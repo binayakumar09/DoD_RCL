@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Manifest version="2">
   <CheckInterval>9</CheckInterval>
-  <RemoteConfigUri>http://www.codeproject.com/script/Membership/Uploads/1740717/update.xml</RemoteConfigUri>
+  <RemoteConfigUri>https://github.com/binayakumar09/DoD_RCL/blob/7a5350ef6baf2e043e2722b598342e1e887a5e31/Update/update.xml</RemoteConfigUri>
   <SecurityToken>D68EF3A7-E787-4CC4-B020-878BA649B4CD</SecurityToken>
   <BaseUri>https://github.com/binayakumar09/DoD_RCL/blob/ebb25a518ea4958a5c6b3aa351f2b63a4fc4a49d/Update/</BaseUri>
   <Payload>RCL.zip</Payload>

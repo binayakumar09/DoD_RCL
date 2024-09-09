@@ -1,0 +1,8 @@
+C:\Users\binpradh\Desktop\RCL.pdb
+C:\Users\binpradh\Desktop\RCL.dll.config
+C:\Users\binpradh\Desktop\D3DCompiler_47_cor3.dll
+C:\Users\binpradh\Desktop\PenImc_cor3.dll
+C:\Users\binpradh\Desktop\PresentationNative_cor3.dll
+C:\Users\binpradh\Desktop\vcruntime140_cor3.dll
+C:\Users\binpradh\Desktop\wpfgfx_cor3.dll
+C:\Users\binpradh\Desktop\RCL.exe

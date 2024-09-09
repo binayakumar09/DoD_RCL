@@ -1,0 +1,8 @@
+C:\ReviewChkList-RCL\rcl\RCL.pdb
+C:\ReviewChkList-RCL\rcl\RCL.dll.config
+C:\ReviewChkList-RCL\rcl\D3DCompiler_47_cor3.dll
+C:\ReviewChkList-RCL\rcl\PenImc_cor3.dll
+C:\ReviewChkList-RCL\rcl\PresentationNative_cor3.dll
+C:\ReviewChkList-RCL\rcl\vcruntime140_cor3.dll
+C:\ReviewChkList-RCL\rcl\wpfgfx_cor3.dll
+C:\ReviewChkList-RCL\rcl\RCL.exe

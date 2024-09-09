@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "WqcHyh6m9vI=",
+  "success": true,
+  "projectFilePath": "D:\\UI Project\\APRCL\\ReaLTaiizor.UI\\RCL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\binpradh\\.nuget\\packages\\microsoft.net.illink.analyzers\\7.0.100-1.23401.1\\microsoft.net.illink.analyzers.7.0.100-1.23401.1.nupkg.sha512",
+    "C:\\Users\\binpradh\\.nuget\\packages\\microsoft.net.illink.tasks\\7.0.100-1.23401.1\\microsoft.net.illink.tasks.7.0.100-1.23401.1.nupkg.sha512",
+    "C:\\Users\\binpradh\\.nuget\\packages\\realtaiizor\\3.7.8.5\\realtaiizor.3.7.8.5.nupkg.sha512",
+    "C:\\Users\\binpradh\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\3.1.32\\microsoft.netcore.app.runtime.win-x64.3.1.32.nupkg.sha512",
+    "C:\\Users\\binpradh\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\3.1.32\\microsoft.windowsdesktop.app.runtime.win-x64.3.1.32.nupkg.sha512",
+    "C:\\Users\\binpradh\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\3.1.32\\microsoft.aspnetcore.app.runtime.win-x64.3.1.32.nupkg.sha512",
+    "C:\\Users\\binpradh\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.33\\microsoft.netcore.app.runtime.win-x64.6.0.33.nupkg.sha512",
+    "C:\\Users\\binpradh\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.33\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.33.nupkg.sha512",
+    "C:\\Users\\binpradh\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.33\\microsoft.aspnetcore.app.runtime.win-x64.6.0.33.nupkg.sha512",
+    "C:\\Users\\binpradh\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\6.0.33\\microsoft.netcore.app.crossgen2.win-x64.6.0.33.nupkg.sha512"
+  ],
+  "logs": []
+}

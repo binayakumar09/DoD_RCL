@@ -1,0 +1,225 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\ReviewChkList-RCL\\ReaLTaiizor-develop\\demo\\ReaLTaiizor.UI\\ReaLTaiizor.UI\\ReaLTaiizor.UI.csproj": {}
+  },
+  "projects": {
+    "D:\\ReviewChkList-RCL\\ReaLTaiizor-develop\\demo\\ReaLTaiizor.UI\\ReaLTaiizor.UI\\ReaLTaiizor.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ReviewChkList-RCL\\ReaLTaiizor-develop\\demo\\ReaLTaiizor.UI\\ReaLTaiizor.UI\\ReaLTaiizor.UI.csproj",
+        "projectName": "ReaLTaiizor.UI",
+        "projectPath": "D:\\ReviewChkList-RCL\\ReaLTaiizor-develop\\demo\\ReaLTaiizor.UI\\ReaLTaiizor.UI\\ReaLTaiizor.UI.csproj",
+        "packagesPath": "C:\\Users\\ravraj\\.nuget\\packages\\",
+        "outputPath": "D:\\ReviewChkList-RCL\\ReaLTaiizor-develop\\demo\\ReaLTaiizor.UI\\ReaLTaiizor.UI\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "C:\\Users\\ravraj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net5.0-windows",
+          "netcoreapp3.1-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1-windows",
+            "projectReferences": {}
+          },
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {}
+          },
+          "net461": {
+            "targetAlias": "net461",
+            "projectReferences": {}
+          },
+          "net462": {
+            "targetAlias": "net462",
+            "projectReferences": {}
+          },
+          "net47": {
+            "targetAlias": "net47",
+            "projectReferences": {}
+          },
+          "net471": {
+            "targetAlias": "net471",
+            "projectReferences": {}
+          },
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1-windows",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "ReaLTaiizor": {
+              "target": "Package",
+              "version": "[3.7.8.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.17, 3.1.17]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
+        },
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "ReaLTaiizor": {
+              "target": "Package",
+              "version": "[3.7.8.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.8, 5.0.8]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
+        },
+        "net461": {
+          "targetAlias": "net461",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "ReaLTaiizor": {
+              "target": "Package",
+              "version": "[3.7.8.5, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
+        },
+        "net462": {
+          "targetAlias": "net462",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "ReaLTaiizor": {
+              "target": "Package",
+              "version": "[3.7.8.5, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
+        },
+        "net47": {
+          "targetAlias": "net47",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "ReaLTaiizor": {
+              "target": "Package",
+              "version": "[3.7.8.5, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
+        },
+        "net471": {
+          "targetAlias": "net471",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "ReaLTaiizor": {
+              "target": "Package",
+              "version": "[3.7.8.5, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
+        },
+        "net472": {
+          "targetAlias": "net472",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "ReaLTaiizor": {
+              "target": "Package",
+              "version": "[3.7.8.5, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win7-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

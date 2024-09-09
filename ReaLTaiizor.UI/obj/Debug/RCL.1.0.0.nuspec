@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>RCL</id>
+    <version>1.0.0</version>
+    <authors>RCL</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="ed218953bd0c144d8b5ccd5b50ae00b059aa58bd" />
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="ReaLTaiizor" version="3.7.8.5" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net6.0-windows7.0">
+        <dependency id="ReaLTaiizor" version="3.7.8.5" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework=".NETCoreApp3.1">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+    </frameworkReferences>
+    <contentFiles>
+      <files include="any/net6.0-windows7.0/Resources/application_16x.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/application_16x.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/AttachOrDetach_7014.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/AttachOrDetach_7014.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/baseline_thumb_up_black_24dp.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/baseline_thumb_up_black_24dp.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/baseline_build_black_24dp.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/baseline_build_black_24dp.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/baseline_favorite_border_black_24dp.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/baseline_favorite_border_black_24dp.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/baseline_fingerprint_black_24dp.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/baseline_fingerprint_black_24dp.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/document_16xLG.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/document_16xLG.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/Files_7954.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/Files_7954.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/folder_16x.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/folder_16x.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/folder_Closed_16xLG.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/folder_Closed_16xLG.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/Close_16xLG.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/Close_16xLG.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/Collection_16xLG.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/Collection_16xLG.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/Console.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/Console.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/minus.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/minus.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/NewFile_6276.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/NewFile_6276.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/plus.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/plus.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/properties_16xLG.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/properties_16xLG.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/RefactoringLog_12810.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/RefactoringLog_12810.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/round_assessment_white_24dp.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/round_assessment_white_24dp.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/round_backup_white_24dp.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/round_backup_white_24dp.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/round_bluetooth_white_24dp.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/round_bluetooth_white_24dp.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/round_bookmark_white_24dp.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/round_bookmark_white_24dp.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/round_build_white_24dp.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/round_build_white_24dp.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/round_gps_fixed_white_24dp.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/round_gps_fixed_white_24dp.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/round_http_white_24dp.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/round_http_white_24dp.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/round_report_problem_white_24dp.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/round_report_problem_white_24dp.png" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Resources/round_swap_vert_white_24dp.png" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Resources/round_swap_vert_white_24dp.png" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\bin\Debug\net6.0-windows\RCL.runtimeconfig.json" target="lib\net6.0-windows7.0\RCL.runtimeconfig.json" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\bin\Debug\net6.0-windows\RCL.dll" target="lib\net6.0-windows7.0\RCL.dll" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\bin\Debug\netcoreapp3.1-windows\RCL.runtimeconfig.json" target="lib\netcoreapp3.1\RCL.runtimeconfig.json" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\bin\Debug\netcoreapp3.1-windows\RCL.dll" target="lib\netcoreapp3.1\RCL.dll" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\application_16x.png" target="content\Resources\application_16x.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\application_16x.png" target="contentFiles\any\net6.0-windows7.0\Resources\application_16x.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\application_16x.png" target="contentFiles\any\netcoreapp3.1\Resources\application_16x.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\AttachOrDetach_7014.png" target="content\Resources\AttachOrDetach_7014.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\AttachOrDetach_7014.png" target="contentFiles\any\net6.0-windows7.0\Resources\AttachOrDetach_7014.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\AttachOrDetach_7014.png" target="contentFiles\any\netcoreapp3.1\Resources\AttachOrDetach_7014.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\baseline_thumb_up_black_24dp.png" target="content\Resources\baseline_thumb_up_black_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\baseline_thumb_up_black_24dp.png" target="contentFiles\any\net6.0-windows7.0\Resources\baseline_thumb_up_black_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\baseline_thumb_up_black_24dp.png" target="contentFiles\any\netcoreapp3.1\Resources\baseline_thumb_up_black_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\baseline_build_black_24dp.png" target="content\Resources\baseline_build_black_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\baseline_build_black_24dp.png" target="contentFiles\any\net6.0-windows7.0\Resources\baseline_build_black_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\baseline_build_black_24dp.png" target="contentFiles\any\netcoreapp3.1\Resources\baseline_build_black_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\baseline_favorite_border_black_24dp.png" target="content\Resources\baseline_favorite_border_black_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\baseline_favorite_border_black_24dp.png" target="contentFiles\any\net6.0-windows7.0\Resources\baseline_favorite_border_black_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\baseline_favorite_border_black_24dp.png" target="contentFiles\any\netcoreapp3.1\Resources\baseline_favorite_border_black_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\baseline_fingerprint_black_24dp.png" target="content\Resources\baseline_fingerprint_black_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\baseline_fingerprint_black_24dp.png" target="contentFiles\any\net6.0-windows7.0\Resources\baseline_fingerprint_black_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\baseline_fingerprint_black_24dp.png" target="contentFiles\any\netcoreapp3.1\Resources\baseline_fingerprint_black_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\document_16xLG.png" target="content\Resources\document_16xLG.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\document_16xLG.png" target="contentFiles\any\net6.0-windows7.0\Resources\document_16xLG.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\document_16xLG.png" target="contentFiles\any\netcoreapp3.1\Resources\document_16xLG.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\Files_7954.png" target="content\Resources\Files_7954.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\Files_7954.png" target="contentFiles\any\net6.0-windows7.0\Resources\Files_7954.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\Files_7954.png" target="contentFiles\any\netcoreapp3.1\Resources\Files_7954.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\folder_16x.png" target="content\Resources\folder_16x.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\folder_16x.png" target="contentFiles\any\net6.0-windows7.0\Resources\folder_16x.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\folder_16x.png" target="contentFiles\any\netcoreapp3.1\Resources\folder_16x.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\folder_Closed_16xLG.png" target="content\Resources\folder_Closed_16xLG.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\folder_Closed_16xLG.png" target="contentFiles\any\net6.0-windows7.0\Resources\folder_Closed_16xLG.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\folder_Closed_16xLG.png" target="contentFiles\any\netcoreapp3.1\Resources\folder_Closed_16xLG.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\Close_16xLG.png" target="content\Resources\Close_16xLG.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\Close_16xLG.png" target="contentFiles\any\net6.0-windows7.0\Resources\Close_16xLG.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\Close_16xLG.png" target="contentFiles\any\netcoreapp3.1\Resources\Close_16xLG.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\Collection_16xLG.png" target="content\Resources\Collection_16xLG.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\Collection_16xLG.png" target="contentFiles\any\net6.0-windows7.0\Resources\Collection_16xLG.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\Collection_16xLG.png" target="contentFiles\any\netcoreapp3.1\Resources\Collection_16xLG.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\Console.png" target="content\Resources\Console.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\Console.png" target="contentFiles\any\net6.0-windows7.0\Resources\Console.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\Console.png" target="contentFiles\any\netcoreapp3.1\Resources\Console.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\minus.png" target="content\Resources\minus.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\minus.png" target="contentFiles\any\net6.0-windows7.0\Resources\minus.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\minus.png" target="contentFiles\any\netcoreapp3.1\Resources\minus.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\NewFile_6276.png" target="content\Resources\NewFile_6276.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\NewFile_6276.png" target="contentFiles\any\net6.0-windows7.0\Resources\NewFile_6276.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\NewFile_6276.png" target="contentFiles\any\netcoreapp3.1\Resources\NewFile_6276.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\plus.png" target="content\Resources\plus.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\plus.png" target="contentFiles\any\net6.0-windows7.0\Resources\plus.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\plus.png" target="contentFiles\any\netcoreapp3.1\Resources\plus.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\properties_16xLG.png" target="content\Resources\properties_16xLG.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\properties_16xLG.png" target="contentFiles\any\net6.0-windows7.0\Resources\properties_16xLG.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\properties_16xLG.png" target="contentFiles\any\netcoreapp3.1\Resources\properties_16xLG.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\RefactoringLog_12810.png" target="content\Resources\RefactoringLog_12810.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\RefactoringLog_12810.png" target="contentFiles\any\net6.0-windows7.0\Resources\RefactoringLog_12810.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\RefactoringLog_12810.png" target="contentFiles\any\netcoreapp3.1\Resources\RefactoringLog_12810.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_assessment_white_24dp.png" target="content\Resources\round_assessment_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_assessment_white_24dp.png" target="contentFiles\any\net6.0-windows7.0\Resources\round_assessment_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_assessment_white_24dp.png" target="contentFiles\any\netcoreapp3.1\Resources\round_assessment_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_backup_white_24dp.png" target="content\Resources\round_backup_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_backup_white_24dp.png" target="contentFiles\any\net6.0-windows7.0\Resources\round_backup_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_backup_white_24dp.png" target="contentFiles\any\netcoreapp3.1\Resources\round_backup_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_bluetooth_white_24dp.png" target="content\Resources\round_bluetooth_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_bluetooth_white_24dp.png" target="contentFiles\any\net6.0-windows7.0\Resources\round_bluetooth_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_bluetooth_white_24dp.png" target="contentFiles\any\netcoreapp3.1\Resources\round_bluetooth_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_bookmark_white_24dp.png" target="content\Resources\round_bookmark_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_bookmark_white_24dp.png" target="contentFiles\any\net6.0-windows7.0\Resources\round_bookmark_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_bookmark_white_24dp.png" target="contentFiles\any\netcoreapp3.1\Resources\round_bookmark_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_build_white_24dp.png" target="content\Resources\round_build_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_build_white_24dp.png" target="contentFiles\any\net6.0-windows7.0\Resources\round_build_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_build_white_24dp.png" target="contentFiles\any\netcoreapp3.1\Resources\round_build_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_gps_fixed_white_24dp.png" target="content\Resources\round_gps_fixed_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_gps_fixed_white_24dp.png" target="contentFiles\any\net6.0-windows7.0\Resources\round_gps_fixed_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_gps_fixed_white_24dp.png" target="contentFiles\any\netcoreapp3.1\Resources\round_gps_fixed_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_http_white_24dp.png" target="content\Resources\round_http_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_http_white_24dp.png" target="contentFiles\any\net6.0-windows7.0\Resources\round_http_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_http_white_24dp.png" target="contentFiles\any\netcoreapp3.1\Resources\round_http_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_report_problem_white_24dp.png" target="content\Resources\round_report_problem_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_report_problem_white_24dp.png" target="contentFiles\any\net6.0-windows7.0\Resources\round_report_problem_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_report_problem_white_24dp.png" target="contentFiles\any\netcoreapp3.1\Resources\round_report_problem_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_swap_vert_white_24dp.png" target="content\Resources\round_swap_vert_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_swap_vert_white_24dp.png" target="contentFiles\any\net6.0-windows7.0\Resources\round_swap_vert_white_24dp.png" />
+    <file src="D:\UI Project\APRCL\ReaLTaiizor.UI\Resources\round_swap_vert_white_24dp.png" target="contentFiles\any\netcoreapp3.1\Resources\round_swap_vert_white_24dp.png" />
+  </files>
+</package>

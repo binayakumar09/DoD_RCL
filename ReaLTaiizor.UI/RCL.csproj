@@ -1,0 +1,103 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!--<TargetFramework>net48</TargetFramework>-->
+	  <!--TargetFrameworks>net461;net462;net6.0-windows</TargetFrameworks-->
+	  <TargetFrameworks>netcoreapp3.1-windows;net6.0-windows</TargetFrameworks>
+	  <!--TargetFrameworks>net472;netcoreapp3.1-windows</TargetFrameworks-->
+	  <EnablePreviewFeatures>True</EnablePreviewFeatures>
+	  <GenerateRequiresPreviewFeaturesAttribute>False</GenerateRequiresPreviewFeaturesAttribute>
+    <OutputType>WinExe</OutputType>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AnalysisLevel>preview</AnalysisLevel>
+    <LangVersion>preview</LangVersion>
+    <NeutralLanguage>en</NeutralLanguage>
+    <NoWarn>CA1416</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject></StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ic_assignment_black_48dp.ico</ApplicationIcon>
+    <Win32Resource />
+    <SignAssembly>false</SignAssembly>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Update="TaskWindowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\application_16x.png" />
+    <Content Include="Resources\AttachOrDetach_7014.png" />
+    <Content Include="Resources\baseline_thumb_up_black_24dp.png" />
+    <Content Include="Resources\baseline_build_black_24dp.png" />
+    <Content Include="Resources\baseline_favorite_border_black_24dp.png" />
+    <Content Include="Resources\baseline_fingerprint_black_24dp.png" />
+    <Content Include="Resources\document_16xLG.png" />
+    <Content Include="Resources\Files_7954.png" />
+    <Content Include="Resources\folder_16x.png" />
+    <Content Include="Resources\folder_Closed_16xLG.png" />
+    <Content Include="Resources\Close_16xLG.png" />
+    <Content Include="Resources\Collection_16xLG.png" />
+    <Content Include="Resources\Console.png" />
+    <Content Include="Resources\minus.png" />
+    <Content Include="Resources\NewFile_6276.png" />
+    <Content Include="Resources\plus.png" />
+    <Content Include="Resources\properties_16xLG.png" />
+    <Content Include="Resources\RefactoringLog_12810.png" />
+    <Content Include="Resources\round_assessment_white_24dp.png" />
+    <Content Include="Resources\round_backup_white_24dp.png" />
+    <Content Include="Resources\round_bluetooth_white_24dp.png" />
+    <Content Include="Resources\round_bookmark_white_24dp.png" />
+    <Content Include="Resources\round_build_white_24dp.png" />
+    <Content Include="Resources\round_gps_fixed_white_24dp.png" />
+    <Content Include="Resources\round_http_white_24dp.png" />
+    <Content Include="Resources\round_report_problem_white_24dp.png" />
+    <Content Include="Resources\round_swap_vert_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ReaLTaiizor" Version="3.7.8.5" />
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GitHub|AnyCPU'">
+    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net461|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DefineConstants />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net461|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)'=='GitHub|AnyCPU'">
+    <PackageReference Include="System.Resources.Extensions" Version="6.0.0-preview.5.21301.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="RedCell.Diagnostics.Update">
+      <HintPath>..\..\RedCell.Diagnostics.Update-Source\RedCell.Diagnostics.Update\bin\RedCell.Diagnostics.Update.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+</Project>

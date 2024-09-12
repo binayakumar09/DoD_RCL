@@ -5,7 +5,6 @@ using System.Windows.Forms;
 using ReaLTaiizor.Colors;
 using ReaLTaiizor.Forms;
 using ReaLTaiizor.Util;
-using RedCell.Diagnostics.Update;
 
 namespace ReaLTaiizor.UI
 {
@@ -40,18 +39,6 @@ namespace ReaLTaiizor.UI
         public frmRcl()
         {
             InitializeComponent();
-            // Log activity to the console.
-            Log.Console = true;
-            Console.WriteLine("You are running version 2 of this console application.");
-
-            // Log activity to the System.Diagnostics.Debug facilty.
-            Log.Debug = true;
-
-            // Prefix messages to the above.
-            Log.Prefix = "[Update] "; // This is the default.
-
-            var updater = new Updater();
-            updater.StartMonitoring();
 
             // Initialize MaterialManager
             materialManager = MaterialManager.Instance;

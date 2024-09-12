@@ -79,8 +79,3 @@ D:\UI Project\APRCL\ReaLTaiizor.UI\obj\Release\net6.0-windows\refint\RCL.dll
 D:\UI Project\APRCL\ReaLTaiizor.UI\obj\Release\net6.0-windows\RCL.pdb
 D:\UI Project\APRCL\ReaLTaiizor.UI\obj\Release\net6.0-windows\RCL.genruntimeconfig.cache
 D:\UI Project\APRCL\ReaLTaiizor.UI\obj\Release\net6.0-windows\ref\RCL.dll
-D:\UI Project\APRCL\ReaLTaiizor.UI\bin\Release\net6.0-windows\RedCell.Diagnostics.Update.dll
-D:\UI Project\APRCL\ReaLTaiizor.UI\bin\Release\net6.0-windows\RedCell.Net.dll
-D:\UI Project\APRCL\ReaLTaiizor.UI\bin\Release\net6.0-windows\Ionic.Zip.Reduced.dll
-D:\UI Project\APRCL\ReaLTaiizor.UI\bin\Release\net6.0-windows\RedCell.Diagnostics.Update.pdb
-D:\UI Project\APRCL\ReaLTaiizor.UI\bin\Release\net6.0-windows\RedCell.Net.pdb

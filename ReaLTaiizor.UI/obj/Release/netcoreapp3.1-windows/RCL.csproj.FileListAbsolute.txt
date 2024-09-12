@@ -75,8 +75,3 @@ D:\UI Project\APRCL\ReaLTaiizor.UI\obj\Release\netcoreapp3.1-windows\RCL.csproj.
 D:\UI Project\APRCL\ReaLTaiizor.UI\obj\Release\netcoreapp3.1-windows\RCL.dll
 D:\UI Project\APRCL\ReaLTaiizor.UI\obj\Release\netcoreapp3.1-windows\RCL.pdb
 D:\UI Project\APRCL\ReaLTaiizor.UI\obj\Release\netcoreapp3.1-windows\RCL.genruntimeconfig.cache
-D:\UI Project\APRCL\ReaLTaiizor.UI\bin\Release\netcoreapp3.1-windows\RedCell.Diagnostics.Update.dll
-D:\UI Project\APRCL\ReaLTaiizor.UI\bin\Release\netcoreapp3.1-windows\RedCell.Net.dll
-D:\UI Project\APRCL\ReaLTaiizor.UI\bin\Release\netcoreapp3.1-windows\Ionic.Zip.Reduced.dll
-D:\UI Project\APRCL\ReaLTaiizor.UI\bin\Release\netcoreapp3.1-windows\RedCell.Diagnostics.Update.pdb
-D:\UI Project\APRCL\ReaLTaiizor.UI\bin\Release\netcoreapp3.1-windows\RedCell.Net.pdb

@@ -12,7 +12,6 @@
           "Microsoft.NET.ILLink.Analyzers": "7.0.100-1.23401.1",
           "Microsoft.NET.ILLink.Tasks": "7.0.100-1.23401.1",
           "ReaLTaiizor": "3.7.8.5",
-          "RedCell.Diagnostics.Update": "1.0.0.27964",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "6.0.33",
           "runtimepack.Microsoft.WindowsDesktop.App.Runtime.win-x64": "6.0.33"
         },
@@ -918,30 +917,6 @@
             "fileVersion": "3.7.8.5"
           }
         }
-      },
-      "RedCell.Diagnostics.Update/1.0.0.27964": {
-        "runtime": {
-          "RedCell.Diagnostics.Update.dll": {
-            "assemblyVersion": "1.0.0.27964",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "RedCell.Net/1.0.0.0": {
-        "runtime": {
-          "RedCell.Net.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "Ionic.Zip.Reduced/1.9.1.8": {
-        "runtime": {
-          "Ionic.Zip.Reduced.dll": {
-            "assemblyVersion": "1.9.1.8",
-            "fileVersion": "1.9.1.8"
-          }
-        }
       }
     }
   },
@@ -981,21 +956,6 @@
       "sha512": "sha512-Ii7HHUZifkTgerZ9mbksg2FVCtiG3PgKNZzMy9skdcrzavLfYVbNxBFTodNfnDl+KII9QZ2fxpBmy7quFT44VA==",
       "path": "realtaiizor/3.7.8.5",
       "hashPath": "realtaiizor.3.7.8.5.nupkg.sha512"
-    },
-    "RedCell.Diagnostics.Update/1.0.0.27964": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "RedCell.Net/1.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Ionic.Zip.Reduced/1.9.1.8": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
     }
   },
   "runtimes": {

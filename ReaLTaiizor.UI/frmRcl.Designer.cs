@@ -34,6 +34,7 @@ namespace ReaLTaiizor.UI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRcl));
             materialTabControl1 = new Controls.MaterialTabControl();
             efsTab = new TabPage();
+            console = new TextBox();
             efslink = new LinkLabel();
             materialLabel2 = new Controls.MaterialLabel();
             efsBtnReset = new Controls.MaterialButton();
@@ -171,6 +172,7 @@ namespace ReaLTaiizor.UI
             // efsTab
             // 
             efsTab.BackColor = System.Drawing.Color.White;
+            efsTab.Controls.Add(console);
             efsTab.Controls.Add(efslink);
             efsTab.Controls.Add(materialLabel2);
             efsTab.Controls.Add(efsBtnReset);
@@ -191,6 +193,15 @@ namespace ReaLTaiizor.UI
             efsTab.Size = new System.Drawing.Size(1260, 769);
             efsTab.TabIndex = 7;
             efsTab.Text = "EFS Review";
+            // 
+            // console
+            // 
+            console.Location = new System.Drawing.Point(819, 597);
+            console.Multiline = true;
+            console.Name = "console";
+            console.ScrollBars = ScrollBars.Vertical;
+            console.Size = new System.Drawing.Size(363, 120);
+            console.TabIndex = 99;
             // 
             // efslink
             // 
@@ -1694,5 +1705,6 @@ namespace ReaLTaiizor.UI
         private TextBox cdrtxt2;
         private TextBox cdrtxt1;
         private Controls.MaterialLabel materialLabel58;
+        private TextBox console;
     }
 }

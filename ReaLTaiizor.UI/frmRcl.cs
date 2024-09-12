@@ -1,7 +1,10 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Windows.Forms;
+using RCL;
 using ReaLTaiizor.Colors;
 using ReaLTaiizor.Forms;
 using ReaLTaiizor.Util;
@@ -40,6 +43,31 @@ namespace ReaLTaiizor.UI
         {
             InitializeComponent();
 
+            DataLogger.logString += "Test \n";
+
+            string fileUrl = "file://eseefsn50.emea.nsn-net.net/rotta4internal/5G_3/Bangalore/RCL/update.xml";
+            string localPath = @"C:\Users\binpradh\Desktop\Executable\update.xml"; // Replace with your local file path
+            Uri fileUri = new Uri(fileUrl);
+
+            // Create a FileWebRequest object
+            FileWebRequest request = (FileWebRequest)WebRequest.Create(fileUri);
+
+            using (FileWebResponse response = (FileWebResponse)request.GetResponse())
+            {
+                // Get the response stream
+                using (Stream responseStream = response.GetResponseStream())
+                {
+                    // Create a file stream to save the file
+                    using (FileStream fileStream = new FileStream(localPath, FileMode.Create, FileAccess.Write))
+                    {
+                        // Read the response stream and write to the file stream
+                        responseStream.CopyTo(fileStream);
+                    }
+                }
+            }
+
+            DataLogger.logString += "File downloaded successfully! \n";
+
             // Initialize MaterialManager
             materialManager = MaterialManager.Instance;
 
@@ -51,6 +79,7 @@ namespace ReaLTaiizor.UI
             materialManager.AddFormToManage(this);
             materialManager.Theme = MaterialManager.Themes.LIGHT;
             materialManager.ColorScheme = new MaterialColorScheme(MaterialPrimary.Indigo500, MaterialPrimary.Indigo700, MaterialPrimary.Indigo100, MaterialAccent.Pink200, MaterialTextShade.WHITE);
+            console.Text = DataLogger.logString;
         }
 
 

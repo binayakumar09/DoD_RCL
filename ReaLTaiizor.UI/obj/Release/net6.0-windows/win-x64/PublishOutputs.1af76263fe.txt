@@ -5,6 +5,4 @@ C:\Users\binpradh\Desktop\Executable\PenImc_cor3.dll
 C:\Users\binpradh\Desktop\Executable\PresentationNative_cor3.dll
 C:\Users\binpradh\Desktop\Executable\vcruntime140_cor3.dll
 C:\Users\binpradh\Desktop\Executable\wpfgfx_cor3.dll
-C:\Users\binpradh\Desktop\Executable\RedCell.Diagnostics.Update.pdb
-C:\Users\binpradh\Desktop\Executable\RedCell.Net.pdb
 C:\Users\binpradh\Desktop\Executable\RCL.exe

@@ -2,8 +2,10 @@
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Windows.Forms;
+using System.Xml;
 using RCL;
 using ReaLTaiizor.Colors;
 using ReaLTaiizor.Forms;
@@ -11,6 +13,7 @@ using ReaLTaiizor.Util;
 
 namespace ReaLTaiizor.UI
 {
+
     public partial class frmRcl : MaterialForm
     {
         private readonly MaterialManager materialManager;
@@ -43,10 +46,37 @@ namespace ReaLTaiizor.UI
         {
             InitializeComponent();
 
+            console.Visible = true;
+
+            CheckforUpdate();
+
+            // Initialize MaterialManager
+            materialManager = MaterialManager.Instance;
+
+            // Set this to false to disable backcolor enforcing on non-materialSkin components
+            // This HAS to be set before the AddFormToManage()
+            materialManager.EnforceBackcolorOnAllComponents = true;
+
+            // MaterialManager properties
+            materialManager.AddFormToManage(this);
+            materialManager.Theme = MaterialManager.Themes.LIGHT;
+            materialManager.ColorScheme = new MaterialColorScheme(MaterialPrimary.Indigo500, MaterialPrimary.Indigo700, MaterialPrimary.Indigo100, MaterialAccent.Pink200, MaterialTextShade.WHITE);
+            console.Text = DataLogger.logString;
+        }
+
+        private void CheckforUpdate()
+        {
+            String RemoteVersion, LocalVersion = "";
             DataLogger.logString += "Test \n";
 
+            if (!isNWavailable())
+            {
+                DataLogger.logString += ("Unable to connect to Server");
+                return;
+            }
+
             string fileUrl = "file://eseefsn50.emea.nsn-net.net/rotta4internal/5G_3/Bangalore/RCL/update.xml";
-            string localPath = @"C:\Users\binpradh\Desktop\Executable\update.xml"; // Replace with your local file path
+            string localPath = @"C:\Users\binpradh\Desktop\Executable\update_new.xml"; // Replace with your local file path
             Uri fileUri = new Uri(fileUrl);
 
             // Create a FileWebRequest object
@@ -66,30 +96,80 @@ namespace ReaLTaiizor.UI
                 }
             }
 
-            DataLogger.logString += "File downloaded successfully! \n";
+            DataLogger.logString += "Version File downloaded successfully!";
+            DataLogger.logString += "\n";
 
-            // Initialize MaterialManager
-            materialManager = MaterialManager.Instance;
+            XmlDocument doc = new XmlDocument();
+            doc.Load(@"C:\Users\binpradh\Desktop\Executable\update_new.xml");
+            XmlNode node = doc.SelectSingleNode("//AppVersion");
+            if (node != null)
+            {
+                DataLogger.logString += ("Server AppVersion Value: " + node.InnerText);
+                DataLogger.logString += "\n";
+                RemoteVersion = node.InnerText;
+            } else
+            {
+                DataLogger.logString += ("FAIL: AppVersion Value: ");
+                DataLogger.logString += "\n";
+                MessageBox.Show("Failed to Check Update", "NW Error", buttonsOk, MessageBoxIcon.Error);
+                return;
+            }
 
-            // Set this to false to disable backcolor enforcing on non-materialSkin components
-            // This HAS to be set before the AddFormToManage()
-            materialManager.EnforceBackcolorOnAllComponents = true;
-
-            // MaterialManager properties
-            materialManager.AddFormToManage(this);
-            materialManager.Theme = MaterialManager.Themes.LIGHT;
-            materialManager.ColorScheme = new MaterialColorScheme(MaterialPrimary.Indigo500, MaterialPrimary.Indigo700, MaterialPrimary.Indigo100, MaterialAccent.Pink200, MaterialTextShade.WHITE);
-            console.Text = DataLogger.logString;
+            doc.Load(@"C:\Users\binpradh\Desktop\Executable\update.xml");
+            XmlNode node_local = doc.SelectSingleNode("//AppVersion");
+            if (node_local != null)
+            {
+                DataLogger.logString += ("Local AppVersion Value: " + node_local.InnerText);
+                DataLogger.logString += "\n";
+                LocalVersion = node_local.InnerText;
+            }
+            else
+            {
+                DataLogger.logString += ("FAIL: AppVersion Value: ");
+                DataLogger.logString += "\n";
+                MessageBox.Show("Failed to Check Update", "NW Error", buttonsOk, MessageBoxIcon.Error);
+                return;
+            }
+            if (LocalVersion != RemoteVersion)
+            {
+                DataLogger.logString += ("App Update is Needed");
+                DataLogger.logString += "\n";
+                MessageBox.Show("Tool Update is Mandatory", "New version Available", buttonsOk, MessageBoxIcon.Warning);
+                progressBar.Visible = true;
+                DownloadFile(progressBar);
+            }
+            return;
         }
 
+        private bool isNWavailable()
+        {
+            string server = "eseefsn50.emea.nsn-net.net";
+            Ping ping = new Ping();
+
+            try
+            {
+                PingReply reply = ping.Send(server);
+                if (reply.Status == IPStatus.Success)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unable to Check for Update!!!", ex.Message, buttonsOk, MessageBoxIcon.Error);
+                return false;
+            }
+        }
 
         private void materialButton1_Click(object sender, EventArgs e)
         {
             materialManager.Theme = materialManager.Theme == MaterialManager.Themes.DARK ? MaterialManager.Themes.LIGHT : MaterialManager.Themes.DARK;
             updateColor();
         }
-
-
 
         private void updateColor()
         {
@@ -192,6 +272,36 @@ namespace ReaLTaiizor.UI
             }
 
             efsReviewResult();
+        }
+
+        public async void DownloadFile(ProgressBar progressBar)
+        {
+            String fileUrl = "file://eseefsn50.emea.nsn-net.net/rotta4internal/5G_3/Bangalore/RCL/RCL.zip";
+            string destinationPath = @"C:\Users\binpradh\Desktop\Executable\RCL.zip";
+            FileWebRequest request = (FileWebRequest)WebRequest.Create(fileUrl);
+            using (WebResponse response = await request.GetResponseAsync())
+            using (Stream responseStream = response.GetResponseStream())
+            using (FileStream fileStream = new FileStream(destinationPath, FileMode.Create))
+            {
+                byte[] buffer = new byte[4096];
+                int bytesRead;
+                long totalBytesRead = 0;
+                long totalBytes = response.ContentLength;
+
+                progressBar.Maximum = 100;
+                progressBar.Value = 0;
+
+                while ((bytesRead = await responseStream.ReadAsync(buffer, 0, buffer.Length)) > 0)
+                {
+                    await fileStream.WriteAsync(buffer, 0, bytesRead);
+                    totalBytesRead += bytesRead;
+                    progressBar.Value = (int)((totalBytesRead * 100) / totalBytes);
+                    if (progressBar.Value == 100)
+                    {
+                        MessageBox.Show("File Downloaded Successfully", "SUCCESS", buttonsOk, MessageBoxIcon.Exclamation);
+                    }
+                }
+            }
         }
 
         public void cdrReviewResult()

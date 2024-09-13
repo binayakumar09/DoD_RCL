@@ -1562,7 +1562,6 @@ D:\UI Project\APRCL\ReaLTaiizor.UI\bin\Release\net6.0-windows\win-x64\RCL.dll
 D:\UI Project\APRCL\ReaLTaiizor.UI\bin\Release\net6.0-windows\win-x64\RCL.pdb
 D:\UI Project\APRCL\ReaLTaiizor.UI\bin\Release\net6.0-windows\win-x64\ReaLTaiizor.dll
 D:\UI Project\APRCL\ReaLTaiizor.UI\obj\Release\net6.0-windows\win-x64\RCL.csproj.AssemblyReference.cache
-D:\UI Project\APRCL\ReaLTaiizor.UI\obj\Release\net6.0-windows\win-x64\ReaLTaiizor.UI.frmRcl.resources
 D:\UI Project\APRCL\ReaLTaiizor.UI\obj\Release\net6.0-windows\win-x64\RCL.Properties.Resources.resources
 D:\UI Project\APRCL\ReaLTaiizor.UI\obj\Release\net6.0-windows\win-x64\ReaLTaiizor.UI.TaskWindowControl.resources
 D:\UI Project\APRCL\ReaLTaiizor.UI\obj\Release\net6.0-windows\win-x64\RCL.csproj.GenerateResource.cache
@@ -2074,3 +2073,4 @@ D:\UI Project\APRCL\ReaLTaiizor.UI\bin\Release\net6.0-windows\win-x64\zh-Hant\UI
 D:\UI Project\APRCL\ReaLTaiizor.UI\bin\Release\net6.0-windows\win-x64\zh-Hant\UIAutomationTypes.resources.dll
 D:\UI Project\APRCL\ReaLTaiizor.UI\bin\Release\net6.0-windows\win-x64\zh-Hant\WindowsBase.resources.dll
 D:\UI Project\APRCL\ReaLTaiizor.UI\bin\Release\net6.0-windows\win-x64\zh-Hant\WindowsFormsIntegration.resources.dll
+D:\UI Project\APRCL\ReaLTaiizor.UI\obj\Release\net6.0-windows\win-x64\ReaLTaiizor.UI.frmRcl.resources

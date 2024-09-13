@@ -34,6 +34,7 @@ namespace ReaLTaiizor.UI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRcl));
             materialTabControl1 = new Controls.MaterialTabControl();
             efsTab = new TabPage();
+            progressBar = new ProgressBar();
             console = new TextBox();
             efslink = new LinkLabel();
             materialLabel2 = new Controls.MaterialLabel();
@@ -172,6 +173,7 @@ namespace ReaLTaiizor.UI
             // efsTab
             // 
             efsTab.BackColor = System.Drawing.Color.White;
+            efsTab.Controls.Add(progressBar);
             efsTab.Controls.Add(console);
             efsTab.Controls.Add(efslink);
             efsTab.Controls.Add(materialLabel2);
@@ -194,13 +196,22 @@ namespace ReaLTaiizor.UI
             efsTab.TabIndex = 7;
             efsTab.Text = "EFS Review";
             // 
+            // progressBar
+            // 
+            progressBar.Location = new System.Drawing.Point(426, 581);
+            progressBar.Name = "progressBar";
+            progressBar.Size = new System.Drawing.Size(262, 23);
+            progressBar.TabIndex = 100;
+            progressBar.Visible = false;
+            // 
             // console
             // 
-            console.Location = new System.Drawing.Point(819, 597);
+            console.Location = new System.Drawing.Point(819, 581);
             console.Multiline = true;
             console.Name = "console";
+            console.PlaceholderText = "This Place is only for debugging. If you see this then it's my mistake :)";
             console.ScrollBars = ScrollBars.Vertical;
-            console.Size = new System.Drawing.Size(363, 120);
+            console.Size = new System.Drawing.Size(363, 136);
             console.TabIndex = 99;
             // 
             // efslink
@@ -1706,5 +1717,6 @@ namespace ReaLTaiizor.UI
         private TextBox cdrtxt1;
         private Controls.MaterialLabel materialLabel58;
         private TextBox console;
+        private ProgressBar progressBar;
     }
 }

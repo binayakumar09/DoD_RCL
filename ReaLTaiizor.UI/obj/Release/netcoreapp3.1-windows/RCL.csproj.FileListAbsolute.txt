@@ -64,7 +64,6 @@ D:\UI Project\APRCL\ReaLTaiizor.UI\bin\Release\netcoreapp3.1-windows\RCL.dll
 D:\UI Project\APRCL\ReaLTaiizor.UI\bin\Release\netcoreapp3.1-windows\RCL.pdb
 D:\UI Project\APRCL\ReaLTaiizor.UI\bin\Release\netcoreapp3.1-windows\ReaLTaiizor.dll
 D:\UI Project\APRCL\ReaLTaiizor.UI\obj\Release\netcoreapp3.1-windows\RCL.csproj.AssemblyReference.cache
-D:\UI Project\APRCL\ReaLTaiizor.UI\obj\Release\netcoreapp3.1-windows\ReaLTaiizor.UI.frmRcl.resources
 D:\UI Project\APRCL\ReaLTaiizor.UI\obj\Release\netcoreapp3.1-windows\RCL.Properties.Resources.resources
 D:\UI Project\APRCL\ReaLTaiizor.UI\obj\Release\netcoreapp3.1-windows\ReaLTaiizor.UI.TaskWindowControl.resources
 D:\UI Project\APRCL\ReaLTaiizor.UI\obj\Release\netcoreapp3.1-windows\RCL.csproj.GenerateResource.cache
@@ -75,3 +74,4 @@ D:\UI Project\APRCL\ReaLTaiizor.UI\obj\Release\netcoreapp3.1-windows\RCL.csproj.
 D:\UI Project\APRCL\ReaLTaiizor.UI\obj\Release\netcoreapp3.1-windows\RCL.dll
 D:\UI Project\APRCL\ReaLTaiizor.UI\obj\Release\netcoreapp3.1-windows\RCL.pdb
 D:\UI Project\APRCL\ReaLTaiizor.UI\obj\Release\netcoreapp3.1-windows\RCL.genruntimeconfig.cache
+D:\UI Project\APRCL\ReaLTaiizor.UI\obj\Release\netcoreapp3.1-windows\ReaLTaiizor.UI.frmRcl.resources

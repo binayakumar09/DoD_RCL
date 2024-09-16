@@ -403,21 +403,27 @@ namespace ReaLTaiizor.UI
             // efstxt9
             // 
             efstxt9.Location = new System.Drawing.Point(622, 341);
+            efstxt9.Multiline = true;
             efstxt9.Name = "efstxt9";
+            efstxt9.ScrollBars = ScrollBars.Vertical;
             efstxt9.Size = new System.Drawing.Size(541, 23);
             efstxt9.TabIndex = 50;
             // 
             // efstxt8
             // 
             efstxt8.Location = new System.Drawing.Point(622, 299);
+            efstxt8.Multiline = true;
             efstxt8.Name = "efstxt8";
+            efstxt8.ScrollBars = ScrollBars.Vertical;
             efstxt8.Size = new System.Drawing.Size(541, 23);
             efstxt8.TabIndex = 49;
             // 
             // efstxt7
             // 
             efstxt7.Location = new System.Drawing.Point(622, 257);
+            efstxt7.Multiline = true;
             efstxt7.Name = "efstxt7";
+            efstxt7.ScrollBars = ScrollBars.Vertical;
             efstxt7.Size = new System.Drawing.Size(541, 23);
             efstxt7.TabIndex = 48;
             // 
@@ -466,35 +472,45 @@ namespace ReaLTaiizor.UI
             // efstxt6
             // 
             efstxt6.Location = new System.Drawing.Point(622, 215);
+            efstxt6.Multiline = true;
             efstxt6.Name = "efstxt6";
+            efstxt6.ScrollBars = ScrollBars.Vertical;
             efstxt6.Size = new System.Drawing.Size(541, 23);
             efstxt6.TabIndex = 35;
             // 
             // efstxt5
             // 
             efstxt5.Location = new System.Drawing.Point(622, 173);
+            efstxt5.Multiline = true;
             efstxt5.Name = "efstxt5";
+            efstxt5.ScrollBars = ScrollBars.Vertical;
             efstxt5.Size = new System.Drawing.Size(541, 23);
             efstxt5.TabIndex = 34;
             // 
             // efstxt4
             // 
             efstxt4.Location = new System.Drawing.Point(622, 131);
+            efstxt4.Multiline = true;
             efstxt4.Name = "efstxt4";
+            efstxt4.ScrollBars = ScrollBars.Vertical;
             efstxt4.Size = new System.Drawing.Size(541, 23);
             efstxt4.TabIndex = 33;
             // 
             // efstxt3
             // 
             efstxt3.Location = new System.Drawing.Point(622, 89);
+            efstxt3.Multiline = true;
             efstxt3.Name = "efstxt3";
+            efstxt3.ScrollBars = ScrollBars.Vertical;
             efstxt3.Size = new System.Drawing.Size(541, 23);
             efstxt3.TabIndex = 32;
             // 
             // efstxt2
             // 
             efstxt2.Location = new System.Drawing.Point(622, 47);
+            efstxt2.Multiline = true;
             efstxt2.Name = "efstxt2";
+            efstxt2.ScrollBars = ScrollBars.Vertical;
             efstxt2.Size = new System.Drawing.Size(541, 23);
             efstxt2.TabIndex = 31;
             // 
@@ -574,7 +590,9 @@ namespace ReaLTaiizor.UI
             // efstxt1
             // 
             efstxt1.Location = new System.Drawing.Point(622, 5);
+            efstxt1.Multiline = true;
             efstxt1.Name = "efstxt1";
+            efstxt1.ScrollBars = ScrollBars.Vertical;
             efstxt1.Size = new System.Drawing.Size(541, 23);
             efstxt1.TabIndex = 25;
             // 
@@ -1015,81 +1033,103 @@ namespace ReaLTaiizor.UI
             // cdrtxt11
             // 
             cdrtxt11.Location = new System.Drawing.Point(631, 425);
+            cdrtxt11.Multiline = true;
             cdrtxt11.Name = "cdrtxt11";
             cdrtxt11.PlaceholderText = "Please add DFMEA link or schedule when DFMEA is planned";
+            cdrtxt11.ScrollBars = ScrollBars.Vertical;
             cdrtxt11.Size = new System.Drawing.Size(541, 23);
             cdrtxt11.TabIndex = 128;
             // 
             // cdrtxt10
             // 
             cdrtxt10.Location = new System.Drawing.Point(631, 383);
+            cdrtxt10.Multiline = true;
             cdrtxt10.Name = "cdrtxt10";
+            cdrtxt10.ScrollBars = ScrollBars.Vertical;
             cdrtxt10.Size = new System.Drawing.Size(541, 23);
             cdrtxt10.TabIndex = 127;
             // 
             // cdrtxt9
             // 
             cdrtxt9.Location = new System.Drawing.Point(631, 341);
+            cdrtxt9.Multiline = true;
             cdrtxt9.Name = "cdrtxt9";
             cdrtxt9.PlaceholderText = "Please make sure Coverity snapshot/link is updated in JIRA";
+            cdrtxt9.ScrollBars = ScrollBars.Vertical;
             cdrtxt9.Size = new System.Drawing.Size(541, 23);
             cdrtxt9.TabIndex = 126;
             // 
             // cdrtxt8
             // 
             cdrtxt8.Location = new System.Drawing.Point(631, 299);
+            cdrtxt8.Multiline = true;
             cdrtxt8.Name = "cdrtxt8";
+            cdrtxt8.ScrollBars = ScrollBars.Vertical;
             cdrtxt8.Size = new System.Drawing.Size(541, 23);
             cdrtxt8.TabIndex = 125;
             // 
             // cdrtxt7
             // 
             cdrtxt7.Location = new System.Drawing.Point(631, 257);
+            cdrtxt7.Multiline = true;
             cdrtxt7.Name = "cdrtxt7";
+            cdrtxt7.ScrollBars = ScrollBars.Vertical;
             cdrtxt7.Size = new System.Drawing.Size(541, 23);
             cdrtxt7.TabIndex = 124;
             // 
             // cdrtxt6
             // 
             cdrtxt6.Location = new System.Drawing.Point(631, 215);
+            cdrtxt6.Multiline = true;
             cdrtxt6.Name = "cdrtxt6";
+            cdrtxt6.ScrollBars = ScrollBars.Vertical;
             cdrtxt6.Size = new System.Drawing.Size(541, 23);
             cdrtxt6.TabIndex = 123;
             // 
             // cdrtxt5
             // 
             cdrtxt5.Location = new System.Drawing.Point(631, 173);
+            cdrtxt5.Multiline = true;
             cdrtxt5.Name = "cdrtxt5";
+            cdrtxt5.ScrollBars = ScrollBars.Vertical;
             cdrtxt5.Size = new System.Drawing.Size(541, 23);
             cdrtxt5.TabIndex = 122;
             // 
             // cdrtxt4
             // 
             cdrtxt4.Location = new System.Drawing.Point(631, 131);
+            cdrtxt4.Multiline = true;
             cdrtxt4.Name = "cdrtxt4";
+            cdrtxt4.ScrollBars = ScrollBars.Vertical;
             cdrtxt4.Size = new System.Drawing.Size(541, 23);
             cdrtxt4.TabIndex = 121;
             // 
             // cdrtxt3
             // 
             cdrtxt3.Location = new System.Drawing.Point(631, 89);
+            cdrtxt3.Multiline = true;
             cdrtxt3.Name = "cdrtxt3";
+            cdrtxt3.ScrollBars = ScrollBars.Vertical;
             cdrtxt3.Size = new System.Drawing.Size(541, 23);
             cdrtxt3.TabIndex = 120;
             // 
             // cdrtxt2
             // 
             cdrtxt2.Location = new System.Drawing.Point(631, 47);
+            cdrtxt2.Multiline = true;
             cdrtxt2.Name = "cdrtxt2";
             cdrtxt2.PlaceholderText = "Update Reviewer name and MR link here ...";
+            cdrtxt2.ScrollBars = ScrollBars.Vertical;
             cdrtxt2.Size = new System.Drawing.Size(541, 23);
             cdrtxt2.TabIndex = 119;
             // 
             // cdrtxt1
             // 
             cdrtxt1.Location = new System.Drawing.Point(631, 5);
+            cdrtxt1.Multiline = true;
             cdrtxt1.Name = "cdrtxt1";
             cdrtxt1.PlaceholderText = "This is applicable only for Grooming/Refinement/Study JIRA";
+            cdrtxt1.ScrollBars = ScrollBars.Vertical;
             cdrtxt1.Size = new System.Drawing.Size(541, 23);
             cdrtxt1.TabIndex = 118;
             // 

@@ -18,11 +18,35 @@
       },
       "runtimepack.Microsoft.NETCore.App.Runtime.win-x64/8.0.8": {
         "runtime": {
+          "Microsoft.Win32.Registry.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.824.36612"
+          },
+          "System.Collections.Concurrent.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.824.36612"
+          },
           "System.Collections.Immutable.dll": {
             "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.0.824.36612"
           },
+          "System.Collections.NonGeneric.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.824.36612"
+          },
+          "System.ComponentModel.Primitives.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.824.36612"
+          },
+          "System.ComponentModel.TypeConverter.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.824.36612"
+          },
           "System.Console.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.824.36612"
+          },
+          "System.Diagnostics.Process.dll": {
             "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.0.824.36612"
           },
@@ -42,12 +66,20 @@
             "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.0.824.36612"
           },
+          "System.ObjectModel.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.824.36612"
+          },
           "System.Private.CoreLib.dll": {
             "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.0.824.36612"
           },
           "System.Reflection.Metadata.dll": {
             "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.824.36612"
+          },
+          "System.dll": {
+            "assemblyVersion": "4.0.0.0",
             "fileVersion": "8.0.824.36612"
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BP3tcTURCxI=",
+  "dgSpecHash": "7CeXgunrWlQ=",
   "success": true,
-  "projectFilePath": "D:\\UI Project\\Updater\\Updater.csproj",
+  "projectFilePath": "D:\\UI Project\\APRCL\\Updater\\Updater.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\binpradh\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.8\\microsoft.net.illink.tasks.8.0.8.nupkg.sha512",
     "C:\\Users\\binpradh\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.8\\microsoft.netcore.app.runtime.win-x64.8.0.8.nupkg.sha512",

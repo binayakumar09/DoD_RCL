@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\UI Project\\Updater\\Updater.csproj": {}
+    "D:\\UI Project\\APRCL\\Updater\\Updater.csproj": {}
   },
   "projects": {
-    "D:\\UI Project\\Updater\\Updater.csproj": {
+    "D:\\UI Project\\APRCL\\Updater\\Updater.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\UI Project\\Updater\\Updater.csproj",
+        "projectUniqueName": "D:\\UI Project\\APRCL\\Updater\\Updater.csproj",
         "projectName": "Updater",
-        "projectPath": "D:\\UI Project\\Updater\\Updater.csproj",
+        "projectPath": "D:\\UI Project\\APRCL\\Updater\\Updater.csproj",
         "packagesPath": "C:\\Users\\binpradh\\.nuget\\packages\\",
-        "outputPath": "D:\\UI Project\\Updater\\obj\\publish\\win-x64\\",
+        "outputPath": "D:\\UI Project\\APRCL\\Updater\\obj\\publish\\win-x64\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,4 +1,5 @@
-﻿using System.IO.Compression;
+﻿using System.Diagnostics;
+using System.IO.Compression;
 
 class Program
 {
@@ -30,6 +31,32 @@ class Program
             }
         }
         Console.WriteLine("Update complete!");
+        RunRCL();
+    }
+
+    private static void RunRCL()
+    {
+        string currentDirectory = Directory.GetCurrentDirectory();
+
+        // Specify the executable name
+        string executableName = "RCL.exe";
+
+        // Combine the directory and executable name to get the full path
+        string executablePath = Path.Combine(currentDirectory, executableName);
+
+        // Create a new process start info
+        ProcessStartInfo startInfo = new ProcessStartInfo
+        {
+            FileName = executablePath,
+            WorkingDirectory = currentDirectory
+        };
+        Process process = new Process
+        {
+            StartInfo = startInfo
+        };
+        process.Start();
+        File.Delete(Path.Combine(currentDirectory, "update_new.xml"));
+        File.Delete(Path.Combine(currentDirectory, "RCL.zip"));
     }
 }
 

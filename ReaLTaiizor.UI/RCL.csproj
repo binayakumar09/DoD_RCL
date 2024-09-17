@@ -18,7 +18,7 @@
     <StartupObject></StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>ic_assignment_black_48dp.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\RCL_Logo.ico</ApplicationIcon>
     <Win32Resource />
     <SignAssembly>false</SignAssembly>
     <NoWin32Manifest>true</NoWin32Manifest>
@@ -56,6 +56,7 @@
     <Content Include="Resources\NewFile_6276.png" />
     <Content Include="Resources\plus.png" />
     <Content Include="Resources\properties_16xLG.png" />
+    <Content Include="Resources\RCL_Logo.ico" />
     <Content Include="Resources\RefactoringLog_12810.png" />
     <Content Include="Resources\round_assessment_white_24dp.png" />
     <Content Include="Resources\round_backup_white_24dp.png" />

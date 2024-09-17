@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -46,7 +47,7 @@ namespace ReaLTaiizor.UI
         {
             InitializeComponent();
 
-            console.Visible = true;
+            console.Visible = false;
 
             CheckforUpdate();
 
@@ -76,7 +77,8 @@ namespace ReaLTaiizor.UI
             }
 
             string fileUrl = "file://eseefsn50.emea.nsn-net.net/rotta4internal/5G_3/Bangalore/RCL/update.xml";
-            string localPath = @"C:\Users\binpradh\Desktop\Executable\update_new.xml"; // Replace with your local file path
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string localPath = Path.Combine(currentDirectory, "update_new.xml");
             Uri fileUri = new Uri(fileUrl);
 
             // Create a FileWebRequest object
@@ -100,14 +102,15 @@ namespace ReaLTaiizor.UI
             DataLogger.logString += "\n";
 
             XmlDocument doc = new XmlDocument();
-            doc.Load(@"C:\Users\binpradh\Desktop\Executable\update_new.xml");
+            doc.Load(localPath);
             XmlNode node = doc.SelectSingleNode("//AppVersion");
             if (node != null)
             {
                 DataLogger.logString += ("Server AppVersion Value: " + node.InnerText);
                 DataLogger.logString += "\n";
                 RemoteVersion = node.InnerText;
-            } else
+            }
+            else
             {
                 DataLogger.logString += ("FAIL: AppVersion Value: ");
                 DataLogger.logString += "\n";
@@ -115,7 +118,8 @@ namespace ReaLTaiizor.UI
                 return;
             }
 
-            doc.Load(@"C:\Users\binpradh\Desktop\Executable\update.xml");
+            string localPath_old = Path.Combine(currentDirectory, "update.xml");
+            doc.Load(localPath_old);
             XmlNode node_local = doc.SelectSingleNode("//AppVersion");
             if (node_local != null)
             {
@@ -134,10 +138,10 @@ namespace ReaLTaiizor.UI
             {
                 DataLogger.logString += ("App Update is Needed");
                 DataLogger.logString += "\n";
-                MessageBox.Show("Tool Update is Mandatory", "New version Available", buttonsOk, MessageBoxIcon.Warning);
-                progressBar.Visible = true;
-                DownloadFile(progressBar);
+                MessageBox.Show("Tool Update is Mandatory. Update will take upto 2 minutes. Don't disconnect VPN", "New version Available", buttonsOk, MessageBoxIcon.Warning);
+                DownloadFile();
             }
+            File.Delete(Path.Combine(currentDirectory, "update_new.xml"));
             return;
         }
 
@@ -160,7 +164,7 @@ namespace ReaLTaiizor.UI
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Unable to Check for Update!!!", ex.Message, buttonsOk, MessageBoxIcon.Error);
+                MessageBox.Show("Unable to Check for Update!!! Make sure you are connected to VPN", ex.Message, buttonsOk, MessageBoxIcon.Error);
                 return false;
             }
         }
@@ -274,34 +278,52 @@ namespace ReaLTaiizor.UI
             efsReviewResult();
         }
 
-        public async void DownloadFile(ProgressBar progressBar)
+        public void DownloadFile()
         {
             String fileUrl = "file://eseefsn50.emea.nsn-net.net/rotta4internal/5G_3/Bangalore/RCL/RCL.zip";
-            string destinationPath = @"C:\Users\binpradh\Desktop\Executable\RCL.zip";
+            string destinationPath = Path.Combine(Directory.GetCurrentDirectory(), "RCL.zip");
             FileWebRequest request = (FileWebRequest)WebRequest.Create(fileUrl);
-            using (WebResponse response = await request.GetResponseAsync())
-            using (Stream responseStream = response.GetResponseStream())
-            using (FileStream fileStream = new FileStream(destinationPath, FileMode.Create))
+            Uri fileUri = new Uri(fileUrl);
+
+            using (FileWebResponse response = (FileWebResponse)request.GetResponse())
             {
-                byte[] buffer = new byte[4096];
-                int bytesRead;
-                long totalBytesRead = 0;
-                long totalBytes = response.ContentLength;
-
-                progressBar.Maximum = 100;
-                progressBar.Value = 0;
-
-                while ((bytesRead = await responseStream.ReadAsync(buffer, 0, buffer.Length)) > 0)
+                // Get the response stream
+                using (Stream responseStream = response.GetResponseStream())
                 {
-                    await fileStream.WriteAsync(buffer, 0, bytesRead);
-                    totalBytesRead += bytesRead;
-                    progressBar.Value = (int)((totalBytesRead * 100) / totalBytes);
-                    if (progressBar.Value == 100)
+                    // Create a file stream to save the file
+                    using (FileStream fileStream = new FileStream(destinationPath, FileMode.Create, FileAccess.Write))
                     {
-                        MessageBox.Show("File Downloaded Successfully", "SUCCESS", buttonsOk, MessageBoxIcon.Exclamation);
+                        // Read the response stream and write to the file stream
+                        responseStream.CopyTo(fileStream);
                     }
                 }
             }
+
+            RunUpdater();
+            Environment.Exit(0);
+        }
+
+        private void RunUpdater()
+        {
+            string currentDirectory = Directory.GetCurrentDirectory();
+
+            // Specify the executable name
+            string executableName = "Updater.exe";
+
+            // Combine the directory and executable name to get the full path
+            string executablePath = Path.Combine(currentDirectory, executableName);
+
+            // Create a new process start info
+            ProcessStartInfo startInfo = new ProcessStartInfo
+            {
+                FileName = executablePath,
+                WorkingDirectory = currentDirectory
+            };
+            Process process = new Process
+            {
+                StartInfo = startInfo
+            };
+            process.Start();
         }
 
         public void cdrReviewResult()
@@ -679,6 +701,11 @@ namespace ReaLTaiizor.UI
         }
 
         private void cdrlbl11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel50_Click(object sender, EventArgs e)
         {
 
         }

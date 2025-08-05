@@ -2,7 +2,7 @@
   <PropertyGroup>
     <!--<TargetFramework>net48</TargetFramework>-->
 	  <!--TargetFrameworks>net461;net462;net6.0-windows</TargetFrameworks-->
-	  <TargetFrameworks>netcoreapp3.1-windows;net6.0-windows</TargetFrameworks>
+	  <TargetFrameworks>;net6.0-windows</TargetFrameworks>
 	  <!--TargetFrameworks>net472;netcoreapp3.1-windows</TargetFrameworks-->
 	  <EnablePreviewFeatures>True</EnablePreviewFeatures>
 	  <GenerateRequiresPreviewFeaturesAttribute>False</GenerateRequiresPreviewFeaturesAttribute>

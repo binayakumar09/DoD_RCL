@@ -32,17 +32,17 @@ namespace ReaLTaiizor.UI
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRcl));
-            materialTabControl1 = new Controls.MaterialTabControl();
+            materialTabControl1 = new ReaLTaiizor.Controls.MaterialTabControl();
             efsTab = new TabPage();
             console = new TextBox();
             efslink = new LinkLabel();
-            materialLabel2 = new Controls.MaterialLabel();
-            efsBtnReset = new Controls.MaterialButton();
-            materialCard2 = new Controls.MaterialCard();
+            materialLabel2 = new ReaLTaiizor.Controls.MaterialLabel();
+            efsBtnReset = new ReaLTaiizor.Controls.MaterialButton();
+            materialCard2 = new ReaLTaiizor.Controls.MaterialCard();
             tableLayoutPanelHeader = new TableLayoutPanel();
-            efslblhdr1 = new Controls.MaterialLabel();
-            efslblhdr3 = new Controls.MaterialLabel();
-            efslblhdr2 = new Controls.MaterialLabel();
+            efslblhdr1 = new ReaLTaiizor.Controls.MaterialLabel();
+            efslblhdr3 = new ReaLTaiizor.Controls.MaterialLabel();
+            efslblhdr2 = new ReaLTaiizor.Controls.MaterialLabel();
             tableLayoutPanelBody = new TableLayoutPanel();
             efstxt9 = new TextBox();
             efstxt8 = new TextBox();
@@ -72,22 +72,22 @@ namespace ReaLTaiizor.UI
             efsComboBox6 = new ComboBox();
             efsComboBox9 = new ComboBox();
             pictureBox2 = new PictureBox();
-            materialLabel50 = new Controls.MaterialLabel();
-            materialLabel48 = new Controls.MaterialLabel();
-            materialLabel49 = new Controls.MaterialLabel();
-            efsBtnSubmit = new Controls.MaterialButton();
-            efsBtnCancel = new Controls.MaterialButton();
-            efstxtReviewers = new Controls.MaterialTextBox();
-            materialLabel46 = new Controls.MaterialLabel();
+            materialLabel50 = new ReaLTaiizor.Controls.MaterialLabel();
+            materialLabel48 = new ReaLTaiizor.Controls.MaterialLabel();
+            materialLabel49 = new ReaLTaiizor.Controls.MaterialLabel();
+            efsBtnSubmit = new ReaLTaiizor.Controls.MaterialButton();
+            efsBtnCancel = new ReaLTaiizor.Controls.MaterialButton();
+            efstxtReviewers = new ReaLTaiizor.Controls.MaterialTextBox();
+            materialLabel46 = new ReaLTaiizor.Controls.MaterialLabel();
             codeReviewTab = new TabPage();
             cdrLink = new LinkLabel();
-            materialLabel1 = new Controls.MaterialLabel();
-            cdrBtnReset = new Controls.MaterialButton();
-            materialCard1 = new Controls.MaterialCard();
+            materialLabel1 = new ReaLTaiizor.Controls.MaterialLabel();
+            cdrBtnReset = new ReaLTaiizor.Controls.MaterialButton();
+            materialCard1 = new ReaLTaiizor.Controls.MaterialCard();
             tableLayoutPanel7 = new TableLayoutPanel();
-            cdrlblhdr1 = new Controls.MaterialLabel();
-            cdrlblhdr3 = new Controls.MaterialLabel();
-            cdrlblhdr2 = new Controls.MaterialLabel();
+            cdrlblhdr1 = new ReaLTaiizor.Controls.MaterialLabel();
+            cdrlblhdr3 = new ReaLTaiizor.Controls.MaterialLabel();
+            cdrlblhdr2 = new ReaLTaiizor.Controls.MaterialLabel();
             tableLayoutPanel8 = new TableLayoutPanel();
             cdrtxt11 = new TextBox();
             cdrtxt10 = new TextBox();
@@ -123,22 +123,22 @@ namespace ReaLTaiizor.UI
             cdrComboBox10 = new ComboBox();
             cdrComboBox11 = new ComboBox();
             pictureBox3 = new PictureBox();
-            materialLabel44 = new Controls.MaterialLabel();
-            materialLabel45 = new Controls.MaterialLabel();
-            materialLabel56 = new Controls.MaterialLabel();
-            cdrBtnSubmit = new Controls.MaterialButton();
-            cdrBtnCancel = new Controls.MaterialButton();
-            materialLabel58 = new Controls.MaterialLabel();
+            materialLabel44 = new ReaLTaiizor.Controls.MaterialLabel();
+            materialLabel45 = new ReaLTaiizor.Controls.MaterialLabel();
+            materialLabel56 = new ReaLTaiizor.Controls.MaterialLabel();
+            cdrBtnSubmit = new ReaLTaiizor.Controls.MaterialButton();
+            cdrBtnCancel = new ReaLTaiizor.Controls.MaterialButton();
+            materialLabel58 = new ReaLTaiizor.Controls.MaterialLabel();
             menuIconList = new ImageList(components);
-            materialButton26 = new Controls.MaterialButton();
-            materialContextMenuStrip1 = new Controls.MaterialContextMenuStrip();
-            item1ToolStripMenuItem = new Controls.MaterialToolStripMenuItem();
-            subItem1ToolStripMenuItem = new Controls.MaterialToolStripMenuItem();
-            subItem2ToolStripMenuItem = new Controls.MaterialToolStripMenuItem();
+            materialButton26 = new ReaLTaiizor.Controls.MaterialButton();
+            materialContextMenuStrip1 = new ReaLTaiizor.Controls.MaterialContextMenuStrip();
+            item1ToolStripMenuItem = new ReaLTaiizor.Controls.MaterialToolStripMenuItem();
+            subItem1ToolStripMenuItem = new ReaLTaiizor.Controls.MaterialToolStripMenuItem();
+            subItem2ToolStripMenuItem = new ReaLTaiizor.Controls.MaterialToolStripMenuItem();
             disabledItemToolStripMenuItem = new ToolStripMenuItem();
-            item2ToolStripMenuItem = new Controls.MaterialToolStripMenuItem();
+            item2ToolStripMenuItem = new ReaLTaiizor.Controls.MaterialToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
-            item3ToolStripMenuItem = new Controls.MaterialToolStripMenuItem();
+            item3ToolStripMenuItem = new ReaLTaiizor.Controls.MaterialToolStripMenuItem();
             contextMenuStrip1 = new ContextMenuStrip(components);
             materialTabControl1.SuspendLayout();
             efsTab.SuspendLayout();
@@ -161,12 +161,12 @@ namespace ReaLTaiizor.UI
             materialTabControl1.Depth = 0;
             materialTabControl1.Dock = DockStyle.Fill;
             materialTabControl1.ImageList = menuIconList;
-            materialTabControl1.Location = new System.Drawing.Point(3, 64);
+            materialTabControl1.Location = new System.Drawing.Point(3, 3);
             materialTabControl1.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialTabControl1.Multiline = true;
             materialTabControl1.Name = "materialTabControl1";
             materialTabControl1.SelectedIndex = 0;
-            materialTabControl1.Size = new System.Drawing.Size(1268, 804);
+            materialTabControl1.Size = new System.Drawing.Size(1268, 865);
             materialTabControl1.TabIndex = 18;
             // 
             // efsTab
@@ -190,7 +190,7 @@ namespace ReaLTaiizor.UI
             efsTab.Margin = new Padding(2);
             efsTab.Name = "efsTab";
             efsTab.Padding = new Padding(2);
-            efsTab.Size = new System.Drawing.Size(1260, 769);
+            efsTab.Size = new System.Drawing.Size(1260, 830);
             efsTab.TabIndex = 7;
             efsTab.Text = "EFS Review";
             // 
@@ -220,8 +220,7 @@ namespace ReaLTaiizor.UI
             // 
             materialLabel2.AutoSize = true;
             materialLabel2.Depth = 0;
-            materialLabel2.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            materialLabel2.FontType = Util.MaterialManager.FontType.Subtitle1;
+            materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             materialLabel2.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             materialLabel2.HighEmphasis = true;
             materialLabel2.Location = new System.Drawing.Point(47, 734);
@@ -295,8 +294,7 @@ namespace ReaLTaiizor.UI
             efslblhdr1.Anchor = AnchorStyles.None;
             efslblhdr1.AutoSize = true;
             efslblhdr1.Depth = 0;
-            efslblhdr1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            efslblhdr1.FontType = Util.MaterialManager.FontType.Subtitle1;
+            efslblhdr1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             efslblhdr1.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             efslblhdr1.HighEmphasis = true;
             efslblhdr1.Location = new System.Drawing.Point(178, 7);
@@ -311,8 +309,7 @@ namespace ReaLTaiizor.UI
             efslblhdr3.Anchor = AnchorStyles.None;
             efslblhdr3.AutoSize = true;
             efslblhdr3.Depth = 0;
-            efslblhdr3.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            efslblhdr3.FontType = Util.MaterialManager.FontType.Subtitle1;
+            efslblhdr3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             efslblhdr3.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             efslblhdr3.HighEmphasis = true;
             efslblhdr3.Location = new System.Drawing.Point(853, 7);
@@ -327,8 +324,7 @@ namespace ReaLTaiizor.UI
             efslblhdr2.Anchor = AnchorStyles.None;
             efslblhdr2.AutoSize = true;
             efslblhdr2.Depth = 0;
-            efslblhdr2.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            efslblhdr2.FontType = Util.MaterialManager.FontType.Subtitle1;
+            efslblhdr2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             efslblhdr2.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             efslblhdr2.HighEmphasis = true;
             efslblhdr2.Location = new System.Drawing.Point(515, 7);
@@ -689,8 +685,7 @@ namespace ReaLTaiizor.UI
             // 
             materialLabel50.AutoSize = true;
             materialLabel50.Depth = 0;
-            materialLabel50.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            materialLabel50.FontType = Util.MaterialManager.FontType.Subtitle1;
+            materialLabel50.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             materialLabel50.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             materialLabel50.HighEmphasis = true;
             materialLabel50.Location = new System.Drawing.Point(48, 691);
@@ -705,8 +700,7 @@ namespace ReaLTaiizor.UI
             // 
             materialLabel48.AutoSize = true;
             materialLabel48.Depth = 0;
-            materialLabel48.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            materialLabel48.FontType = Util.MaterialManager.FontType.Subtitle1;
+            materialLabel48.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             materialLabel48.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             materialLabel48.HighEmphasis = true;
             materialLabel48.Location = new System.Drawing.Point(47, 712);
@@ -721,8 +715,7 @@ namespace ReaLTaiizor.UI
             // 
             materialLabel49.AutoSize = true;
             materialLabel49.Depth = 0;
-            materialLabel49.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            materialLabel49.FontType = Util.MaterialManager.FontType.Subtitle1;
+            materialLabel49.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             materialLabel49.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             materialLabel49.HighEmphasis = true;
             materialLabel49.Location = new System.Drawing.Point(50, 668);
@@ -795,8 +788,7 @@ namespace ReaLTaiizor.UI
             // materialLabel46
             // 
             materialLabel46.Depth = 0;
-            materialLabel46.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            materialLabel46.FontType = Util.MaterialManager.FontType.H4;
+            materialLabel46.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             materialLabel46.Location = new System.Drawing.Point(454, 23);
             materialLabel46.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialLabel46.Name = "materialLabel46";
@@ -841,8 +833,7 @@ namespace ReaLTaiizor.UI
             // 
             materialLabel1.AutoSize = true;
             materialLabel1.Depth = 0;
-            materialLabel1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            materialLabel1.FontType = Util.MaterialManager.FontType.Subtitle1;
+            materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             materialLabel1.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             materialLabel1.HighEmphasis = true;
             materialLabel1.Location = new System.Drawing.Point(50, 699);
@@ -916,8 +907,7 @@ namespace ReaLTaiizor.UI
             cdrlblhdr1.Anchor = AnchorStyles.None;
             cdrlblhdr1.AutoSize = true;
             cdrlblhdr1.Depth = 0;
-            cdrlblhdr1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            cdrlblhdr1.FontType = Util.MaterialManager.FontType.Subtitle1;
+            cdrlblhdr1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             cdrlblhdr1.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             cdrlblhdr1.HighEmphasis = true;
             cdrlblhdr1.Location = new System.Drawing.Point(180, 7);
@@ -932,8 +922,7 @@ namespace ReaLTaiizor.UI
             cdrlblhdr3.Anchor = AnchorStyles.None;
             cdrlblhdr3.AutoSize = true;
             cdrlblhdr3.Depth = 0;
-            cdrlblhdr3.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            cdrlblhdr3.FontType = Util.MaterialManager.FontType.Subtitle1;
+            cdrlblhdr3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             cdrlblhdr3.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             cdrlblhdr3.HighEmphasis = true;
             cdrlblhdr3.Location = new System.Drawing.Point(859, 7);
@@ -948,8 +937,7 @@ namespace ReaLTaiizor.UI
             cdrlblhdr2.Anchor = AnchorStyles.None;
             cdrlblhdr2.AutoSize = true;
             cdrlblhdr2.Depth = 0;
-            cdrlblhdr2.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            cdrlblhdr2.FontType = Util.MaterialManager.FontType.Subtitle1;
+            cdrlblhdr2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             cdrlblhdr2.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             cdrlblhdr2.HighEmphasis = true;
             cdrlblhdr2.Location = new System.Drawing.Point(521, 7);
@@ -1396,8 +1384,7 @@ namespace ReaLTaiizor.UI
             // 
             materialLabel44.AutoSize = true;
             materialLabel44.Depth = 0;
-            materialLabel44.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            materialLabel44.FontType = Util.MaterialManager.FontType.Subtitle1;
+            materialLabel44.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             materialLabel44.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             materialLabel44.HighEmphasis = true;
             materialLabel44.Location = new System.Drawing.Point(50, 661);
@@ -1412,8 +1399,7 @@ namespace ReaLTaiizor.UI
             // 
             materialLabel45.AutoSize = true;
             materialLabel45.Depth = 0;
-            materialLabel45.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            materialLabel45.FontType = Util.MaterialManager.FontType.Subtitle1;
+            materialLabel45.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             materialLabel45.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             materialLabel45.HighEmphasis = true;
             materialLabel45.Location = new System.Drawing.Point(49, 680);
@@ -1428,8 +1414,7 @@ namespace ReaLTaiizor.UI
             // 
             materialLabel56.AutoSize = true;
             materialLabel56.Depth = 0;
-            materialLabel56.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            materialLabel56.FontType = Util.MaterialManager.FontType.Subtitle1;
+            materialLabel56.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             materialLabel56.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             materialLabel56.HighEmphasis = true;
             materialLabel56.Location = new System.Drawing.Point(52, 637);
@@ -1485,8 +1470,7 @@ namespace ReaLTaiizor.UI
             // materialLabel58
             // 
             materialLabel58.Depth = 0;
-            materialLabel58.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            materialLabel58.FontType = Util.MaterialManager.FontType.H4;
+            materialLabel58.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             materialLabel58.Location = new System.Drawing.Point(467, 25);
             materialLabel58.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialLabel58.Name = "materialLabel58";
@@ -1613,7 +1597,6 @@ namespace ReaLTaiizor.UI
             Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             MinimumSize = new System.Drawing.Size(300, 300);
             Name = "frmRcl";
-            Padding = new Padding(3, 64, 3, 3);
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Airphone DOD Review Check List";
             materialTabControl1.ResumeLayout(false);

@@ -132,32 +132,37 @@ namespace ReaLTaiizor.UI
             systemSpecTab = new TabPage();
             systemSpecInnerTabControl = new TabControl();
             cp1Tab = new TabPage();
+            specBtnReset = new ReaLTaiizor.Controls.MaterialButton();
+            materialButton3 = new ReaLTaiizor.Controls.MaterialButton();
+            materialButton2 = new ReaLTaiizor.Controls.MaterialButton();
+            pictureBox1 = new PictureBox();
+            materialLabel6 = new ReaLTaiizor.Controls.MaterialLabel();
             tableLayoutPanel2 = new TableLayoutPanel();
             materialLabel3 = new ReaLTaiizor.Controls.MaterialLabel();
             materialLabel4 = new ReaLTaiizor.Controls.MaterialLabel();
             materialLabel5 = new ReaLTaiizor.Controls.MaterialLabel();
             tableLayoutPanel1 = new TableLayoutPanel();
-            textBox3 = new TextBox();
-            label1 = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            comboBox3 = new ComboBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            textBox9 = new TextBox();
-            comboBox4 = new ComboBox();
-            comboBox5 = new ComboBox();
-            comboBox7 = new ComboBox();
-            comboBox8 = new ComboBox();
+            spectxt7 = new TextBox();
+            speclbl7 = new Label();
+            specComboBox5 = new ComboBox();
+            specComboBox4 = new ComboBox();
+            specComboBox3 = new ComboBox();
+            spectxt6 = new TextBox();
+            spectxt5 = new TextBox();
+            spectxt4 = new TextBox();
+            spectxt3 = new TextBox();
+            spectxt2 = new TextBox();
+            speclbl6 = new Label();
+            speclbl2 = new Label();
+            speclbl3 = new Label();
+            speclbl4 = new Label();
+            speclbl5 = new Label();
+            speclbl1 = new Label();
+            spectxt1 = new TextBox();
+            specComboBox1 = new ComboBox();
+            specComboBox2 = new ComboBox();
+            specComboBox7 = new ComboBox();
+            specComboBox6 = new ComboBox();
             cp2Tab = new TabPage();
             menuIconList = new ImageList(components);
             innerTabControl = new TabControl();
@@ -189,6 +194,7 @@ namespace ReaLTaiizor.UI
             systemSpecTab.SuspendLayout();
             systemSpecInnerTabControl.SuspendLayout();
             cp1Tab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             innerTabControl.SuspendLayout();
@@ -1525,6 +1531,7 @@ namespace ReaLTaiizor.UI
             // 
             systemSpecTab.BackColor = System.Drawing.Color.White;
             systemSpecTab.Controls.Add(systemSpecInnerTabControl);
+            systemSpecTab.ImageKey = "round_report_problem_white_24dp.png";
             systemSpecTab.Location = new System.Drawing.Point(4, 31);
             systemSpecTab.Name = "systemSpecTab";
             systemSpecTab.Padding = new Padding(3);
@@ -1546,6 +1553,12 @@ namespace ReaLTaiizor.UI
             // 
             // cp1Tab
             // 
+            cp1Tab.BackColor = System.Drawing.Color.White;
+            cp1Tab.Controls.Add(specBtnReset);
+            cp1Tab.Controls.Add(materialButton3);
+            cp1Tab.Controls.Add(materialButton2);
+            cp1Tab.Controls.Add(pictureBox1);
+            cp1Tab.Controls.Add(materialLabel6);
             cp1Tab.Controls.Add(tableLayoutPanel2);
             cp1Tab.Controls.Add(tableLayoutPanel1);
             cp1Tab.Location = new System.Drawing.Point(4, 24);
@@ -1553,6 +1566,91 @@ namespace ReaLTaiizor.UI
             cp1Tab.Size = new System.Drawing.Size(1246, 796);
             cp1Tab.TabIndex = 0;
             cp1Tab.Text = "CP1";
+            // 
+            // specBtnReset
+            // 
+            specBtnReset.AutoSize = false;
+            specBtnReset.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            specBtnReset.Depth = 0;
+            specBtnReset.DrawShadows = true;
+            specBtnReset.HighEmphasis = false;
+            specBtnReset.Icon = RCL.Properties.Resources.ic_restore_page_black_36dp;
+            specBtnReset.Location = new System.Drawing.Point(333, 490);
+            specBtnReset.Margin = new Padding(4, 6, 4, 6);
+            specBtnReset.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            specBtnReset.Name = "specBtnReset";
+            specBtnReset.Size = new System.Drawing.Size(130, 36);
+            specBtnReset.TabIndex = 77;
+            specBtnReset.Text = "Reset";
+            specBtnReset.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
+            specBtnReset.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            specBtnReset.UseAccentColor = false;
+            specBtnReset.UseVisualStyleBackColor = true;
+            specBtnReset.Click += specBtnReset_Click;
+            // 
+            // materialButton3
+            // 
+            materialButton3.AutoSize = false;
+            materialButton3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton3.Depth = 0;
+            materialButton3.DrawShadows = true;
+            materialButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            materialButton3.HighEmphasis = true;
+            materialButton3.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
+            materialButton3.Location = new System.Drawing.Point(686, 490);
+            materialButton3.Margin = new Padding(4, 6, 4, 6);
+            materialButton3.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialButton3.Name = "materialButton3";
+            materialButton3.Size = new System.Drawing.Size(138, 36);
+            materialButton3.TabIndex = 76;
+            materialButton3.Text = "Submit";
+            materialButton3.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
+            materialButton3.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton3.UseAccentColor = false;
+            materialButton3.UseVisualStyleBackColor = true;
+            // 
+            // materialButton2
+            // 
+            materialButton2.AutoSize = false;
+            materialButton2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton2.Depth = 0;
+            materialButton2.DrawShadows = true;
+            materialButton2.HighEmphasis = true;
+            materialButton2.Icon = RCL.Properties.Resources.Close_16xLG;
+            materialButton2.Location = new System.Drawing.Point(509, 491);
+            materialButton2.Margin = new Padding(4, 6, 4, 6);
+            materialButton2.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialButton2.Name = "materialButton2";
+            materialButton2.Size = new System.Drawing.Size(130, 36);
+            materialButton2.TabIndex = 75;
+            materialButton2.Text = "Cancel";
+            materialButton2.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
+            materialButton2.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton2.UseAccentColor = true;
+            materialButton2.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (System.Drawing.Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.InitialImage = (System.Drawing.Image)resources.GetObject("pictureBox1.InitialImage");
+            pictureBox1.Location = new System.Drawing.Point(422, 27);
+            pictureBox1.Margin = new Padding(0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new System.Drawing.Size(54, 50);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 73;
+            pictureBox1.TabStop = false;
+            // 
+            // materialLabel6
+            // 
+            materialLabel6.Depth = 0;
+            materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            materialLabel6.Location = new System.Drawing.Point(479, 43);
+            materialLabel6.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialLabel6.Name = "materialLabel6";
+            materialLabel6.Size = new System.Drawing.Size(261, 44);
+            materialLabel6.TabIndex = 72;
+            materialLabel6.Text = "CFAM CP1 Checkpoint";
             // 
             // tableLayoutPanel2
             // 
@@ -1567,7 +1665,7 @@ namespace ReaLTaiizor.UI
             tableLayoutPanel2.Controls.Add(materialLabel4, 2, 0);
             tableLayoutPanel2.Controls.Add(materialLabel5, 1, 0);
             tableLayoutPanel2.ForeColor = System.Drawing.Color.White;
-            tableLayoutPanel2.Location = new System.Drawing.Point(14, 91);
+            tableLayoutPanel2.Location = new System.Drawing.Point(14, 112);
             tableLayoutPanel2.Margin = new Padding(2);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
@@ -1628,28 +1726,28 @@ namespace ReaLTaiizor.UI
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 156F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 547F));
-            tableLayoutPanel1.Controls.Add(textBox3, 2, 6);
-            tableLayoutPanel1.Controls.Add(label1, 0, 6);
-            tableLayoutPanel1.Controls.Add(comboBox1, 1, 4);
-            tableLayoutPanel1.Controls.Add(comboBox2, 1, 3);
-            tableLayoutPanel1.Controls.Add(comboBox3, 1, 2);
-            tableLayoutPanel1.Controls.Add(textBox4, 2, 5);
-            tableLayoutPanel1.Controls.Add(textBox5, 2, 4);
-            tableLayoutPanel1.Controls.Add(textBox6, 2, 3);
-            tableLayoutPanel1.Controls.Add(textBox7, 2, 2);
-            tableLayoutPanel1.Controls.Add(textBox8, 2, 1);
-            tableLayoutPanel1.Controls.Add(label2, 0, 5);
-            tableLayoutPanel1.Controls.Add(label3, 0, 1);
-            tableLayoutPanel1.Controls.Add(label4, 0, 2);
-            tableLayoutPanel1.Controls.Add(label5, 0, 3);
-            tableLayoutPanel1.Controls.Add(label6, 0, 4);
-            tableLayoutPanel1.Controls.Add(label7, 0, 0);
-            tableLayoutPanel1.Controls.Add(textBox9, 2, 0);
-            tableLayoutPanel1.Controls.Add(comboBox4, 1, 0);
-            tableLayoutPanel1.Controls.Add(comboBox5, 1, 1);
-            tableLayoutPanel1.Controls.Add(comboBox7, 1, 6);
-            tableLayoutPanel1.Controls.Add(comboBox8, 1, 5);
-            tableLayoutPanel1.Location = new System.Drawing.Point(14, 126);
+            tableLayoutPanel1.Controls.Add(spectxt7, 2, 6);
+            tableLayoutPanel1.Controls.Add(speclbl7, 0, 6);
+            tableLayoutPanel1.Controls.Add(specComboBox5, 1, 4);
+            tableLayoutPanel1.Controls.Add(specComboBox4, 1, 3);
+            tableLayoutPanel1.Controls.Add(specComboBox3, 1, 2);
+            tableLayoutPanel1.Controls.Add(spectxt6, 2, 5);
+            tableLayoutPanel1.Controls.Add(spectxt5, 2, 4);
+            tableLayoutPanel1.Controls.Add(spectxt4, 2, 3);
+            tableLayoutPanel1.Controls.Add(spectxt3, 2, 2);
+            tableLayoutPanel1.Controls.Add(spectxt2, 2, 1);
+            tableLayoutPanel1.Controls.Add(speclbl6, 0, 5);
+            tableLayoutPanel1.Controls.Add(speclbl2, 0, 1);
+            tableLayoutPanel1.Controls.Add(speclbl3, 0, 2);
+            tableLayoutPanel1.Controls.Add(speclbl4, 0, 3);
+            tableLayoutPanel1.Controls.Add(speclbl5, 0, 4);
+            tableLayoutPanel1.Controls.Add(speclbl1, 0, 0);
+            tableLayoutPanel1.Controls.Add(spectxt1, 2, 0);
+            tableLayoutPanel1.Controls.Add(specComboBox1, 1, 0);
+            tableLayoutPanel1.Controls.Add(specComboBox2, 1, 1);
+            tableLayoutPanel1.Controls.Add(specComboBox7, 1, 6);
+            tableLayoutPanel1.Controls.Add(specComboBox6, 1, 5);
+            tableLayoutPanel1.Location = new System.Drawing.Point(14, 147);
             tableLayoutPanel1.Margin = new Padding(0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 7;
@@ -1664,226 +1762,226 @@ namespace ReaLTaiizor.UI
             tableLayoutPanel1.Size = new System.Drawing.Size(1168, 295);
             tableLayoutPanel1.TabIndex = 70;
             // 
-            // textBox3
+            // spectxt7
             // 
-            textBox3.Location = new System.Drawing.Point(622, 257);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.ScrollBars = ScrollBars.Vertical;
-            textBox3.Size = new System.Drawing.Size(541, 23);
-            textBox3.TabIndex = 48;
+            spectxt7.Location = new System.Drawing.Point(622, 257);
+            spectxt7.Multiline = true;
+            spectxt7.Name = "spectxt7";
+            spectxt7.ScrollBars = ScrollBars.Vertical;
+            spectxt7.Size = new System.Drawing.Size(541, 23);
+            spectxt7.TabIndex = 48;
             // 
-            // label1
+            // speclbl7
             // 
-            label1.Anchor = AnchorStyles.Left;
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            label1.Location = new System.Drawing.Point(9, 266);
-            label1.Margin = new Padding(7, 0, 2, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(322, 16);
-            label1.TabIndex = 42;
-            label1.Text = "Highlight any other Component area dependency (L1/OAM)";
+            speclbl7.Anchor = AnchorStyles.Left;
+            speclbl7.AutoSize = true;
+            speclbl7.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            speclbl7.Location = new System.Drawing.Point(9, 266);
+            speclbl7.Margin = new Padding(7, 0, 2, 0);
+            speclbl7.Name = "speclbl7";
+            speclbl7.Size = new System.Drawing.Size(322, 16);
+            speclbl7.TabIndex = 42;
+            speclbl7.Text = "Highlight any other Component area dependency (L1/OAM)";
             // 
-            // comboBox1
+            // specComboBox5
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            comboBox1.Location = new System.Drawing.Point(464, 173);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new System.Drawing.Size(147, 23);
-            comboBox1.TabIndex = 40;
-            comboBox1.Text = "Select";
+            specComboBox5.FormattingEnabled = true;
+            specComboBox5.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            specComboBox5.Location = new System.Drawing.Point(464, 173);
+            specComboBox5.Name = "specComboBox5";
+            specComboBox5.Size = new System.Drawing.Size(147, 23);
+            specComboBox5.TabIndex = 40;
+            specComboBox5.Text = "Select";
             // 
-            // comboBox2
+            // specComboBox4
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            comboBox2.Location = new System.Drawing.Point(464, 131);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new System.Drawing.Size(147, 23);
-            comboBox2.TabIndex = 39;
-            comboBox2.Text = "Select";
+            specComboBox4.FormattingEnabled = true;
+            specComboBox4.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            specComboBox4.Location = new System.Drawing.Point(464, 131);
+            specComboBox4.Name = "specComboBox4";
+            specComboBox4.Size = new System.Drawing.Size(147, 23);
+            specComboBox4.TabIndex = 39;
+            specComboBox4.Text = "Select";
             // 
-            // comboBox3
+            // specComboBox3
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            comboBox3.Location = new System.Drawing.Point(464, 89);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new System.Drawing.Size(147, 23);
-            comboBox3.TabIndex = 38;
-            comboBox3.Text = "Select";
+            specComboBox3.FormattingEnabled = true;
+            specComboBox3.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            specComboBox3.Location = new System.Drawing.Point(464, 89);
+            specComboBox3.Name = "specComboBox3";
+            specComboBox3.Size = new System.Drawing.Size(147, 23);
+            specComboBox3.TabIndex = 38;
+            specComboBox3.Text = "Select";
             // 
-            // textBox4
+            // spectxt6
             // 
-            textBox4.Location = new System.Drawing.Point(622, 215);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "Enter the Schedule, e.g. Wk Number or Date";
-            textBox4.ScrollBars = ScrollBars.Vertical;
-            textBox4.Size = new System.Drawing.Size(541, 23);
-            textBox4.TabIndex = 35;
+            spectxt6.Location = new System.Drawing.Point(622, 215);
+            spectxt6.Multiline = true;
+            spectxt6.Name = "spectxt6";
+            spectxt6.PlaceholderText = "Enter the Schedule, e.g. Wk Number or Date";
+            spectxt6.ScrollBars = ScrollBars.Vertical;
+            spectxt6.Size = new System.Drawing.Size(541, 23);
+            spectxt6.TabIndex = 35;
             // 
-            // textBox5
+            // spectxt5
             // 
-            textBox5.Location = new System.Drawing.Point(622, 173);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.ScrollBars = ScrollBars.Vertical;
-            textBox5.Size = new System.Drawing.Size(541, 23);
-            textBox5.TabIndex = 34;
+            spectxt5.Location = new System.Drawing.Point(622, 173);
+            spectxt5.Multiline = true;
+            spectxt5.Name = "spectxt5";
+            spectxt5.ScrollBars = ScrollBars.Vertical;
+            spectxt5.Size = new System.Drawing.Size(541, 23);
+            spectxt5.TabIndex = 34;
             // 
-            // textBox6
+            // spectxt4
             // 
-            textBox6.Location = new System.Drawing.Point(622, 131);
-            textBox6.Multiline = true;
-            textBox6.Name = "textBox6";
-            textBox6.ScrollBars = ScrollBars.Vertical;
-            textBox6.Size = new System.Drawing.Size(541, 23);
-            textBox6.TabIndex = 33;
+            spectxt4.Location = new System.Drawing.Point(622, 131);
+            spectxt4.Multiline = true;
+            spectxt4.Name = "spectxt4";
+            spectxt4.ScrollBars = ScrollBars.Vertical;
+            spectxt4.Size = new System.Drawing.Size(541, 23);
+            spectxt4.TabIndex = 33;
             // 
-            // textBox7
+            // spectxt3
             // 
-            textBox7.Location = new System.Drawing.Point(622, 89);
-            textBox7.Multiline = true;
-            textBox7.Name = "textBox7";
-            textBox7.ScrollBars = ScrollBars.Vertical;
-            textBox7.Size = new System.Drawing.Size(541, 23);
-            textBox7.TabIndex = 32;
+            spectxt3.Location = new System.Drawing.Point(622, 89);
+            spectxt3.Multiline = true;
+            spectxt3.Name = "spectxt3";
+            spectxt3.ScrollBars = ScrollBars.Vertical;
+            spectxt3.Size = new System.Drawing.Size(541, 23);
+            spectxt3.TabIndex = 32;
             // 
-            // textBox8
+            // spectxt2
             // 
-            textBox8.Location = new System.Drawing.Point(622, 47);
-            textBox8.Multiline = true;
-            textBox8.Name = "textBox8";
-            textBox8.ScrollBars = ScrollBars.Vertical;
-            textBox8.Size = new System.Drawing.Size(541, 23);
-            textBox8.TabIndex = 31;
+            spectxt2.Location = new System.Drawing.Point(622, 47);
+            spectxt2.Multiline = true;
+            spectxt2.Name = "spectxt2";
+            spectxt2.ScrollBars = ScrollBars.Vertical;
+            spectxt2.Size = new System.Drawing.Size(541, 23);
+            spectxt2.TabIndex = 31;
             // 
-            // label2
+            // speclbl6
             // 
-            label2.Anchor = AnchorStyles.Left;
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            label2.Location = new System.Drawing.Point(9, 224);
-            label2.Margin = new Padding(7, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(376, 16);
-            label2.TabIndex = 23;
-            label2.Text = "Indicate whether Pre-Integration/BLR3 functional testing is needed .";
-            label2.Click += label2_Click;
+            speclbl6.Anchor = AnchorStyles.Left;
+            speclbl6.AutoSize = true;
+            speclbl6.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            speclbl6.Location = new System.Drawing.Point(9, 224);
+            speclbl6.Margin = new Padding(7, 0, 2, 0);
+            speclbl6.Name = "speclbl6";
+            speclbl6.Size = new System.Drawing.Size(376, 16);
+            speclbl6.TabIndex = 23;
+            speclbl6.Text = "Indicate whether Pre-Integration/BLR3 functional testing is needed .";
+            speclbl6.Click += label2_Click;
             // 
-            // label3
+            // speclbl2
             // 
-            label3.Anchor = AnchorStyles.Left;
-            label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            label3.Location = new System.Drawing.Point(9, 56);
-            label3.Margin = new Padding(7, 0, 2, 0);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(258, 16);
-            label3.TabIndex = 3;
-            label3.Text = "Needed Interface changes are captured [L1-L2]";
+            speclbl2.Anchor = AnchorStyles.Left;
+            speclbl2.AutoSize = true;
+            speclbl2.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            speclbl2.Location = new System.Drawing.Point(9, 56);
+            speclbl2.Margin = new Padding(7, 0, 2, 0);
+            speclbl2.Name = "speclbl2";
+            speclbl2.Size = new System.Drawing.Size(258, 16);
+            speclbl2.TabIndex = 3;
+            speclbl2.Text = "Needed Interface changes are captured [L1-L2]";
             // 
-            // label4
+            // speclbl3
             // 
-            label4.Anchor = AnchorStyles.Left;
-            label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            label4.Location = new System.Drawing.Point(9, 98);
-            label4.Margin = new Padding(7, 0, 2, 0);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(257, 16);
-            label4.TabIndex = 5;
-            label4.Text = "Needed Interface changes are captured [L1-L3]";
+            speclbl3.Anchor = AnchorStyles.Left;
+            speclbl3.AutoSize = true;
+            speclbl3.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            speclbl3.Location = new System.Drawing.Point(9, 98);
+            speclbl3.Margin = new Padding(7, 0, 2, 0);
+            speclbl3.Name = "speclbl3";
+            speclbl3.Size = new System.Drawing.Size(257, 16);
+            speclbl3.TabIndex = 5;
+            speclbl3.Text = "Needed Interface changes are captured [L1-L3]";
             // 
-            // label5
+            // speclbl4
             // 
-            label5.Anchor = AnchorStyles.Left;
-            label5.AutoSize = true;
-            label5.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            label5.Location = new System.Drawing.Point(9, 140);
-            label5.Margin = new Padding(7, 0, 2, 0);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(271, 16);
-            label5.TabIndex = 4;
-            label5.Text = "Needed Interface changes are captured [L3-OAM]";
+            speclbl4.Anchor = AnchorStyles.Left;
+            speclbl4.AutoSize = true;
+            speclbl4.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            speclbl4.Location = new System.Drawing.Point(9, 140);
+            speclbl4.Margin = new Padding(7, 0, 2, 0);
+            speclbl4.Name = "speclbl4";
+            speclbl4.Size = new System.Drawing.Size(271, 16);
+            speclbl4.TabIndex = 4;
+            speclbl4.Text = "Needed Interface changes are captured [L3-OAM]";
             // 
-            // label6
+            // speclbl5
             // 
-            label6.Anchor = AnchorStyles.Left;
-            label6.AutoSize = true;
-            label6.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            label6.Location = new System.Drawing.Point(9, 182);
-            label6.Margin = new Padding(7, 0, 2, 0);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(259, 16);
-            label6.TabIndex = 6;
-            label6.Text = "Needed Interface changes are captured [L2-L3]";
+            speclbl5.Anchor = AnchorStyles.Left;
+            speclbl5.AutoSize = true;
+            speclbl5.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            speclbl5.Location = new System.Drawing.Point(9, 182);
+            speclbl5.Margin = new Padding(7, 0, 2, 0);
+            speclbl5.Name = "speclbl5";
+            speclbl5.Size = new System.Drawing.Size(259, 16);
+            speclbl5.TabIndex = 6;
+            speclbl5.Text = "Needed Interface changes are captured [L2-L3]";
             // 
-            // label7
+            // speclbl1
             // 
-            label7.Anchor = AnchorStyles.Left;
-            label7.AutoSize = true;
-            label7.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            label7.Location = new System.Drawing.Point(9, 14);
-            label7.Margin = new Padding(7, 0, 2, 0);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(387, 16);
-            label7.TabIndex = 2;
-            label7.Text = "Technical Analysis updated in sharepoint post CP2 [EI wise effort split]";
-            label7.Click += label7_Click;
+            speclbl1.Anchor = AnchorStyles.Left;
+            speclbl1.AutoSize = true;
+            speclbl1.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            speclbl1.Location = new System.Drawing.Point(9, 14);
+            speclbl1.Margin = new Padding(7, 0, 2, 0);
+            speclbl1.Name = "speclbl1";
+            speclbl1.Size = new System.Drawing.Size(387, 16);
+            speclbl1.TabIndex = 2;
+            speclbl1.Text = "Technical Analysis updated in sharepoint post CP2 [EI wise effort split]";
+            speclbl1.Click += label7_Click;
             // 
-            // textBox9
+            // spectxt1
             // 
-            textBox9.Location = new System.Drawing.Point(622, 5);
-            textBox9.Multiline = true;
-            textBox9.Name = "textBox9";
-            textBox9.ScrollBars = ScrollBars.Vertical;
-            textBox9.Size = new System.Drawing.Size(541, 23);
-            textBox9.TabIndex = 25;
+            spectxt1.Location = new System.Drawing.Point(622, 5);
+            spectxt1.Multiline = true;
+            spectxt1.Name = "spectxt1";
+            spectxt1.ScrollBars = ScrollBars.Vertical;
+            spectxt1.Size = new System.Drawing.Size(541, 23);
+            spectxt1.TabIndex = 25;
             // 
-            // comboBox4
+            // specComboBox1
             // 
-            comboBox4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            comboBox4.Location = new System.Drawing.Point(464, 5);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new System.Drawing.Size(150, 23);
-            comboBox4.TabIndex = 36;
-            comboBox4.Text = "Select";
+            specComboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            specComboBox1.FormattingEnabled = true;
+            specComboBox1.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            specComboBox1.Location = new System.Drawing.Point(464, 5);
+            specComboBox1.Name = "specComboBox1";
+            specComboBox1.Size = new System.Drawing.Size(150, 23);
+            specComboBox1.TabIndex = 36;
+            specComboBox1.Text = "Select";
             // 
-            // comboBox5
+            // specComboBox2
             // 
-            comboBox5.FormattingEnabled = true;
-            comboBox5.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            comboBox5.Location = new System.Drawing.Point(464, 47);
-            comboBox5.Name = "comboBox5";
-            comboBox5.Size = new System.Drawing.Size(147, 23);
-            comboBox5.TabIndex = 37;
-            comboBox5.Text = "Select";
+            specComboBox2.FormattingEnabled = true;
+            specComboBox2.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            specComboBox2.Location = new System.Drawing.Point(464, 47);
+            specComboBox2.Name = "specComboBox2";
+            specComboBox2.Size = new System.Drawing.Size(147, 23);
+            specComboBox2.TabIndex = 37;
+            specComboBox2.Text = "Select";
             // 
-            // comboBox7
+            // specComboBox7
             // 
-            comboBox7.FormattingEnabled = true;
-            comboBox7.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            comboBox7.Location = new System.Drawing.Point(464, 257);
-            comboBox7.Name = "comboBox7";
-            comboBox7.Size = new System.Drawing.Size(147, 23);
-            comboBox7.TabIndex = 45;
-            comboBox7.Text = "Select";
+            specComboBox7.FormattingEnabled = true;
+            specComboBox7.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            specComboBox7.Location = new System.Drawing.Point(464, 257);
+            specComboBox7.Name = "specComboBox7";
+            specComboBox7.Size = new System.Drawing.Size(147, 23);
+            specComboBox7.TabIndex = 45;
+            specComboBox7.Text = "Select";
             // 
-            // comboBox8
+            // specComboBox6
             // 
-            comboBox8.FormattingEnabled = true;
-            comboBox8.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            comboBox8.Location = new System.Drawing.Point(464, 215);
-            comboBox8.Name = "comboBox8";
-            comboBox8.Size = new System.Drawing.Size(147, 23);
-            comboBox8.TabIndex = 41;
-            comboBox8.Text = "Select";
+            specComboBox6.FormattingEnabled = true;
+            specComboBox6.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            specComboBox6.Location = new System.Drawing.Point(464, 215);
+            specComboBox6.Name = "specComboBox6";
+            specComboBox6.Size = new System.Drawing.Size(147, 23);
+            specComboBox6.TabIndex = 41;
+            specComboBox6.Text = "Select";
             // 
             // cp2Tab
             // 
@@ -2079,6 +2177,7 @@ namespace ReaLTaiizor.UI
             systemSpecTab.ResumeLayout(false);
             systemSpecInnerTabControl.ResumeLayout(false);
             cp1Tab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
@@ -2209,30 +2308,35 @@ namespace ReaLTaiizor.UI
         private System.Windows.Forms.TabPage cp1Tab;
         private System.Windows.Forms.TabPage cp2Tab;
         private TableLayoutPanel tableLayoutPanel1;
-        private TextBox textBox3;
-        private Label label1;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
-        private Label label7;
-        private TextBox textBox9;
-        private ComboBox comboBox4;
-        private ComboBox comboBox5;
-        private ComboBox comboBox7;
-        private ComboBox comboBox8;
+        private TextBox spectxt7;
+        private Label speclbl7;
+        private ComboBox specComboBox5;
+        private ComboBox specComboBox4;
+        private ComboBox specComboBox3;
+        private TextBox spectxt6;
+        private TextBox spectxt5;
+        private TextBox spectxt4;
+        private TextBox spectxt3;
+        private TextBox spectxt2;
+        private Label speclbl6;
+        private Label speclbl2;
+        private Label speclbl3;
+        private Label speclbl4;
+        private Label speclbl5;
+        private Label speclbl1;
+        private TextBox spectxt1;
+        private ComboBox specComboBox1;
+        private ComboBox specComboBox2;
+        private ComboBox specComboBox7;
+        private ComboBox specComboBox6;
         private TableLayoutPanel tableLayoutPanel2;
         private Controls.MaterialLabel materialLabel3;
         private Controls.MaterialLabel materialLabel4;
         private Controls.MaterialLabel materialLabel5;
+        private PictureBox pictureBox1;
+        private Controls.MaterialLabel materialLabel6;
+        private Controls.MaterialButton materialButton3;
+        private Controls.MaterialButton materialButton2;
+        private Controls.MaterialButton specBtnReset;
     }
 }

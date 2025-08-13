@@ -414,45 +414,35 @@ namespace ReaLTaiizor.UI
 
         private void efsBtnReset_Click(object sender, EventArgs e)
         {
+            // Defensive: Ensure "Select" is present, add if missing
+            EnsureSelectItem(efsComboBox1);
+            EnsureSelectItem(efsComboBox2);
+            EnsureSelectItem(efsComboBox3);
+            EnsureSelectItem(efsComboBox4);
+            EnsureSelectItem(efsComboBox5);
+            EnsureSelectItem(efsComboBox6);
 
-            efsComboBox1.DroppedDown = false;
-            efsComboBox1.SelectedItem = "Select";
-            efsComboBox1.SelectedIndex = 0;
-            efsComboBox1.Focus();
+            // Now reliably set to "Select"
+            SetComboBoxToSelect(efsComboBox1);
+            SetComboBoxToSelect(efsComboBox2);
+            SetComboBoxToSelect(efsComboBox3);
+            SetComboBoxToSelect(efsComboBox4);
+            SetComboBoxToSelect(efsComboBox5);
+            SetComboBoxToSelect(efsComboBox6);
+
+            // Clear associated TextBoxes
             efstxt1.Text = "";
-
-            efsComboBox2.DroppedDown = false;
-            efsComboBox2.SelectedItem = "Select";
-            efsComboBox2.SelectedIndex = 0;
-            efsComboBox2.Focus();
             efstxt2.Text = "";
-
-            efsComboBox3.DroppedDown = false;
-            efsComboBox3.SelectedItem = "Select";
-            efsComboBox3.SelectedIndex = 0;
-            efsComboBox3.Focus();
             efstxt3.Text = "";
-
-            efsComboBox4.DroppedDown = false;
-            efsComboBox4.SelectedItem = "Select";
-            efsComboBox4.SelectedIndex = 0;
-            efsComboBox4.Focus();
             efstxt4.Text = "";
-
-            efsComboBox5.DroppedDown = false;
-            efsComboBox5.SelectedItem = "Select";
-            efsComboBox5.SelectedIndex = 0;
-            efsComboBox5.Focus();
             efstxt5.Text = "";
-
-            efsComboBox6.DroppedDown = false;
-            efsComboBox6.SelectedItem = "Select";
-            efsComboBox6.SelectedIndex = 0;
-            efsComboBox6.Focus();
             efstxt6.Text = "";
-
+            efstxt7.Text = "";
+            efstxt8.Text = "";
+            efstxt9.Text = "";
             efstxtReviewers.Text = "";
 
+            // Reset flags
             efsComboBoxFlag1 = false;
             efsComboBoxFlag2 = false;
             efsComboBoxFlag3 = false;
@@ -468,55 +458,37 @@ namespace ReaLTaiizor.UI
 
         private void cdrBtnReset_Click(object sender, EventArgs e)
         {
+            // Defensive: Ensure "Select" is present, add if missing
+            EnsureSelectItem(cdrComboBox1);
+            EnsureSelectItem(cdrComboBox2);
+            EnsureSelectItem(cdrComboBox3);
+            EnsureSelectItem(cdrComboBox4);
+            EnsureSelectItem(cdrComboBox5);
+            EnsureSelectItem(cdrComboBox6);
+            EnsureSelectItem(cdrComboBox7);
+            EnsureSelectItem(cdrComboBox8);
 
-            cdrComboBox1.DroppedDown = false;
-            cdrComboBox1.SelectedItem = "Select";
-            cdrComboBox1.SelectedIndex = 0;
-            cdrComboBox1.Focus();
+            // Now reliably set to "Select"
+            SetComboBoxToSelect(cdrComboBox1);
+            SetComboBoxToSelect(cdrComboBox2);
+            SetComboBoxToSelect(cdrComboBox3);
+            SetComboBoxToSelect(cdrComboBox4);
+            SetComboBoxToSelect(cdrComboBox5);
+            SetComboBoxToSelect(cdrComboBox6);
+            SetComboBoxToSelect(cdrComboBox7);
+            SetComboBoxToSelect(cdrComboBox8);
+
+            // Clear associated TextBoxes
             cdrtxt1.Text = "";
-
-            cdrComboBox2.DroppedDown = false;
-            cdrComboBox2.SelectedItem = "Select";
-            cdrComboBox2.SelectedIndex = 0;
-            cdrComboBox2.Focus();
             cdrtxt2.Text = "";
-
-            cdrComboBox3.DroppedDown = false;
-            cdrComboBox3.SelectedItem = "Select";
-            cdrComboBox3.SelectedIndex = 0;
-            cdrComboBox3.Focus();
             cdrtxt3.Text = "";
-
-            cdrComboBox4.DroppedDown = false;
-            cdrComboBox4.SelectedItem = "Select";
-            cdrComboBox4.SelectedIndex = 0;
-            cdrComboBox4.Focus();
             cdrtxt4.Text = "";
-
-            cdrComboBox5.DroppedDown = false;
-            cdrComboBox5.SelectedItem = "Select";
-            cdrComboBox5.SelectedIndex = 0;
-            cdrComboBox5.Focus();
             cdrtxt5.Text = "";
-
-            cdrComboBox6.DroppedDown = false;
-            cdrComboBox6.SelectedItem = "Select";
-            cdrComboBox6.SelectedIndex = 0;
-            cdrComboBox6.Focus();
             cdrtxt6.Text = "";
-
-            cdrComboBox7.DroppedDown = false;
-            cdrComboBox7.SelectedItem = "Select";
-            cdrComboBox7.SelectedIndex = 0;
-            cdrComboBox7.Focus();
             cdrtxt7.Text = "";
-
-            cdrComboBox8.DroppedDown = false;
-            cdrComboBox8.SelectedItem = "Select";
-            cdrComboBox8.SelectedIndex = 0;
-            cdrComboBox8.Focus();
             cdrtxt8.Text = "";
 
+            // Reset flags
             cdrComboBoxFlag1 = false;
             cdrComboBoxFlag2 = false;
             cdrComboBoxFlag3 = false;
@@ -723,6 +695,79 @@ namespace ReaLTaiizor.UI
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void materialButton1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void specBtnReset_Click(object sender, EventArgs e)
+        {
+            // Defensive: Ensure "Select" is present, add if missing
+            EnsureSelectItem(specComboBox1);
+            EnsureSelectItem(specComboBox2);
+            EnsureSelectItem(specComboBox3);
+            EnsureSelectItem(specComboBox4);
+            EnsureSelectItem(specComboBox5);
+            EnsureSelectItem(specComboBox6);
+            EnsureSelectItem(specComboBox7);
+
+            // Now reliably set to "Select"
+            SetComboBoxToSelect(specComboBox1);
+            SetComboBoxToSelect(specComboBox2);
+            SetComboBoxToSelect(specComboBox3);
+            SetComboBoxToSelect(specComboBox4);
+            SetComboBoxToSelect(specComboBox5);
+            SetComboBoxToSelect(specComboBox6);
+            SetComboBoxToSelect(specComboBox7);
+
+            // Clear associated TextBoxes
+            spectxt1.Text = "";
+            spectxt2.Text = "";
+            spectxt3.Text = "";
+            spectxt4.Text = "";
+            spectxt5.Text = "";
+            spectxt6.Text = "";
+            spectxt7.Text = "";
+        }
+
+        private void EnsureSelectItem(ComboBox comboBox)
+        {
+            bool found = false;
+            foreach (var item in comboBox.Items)
+            {
+                if (item.ToString().Equals("Select", StringComparison.OrdinalIgnoreCase))
+                {
+                    found = true;
+                    break;
+                }
+            }
+            if (!found)
+            {
+                comboBox.Items.Insert(0, "Select");
+            }
+        }
+
+        private void SetComboBoxToSelect(ComboBox comboBox)
+        {
+            int selectIndex = -1;
+            for (int i = 0; i < comboBox.Items.Count; i++)
+            {
+                if (comboBox.Items[i].ToString().Equals("Select", StringComparison.OrdinalIgnoreCase))
+                {
+                    selectIndex = i;
+                    break;
+                }
+            }
+            if (selectIndex >= 0)
+            {
+                comboBox.SelectedIndex = selectIndex;
+            }
+            else
+            {
+                comboBox.SelectedIndex = 0;
+            }
         }
     }
 }

@@ -46,6 +46,8 @@ namespace ReaLTaiizor.UI
         public frmRcl()
         {
             InitializeComponent();
+            tableLayoutPanel1.BackColor = System.Drawing.Color.White;
+            tableLayoutPanel2.BackColor = System.Drawing.Color.White;
 
             console.Visible = false;
 
@@ -860,6 +862,114 @@ namespace ReaLTaiizor.UI
                 Clipboard.SetText(batchOperationResults);
                 return;
             }
+        }
+
+        private void materialLabel10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void specBtnReset2_Click(object sender, EventArgs e)
+        {
+            // Defensive: Ensure "Select" is present, add if missing
+            EnsureSelectItem(specComboBox1_2);
+
+            // Now reliably set to "Select"
+            SetComboBoxToSelect(specComboBox1_2);
+
+            // Clear associated TextBoxes
+            spectxt1_2.Text = "";
+        }
+
+        private void specBtnSubmit2_Click(object sender, EventArgs e)
+        {
+            // If you have a reviewers textbox for spec2, validate it here.
+            // If not, you can remove this block.
+            // if (specTxtReviewers2.TextLength == 0)
+            // {
+            //     result1 = MessageBox.Show("Please add reviewers name", "Mandatory reviewers", buttonsOk, MessageBoxIcon.Warning);
+            //     if (result1 == DialogResult.OK)
+            //     {
+            //         specTxtReviewers2.Focus();
+            //         return;
+            //     }
+            // }
+
+            void ShowMessageAndFocus(ComboBox comboBox, TextBox textBox, string message, Label label)
+            {
+                var result = MessageBox.Show(message, label.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (result == DialogResult.OK)
+                {
+                    if (comboBox != null)
+                    {
+                        comboBox.Focus();
+                    }
+                    else if (textBox != null)
+                    {
+                        textBox.Focus();
+                    }
+                }
+            }
+
+            Boolean ValidateSpecComboBoxAndTextBox(ComboBox comboBox, TextBox textBox, string selectMessage, string addCommentMessage, Label label)
+            {
+                String text = textBox.Text;
+                int wordCount = text.Split(new char[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries).Length;
+
+                if (comboBox.Text.Equals("Select"))
+                {
+                    ShowMessageAndFocus(comboBox, textBox, "Please Select the Status", label);
+                    return false;
+                }
+                else if (wordCount <= 2 && (comboBox.SelectedIndex == 1 || comboBox.SelectedIndex == 2))
+                {
+                    ShowMessageAndFocus(comboBox, textBox, addCommentMessage, label);
+                    return false;
+                }
+                return true;
+            }
+
+            // Arrays for your ComboBoxes, TextBoxes, and Labels for CP2
+            ComboBox[] comboBoxes = { specComboBox1_2 };
+            TextBox[] textBoxes = { spectxt1_2 };
+            Label[] labels = { label7 };
+
+            for (int i = 0; i < comboBoxes.Length; i++)
+            {
+                if (!ValidateSpecComboBoxAndTextBox(comboBoxes[i], textBoxes[i], selectEfsOptionMessage, addEfsCommentMessage, labels[i]))
+                {
+                    return;
+                }
+            }
+
+            // Show summary/result for CP2
+            StringBuilder builder = new StringBuilder("||Review Criteria||Status||Comments||\n");
+            for (int i = 0; i < comboBoxes.Length; i++)
+            {
+                builder.AppendFormat("|{0}", labels[i].Text);
+                if (comboBoxes[i].Text.Equals("No") || comboBoxes[i].Text.Equals("Not Applicable"))
+                {
+                    builder.AppendFormat("||{0}", comboBoxes[i].SelectedItem);
+                }
+                else
+                {
+                    builder.AppendFormat("|{0}", comboBoxes[i].SelectedItem);
+                }
+                builder.AppendFormat("|{0} |\n", textBoxes[i].Text);
+            }
+
+            string batchOperationResults = builder.ToString();
+            result1 = MessageBox.Show(batchOperationResults + "Click OK to copy contents", "Paste contents to Jira Description", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result1 == DialogResult.OK)
+            {
+                Clipboard.SetText(batchOperationResults);
+                return;
+            }
+        }
+
+        private void specBtnCancel2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

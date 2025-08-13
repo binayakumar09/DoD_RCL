@@ -32,7 +32,7 @@ namespace ReaLTaiizor.UI
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRcl));
-            materialTabControl1 = new ReaLTaiizor.Controls.MaterialTabControl();
+            specTabControl = new ReaLTaiizor.Controls.MaterialTabControl();
             efsTab = new TabPage();
             console = new TextBox();
             efslink = new LinkLabel();
@@ -164,6 +164,19 @@ namespace ReaLTaiizor.UI
             specComboBox7 = new ComboBox();
             specComboBox6 = new ComboBox();
             cp2Tab = new TabPage();
+            pictureBox5 = new PictureBox();
+            specBtnReset2 = new ReaLTaiizor.Controls.MaterialButton();
+            specBtnSubmit2 = new ReaLTaiizor.Controls.MaterialButton();
+            specBtnCancel2 = new ReaLTaiizor.Controls.MaterialButton();
+            materialLabel10 = new ReaLTaiizor.Controls.MaterialLabel();
+            tableLayoutPanel3 = new TableLayoutPanel();
+            materialLabel7 = new ReaLTaiizor.Controls.MaterialLabel();
+            materialLabel8 = new ReaLTaiizor.Controls.MaterialLabel();
+            materialLabel9 = new ReaLTaiizor.Controls.MaterialLabel();
+            tableLayoutPanel4 = new TableLayoutPanel();
+            label7 = new Label();
+            spectxt1_2 = new TextBox();
+            specComboBox1_2 = new ComboBox();
             menuIconList = new ImageList(components);
             innerTabControl = new TabControl();
             tabA = new TabPage();
@@ -180,7 +193,7 @@ namespace ReaLTaiizor.UI
             toolStripSeparator1 = new ToolStripSeparator();
             item3ToolStripMenuItem = new ReaLTaiizor.Controls.MaterialToolStripMenuItem();
             contextMenuStrip1 = new ContextMenuStrip(components);
-            materialTabControl1.SuspendLayout();
+            specTabControl.SuspendLayout();
             efsTab.SuspendLayout();
             materialCard2.SuspendLayout();
             tableLayoutPanelHeader.SuspendLayout();
@@ -197,26 +210,30 @@ namespace ReaLTaiizor.UI
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
+            cp2Tab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            tableLayoutPanel3.SuspendLayout();
+            tableLayoutPanel4.SuspendLayout();
             innerTabControl.SuspendLayout();
             tabPage1.SuspendLayout();
             materialContextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // materialTabControl1
+            // specTabControl
             // 
-            materialTabControl1.Controls.Add(efsTab);
-            materialTabControl1.Controls.Add(codeReviewTab);
-            materialTabControl1.Controls.Add(systemSpecTab);
-            materialTabControl1.Depth = 0;
-            materialTabControl1.Dock = DockStyle.Fill;
-            materialTabControl1.ImageList = menuIconList;
-            materialTabControl1.Location = new System.Drawing.Point(3, 3);
-            materialTabControl1.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            materialTabControl1.Multiline = true;
-            materialTabControl1.Name = "materialTabControl1";
-            materialTabControl1.SelectedIndex = 0;
-            materialTabControl1.Size = new System.Drawing.Size(1268, 865);
-            materialTabControl1.TabIndex = 18;
+            specTabControl.Controls.Add(efsTab);
+            specTabControl.Controls.Add(codeReviewTab);
+            specTabControl.Controls.Add(systemSpecTab);
+            specTabControl.Depth = 0;
+            specTabControl.Dock = DockStyle.Fill;
+            specTabControl.ImageList = menuIconList;
+            specTabControl.Location = new System.Drawing.Point(3, 3);
+            specTabControl.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            specTabControl.Multiline = true;
+            specTabControl.Name = "specTabControl";
+            specTabControl.SelectedIndex = 0;
+            specTabControl.Size = new System.Drawing.Size(1268, 865);
+            specTabControl.TabIndex = 18;
             // 
             // efsTab
             // 
@@ -1531,7 +1548,7 @@ namespace ReaLTaiizor.UI
             // 
             systemSpecTab.BackColor = System.Drawing.Color.White;
             systemSpecTab.Controls.Add(systemSpecInnerTabControl);
-            systemSpecTab.ImageKey = "round_report_problem_white_24dp.png";
+            systemSpecTab.ImageKey = "round_bookmark_white_24dp.png";
             systemSpecTab.Location = new System.Drawing.Point(4, 31);
             systemSpecTab.Name = "systemSpecTab";
             systemSpecTab.Padding = new Padding(3);
@@ -1656,6 +1673,7 @@ namespace ReaLTaiizor.UI
             // 
             // tableLayoutPanel2
             // 
+            tableLayoutPanel2.BackColor = System.Drawing.Color.White;
             tableLayoutPanel2.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
             tableLayoutPanel2.ColumnCount = 3;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
@@ -1761,7 +1779,7 @@ namespace ReaLTaiizor.UI
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new System.Drawing.Size(1168, 295);
+            tableLayoutPanel1.Size = new System.Drawing.Size(1168, 304);
             tableLayoutPanel1.TabIndex = 70;
             // 
             // spectxt7
@@ -1778,7 +1796,7 @@ namespace ReaLTaiizor.UI
             speclbl7.Anchor = AnchorStyles.Left;
             speclbl7.AutoSize = true;
             speclbl7.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            speclbl7.Location = new System.Drawing.Point(9, 266);
+            speclbl7.Location = new System.Drawing.Point(9, 270);
             speclbl7.Margin = new Padding(7, 0, 2, 0);
             speclbl7.Name = "speclbl7";
             speclbl7.Size = new System.Drawing.Size(322, 16);
@@ -1987,11 +2005,230 @@ namespace ReaLTaiizor.UI
             // 
             // cp2Tab
             // 
+            cp2Tab.Controls.Add(pictureBox5);
+            cp2Tab.Controls.Add(specBtnReset2);
+            cp2Tab.Controls.Add(specBtnSubmit2);
+            cp2Tab.Controls.Add(specBtnCancel2);
+            cp2Tab.Controls.Add(materialLabel10);
+            cp2Tab.Controls.Add(tableLayoutPanel3);
+            cp2Tab.Controls.Add(tableLayoutPanel4);
             cp2Tab.Location = new System.Drawing.Point(4, 24);
             cp2Tab.Name = "cp2Tab";
             cp2Tab.Size = new System.Drawing.Size(1246, 796);
             cp2Tab.TabIndex = 1;
             cp2Tab.Text = "CP2";
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = (System.Drawing.Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.InitialImage = (System.Drawing.Image)resources.GetObject("pictureBox5.InitialImage");
+            pictureBox5.Location = new System.Drawing.Point(437, 86);
+            pictureBox5.Margin = new Padding(0);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new System.Drawing.Size(54, 50);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.TabIndex = 92;
+            pictureBox5.TabStop = false;
+            // 
+            // specBtnReset2
+            // 
+            specBtnReset2.AutoSize = false;
+            specBtnReset2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            specBtnReset2.Depth = 0;
+            specBtnReset2.DrawShadows = true;
+            specBtnReset2.HighEmphasis = false;
+            specBtnReset2.Icon = RCL.Properties.Resources.ic_restore_page_black_36dp;
+            specBtnReset2.Location = new System.Drawing.Point(401, 380);
+            specBtnReset2.Margin = new Padding(4, 6, 4, 6);
+            specBtnReset2.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            specBtnReset2.Name = "specBtnReset2";
+            specBtnReset2.Size = new System.Drawing.Size(130, 36);
+            specBtnReset2.TabIndex = 91;
+            specBtnReset2.Text = "Reset";
+            specBtnReset2.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
+            specBtnReset2.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            specBtnReset2.UseAccentColor = false;
+            specBtnReset2.UseVisualStyleBackColor = true;
+            specBtnReset2.Click += specBtnReset2_Click;
+            // 
+            // specBtnSubmit2
+            // 
+            specBtnSubmit2.AutoSize = false;
+            specBtnSubmit2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            specBtnSubmit2.Depth = 0;
+            specBtnSubmit2.DrawShadows = true;
+            specBtnSubmit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            specBtnSubmit2.HighEmphasis = true;
+            specBtnSubmit2.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
+            specBtnSubmit2.Location = new System.Drawing.Point(707, 380);
+            specBtnSubmit2.Margin = new Padding(4, 6, 4, 6);
+            specBtnSubmit2.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            specBtnSubmit2.Name = "specBtnSubmit2";
+            specBtnSubmit2.Size = new System.Drawing.Size(138, 36);
+            specBtnSubmit2.TabIndex = 89;
+            specBtnSubmit2.Text = "Submit";
+            specBtnSubmit2.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
+            specBtnSubmit2.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            specBtnSubmit2.UseAccentColor = false;
+            specBtnSubmit2.UseVisualStyleBackColor = true;
+            specBtnSubmit2.Click += specBtnSubmit2_Click;
+            // 
+            // specBtnCancel2
+            // 
+            specBtnCancel2.AutoSize = false;
+            specBtnCancel2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            specBtnCancel2.Depth = 0;
+            specBtnCancel2.DrawShadows = true;
+            specBtnCancel2.HighEmphasis = true;
+            specBtnCancel2.Icon = RCL.Properties.Resources.Close_16xLG;
+            specBtnCancel2.Location = new System.Drawing.Point(555, 380);
+            specBtnCancel2.Margin = new Padding(4, 6, 4, 6);
+            specBtnCancel2.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            specBtnCancel2.Name = "specBtnCancel2";
+            specBtnCancel2.Size = new System.Drawing.Size(130, 36);
+            specBtnCancel2.TabIndex = 90;
+            specBtnCancel2.Text = "Cancel";
+            specBtnCancel2.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
+            specBtnCancel2.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            specBtnCancel2.UseAccentColor = true;
+            specBtnCancel2.UseVisualStyleBackColor = true;
+            specBtnCancel2.Click += specBtnCancel2_Click;
+            // 
+            // materialLabel10
+            // 
+            materialLabel10.Depth = 0;
+            materialLabel10.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            materialLabel10.Location = new System.Drawing.Point(494, 98);
+            materialLabel10.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialLabel10.Name = "materialLabel10";
+            materialLabel10.Size = new System.Drawing.Size(275, 38);
+            materialLabel10.TabIndex = 87;
+            materialLabel10.Text = "CFAM CP2 Checkpoint";
+            materialLabel10.Click += materialLabel10_Click;
+            // 
+            // tableLayoutPanel3
+            // 
+            tableLayoutPanel3.BackColor = System.Drawing.Color.White;
+            tableLayoutPanel3.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
+            tableLayoutPanel3.ColumnCount = 3;
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 156F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 549F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel3.Controls.Add(materialLabel7, 0, 0);
+            tableLayoutPanel3.Controls.Add(materialLabel8, 2, 0);
+            tableLayoutPanel3.Controls.Add(materialLabel9, 1, 0);
+            tableLayoutPanel3.ForeColor = System.Drawing.Color.White;
+            tableLayoutPanel3.Location = new System.Drawing.Point(15, 179);
+            tableLayoutPanel3.Margin = new Padding(2);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 1;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel3.Size = new System.Drawing.Size(1168, 33);
+            tableLayoutPanel3.TabIndex = 73;
+            // 
+            // materialLabel7
+            // 
+            materialLabel7.Anchor = AnchorStyles.None;
+            materialLabel7.AutoSize = true;
+            materialLabel7.Depth = 0;
+            materialLabel7.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            materialLabel7.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
+            materialLabel7.HighEmphasis = true;
+            materialLabel7.Location = new System.Drawing.Point(178, 7);
+            materialLabel7.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialLabel7.Name = "materialLabel7";
+            materialLabel7.Size = new System.Drawing.Size(105, 19);
+            materialLabel7.TabIndex = 66;
+            materialLabel7.Text = "Review Criteria";
+            // 
+            // materialLabel8
+            // 
+            materialLabel8.Anchor = AnchorStyles.None;
+            materialLabel8.AutoSize = true;
+            materialLabel8.Depth = 0;
+            materialLabel8.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            materialLabel8.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
+            materialLabel8.HighEmphasis = true;
+            materialLabel8.Location = new System.Drawing.Point(853, 7);
+            materialLabel8.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialLabel8.Name = "materialLabel8";
+            materialLabel8.Size = new System.Drawing.Size(78, 19);
+            materialLabel8.TabIndex = 69;
+            materialLabel8.Text = "Comments";
+            // 
+            // materialLabel9
+            // 
+            materialLabel9.Anchor = AnchorStyles.None;
+            materialLabel9.AutoSize = true;
+            materialLabel9.Depth = 0;
+            materialLabel9.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            materialLabel9.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
+            materialLabel9.HighEmphasis = true;
+            materialLabel9.Location = new System.Drawing.Point(515, 7);
+            materialLabel9.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialLabel9.Name = "materialLabel9";
+            materialLabel9.Size = new System.Drawing.Size(47, 19);
+            materialLabel9.TabIndex = 68;
+            materialLabel9.Text = "Status";
+            // 
+            // tableLayoutPanel4
+            // 
+            tableLayoutPanel4.BackColor = System.Drawing.Color.White;
+            tableLayoutPanel4.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
+            tableLayoutPanel4.ColumnCount = 3;
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 156F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 547F));
+            tableLayoutPanel4.Controls.Add(label7, 0, 0);
+            tableLayoutPanel4.Controls.Add(spectxt1_2, 2, 0);
+            tableLayoutPanel4.Controls.Add(specComboBox1_2, 1, 0);
+            tableLayoutPanel4.Location = new System.Drawing.Point(15, 214);
+            tableLayoutPanel4.Margin = new Padding(0);
+            tableLayoutPanel4.Name = "tableLayoutPanel4";
+            tableLayoutPanel4.RowCount = 1;
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel4.Size = new System.Drawing.Size(1168, 49);
+            tableLayoutPanel4.TabIndex = 72;
+            // 
+            // label7
+            // 
+            label7.Anchor = AnchorStyles.Left;
+            label7.AutoSize = true;
+            label7.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            label7.Location = new System.Drawing.Point(9, 16);
+            label7.Margin = new Padding(7, 0, 2, 0);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(387, 16);
+            label7.TabIndex = 2;
+            label7.Text = "Technical Analysis updated in sharepoint post CP2 [EI wise effort split]";
+            // 
+            // spectxt1_2
+            // 
+            spectxt1_2.Location = new System.Drawing.Point(622, 5);
+            spectxt1_2.Multiline = true;
+            spectxt1_2.Name = "spectxt1_2";
+            spectxt1_2.ScrollBars = ScrollBars.Vertical;
+            spectxt1_2.Size = new System.Drawing.Size(541, 23);
+            spectxt1_2.TabIndex = 25;
+            // 
+            // specComboBox1_2
+            // 
+            specComboBox1_2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            specComboBox1_2.FormattingEnabled = true;
+            specComboBox1_2.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            specComboBox1_2.Location = new System.Drawing.Point(464, 5);
+            specComboBox1_2.Name = "specComboBox1_2";
+            specComboBox1_2.Size = new System.Drawing.Size(150, 23);
+            specComboBox1_2.TabIndex = 36;
+            specComboBox1_2.Text = "Select";
             // 
             // menuIconList
             // 
@@ -2150,16 +2387,16 @@ namespace ReaLTaiizor.UI
             BackColor = System.Drawing.Color.White;
             ClientSize = new System.Drawing.Size(1274, 871);
             ContextMenuStrip = materialContextMenuStrip1;
-            Controls.Add(materialTabControl1);
+            Controls.Add(specTabControl);
             Controls.Add(materialButton26);
             DrawerShowIconsWhenHidden = true;
-            DrawerTabControl = materialTabControl1;
+            DrawerTabControl = specTabControl;
             Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             MinimumSize = new System.Drawing.Size(300, 300);
             Name = "frmRcl";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Airphone DOD Review Check List";
-            materialTabControl1.ResumeLayout(false);
+            specTabControl.ResumeLayout(false);
             efsTab.ResumeLayout(false);
             efsTab.PerformLayout();
             materialCard2.ResumeLayout(false);
@@ -2184,6 +2421,12 @@ namespace ReaLTaiizor.UI
             tableLayoutPanel2.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
+            cp2Tab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            tableLayoutPanel3.ResumeLayout(false);
+            tableLayoutPanel3.PerformLayout();
+            tableLayoutPanel4.ResumeLayout(false);
+            tableLayoutPanel4.PerformLayout();
             innerTabControl.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             materialContextMenuStrip1.ResumeLayout(false);
@@ -2192,7 +2435,7 @@ namespace ReaLTaiizor.UI
         }
 
         #endregion
-        private ReaLTaiizor.Controls.MaterialTabControl materialTabControl1;
+        private ReaLTaiizor.Controls.MaterialTabControl specTabControl;
         private System.Windows.Forms.TabPage codeReviewTab;
         private ReaLTaiizor.Controls.MaterialContextMenuStrip materialContextMenuStrip1;
         private ReaLTaiizor.Controls.MaterialToolStripMenuItem item1ToolStripMenuItem;
@@ -2340,5 +2583,18 @@ namespace ReaLTaiizor.UI
         private Controls.MaterialButton specBtnSubmit;
         private Controls.MaterialButton specBtnCancel;
         private Controls.MaterialButton specBtnReset;
+        private TableLayoutPanel tableLayoutPanel3;
+        private Controls.MaterialLabel materialLabel7;
+        private Controls.MaterialLabel materialLabel8;
+        private Controls.MaterialLabel materialLabel9;
+        private TableLayoutPanel tableLayoutPanel4;
+        private Label label7;
+        private TextBox spectxt1_2;
+        private ComboBox specComboBox1_2;
+        private Controls.MaterialLabel materialLabel10;
+        private Controls.MaterialButton specBtnReset2;
+        private Controls.MaterialButton specBtnSubmit2;
+        private Controls.MaterialButton specBtnCancel2;
+        private PictureBox pictureBox5;
     }
 }

@@ -133,8 +133,8 @@ namespace ReaLTaiizor.UI
             systemSpecInnerTabControl = new TabControl();
             cp1Tab = new TabPage();
             specBtnReset = new ReaLTaiizor.Controls.MaterialButton();
-            materialButton3 = new ReaLTaiizor.Controls.MaterialButton();
-            materialButton2 = new ReaLTaiizor.Controls.MaterialButton();
+            specBtnSubmit = new ReaLTaiizor.Controls.MaterialButton();
+            specBtnCancel = new ReaLTaiizor.Controls.MaterialButton();
             pictureBox1 = new PictureBox();
             materialLabel6 = new ReaLTaiizor.Controls.MaterialLabel();
             tableLayoutPanel2 = new TableLayoutPanel();
@@ -1555,8 +1555,8 @@ namespace ReaLTaiizor.UI
             // 
             cp1Tab.BackColor = System.Drawing.Color.White;
             cp1Tab.Controls.Add(specBtnReset);
-            cp1Tab.Controls.Add(materialButton3);
-            cp1Tab.Controls.Add(materialButton2);
+            cp1Tab.Controls.Add(specBtnSubmit);
+            cp1Tab.Controls.Add(specBtnCancel);
             cp1Tab.Controls.Add(pictureBox1);
             cp1Tab.Controls.Add(materialLabel6);
             cp1Tab.Controls.Add(tableLayoutPanel2);
@@ -1588,46 +1588,48 @@ namespace ReaLTaiizor.UI
             specBtnReset.UseVisualStyleBackColor = true;
             specBtnReset.Click += specBtnReset_Click;
             // 
-            // materialButton3
+            // specBtnSubmit
             // 
-            materialButton3.AutoSize = false;
-            materialButton3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton3.Depth = 0;
-            materialButton3.DrawShadows = true;
-            materialButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            materialButton3.HighEmphasis = true;
-            materialButton3.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
-            materialButton3.Location = new System.Drawing.Point(686, 490);
-            materialButton3.Margin = new Padding(4, 6, 4, 6);
-            materialButton3.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            materialButton3.Name = "materialButton3";
-            materialButton3.Size = new System.Drawing.Size(138, 36);
-            materialButton3.TabIndex = 76;
-            materialButton3.Text = "Submit";
-            materialButton3.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
-            materialButton3.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton3.UseAccentColor = false;
-            materialButton3.UseVisualStyleBackColor = true;
+            specBtnSubmit.AutoSize = false;
+            specBtnSubmit.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            specBtnSubmit.Depth = 0;
+            specBtnSubmit.DrawShadows = true;
+            specBtnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            specBtnSubmit.HighEmphasis = true;
+            specBtnSubmit.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
+            specBtnSubmit.Location = new System.Drawing.Point(686, 490);
+            specBtnSubmit.Margin = new Padding(4, 6, 4, 6);
+            specBtnSubmit.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            specBtnSubmit.Name = "specBtnSubmit";
+            specBtnSubmit.Size = new System.Drawing.Size(138, 36);
+            specBtnSubmit.TabIndex = 76;
+            specBtnSubmit.Text = "Submit";
+            specBtnSubmit.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
+            specBtnSubmit.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            specBtnSubmit.UseAccentColor = false;
+            specBtnSubmit.UseVisualStyleBackColor = true;
+            specBtnSubmit.Click += specBtnSubmit_Click;
             // 
-            // materialButton2
+            // specBtnCancel
             // 
-            materialButton2.AutoSize = false;
-            materialButton2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton2.Depth = 0;
-            materialButton2.DrawShadows = true;
-            materialButton2.HighEmphasis = true;
-            materialButton2.Icon = RCL.Properties.Resources.Close_16xLG;
-            materialButton2.Location = new System.Drawing.Point(509, 491);
-            materialButton2.Margin = new Padding(4, 6, 4, 6);
-            materialButton2.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            materialButton2.Name = "materialButton2";
-            materialButton2.Size = new System.Drawing.Size(130, 36);
-            materialButton2.TabIndex = 75;
-            materialButton2.Text = "Cancel";
-            materialButton2.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
-            materialButton2.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton2.UseAccentColor = true;
-            materialButton2.UseVisualStyleBackColor = true;
+            specBtnCancel.AutoSize = false;
+            specBtnCancel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            specBtnCancel.Depth = 0;
+            specBtnCancel.DrawShadows = true;
+            specBtnCancel.HighEmphasis = true;
+            specBtnCancel.Icon = RCL.Properties.Resources.Close_16xLG;
+            specBtnCancel.Location = new System.Drawing.Point(509, 491);
+            specBtnCancel.Margin = new Padding(4, 6, 4, 6);
+            specBtnCancel.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            specBtnCancel.Name = "specBtnCancel";
+            specBtnCancel.Size = new System.Drawing.Size(130, 36);
+            specBtnCancel.TabIndex = 75;
+            specBtnCancel.Text = "Cancel";
+            specBtnCancel.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
+            specBtnCancel.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            specBtnCancel.UseAccentColor = true;
+            specBtnCancel.UseVisualStyleBackColor = true;
+            specBtnCancel.Click += specBtnCancel_Click;
             // 
             // pictureBox1
             // 
@@ -2335,8 +2337,8 @@ namespace ReaLTaiizor.UI
         private Controls.MaterialLabel materialLabel5;
         private PictureBox pictureBox1;
         private Controls.MaterialLabel materialLabel6;
-        private Controls.MaterialButton materialButton3;
-        private Controls.MaterialButton materialButton2;
+        private Controls.MaterialButton specBtnSubmit;
+        private Controls.MaterialButton specBtnCancel;
         private Controls.MaterialButton specBtnReset;
     }
 }

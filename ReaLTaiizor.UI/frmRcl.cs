@@ -769,5 +769,97 @@ namespace ReaLTaiizor.UI
                 comboBox.SelectedIndex = 0;
             }
         }
+
+        private void specBtnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void specBtnSubmit_Click(object sender, EventArgs e)
+        {
+            // Example: If you have a reviewers textbox for spec, validate it here.
+            // If not, you can remove this block.
+            // if (specTxtReviewers.TextLength == 0)
+            // {
+            //     result1 = MessageBox.Show("Please add reviewers name", "Mandatory reviewers", buttonsOk, MessageBoxIcon.Warning);
+            //     if (result1 == DialogResult.OK)
+            //     {
+            //         specTxtReviewers.Focus();
+            //         return;
+            //     }
+            // }
+
+            void ShowMessageAndFocus(ComboBox comboBox, TextBox textBox, string message, Label label)
+            {
+                var result = MessageBox.Show(message, label.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (result == DialogResult.OK)
+                {
+                    if (comboBox != null)
+                    {
+                        comboBox.Focus();
+                    }
+                    else if (textBox != null)
+                    {
+                        textBox.Focus();
+                    }
+                }
+            }
+
+            Boolean ValidateSpecComboBoxAndTextBox(ComboBox comboBox, TextBox textBox, string selectMessage, string addCommentMessage, Label label)
+            {
+                String text = textBox.Text;
+                int wordCount = text.Split(new char[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries).Length;
+
+                if (comboBox.Text.Equals("Select"))
+                {
+                    ShowMessageAndFocus(comboBox, textBox, "Please Select the Status", label);
+                    return false;
+                }
+                else if (wordCount <= 2 && (comboBox.SelectedIndex == 1 || comboBox.SelectedIndex == 2))
+                {
+                    ShowMessageAndFocus(comboBox, textBox, addCommentMessage, label);
+                    return false;
+                }
+                return true;
+            }
+
+            // Arrays for your ComboBoxes, TextBoxes, and Labels
+            ComboBox[] comboBoxes = { specComboBox1, specComboBox2, specComboBox3, specComboBox4, specComboBox5, specComboBox6, specComboBox7 };
+            TextBox[] textBoxes = { spectxt1, spectxt2, spectxt3, spectxt4, spectxt5, spectxt6, spectxt7 };
+            Label[] labels = { speclbl1, speclbl2, speclbl3, speclbl4, speclbl5, speclbl6, speclbl7 };
+
+            for (int i = 0; i < comboBoxes.Length; i++)
+            {
+                if (!ValidateSpecComboBoxAndTextBox(comboBoxes[i], textBoxes[i], selectEfsOptionMessage, addEfsCommentMessage, labels[i]))
+                {
+                    return;
+                }
+            }
+
+            // If you want to show a summary/result, implement it here.
+            // For example, you can copy the logic from efsReviewResult and adapt for spec.
+            StringBuilder builder = new StringBuilder("||Review Criteria||Status||Comments||\n");
+            for (int i = 0; i < comboBoxes.Length; i++)
+            {
+                builder.AppendFormat("|{0}", labels[i].Text);
+                if (comboBoxes[i].Text.Equals("No") || comboBoxes[i].Text.Equals("Not Applicable"))
+                {
+                    builder.AppendFormat("||{0}", comboBoxes[i].SelectedItem);
+                }
+                else
+                {
+                    builder.AppendFormat("|{0}", comboBoxes[i].SelectedItem);
+                }
+                builder.AppendFormat("|{0} |\n", textBoxes[i].Text);
+            }
+
+            string batchOperationResults = builder.ToString();
+            result1 = MessageBox.Show(batchOperationResults + "Click OK to copy contents", "Paste contents to Jira Description", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result1 == DialogResult.OK)
+            {
+                Clipboard.SetText(batchOperationResults);
+                return;
+            }
+        }
     }
 }

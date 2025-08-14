@@ -32,9 +32,11 @@ namespace ReaLTaiizor.UI
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRcl));
+            console = new TextBox();
             specTabControl = new ReaLTaiizor.Controls.MaterialTabControl();
             efsTab = new TabPage();
-            console = new TextBox();
+            efsTabInnerTabControl = new TabControl();
+            efsTabA = new TabPage();
             efslink = new LinkLabel();
             materialLabel2 = new ReaLTaiizor.Controls.MaterialLabel();
             efsBtnReset = new ReaLTaiizor.Controls.MaterialButton();
@@ -79,6 +81,7 @@ namespace ReaLTaiizor.UI
             efsBtnCancel = new ReaLTaiizor.Controls.MaterialButton();
             efstxtReviewers = new ReaLTaiizor.Controls.MaterialTextBox();
             materialLabel46 = new ReaLTaiizor.Controls.MaterialLabel();
+            efsTabB = new TabPage();
             codeReviewTab = new TabPage();
             cdrLink = new LinkLabel();
             materialLabel1 = new ReaLTaiizor.Controls.MaterialLabel();
@@ -195,6 +198,8 @@ namespace ReaLTaiizor.UI
             contextMenuStrip1 = new ContextMenuStrip(components);
             specTabControl.SuspendLayout();
             efsTab.SuspendLayout();
+            efsTabInnerTabControl.SuspendLayout();
+            efsTabA.SuspendLayout();
             materialCard2.SuspendLayout();
             tableLayoutPanelHeader.SuspendLayout();
             tableLayoutPanelBody.SuspendLayout();
@@ -219,6 +224,16 @@ namespace ReaLTaiizor.UI
             materialContextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
+            // console
+            // 
+            console.Location = new System.Drawing.Point(819, 581);
+            console.Multiline = true;
+            console.Name = "console";
+            console.PlaceholderText = "This Place is only for debugging. If you see this then it's my mistake :)";
+            console.ScrollBars = ScrollBars.Vertical;
+            console.Size = new System.Drawing.Size(363, 136);
+            console.TabIndex = 99;
+            // 
             // specTabControl
             // 
             specTabControl.Controls.Add(efsTab);
@@ -238,19 +253,7 @@ namespace ReaLTaiizor.UI
             // efsTab
             // 
             efsTab.BackColor = System.Drawing.Color.White;
-            efsTab.Controls.Add(console);
-            efsTab.Controls.Add(efslink);
-            efsTab.Controls.Add(materialLabel2);
-            efsTab.Controls.Add(efsBtnReset);
-            efsTab.Controls.Add(materialCard2);
-            efsTab.Controls.Add(pictureBox2);
-            efsTab.Controls.Add(materialLabel50);
-            efsTab.Controls.Add(materialLabel48);
-            efsTab.Controls.Add(materialLabel49);
-            efsTab.Controls.Add(efsBtnSubmit);
-            efsTab.Controls.Add(efsBtnCancel);
-            efsTab.Controls.Add(efstxtReviewers);
-            efsTab.Controls.Add(materialLabel46);
+            efsTab.Controls.Add(efsTabInnerTabControl);
             efsTab.ImageKey = "ic_view_list_white_24dp.png";
             efsTab.Location = new System.Drawing.Point(4, 31);
             efsTab.Margin = new Padding(2);
@@ -260,15 +263,39 @@ namespace ReaLTaiizor.UI
             efsTab.TabIndex = 7;
             efsTab.Text = "EFS Review";
             // 
-            // console
+            // efsTabInnerTabControl
             // 
-            console.Location = new System.Drawing.Point(819, 581);
-            console.Multiline = true;
-            console.Name = "console";
-            console.PlaceholderText = "This Place is only for debugging. If you see this then it's my mistake :)";
-            console.ScrollBars = ScrollBars.Vertical;
-            console.Size = new System.Drawing.Size(363, 136);
-            console.TabIndex = 99;
+            efsTabInnerTabControl.Controls.Add(efsTabA);
+            efsTabInnerTabControl.Controls.Add(efsTabB);
+            efsTabInnerTabControl.Dock = DockStyle.Fill;
+            efsTabInnerTabControl.Location = new System.Drawing.Point(2, 2);
+            efsTabInnerTabControl.Name = "efsTabInnerTabControl";
+            efsTabInnerTabControl.SelectedIndex = 0;
+            efsTabInnerTabControl.Size = new System.Drawing.Size(1256, 826);
+            efsTabInnerTabControl.TabIndex = 100;
+            // 
+            // efsTabA
+            // 
+            efsTabA.Controls.Add(console);
+            efsTabA.Controls.Add(efslink);
+            efsTabA.Controls.Add(materialLabel2);
+            efsTabA.Controls.Add(efsBtnReset);
+            efsTabA.Controls.Add(materialCard2);
+            efsTabA.Controls.Add(pictureBox2);
+            efsTabA.Controls.Add(materialLabel50);
+            efsTabA.Controls.Add(materialLabel48);
+            efsTabA.Controls.Add(materialLabel49);
+            efsTabA.Controls.Add(efsBtnSubmit);
+            efsTabA.Controls.Add(efsBtnCancel);
+            efsTabA.Controls.Add(efstxtReviewers);
+            efsTabA.Controls.Add(materialLabel46);
+            efsTabA.Location = new System.Drawing.Point(4, 24);
+            efsTabA.Name = "efsTabA";
+            efsTabA.Padding = new Padding(3);
+            efsTabA.Size = new System.Drawing.Size(1248, 798);
+            efsTabA.TabIndex = 0;
+            efsTabA.Text = "A";
+            efsTabA.UseVisualStyleBackColor = true;
             // 
             // efslink
             // 
@@ -341,8 +368,6 @@ namespace ReaLTaiizor.UI
             tableLayoutPanelHeader.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanelHeader.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 156F));
             tableLayoutPanelHeader.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 549F));
-            tableLayoutPanelHeader.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tableLayoutPanelHeader.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             tableLayoutPanelHeader.Controls.Add(efslblhdr1, 0, 0);
             tableLayoutPanelHeader.Controls.Add(efslblhdr3, 2, 0);
             tableLayoutPanelHeader.Controls.Add(efslblhdr2, 1, 0);
@@ -450,7 +475,6 @@ namespace ReaLTaiizor.UI
             tableLayoutPanelBody.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
             tableLayoutPanelBody.Size = new System.Drawing.Size(1168, 383);
             tableLayoutPanelBody.TabIndex = 69;
-            tableLayoutPanelBody.Paint += tableLayoutPanelBody_Paint;
             // 
             // efstxt9
             // 
@@ -637,7 +661,6 @@ namespace ReaLTaiizor.UI
             efslbl1.Size = new System.Drawing.Size(317, 16);
             efslbl1.TabIndex = 2;
             efslbl1.Text = "Are all inputs required to form dev items available in EFS?";
-            efslbl1.Click += efslbl1_Click;
             // 
             // efstxt1
             // 
@@ -680,7 +703,6 @@ namespace ReaLTaiizor.UI
             efslbl8.Size = new System.Drawing.Size(397, 32);
             efslbl8.TabIndex = 43;
             efslbl8.Text = "Is Feature specific \"Interface EFS\" section: Internal I?F impacts for \"User Plane/Control Plane\" updated?";
-            efslbl8.Click += label1_Click;
             // 
             // efslbl9
             // 
@@ -745,7 +767,6 @@ namespace ReaLTaiizor.UI
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 71;
             pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
             // 
             // materialLabel50
             // 
@@ -862,6 +883,16 @@ namespace ReaLTaiizor.UI
             materialLabel46.TabIndex = 33;
             materialLabel46.Text = "EFS DOD Review";
             // 
+            // efsTabB
+            // 
+            efsTabB.Location = new System.Drawing.Point(4, 24);
+            efsTabB.Name = "efsTabB";
+            efsTabB.Padding = new Padding(3);
+            efsTabB.Size = new System.Drawing.Size(1248, 798);
+            efsTabB.TabIndex = 1;
+            efsTabB.Text = "B";
+            efsTabB.UseVisualStyleBackColor = true;
+            // 
             // codeReviewTab
             // 
             codeReviewTab.BackColor = System.Drawing.Color.White;
@@ -954,8 +985,6 @@ namespace ReaLTaiizor.UI
             tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 157F));
             tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 549F));
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             tableLayoutPanel7.Controls.Add(cdrlblhdr1, 0, 0);
             tableLayoutPanel7.Controls.Add(cdrlblhdr3, 2, 0);
             tableLayoutPanel7.Controls.Add(cdrlblhdr2, 1, 0);
@@ -1057,7 +1086,7 @@ namespace ReaLTaiizor.UI
             tableLayoutPanel8.Location = new System.Drawing.Point(-1, 37);
             tableLayoutPanel8.Margin = new Padding(0);
             tableLayoutPanel8.Name = "tableLayoutPanel8";
-            tableLayoutPanel8.RowCount = 12;
+            tableLayoutPanel8.RowCount = 11;
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
@@ -1069,10 +1098,8 @@ namespace ReaLTaiizor.UI
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel8.Size = new System.Drawing.Size(1177, 483);
+            tableLayoutPanel8.Size = new System.Drawing.Size(1177, 460);
             tableLayoutPanel8.TabIndex = 69;
-            tableLayoutPanel8.Paint += tableLayoutPanel8_Paint;
             // 
             // cdrtxt11
             // 
@@ -1276,7 +1303,6 @@ namespace ReaLTaiizor.UI
             cdrlbl8.Size = new System.Drawing.Size(426, 32);
             cdrlbl8.TabIndex = 10;
             cdrlbl8.Text = "Is EFS updated with dev test plan and design section by dev team (Mandatory before feature CA closure)?";
-            cdrlbl8.Click += cdrlbl8_Click;
             // 
             // cdrlbl6
             // 
@@ -1289,7 +1315,6 @@ namespace ReaLTaiizor.UI
             cdrlbl6.Size = new System.Drawing.Size(433, 32);
             cdrlbl6.TabIndex = 7;
             cdrlbl6.Text = "Are System Component Testing [SCT] TCs planned, prioritized and reviewed by architect and AG?";
-            cdrlbl6.Click += cdrlbl6_Click;
             // 
             // cdrlbl2
             // 
@@ -1398,7 +1423,6 @@ namespace ReaLTaiizor.UI
             cdrlbl11.Size = new System.Drawing.Size(277, 16);
             cdrlbl11.TabIndex = 106;
             cdrlbl11.Text = "Is DFMEA done and all actions are planned in JIRA?";
-            cdrlbl11.Click += cdrlbl11_Click;
             // 
             // cdrComboBox1
             // 
@@ -1444,7 +1468,6 @@ namespace ReaLTaiizor.UI
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 86;
             pictureBox3.TabStop = false;
-            pictureBox3.Click += pictureBox3_Click;
             // 
             // materialLabel44
             // 
@@ -1510,7 +1533,6 @@ namespace ReaLTaiizor.UI
             cdrBtnSubmit.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             cdrBtnSubmit.UseAccentColor = false;
             cdrBtnSubmit.UseVisualStyleBackColor = true;
-            cdrBtnSubmit.Click += cdrBtnSubmit_Click;
             // 
             // cdrBtnCancel
             // 
@@ -1531,7 +1553,6 @@ namespace ReaLTaiizor.UI
             cdrBtnCancel.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             cdrBtnCancel.UseAccentColor = true;
             cdrBtnCancel.UseVisualStyleBackColor = true;
-            cdrBtnCancel.Click += cdrBtnCancel_Click;
             // 
             // materialLabel58
             // 
@@ -1555,7 +1576,6 @@ namespace ReaLTaiizor.UI
             systemSpecTab.Size = new System.Drawing.Size(1260, 830);
             systemSpecTab.TabIndex = 8;
             systemSpecTab.Text = "System Spec";
-            systemSpecTab.UseVisualStyleBackColor = true;
             // 
             // systemSpecInnerTabControl
             // 
@@ -1592,7 +1612,7 @@ namespace ReaLTaiizor.UI
             specBtnReset.DrawShadows = true;
             specBtnReset.HighEmphasis = false;
             specBtnReset.Icon = RCL.Properties.Resources.ic_restore_page_black_36dp;
-            specBtnReset.Location = new System.Drawing.Point(333, 490);
+            specBtnReset.Location = new System.Drawing.Point(401, 490);
             specBtnReset.Margin = new Padding(4, 6, 4, 6);
             specBtnReset.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             specBtnReset.Name = "specBtnReset";
@@ -1603,7 +1623,6 @@ namespace ReaLTaiizor.UI
             specBtnReset.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             specBtnReset.UseAccentColor = false;
             specBtnReset.UseVisualStyleBackColor = true;
-            specBtnReset.Click += specBtnReset_Click;
             // 
             // specBtnSubmit
             // 
@@ -1614,7 +1633,7 @@ namespace ReaLTaiizor.UI
             specBtnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             specBtnSubmit.HighEmphasis = true;
             specBtnSubmit.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
-            specBtnSubmit.Location = new System.Drawing.Point(686, 490);
+            specBtnSubmit.Location = new System.Drawing.Point(736, 490);
             specBtnSubmit.Margin = new Padding(4, 6, 4, 6);
             specBtnSubmit.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             specBtnSubmit.Name = "specBtnSubmit";
@@ -1625,7 +1644,6 @@ namespace ReaLTaiizor.UI
             specBtnSubmit.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             specBtnSubmit.UseAccentColor = false;
             specBtnSubmit.UseVisualStyleBackColor = true;
-            specBtnSubmit.Click += specBtnSubmit_Click;
             // 
             // specBtnCancel
             // 
@@ -1635,7 +1653,7 @@ namespace ReaLTaiizor.UI
             specBtnCancel.DrawShadows = true;
             specBtnCancel.HighEmphasis = true;
             specBtnCancel.Icon = RCL.Properties.Resources.Close_16xLG;
-            specBtnCancel.Location = new System.Drawing.Point(509, 491);
+            specBtnCancel.Location = new System.Drawing.Point(582, 491);
             specBtnCancel.Margin = new Padding(4, 6, 4, 6);
             specBtnCancel.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             specBtnCancel.Name = "specBtnCancel";
@@ -1646,13 +1664,12 @@ namespace ReaLTaiizor.UI
             specBtnCancel.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             specBtnCancel.UseAccentColor = true;
             specBtnCancel.UseVisualStyleBackColor = true;
-            specBtnCancel.Click += specBtnCancel_Click;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (System.Drawing.Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.InitialImage = (System.Drawing.Image)resources.GetObject("pictureBox1.InitialImage");
-            pictureBox1.Location = new System.Drawing.Point(422, 27);
+            pictureBox1.Location = new System.Drawing.Point(437, 23);
             pictureBox1.Margin = new Padding(0);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new System.Drawing.Size(54, 50);
@@ -1664,7 +1681,7 @@ namespace ReaLTaiizor.UI
             // 
             materialLabel6.Depth = 0;
             materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            materialLabel6.Location = new System.Drawing.Point(479, 43);
+            materialLabel6.Location = new System.Drawing.Point(494, 43);
             materialLabel6.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialLabel6.Name = "materialLabel6";
             materialLabel6.Size = new System.Drawing.Size(261, 44);
@@ -1679,8 +1696,6 @@ namespace ReaLTaiizor.UI
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 156F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 549F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             tableLayoutPanel2.Controls.Add(materialLabel3, 0, 0);
             tableLayoutPanel2.Controls.Add(materialLabel4, 2, 0);
             tableLayoutPanel2.Controls.Add(materialLabel5, 1, 0);
@@ -1778,7 +1793,6 @@ namespace ReaLTaiizor.UI
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel1.Size = new System.Drawing.Size(1168, 304);
             tableLayoutPanel1.TabIndex = 70;
             // 
@@ -1890,7 +1904,6 @@ namespace ReaLTaiizor.UI
             speclbl6.Size = new System.Drawing.Size(376, 16);
             speclbl6.TabIndex = 23;
             speclbl6.Text = "Indicate whether Pre-Integration/BLR3 functional testing is needed .";
-            speclbl6.Click += label2_Click;
             // 
             // speclbl2
             // 
@@ -1951,7 +1964,6 @@ namespace ReaLTaiizor.UI
             speclbl1.Size = new System.Drawing.Size(387, 16);
             speclbl1.TabIndex = 2;
             speclbl1.Text = "Technical Analysis updated in sharepoint post CP2 [EI wise effort split]";
-            speclbl1.Click += label7_Click;
             // 
             // spectxt1
             // 
@@ -2049,7 +2061,6 @@ namespace ReaLTaiizor.UI
             specBtnReset2.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             specBtnReset2.UseAccentColor = false;
             specBtnReset2.UseVisualStyleBackColor = true;
-            specBtnReset2.Click += specBtnReset2_Click;
             // 
             // specBtnSubmit2
             // 
@@ -2060,7 +2071,7 @@ namespace ReaLTaiizor.UI
             specBtnSubmit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             specBtnSubmit2.HighEmphasis = true;
             specBtnSubmit2.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
-            specBtnSubmit2.Location = new System.Drawing.Point(707, 380);
+            specBtnSubmit2.Location = new System.Drawing.Point(736, 380);
             specBtnSubmit2.Margin = new Padding(4, 6, 4, 6);
             specBtnSubmit2.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             specBtnSubmit2.Name = "specBtnSubmit2";
@@ -2071,7 +2082,6 @@ namespace ReaLTaiizor.UI
             specBtnSubmit2.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             specBtnSubmit2.UseAccentColor = false;
             specBtnSubmit2.UseVisualStyleBackColor = true;
-            specBtnSubmit2.Click += specBtnSubmit2_Click;
             // 
             // specBtnCancel2
             // 
@@ -2092,7 +2102,6 @@ namespace ReaLTaiizor.UI
             specBtnCancel2.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             specBtnCancel2.UseAccentColor = true;
             specBtnCancel2.UseVisualStyleBackColor = true;
-            specBtnCancel2.Click += specBtnCancel2_Click;
             // 
             // materialLabel10
             // 
@@ -2104,7 +2113,6 @@ namespace ReaLTaiizor.UI
             materialLabel10.Size = new System.Drawing.Size(275, 38);
             materialLabel10.TabIndex = 87;
             materialLabel10.Text = "CFAM CP2 Checkpoint";
-            materialLabel10.Click += materialLabel10_Click;
             // 
             // tableLayoutPanel3
             // 
@@ -2114,8 +2122,6 @@ namespace ReaLTaiizor.UI
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 156F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 549F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             tableLayoutPanel3.Controls.Add(materialLabel7, 0, 0);
             tableLayoutPanel3.Controls.Add(materialLabel8, 2, 0);
             tableLayoutPanel3.Controls.Add(materialLabel9, 1, 0);
@@ -2189,12 +2195,6 @@ namespace ReaLTaiizor.UI
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel4.Size = new System.Drawing.Size(1168, 49);
             tableLayoutPanel4.TabIndex = 72;
             // 
@@ -2246,7 +2246,7 @@ namespace ReaLTaiizor.UI
             menuIconList.Images.SetKeyName(8, "round_swap_vert_white_24dp.png");
             menuIconList.Images.SetKeyName(9, "ic_spa_white_24dp.png");
             menuIconList.Images.SetKeyName(10, "ic_assessment_white_24dp.png");
-            menuIconList.Images.SetKeyName(11, "ic_assignment_turned_in_white_24dp");
+            menuIconList.Images.SetKeyName(11, "ic_assignment_turned_in_white_36dp");
             menuIconList.Images.SetKeyName(12, "ic_subject_white_24dp.png");
             menuIconList.Images.SetKeyName(13, "ic_view_list_white_24dp.png");
             // 
@@ -2398,7 +2398,9 @@ namespace ReaLTaiizor.UI
             Text = "Airphone DOD Review Check List";
             specTabControl.ResumeLayout(false);
             efsTab.ResumeLayout(false);
-            efsTab.PerformLayout();
+            efsTabInnerTabControl.ResumeLayout(false);
+            efsTabA.ResumeLayout(false);
+            efsTabA.PerformLayout();
             materialCard2.ResumeLayout(false);
             tableLayoutPanelHeader.ResumeLayout(false);
             tableLayoutPanelHeader.PerformLayout();
@@ -2542,7 +2544,6 @@ namespace ReaLTaiizor.UI
         private TextBox cdrtxt2;
         private TextBox cdrtxt1;
         private Controls.MaterialLabel materialLabel58;
-        private TextBox console;
         private TabPage tabPage1;
         private TabPage systemSpecTab;
         private System.Windows.Forms.TabControl innerTabControl;
@@ -2596,5 +2597,9 @@ namespace ReaLTaiizor.UI
         private Controls.MaterialButton specBtnSubmit2;
         private Controls.MaterialButton specBtnCancel2;
         private PictureBox pictureBox5;
+        private TabControl efsTabInnerTabControl;
+        private TabPage efsTabA;
+        private TabPage efsTabB;
+        private TextBox console;
     }
 }

@@ -53,18 +53,97 @@ namespace ReaLTaiizor.UI
 
             CheckforUpdate();
 
-            // Initialize MaterialManager
             materialManager = MaterialManager.Instance;
-
-            // Set this to false to disable backcolor enforcing on non-materialSkin components
-            // This HAS to be set before the AddFormToManage()
             materialManager.EnforceBackcolorOnAllComponents = true;
-
-            // MaterialManager properties
             materialManager.AddFormToManage(this);
             materialManager.Theme = MaterialManager.Themes.LIGHT;
             materialManager.ColorScheme = new MaterialColorScheme(MaterialPrimary.Indigo500, MaterialPrimary.Indigo700, MaterialPrimary.Indigo100, MaterialAccent.Pink200, MaterialTextShade.WHITE);
             console.Text = DataLogger.logString;
+
+            // Duplicate efsTabA content into efsTabB
+            DuplicateTabPageContent(efsTabA, efsTabB);
+        }
+
+        private void DuplicateTabPageContent(TabPage source, TabPage destination)
+        {
+            destination.Controls.Clear();
+            foreach (Control ctrl in source.Controls)
+            {
+                Control copy = CloneControl(ctrl);
+                destination.Controls.Add(copy);
+            }
+        }
+
+        private Control CloneControl(Control source)
+        {
+            Control copy = (Control)Activator.CreateInstance(source.GetType());
+
+            // Copy common properties
+            copy.Name = source.Name + "_copy";
+            copy.Text = source.Text;
+            copy.Size = source.Size;
+            copy.Location = source.Location;
+            copy.Dock = source.Dock;
+            copy.Anchor = source.Anchor;
+            copy.Margin = source.Margin;
+            copy.Padding = source.Padding;
+            copy.Enabled = source.Enabled;
+            copy.Visible = source.Visible;
+            copy.BackColor = source.BackColor;
+            copy.ForeColor = source.ForeColor;
+            copy.Font = source.Font;
+            copy.RightToLeft = source.RightToLeft;
+            copy.TabIndex = source.TabIndex;
+
+            // Type-specific properties
+            if (copy is ComboBox cbCopy && source is ComboBox cbSource)
+            {
+                foreach (var item in cbSource.Items) cbCopy.Items.Add(item);
+                cbCopy.SelectedIndex = cbSource.SelectedIndex;
+                cbCopy.DropDownStyle = cbSource.DropDownStyle;
+            }
+            else if (copy is TextBox tbCopy && source is TextBox tbSource)
+            {
+                tbCopy.Text = tbSource.Text;
+                tbCopy.Multiline = tbSource.Multiline;
+                tbCopy.ReadOnly = tbSource.ReadOnly;
+                tbCopy.WordWrap = tbSource.WordWrap;
+            }
+            else if (copy is CheckBox chkCopy && source is CheckBox chkSource)
+            {
+                chkCopy.Checked = chkSource.Checked;
+            }
+            else if (copy is RadioButton rbCopy && source is RadioButton rbSource)
+            {
+                rbCopy.Checked = rbSource.Checked;
+            }
+            else if (copy is ListBox lbCopy && source is ListBox lbSource)
+            {
+                foreach (var item in lbSource.Items) lbCopy.Items.Add(item);
+                lbCopy.SelectedIndex = lbSource.SelectedIndex;
+            }
+            // Add more types as needed
+
+            // Re-assign event handlers for buttons/links if needed
+            if (copy is Button btnCopy && source is Button btnSource)
+            {
+                if (btnSource.Name == "efsBtnSubmit") btnCopy.Click += efsBtnSubmit_Click;
+                if (btnSource.Name == "efsBtnReset") btnCopy.Click += efsBtnReset_Click;
+                if (btnSource.Name == "efsBtnCancel") btnCopy.Click += efsBtnCancel_Click;
+            }
+            if (copy is LinkLabel llCopy && source is LinkLabel llSource)
+            {
+                if (llSource.Name == "efslink") llCopy.LinkClicked += efslink_LinkClicked;
+            }
+
+            // Recursively clone children
+            foreach (Control child in source.Controls)
+            {
+                Control childCopy = CloneControl(child);
+                copy.Controls.Add(childCopy);
+            }
+
+            return copy;
         }
 
         private void CheckforUpdate()
@@ -985,6 +1064,11 @@ namespace ReaLTaiizor.UI
         }
 
         private void materialLabel46_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cdrlbl5_Click(object sender, EventArgs e)
         {
 
         }

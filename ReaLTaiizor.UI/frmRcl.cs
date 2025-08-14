@@ -971,5 +971,10 @@ namespace ReaLTaiizor.UI
         {
             this.Close();
         }
+
+        private void materialLabel46_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

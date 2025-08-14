@@ -196,6 +196,10 @@ namespace ReaLTaiizor.UI
             toolStripSeparator1 = new ToolStripSeparator();
             item3ToolStripMenuItem = new ReaLTaiizor.Controls.MaterialToolStripMenuItem();
             contextMenuStrip1 = new ContextMenuStrip(components);
+            tabPage2 = new TabPage();
+            comboBox1 = new ComboBox();
+            textBox1 = new TextBox();
+            label1 = new Label();
             specTabControl.SuspendLayout();
             efsTab.SuspendLayout();
             efsTabInnerTabControl.SuspendLayout();
@@ -226,7 +230,7 @@ namespace ReaLTaiizor.UI
             // 
             // console
             // 
-            console.Location = new System.Drawing.Point(819, 581);
+            console.Location = new System.Drawing.Point(819, 617);
             console.Multiline = true;
             console.Name = "console";
             console.PlaceholderText = "This Place is only for debugging. If you see this then it's my mistake :)";
@@ -267,6 +271,7 @@ namespace ReaLTaiizor.UI
             // 
             efsTabInnerTabControl.Controls.Add(efsTabA);
             efsTabInnerTabControl.Controls.Add(efsTabB);
+            efsTabInnerTabControl.Controls.Add(tabPage2);
             efsTabInnerTabControl.Dock = DockStyle.Fill;
             efsTabInnerTabControl.Location = new System.Drawing.Point(2, 2);
             efsTabInnerTabControl.Name = "efsTabInnerTabControl";
@@ -294,7 +299,7 @@ namespace ReaLTaiizor.UI
             efsTabA.Padding = new Padding(3);
             efsTabA.Size = new System.Drawing.Size(1248, 798);
             efsTabA.TabIndex = 0;
-            efsTabA.Text = "A";
+            efsTabA.Text = "CP2 Ready State";
             efsTabA.UseVisualStyleBackColor = true;
             // 
             // efslink
@@ -358,7 +363,7 @@ namespace ReaLTaiizor.UI
             materialCard2.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialCard2.Name = "materialCard2";
             materialCard2.Padding = new Padding(14);
-            materialCard2.Size = new System.Drawing.Size(1166, 423);
+            materialCard2.Size = new System.Drawing.Size(1166, 360);
             materialCard2.TabIndex = 72;
             // 
             // tableLayoutPanelHeader
@@ -455,30 +460,36 @@ namespace ReaLTaiizor.UI
             tableLayoutPanelBody.Controls.Add(efsComboBox1, 1, 0);
             tableLayoutPanelBody.Controls.Add(efsComboBox2, 1, 1);
             tableLayoutPanelBody.Controls.Add(efslbl8, 0, 7);
-            tableLayoutPanelBody.Controls.Add(efslbl9, 0, 8);
             tableLayoutPanelBody.Controls.Add(efsComboBox8, 1, 7);
             tableLayoutPanelBody.Controls.Add(efsComboBox7, 1, 6);
             tableLayoutPanelBody.Controls.Add(efsComboBox6, 1, 5);
             tableLayoutPanelBody.Controls.Add(efsComboBox9, 1, 8);
+            tableLayoutPanelBody.Controls.Add(comboBox1, 1, 9);
+            tableLayoutPanelBody.Controls.Add(textBox1, 2, 9);
+            tableLayoutPanelBody.Controls.Add(efslbl9, 0, 9);
+            tableLayoutPanelBody.Controls.Add(label1, 0, 8);
             tableLayoutPanelBody.Location = new System.Drawing.Point(-3, 37);
             tableLayoutPanelBody.Margin = new Padding(0);
             tableLayoutPanelBody.Name = "tableLayoutPanelBody";
-            tableLayoutPanelBody.RowCount = 9;
-            tableLayoutPanelBody.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanelBody.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanelBody.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanelBody.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanelBody.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanelBody.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanelBody.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanelBody.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanelBody.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanelBody.Size = new System.Drawing.Size(1168, 383);
+            tableLayoutPanelBody.RowCount = 12;
+            tableLayoutPanelBody.RowStyles.Add(new RowStyle(SizeType.Absolute, 29F));
+            tableLayoutPanelBody.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tableLayoutPanelBody.RowStyles.Add(new RowStyle(SizeType.Absolute, 32F));
+            tableLayoutPanelBody.RowStyles.Add(new RowStyle(SizeType.Absolute, 29F));
+            tableLayoutPanelBody.RowStyles.Add(new RowStyle(SizeType.Absolute, 29F));
+            tableLayoutPanelBody.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tableLayoutPanelBody.RowStyles.Add(new RowStyle(SizeType.Absolute, 28F));
+            tableLayoutPanelBody.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tableLayoutPanelBody.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tableLayoutPanelBody.RowStyles.Add(new RowStyle(SizeType.Absolute, 29F));
+            tableLayoutPanelBody.RowStyles.Add(new RowStyle(SizeType.Absolute, 124F));
+            tableLayoutPanelBody.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanelBody.Size = new System.Drawing.Size(1168, 325);
             tableLayoutPanelBody.TabIndex = 69;
             // 
             // efstxt9
             // 
-            efstxt9.Location = new System.Drawing.Point(622, 341);
+            efstxt9.Location = new System.Drawing.Point(622, 258);
             efstxt9.Multiline = true;
             efstxt9.Name = "efstxt9";
             efstxt9.ScrollBars = ScrollBars.Vertical;
@@ -487,7 +498,7 @@ namespace ReaLTaiizor.UI
             // 
             // efstxt8
             // 
-            efstxt8.Location = new System.Drawing.Point(622, 299);
+            efstxt8.Location = new System.Drawing.Point(622, 226);
             efstxt8.Multiline = true;
             efstxt8.Name = "efstxt8";
             efstxt8.ScrollBars = ScrollBars.Vertical;
@@ -496,11 +507,12 @@ namespace ReaLTaiizor.UI
             // 
             // efstxt7
             // 
-            efstxt7.Location = new System.Drawing.Point(622, 257);
+            efstxt7.Location = new System.Drawing.Point(622, 196);
             efstxt7.Multiline = true;
             efstxt7.Name = "efstxt7";
+            efstxt7.PlaceholderText = "Enter the Schedule, e.g. Wk Number or Date";
             efstxt7.ScrollBars = ScrollBars.Vertical;
-            efstxt7.Size = new System.Drawing.Size(541, 23);
+            efstxt7.Size = new System.Drawing.Size(541, 22);
             efstxt7.TabIndex = 48;
             // 
             // efslbl7
@@ -508,18 +520,18 @@ namespace ReaLTaiizor.UI
             efslbl7.Anchor = AnchorStyles.Left;
             efslbl7.AutoSize = true;
             efslbl7.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            efslbl7.Location = new System.Drawing.Point(9, 266);
+            efslbl7.Location = new System.Drawing.Point(9, 199);
             efslbl7.Margin = new Padding(7, 0, 2, 0);
             efslbl7.Name = "efslbl7";
-            efslbl7.Size = new System.Drawing.Size(301, 16);
+            efslbl7.Size = new System.Drawing.Size(171, 16);
             efslbl7.TabIndex = 42;
-            efslbl7.Text = "Are ET testability requirements reviewed by architect?";
+            efslbl7.Text = "Is DFMEA needed for the Item?";
             // 
             // efsComboBox5
             // 
             efsComboBox5.FormattingEnabled = true;
             efsComboBox5.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            efsComboBox5.Location = new System.Drawing.Point(464, 173);
+            efsComboBox5.Location = new System.Drawing.Point(464, 133);
             efsComboBox5.Name = "efsComboBox5";
             efsComboBox5.Size = new System.Drawing.Size(147, 23);
             efsComboBox5.TabIndex = 40;
@@ -529,7 +541,7 @@ namespace ReaLTaiizor.UI
             // 
             efsComboBox4.FormattingEnabled = true;
             efsComboBox4.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            efsComboBox4.Location = new System.Drawing.Point(464, 131);
+            efsComboBox4.Location = new System.Drawing.Point(464, 102);
             efsComboBox4.Name = "efsComboBox4";
             efsComboBox4.Size = new System.Drawing.Size(147, 23);
             efsComboBox4.TabIndex = 39;
@@ -539,7 +551,7 @@ namespace ReaLTaiizor.UI
             // 
             efsComboBox3.FormattingEnabled = true;
             efsComboBox3.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            efsComboBox3.Location = new System.Drawing.Point(464, 89);
+            efsComboBox3.Location = new System.Drawing.Point(464, 68);
             efsComboBox3.Name = "efsComboBox3";
             efsComboBox3.Size = new System.Drawing.Size(147, 23);
             efsComboBox3.TabIndex = 38;
@@ -547,7 +559,7 @@ namespace ReaLTaiizor.UI
             // 
             // efstxt6
             // 
-            efstxt6.Location = new System.Drawing.Point(622, 215);
+            efstxt6.Location = new System.Drawing.Point(622, 164);
             efstxt6.Multiline = true;
             efstxt6.Name = "efstxt6";
             efstxt6.ScrollBars = ScrollBars.Vertical;
@@ -556,7 +568,7 @@ namespace ReaLTaiizor.UI
             // 
             // efstxt5
             // 
-            efstxt5.Location = new System.Drawing.Point(622, 173);
+            efstxt5.Location = new System.Drawing.Point(622, 133);
             efstxt5.Multiline = true;
             efstxt5.Name = "efstxt5";
             efstxt5.ScrollBars = ScrollBars.Vertical;
@@ -565,7 +577,7 @@ namespace ReaLTaiizor.UI
             // 
             // efstxt4
             // 
-            efstxt4.Location = new System.Drawing.Point(622, 131);
+            efstxt4.Location = new System.Drawing.Point(622, 102);
             efstxt4.Multiline = true;
             efstxt4.Name = "efstxt4";
             efstxt4.ScrollBars = ScrollBars.Vertical;
@@ -574,7 +586,7 @@ namespace ReaLTaiizor.UI
             // 
             // efstxt3
             // 
-            efstxt3.Location = new System.Drawing.Point(622, 89);
+            efstxt3.Location = new System.Drawing.Point(622, 68);
             efstxt3.Multiline = true;
             efstxt3.Name = "efstxt3";
             efstxt3.ScrollBars = ScrollBars.Vertical;
@@ -583,7 +595,7 @@ namespace ReaLTaiizor.UI
             // 
             // efstxt2
             // 
-            efstxt2.Location = new System.Drawing.Point(622, 47);
+            efstxt2.Location = new System.Drawing.Point(622, 36);
             efstxt2.Multiline = true;
             efstxt2.Name = "efstxt2";
             efstxt2.ScrollBars = ScrollBars.Vertical;
@@ -595,72 +607,72 @@ namespace ReaLTaiizor.UI
             efslbl6.Anchor = AnchorStyles.Left;
             efslbl6.AutoSize = true;
             efslbl6.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            efslbl6.Location = new System.Drawing.Point(9, 224);
+            efslbl6.Location = new System.Drawing.Point(9, 168);
             efslbl6.Margin = new Padding(7, 0, 2, 0);
             efslbl6.Name = "efslbl6";
-            efslbl6.Size = new System.Drawing.Size(365, 16);
+            efslbl6.Size = new System.Drawing.Size(373, 16);
             efslbl6.TabIndex = 23;
-            efslbl6.Text = "Are alternate deisgs considered during grooming and refinement?";
+            efslbl6.Text = "Indicate whether Pre-Integration/BLR3 functional testing is needed.";
             // 
             // efslbl2
             // 
             efslbl2.Anchor = AnchorStyles.Left;
             efslbl2.AutoSize = true;
             efslbl2.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            efslbl2.Location = new System.Drawing.Point(9, 48);
+            efslbl2.Location = new System.Drawing.Point(9, 40);
             efslbl2.Margin = new Padding(7, 0, 2, 0);
             efslbl2.Name = "efslbl2";
-            efslbl2.Size = new System.Drawing.Size(443, 32);
+            efslbl2.Size = new System.Drawing.Size(265, 16);
             efslbl2.TabIndex = 3;
-            efslbl2.Text = "Are review comments from peers captured in .xlsx and EFS state changed to CP3 approved?";
+            efslbl2.Text = "Needed Interface changes are captured [L1-L2]?";
             // 
             // efslbl3
             // 
             efslbl3.Anchor = AnchorStyles.Left;
             efslbl3.AutoSize = true;
             efslbl3.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            efslbl3.Location = new System.Drawing.Point(9, 98);
+            efslbl3.Location = new System.Drawing.Point(9, 73);
             efslbl3.Margin = new Padding(7, 0, 2, 0);
             efslbl3.Name = "efslbl3";
-            efslbl3.Size = new System.Drawing.Size(312, 16);
+            efslbl3.Size = new System.Drawing.Size(264, 16);
             efslbl3.TabIndex = 5;
-            efslbl3.Text = "Is \"Dev Test Strategy\" updated in EFS page by architect?";
+            efslbl3.Text = "Needed Interface changes are captured [L1-L3]?";
             // 
             // efslbl4
             // 
             efslbl4.Anchor = AnchorStyles.Left;
             efslbl4.AutoSize = true;
             efslbl4.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            efslbl4.Location = new System.Drawing.Point(9, 140);
+            efslbl4.Location = new System.Drawing.Point(9, 105);
             efslbl4.Margin = new Padding(7, 0, 2, 0);
             efslbl4.Name = "efslbl4";
             efslbl4.Size = new System.Drawing.Size(278, 16);
             efslbl4.TabIndex = 4;
-            efslbl4.Text = "Is DFMEA done and DFMEA-lite field updated in EFS";
+            efslbl4.Text = "Needed Interface changes are captured [L3-OAM]?";
             // 
             // efslbl5
             // 
             efslbl5.Anchor = AnchorStyles.Left;
             efslbl5.AutoSize = true;
             efslbl5.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            efslbl5.Location = new System.Drawing.Point(9, 182);
+            efslbl5.Location = new System.Drawing.Point(9, 136);
             efslbl5.Margin = new Padding(7, 0, 2, 0);
             efslbl5.Name = "efslbl5";
-            efslbl5.Size = new System.Drawing.Size(327, 16);
+            efslbl5.Size = new System.Drawing.Size(266, 16);
             efslbl5.TabIndex = 6;
-            efslbl5.Text = "Are Capacity and Performance impacts taken into account?";
+            efslbl5.Text = "Needed Interface changes are captured [L2-L3]?";
             // 
             // efslbl1
             // 
             efslbl1.Anchor = AnchorStyles.Left;
             efslbl1.AutoSize = true;
             efslbl1.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            efslbl1.Location = new System.Drawing.Point(9, 14);
+            efslbl1.Location = new System.Drawing.Point(9, 8);
             efslbl1.Margin = new Padding(7, 0, 2, 0);
             efslbl1.Name = "efslbl1";
-            efslbl1.Size = new System.Drawing.Size(317, 16);
+            efslbl1.Size = new System.Drawing.Size(399, 16);
             efslbl1.TabIndex = 2;
-            efslbl1.Text = "Are all inputs required to form dev items available in EFS?";
+            efslbl1.Text = "Technical Analysis is updated in sharepoint post CP2 [EI wise effort split]";
             // 
             // efstxt1
             // 
@@ -686,7 +698,7 @@ namespace ReaLTaiizor.UI
             // 
             efsComboBox2.FormattingEnabled = true;
             efsComboBox2.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            efsComboBox2.Location = new System.Drawing.Point(464, 47);
+            efsComboBox2.Location = new System.Drawing.Point(464, 36);
             efsComboBox2.Name = "efsComboBox2";
             efsComboBox2.Size = new System.Drawing.Size(147, 23);
             efsComboBox2.TabIndex = 37;
@@ -697,30 +709,30 @@ namespace ReaLTaiizor.UI
             efslbl8.Anchor = AnchorStyles.Left;
             efslbl8.AutoSize = true;
             efslbl8.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            efslbl8.Location = new System.Drawing.Point(9, 300);
+            efslbl8.Location = new System.Drawing.Point(9, 230);
             efslbl8.Margin = new Padding(7, 0, 2, 0);
             efslbl8.Name = "efslbl8";
-            efslbl8.Size = new System.Drawing.Size(397, 32);
+            efslbl8.Size = new System.Drawing.Size(392, 16);
             efslbl8.TabIndex = 43;
-            efslbl8.Text = "Is Feature specific \"Interface EFS\" section: Internal I?F impacts for \"User Plane/Control Plane\" updated?";
+            efslbl8.Text = "Are Testability requirements available from VRF team and are reviewed?";
             // 
             // efslbl9
             // 
             efslbl9.Anchor = AnchorStyles.Left;
             efslbl9.AutoSize = true;
             efslbl9.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            efslbl9.Location = new System.Drawing.Point(9, 351);
+            efslbl9.Location = new System.Drawing.Point(9, 293);
             efslbl9.Margin = new Padding(7, 0, 2, 0);
             efslbl9.Name = "efslbl9";
-            efslbl9.Size = new System.Drawing.Size(409, 16);
+            efslbl9.Size = new System.Drawing.Size(320, 16);
             efslbl9.TabIndex = 44;
-            efslbl9.Text = "Is feature specific \"test mode\" section: Impacts on \"Test modes\" updated?";
+            efslbl9.Text = "Is there any other Component area dependency (L1/OAM)?";
             // 
             // efsComboBox8
             // 
             efsComboBox8.FormattingEnabled = true;
             efsComboBox8.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            efsComboBox8.Location = new System.Drawing.Point(464, 299);
+            efsComboBox8.Location = new System.Drawing.Point(464, 226);
             efsComboBox8.Name = "efsComboBox8";
             efsComboBox8.Size = new System.Drawing.Size(147, 23);
             efsComboBox8.TabIndex = 46;
@@ -730,7 +742,7 @@ namespace ReaLTaiizor.UI
             // 
             efsComboBox7.FormattingEnabled = true;
             efsComboBox7.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            efsComboBox7.Location = new System.Drawing.Point(464, 257);
+            efsComboBox7.Location = new System.Drawing.Point(464, 196);
             efsComboBox7.Name = "efsComboBox7";
             efsComboBox7.Size = new System.Drawing.Size(147, 23);
             efsComboBox7.TabIndex = 45;
@@ -740,7 +752,7 @@ namespace ReaLTaiizor.UI
             // 
             efsComboBox6.FormattingEnabled = true;
             efsComboBox6.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            efsComboBox6.Location = new System.Drawing.Point(464, 215);
+            efsComboBox6.Location = new System.Drawing.Point(464, 164);
             efsComboBox6.Name = "efsComboBox6";
             efsComboBox6.Size = new System.Drawing.Size(147, 23);
             efsComboBox6.TabIndex = 41;
@@ -750,7 +762,7 @@ namespace ReaLTaiizor.UI
             // 
             efsComboBox9.FormattingEnabled = true;
             efsComboBox9.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            efsComboBox9.Location = new System.Drawing.Point(464, 341);
+            efsComboBox9.Location = new System.Drawing.Point(464, 258);
             efsComboBox9.Name = "efsComboBox9";
             efsComboBox9.Size = new System.Drawing.Size(147, 23);
             efsComboBox9.TabIndex = 47;
@@ -882,6 +894,7 @@ namespace ReaLTaiizor.UI
             materialLabel46.Size = new System.Drawing.Size(261, 44);
             materialLabel46.TabIndex = 33;
             materialLabel46.Text = "EFS DOD Review";
+            materialLabel46.Click += materialLabel46_Click;
             // 
             // efsTabB
             // 
@@ -890,7 +903,7 @@ namespace ReaLTaiizor.UI
             efsTabB.Padding = new Padding(3);
             efsTabB.Size = new System.Drawing.Size(1248, 798);
             efsTabB.TabIndex = 1;
-            efsTabB.Text = "B";
+            efsTabB.Text = "CP2-Approved";
             efsTabB.UseVisualStyleBackColor = true;
             // 
             // codeReviewTab
@@ -1785,20 +1798,21 @@ namespace ReaLTaiizor.UI
             tableLayoutPanel1.Location = new System.Drawing.Point(14, 147);
             tableLayoutPanel1.Margin = new Padding(0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 7;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel1.Size = new System.Drawing.Size(1168, 304);
+            tableLayoutPanel1.RowCount = 8;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 31F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 28F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 29F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 32F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 31F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 89F));
+            tableLayoutPanel1.Size = new System.Drawing.Size(1168, 234);
             tableLayoutPanel1.TabIndex = 70;
             // 
             // spectxt7
             // 
-            spectxt7.Location = new System.Drawing.Point(622, 257);
+            spectxt7.Location = new System.Drawing.Point(622, 197);
             spectxt7.Multiline = true;
             spectxt7.Name = "spectxt7";
             spectxt7.ScrollBars = ScrollBars.Vertical;
@@ -1810,7 +1824,7 @@ namespace ReaLTaiizor.UI
             speclbl7.Anchor = AnchorStyles.Left;
             speclbl7.AutoSize = true;
             speclbl7.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            speclbl7.Location = new System.Drawing.Point(9, 270);
+            speclbl7.Location = new System.Drawing.Point(9, 201);
             speclbl7.Margin = new Padding(7, 0, 2, 0);
             speclbl7.Name = "speclbl7";
             speclbl7.Size = new System.Drawing.Size(322, 16);
@@ -1821,7 +1835,7 @@ namespace ReaLTaiizor.UI
             // 
             specComboBox5.FormattingEnabled = true;
             specComboBox5.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            specComboBox5.Location = new System.Drawing.Point(464, 173);
+            specComboBox5.Location = new System.Drawing.Point(464, 131);
             specComboBox5.Name = "specComboBox5";
             specComboBox5.Size = new System.Drawing.Size(147, 23);
             specComboBox5.TabIndex = 40;
@@ -1831,7 +1845,7 @@ namespace ReaLTaiizor.UI
             // 
             specComboBox4.FormattingEnabled = true;
             specComboBox4.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            specComboBox4.Location = new System.Drawing.Point(464, 131);
+            specComboBox4.Location = new System.Drawing.Point(464, 100);
             specComboBox4.Name = "specComboBox4";
             specComboBox4.Size = new System.Drawing.Size(147, 23);
             specComboBox4.TabIndex = 39;
@@ -1841,7 +1855,7 @@ namespace ReaLTaiizor.UI
             // 
             specComboBox3.FormattingEnabled = true;
             specComboBox3.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            specComboBox3.Location = new System.Drawing.Point(464, 89);
+            specComboBox3.Location = new System.Drawing.Point(464, 68);
             specComboBox3.Name = "specComboBox3";
             specComboBox3.Size = new System.Drawing.Size(147, 23);
             specComboBox3.TabIndex = 38;
@@ -1849,17 +1863,16 @@ namespace ReaLTaiizor.UI
             // 
             // spectxt6
             // 
-            spectxt6.Location = new System.Drawing.Point(622, 215);
+            spectxt6.Location = new System.Drawing.Point(622, 163);
             spectxt6.Multiline = true;
             spectxt6.Name = "spectxt6";
-            spectxt6.PlaceholderText = "Enter the Schedule, e.g. Wk Number or Date";
             spectxt6.ScrollBars = ScrollBars.Vertical;
             spectxt6.Size = new System.Drawing.Size(541, 23);
             spectxt6.TabIndex = 35;
             // 
             // spectxt5
             // 
-            spectxt5.Location = new System.Drawing.Point(622, 173);
+            spectxt5.Location = new System.Drawing.Point(622, 131);
             spectxt5.Multiline = true;
             spectxt5.Name = "spectxt5";
             spectxt5.ScrollBars = ScrollBars.Vertical;
@@ -1868,7 +1881,7 @@ namespace ReaLTaiizor.UI
             // 
             // spectxt4
             // 
-            spectxt4.Location = new System.Drawing.Point(622, 131);
+            spectxt4.Location = new System.Drawing.Point(622, 100);
             spectxt4.Multiline = true;
             spectxt4.Name = "spectxt4";
             spectxt4.ScrollBars = ScrollBars.Vertical;
@@ -1877,7 +1890,7 @@ namespace ReaLTaiizor.UI
             // 
             // spectxt3
             // 
-            spectxt3.Location = new System.Drawing.Point(622, 89);
+            spectxt3.Location = new System.Drawing.Point(622, 68);
             spectxt3.Multiline = true;
             spectxt3.Name = "spectxt3";
             spectxt3.ScrollBars = ScrollBars.Vertical;
@@ -1886,11 +1899,11 @@ namespace ReaLTaiizor.UI
             // 
             // spectxt2
             // 
-            spectxt2.Location = new System.Drawing.Point(622, 47);
+            spectxt2.Location = new System.Drawing.Point(622, 38);
             spectxt2.Multiline = true;
             spectxt2.Name = "spectxt2";
             spectxt2.ScrollBars = ScrollBars.Vertical;
-            spectxt2.Size = new System.Drawing.Size(541, 23);
+            spectxt2.Size = new System.Drawing.Size(541, 22);
             spectxt2.TabIndex = 31;
             // 
             // speclbl6
@@ -1898,7 +1911,7 @@ namespace ReaLTaiizor.UI
             speclbl6.Anchor = AnchorStyles.Left;
             speclbl6.AutoSize = true;
             speclbl6.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            speclbl6.Location = new System.Drawing.Point(9, 224);
+            speclbl6.Location = new System.Drawing.Point(9, 168);
             speclbl6.Margin = new Padding(7, 0, 2, 0);
             speclbl6.Name = "speclbl6";
             speclbl6.Size = new System.Drawing.Size(376, 16);
@@ -1910,7 +1923,7 @@ namespace ReaLTaiizor.UI
             speclbl2.Anchor = AnchorStyles.Left;
             speclbl2.AutoSize = true;
             speclbl2.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            speclbl2.Location = new System.Drawing.Point(9, 56);
+            speclbl2.Location = new System.Drawing.Point(9, 41);
             speclbl2.Margin = new Padding(7, 0, 2, 0);
             speclbl2.Name = "speclbl2";
             speclbl2.Size = new System.Drawing.Size(258, 16);
@@ -1922,7 +1935,7 @@ namespace ReaLTaiizor.UI
             speclbl3.Anchor = AnchorStyles.Left;
             speclbl3.AutoSize = true;
             speclbl3.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            speclbl3.Location = new System.Drawing.Point(9, 98);
+            speclbl3.Location = new System.Drawing.Point(9, 72);
             speclbl3.Margin = new Padding(7, 0, 2, 0);
             speclbl3.Name = "speclbl3";
             speclbl3.Size = new System.Drawing.Size(257, 16);
@@ -1934,7 +1947,7 @@ namespace ReaLTaiizor.UI
             speclbl4.Anchor = AnchorStyles.Left;
             speclbl4.AutoSize = true;
             speclbl4.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            speclbl4.Location = new System.Drawing.Point(9, 140);
+            speclbl4.Location = new System.Drawing.Point(9, 103);
             speclbl4.Margin = new Padding(7, 0, 2, 0);
             speclbl4.Name = "speclbl4";
             speclbl4.Size = new System.Drawing.Size(271, 16);
@@ -1946,7 +1959,7 @@ namespace ReaLTaiizor.UI
             speclbl5.Anchor = AnchorStyles.Left;
             speclbl5.AutoSize = true;
             speclbl5.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            speclbl5.Location = new System.Drawing.Point(9, 182);
+            speclbl5.Location = new System.Drawing.Point(9, 135);
             speclbl5.Margin = new Padding(7, 0, 2, 0);
             speclbl5.Name = "speclbl5";
             speclbl5.Size = new System.Drawing.Size(259, 16);
@@ -1958,12 +1971,12 @@ namespace ReaLTaiizor.UI
             speclbl1.Anchor = AnchorStyles.Left;
             speclbl1.AutoSize = true;
             speclbl1.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            speclbl1.Location = new System.Drawing.Point(9, 14);
+            speclbl1.Location = new System.Drawing.Point(9, 9);
             speclbl1.Margin = new Padding(7, 0, 2, 0);
             speclbl1.Name = "speclbl1";
-            speclbl1.Size = new System.Drawing.Size(387, 16);
+            speclbl1.Size = new System.Drawing.Size(230, 16);
             speclbl1.TabIndex = 2;
-            speclbl1.Text = "Technical Analysis updated in sharepoint post CP2 [EI wise effort split]";
+            speclbl1.Text = "Technical Analysis updated in sharepoint.";
             // 
             // spectxt1
             // 
@@ -1989,7 +2002,7 @@ namespace ReaLTaiizor.UI
             // 
             specComboBox2.FormattingEnabled = true;
             specComboBox2.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            specComboBox2.Location = new System.Drawing.Point(464, 47);
+            specComboBox2.Location = new System.Drawing.Point(464, 38);
             specComboBox2.Name = "specComboBox2";
             specComboBox2.Size = new System.Drawing.Size(147, 23);
             specComboBox2.TabIndex = 37;
@@ -1999,7 +2012,7 @@ namespace ReaLTaiizor.UI
             // 
             specComboBox7.FormattingEnabled = true;
             specComboBox7.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            specComboBox7.Location = new System.Drawing.Point(464, 257);
+            specComboBox7.Location = new System.Drawing.Point(464, 197);
             specComboBox7.Name = "specComboBox7";
             specComboBox7.Size = new System.Drawing.Size(147, 23);
             specComboBox7.TabIndex = 45;
@@ -2009,7 +2022,7 @@ namespace ReaLTaiizor.UI
             // 
             specComboBox6.FormattingEnabled = true;
             specComboBox6.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            specComboBox6.Location = new System.Drawing.Point(464, 215);
+            specComboBox6.Location = new System.Drawing.Point(464, 163);
             specComboBox6.Name = "specComboBox6";
             specComboBox6.Size = new System.Drawing.Size(147, 23);
             specComboBox6.TabIndex = 41;
@@ -2379,6 +2392,47 @@ namespace ReaLTaiizor.UI
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // tabPage2
+            // 
+            tabPage2.Location = new System.Drawing.Point(4, 24);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new System.Drawing.Size(1248, 798);
+            tabPage2.TabIndex = 2;
+            tabPage2.Text = "CP3-Approved";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            comboBox1.Location = new System.Drawing.Point(464, 290);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new System.Drawing.Size(147, 23);
+            comboBox1.TabIndex = 52;
+            comboBox1.Text = "Select";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new System.Drawing.Point(622, 290);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.ScrollBars = ScrollBars.Vertical;
+            textBox1.Size = new System.Drawing.Size(541, 23);
+            textBox1.TabIndex = 53;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Left;
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            label1.Location = new System.Drawing.Point(9, 262);
+            label1.Margin = new Padding(7, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(295, 16);
+            label1.TabIndex = 51;
+            label1.Text = "Is Greenleaf tool updated with feature requirements?";
+            // 
             // frmRcl
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -2601,5 +2655,9 @@ namespace ReaLTaiizor.UI
         private TabPage efsTabA;
         private TabPage efsTabB;
         private TextBox console;
+        private TabPage tabPage2;
+        private ComboBox comboBox1;
+        private TextBox textBox1;
+        private Label label1;
     }
 }

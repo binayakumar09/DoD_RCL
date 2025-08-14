@@ -2536,7 +2536,7 @@ namespace ReaLTaiizor.UI
             // 
             pictureBox4.Image = RCL.Properties.Resources.EFS;
             pictureBox4.InitialImage = (System.Drawing.Image)resources.GetObject("pictureBox4.InitialImage");
-            pictureBox4.Location = new System.Drawing.Point(427, 14);
+            pictureBox4.Location = new System.Drawing.Point(398, 16);
             pictureBox4.Margin = new Padding(0);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new System.Drawing.Size(54, 50);
@@ -2552,7 +2552,7 @@ namespace ReaLTaiizor.UI
             materialTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             materialTextBox1.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             materialTextBox1.Hint = "Type reviewers name here like Eric, Suresh";
-            materialTextBox1.Location = new System.Drawing.Point(185, 73);
+            materialTextBox1.Location = new System.Drawing.Point(156, 75);
             materialTextBox1.MaxLength = 50;
             materialTextBox1.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             materialTextBox1.Multiline = false;
@@ -2565,7 +2565,7 @@ namespace ReaLTaiizor.UI
             // 
             materialLabel11.Depth = 0;
             materialLabel11.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            materialLabel11.Location = new System.Drawing.Point(484, 20);
+            materialLabel11.Location = new System.Drawing.Point(455, 22);
             materialLabel11.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialLabel11.Name = "materialLabel11";
             materialLabel11.Size = new System.Drawing.Size(261, 44);
@@ -2583,7 +2583,7 @@ namespace ReaLTaiizor.UI
             tableLayoutPanel5.Controls.Add(materialLabel13, 2, 0);
             tableLayoutPanel5.Controls.Add(materialLabel14, 1, 0);
             tableLayoutPanel5.ForeColor = System.Drawing.Color.White;
-            tableLayoutPanel5.Location = new System.Drawing.Point(45, 149);
+            tableLayoutPanel5.Location = new System.Drawing.Point(16, 151);
             tableLayoutPanel5.Margin = new Padding(2);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 1;
@@ -2674,7 +2674,7 @@ namespace ReaLTaiizor.UI
             tableLayoutPanel6.Controls.Add(textBox11, 2, 9);
             tableLayoutPanel6.Controls.Add(label11, 0, 9);
             tableLayoutPanel6.Controls.Add(label12, 0, 8);
-            tableLayoutPanel6.Location = new System.Drawing.Point(45, 184);
+            tableLayoutPanel6.Location = new System.Drawing.Point(16, 186);
             tableLayoutPanel6.Margin = new Padding(0);
             tableLayoutPanel6.Name = "tableLayoutPanel6";
             tableLayoutPanel6.RowCount = 12;
@@ -3014,7 +3014,7 @@ namespace ReaLTaiizor.UI
             materialButton1.DrawShadows = true;
             materialButton1.HighEmphasis = false;
             materialButton1.Icon = RCL.Properties.Resources.ic_restore_page_black_36dp;
-            materialButton1.Location = new System.Drawing.Point(345, 562);
+            materialButton1.Location = new System.Drawing.Point(316, 564);
             materialButton1.Margin = new Padding(4, 6, 4, 6);
             materialButton1.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton1.Name = "materialButton1";
@@ -3035,7 +3035,7 @@ namespace ReaLTaiizor.UI
             materialButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             materialButton2.HighEmphasis = true;
             materialButton2.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
-            materialButton2.Location = new System.Drawing.Point(672, 562);
+            materialButton2.Location = new System.Drawing.Point(643, 564);
             materialButton2.Margin = new Padding(4, 6, 4, 6);
             materialButton2.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton2.Name = "materialButton2";
@@ -3055,7 +3055,7 @@ namespace ReaLTaiizor.UI
             materialButton3.DrawShadows = true;
             materialButton3.HighEmphasis = true;
             materialButton3.Icon = RCL.Properties.Resources.Close_16xLG;
-            materialButton3.Location = new System.Drawing.Point(509, 562);
+            materialButton3.Location = new System.Drawing.Point(480, 564);
             materialButton3.Margin = new Padding(4, 6, 4, 6);
             materialButton3.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton3.Name = "materialButton3";

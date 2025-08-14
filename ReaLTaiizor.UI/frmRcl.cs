@@ -423,6 +423,9 @@ namespace ReaLTaiizor.UI
             EnsureSelectItem(efsComboBox4);
             EnsureSelectItem(efsComboBox5);
             EnsureSelectItem(efsComboBox6);
+            EnsureSelectItem(efsComboBox7);
+            EnsureSelectItem(efsComboBox8);
+            EnsureSelectItem(efsComboBox9);
 
             // Now reliably set to "Select"
             SetComboBoxToSelect(efsComboBox1);
@@ -431,6 +434,9 @@ namespace ReaLTaiizor.UI
             SetComboBoxToSelect(efsComboBox4);
             SetComboBoxToSelect(efsComboBox5);
             SetComboBoxToSelect(efsComboBox6);
+            SetComboBoxToSelect(efsComboBox7);
+            SetComboBoxToSelect(efsComboBox8);
+            SetComboBoxToSelect(efsComboBox9);
 
             // Clear associated TextBoxes
             efstxt1.Text = "";
@@ -469,6 +475,8 @@ namespace ReaLTaiizor.UI
             EnsureSelectItem(cdrComboBox6);
             EnsureSelectItem(cdrComboBox7);
             EnsureSelectItem(cdrComboBox8);
+            EnsureSelectItem(cdrComboBox9);
+            EnsureSelectItem(cdrComboBox10);
 
             // Now reliably set to "Select"
             SetComboBoxToSelect(cdrComboBox1);
@@ -479,6 +487,8 @@ namespace ReaLTaiizor.UI
             SetComboBoxToSelect(cdrComboBox6);
             SetComboBoxToSelect(cdrComboBox7);
             SetComboBoxToSelect(cdrComboBox8);
+            SetComboBoxToSelect(cdrComboBox9);
+            SetComboBoxToSelect(cdrComboBox10);
 
             // Clear associated TextBoxes
             cdrtxt1.Text = "";
@@ -489,6 +499,8 @@ namespace ReaLTaiizor.UI
             cdrtxt6.Text = "";
             cdrtxt7.Text = "";
             cdrtxt8.Text = "";
+            cdrtxt9.Text = "";
+            cdrtxt10.Text = "";
 
             // Reset flags
             cdrComboBoxFlag1 = false;

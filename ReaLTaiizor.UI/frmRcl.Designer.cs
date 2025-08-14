@@ -68,11 +68,14 @@ namespace ReaLTaiizor.UI
             efsComboBox1 = new ComboBox();
             efsComboBox2 = new ComboBox();
             efslbl8 = new Label();
-            efslbl9 = new Label();
             efsComboBox8 = new ComboBox();
             efsComboBox7 = new ComboBox();
             efsComboBox6 = new ComboBox();
             efsComboBox9 = new ComboBox();
+            comboBox1 = new ComboBox();
+            textBox1 = new TextBox();
+            efslbl9 = new Label();
+            label1 = new Label();
             pictureBox2 = new PictureBox();
             materialLabel50 = new ReaLTaiizor.Controls.MaterialLabel();
             materialLabel48 = new ReaLTaiizor.Controls.MaterialLabel();
@@ -82,6 +85,7 @@ namespace ReaLTaiizor.UI
             efstxtReviewers = new ReaLTaiizor.Controls.MaterialTextBox();
             materialLabel46 = new ReaLTaiizor.Controls.MaterialLabel();
             efsTabB = new TabPage();
+            tabPage2 = new TabPage();
             codeReviewTab = new TabPage();
             cdrLink = new LinkLabel();
             materialLabel1 = new ReaLTaiizor.Controls.MaterialLabel();
@@ -196,10 +200,6 @@ namespace ReaLTaiizor.UI
             toolStripSeparator1 = new ToolStripSeparator();
             item3ToolStripMenuItem = new ReaLTaiizor.Controls.MaterialToolStripMenuItem();
             contextMenuStrip1 = new ContextMenuStrip(components);
-            tabPage2 = new TabPage();
-            comboBox1 = new ComboBox();
-            textBox1 = new TextBox();
-            label1 = new Label();
             specTabControl.SuspendLayout();
             efsTab.SuspendLayout();
             efsTabInnerTabControl.SuspendLayout();
@@ -337,7 +337,7 @@ namespace ReaLTaiizor.UI
             efsBtnReset.DrawShadows = true;
             efsBtnReset.HighEmphasis = false;
             efsBtnReset.Icon = RCL.Properties.Resources.ic_restore_page_black_36dp;
-            efsBtnReset.Location = new System.Drawing.Point(353, 628);
+            efsBtnReset.Location = new System.Drawing.Point(334, 542);
             efsBtnReset.Margin = new Padding(4, 6, 4, 6);
             efsBtnReset.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             efsBtnReset.Name = "efsBtnReset";
@@ -716,18 +716,6 @@ namespace ReaLTaiizor.UI
             efslbl8.TabIndex = 43;
             efslbl8.Text = "Are Testability requirements available from VRF team and are reviewed?";
             // 
-            // efslbl9
-            // 
-            efslbl9.Anchor = AnchorStyles.Left;
-            efslbl9.AutoSize = true;
-            efslbl9.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            efslbl9.Location = new System.Drawing.Point(9, 293);
-            efslbl9.Margin = new Padding(7, 0, 2, 0);
-            efslbl9.Name = "efslbl9";
-            efslbl9.Size = new System.Drawing.Size(320, 16);
-            efslbl9.TabIndex = 44;
-            efslbl9.Text = "Is there any other Component area dependency (L1/OAM)?";
-            // 
             // efsComboBox8
             // 
             efsComboBox8.FormattingEnabled = true;
@@ -767,6 +755,49 @@ namespace ReaLTaiizor.UI
             efsComboBox9.Size = new System.Drawing.Size(147, 23);
             efsComboBox9.TabIndex = 47;
             efsComboBox9.Text = "Select";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            comboBox1.Location = new System.Drawing.Point(464, 290);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new System.Drawing.Size(147, 23);
+            comboBox1.TabIndex = 52;
+            comboBox1.Text = "Select";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new System.Drawing.Point(622, 290);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.ScrollBars = ScrollBars.Vertical;
+            textBox1.Size = new System.Drawing.Size(541, 23);
+            textBox1.TabIndex = 53;
+            // 
+            // efslbl9
+            // 
+            efslbl9.Anchor = AnchorStyles.Left;
+            efslbl9.AutoSize = true;
+            efslbl9.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            efslbl9.Location = new System.Drawing.Point(9, 293);
+            efslbl9.Margin = new Padding(7, 0, 2, 0);
+            efslbl9.Name = "efslbl9";
+            efslbl9.Size = new System.Drawing.Size(320, 16);
+            efslbl9.TabIndex = 44;
+            efslbl9.Text = "Is there any other Component area dependency (L1/OAM)?";
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Left;
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            label1.Location = new System.Drawing.Point(9, 262);
+            label1.Margin = new Padding(7, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(295, 16);
+            label1.TabIndex = 51;
+            label1.Text = "Is Greenleaf tool updated with feature requirements?";
             // 
             // pictureBox2
             // 
@@ -833,7 +864,7 @@ namespace ReaLTaiizor.UI
             efsBtnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             efsBtnSubmit.HighEmphasis = true;
             efsBtnSubmit.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
-            efsBtnSubmit.Location = new System.Drawing.Point(664, 629);
+            efsBtnSubmit.Location = new System.Drawing.Point(661, 542);
             efsBtnSubmit.Margin = new Padding(4, 6, 4, 6);
             efsBtnSubmit.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             efsBtnSubmit.Name = "efsBtnSubmit";
@@ -854,7 +885,7 @@ namespace ReaLTaiizor.UI
             efsBtnCancel.DrawShadows = true;
             efsBtnCancel.HighEmphasis = true;
             efsBtnCancel.Icon = RCL.Properties.Resources.Close_16xLG;
-            efsBtnCancel.Location = new System.Drawing.Point(510, 629);
+            efsBtnCancel.Location = new System.Drawing.Point(498, 542);
             efsBtnCancel.Margin = new Padding(4, 6, 4, 6);
             efsBtnCancel.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             efsBtnCancel.Name = "efsBtnCancel";
@@ -905,6 +936,16 @@ namespace ReaLTaiizor.UI
             efsTabB.TabIndex = 1;
             efsTabB.Text = "CP2-Approved";
             efsTabB.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Location = new System.Drawing.Point(4, 24);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new System.Drawing.Size(1248, 798);
+            tabPage2.TabIndex = 2;
+            tabPage2.Text = "CP3-Approved";
+            tabPage2.UseVisualStyleBackColor = true;
             // 
             // codeReviewTab
             // 
@@ -2391,47 +2432,6 @@ namespace ReaLTaiizor.UI
             // 
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // tabPage2
-            // 
-            tabPage2.Location = new System.Drawing.Point(4, 24);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new System.Drawing.Size(1248, 798);
-            tabPage2.TabIndex = 2;
-            tabPage2.Text = "CP3-Approved";
-            tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            comboBox1.Location = new System.Drawing.Point(464, 290);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new System.Drawing.Size(147, 23);
-            comboBox1.TabIndex = 52;
-            comboBox1.Text = "Select";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new System.Drawing.Point(622, 290);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.ScrollBars = ScrollBars.Vertical;
-            textBox1.Size = new System.Drawing.Size(541, 23);
-            textBox1.TabIndex = 53;
-            // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.Left;
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            label1.Location = new System.Drawing.Point(9, 262);
-            label1.Margin = new Padding(7, 0, 2, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(295, 16);
-            label1.TabIndex = 51;
-            label1.Text = "Is Greenleaf tool updated with feature requirements?";
             // 
             // frmRcl
             // 

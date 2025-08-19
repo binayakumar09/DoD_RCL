@@ -341,12 +341,25 @@ namespace ReaLTaiizor.UI
                     ShowMessageAndFocus(null, textBox, addCommentMessage, label);
                     return false;
                 }
+                    return true;
+            }
+
+            Boolean ValidateEfsComboBoxAndTextBoxYes(ComboBox comboBox, TextBox textBox, Label label)
+            {
+                String text = textBox.Text;
+                int wordCount = text.Split(new char[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries).Length;
+
+                if (wordCount < 1 && (comboBox.SelectedIndex.Equals(0)))
+                {
+                    ShowMessageAndFocus(null, textBox, "Please update Comments Section", label);
+                    return false;
+                }
                 return true;
             }
 
-            ComboBox[] comboBoxes = { efsComboBox1, efsComboBox2, efsComboBox3, efsComboBox4, efsComboBox5, efsComboBox6, efsComboBox7, efsComboBox7, efsComboBox9 };
-            TextBox[] textBoxes = { efstxt1, efstxt2, efstxt3, efstxt4, efstxt5, efstxt6, efstxt7, efstxt8, efstxt9 };
-            Label[] labels = { efslbl1, efslbl2, efslbl3, efslbl4, efslbl5, efslbl6, efslbl7, efslbl8, efslbl9 };
+            ComboBox[] comboBoxes = { efsComboBox1, efsComboBox2, efsComboBox3, efsComboBox4, efsComboBox5, efsComboBox6, efsComboBox7, efsComboBox7, efsComboBox9, efsComboBox10 };
+            TextBox[] textBoxes = { efstxt1, efstxt2, efstxt3, efstxt4, efstxt5, efstxt6, efstxt7, efstxt8, efstxt9, efstxt10 };
+            Label[] labels = { efslbl1, efslbl2, efslbl3, efslbl4, efslbl5, efslbl6, efslbl7, efslbl8, efslbl9, efslbl10 };
 
             for (int i = 0; i < comboBoxes.Length; i++)
             {
@@ -355,6 +368,16 @@ namespace ReaLTaiizor.UI
                     return;
                 }
             }
+            if (!ValidateEfsComboBoxAndTextBoxYes(efsComboBox1, efstxt1, efslbl1))
+                return;
+            if (!ValidateEfsComboBoxAndTextBoxYes(efsComboBox2, efstxt2, efslbl2))
+                return;
+            if (!ValidateEfsComboBoxAndTextBoxYes(efsComboBox3, efstxt3, efslbl3))
+                return;
+            if (!ValidateEfsComboBoxAndTextBoxYes(efsComboBox4, efstxt4, efslbl4))
+                return;
+            if (!ValidateEfsComboBoxAndTextBoxYes(efsComboBox5, efstxt5, efslbl5))
+                return;
 
             efsReviewResult();
         }
@@ -451,7 +474,8 @@ namespace ReaLTaiizor.UI
 
         public void efsReviewResult()
         {
-            StringBuilder builder = new("||" + efslblhdr1.Text + "||" + efslblhdr2.Text + "||" + efslblhdr3.Text + "||" + "\n");
+            StringBuilder builder = new("||" + "EFS in CP2 Ready State" + "||" + "\n");
+            builder.AppendFormat("||" + efslblhdr1.Text + "||" + efslblhdr2.Text + "||" + efslblhdr3.Text + "||" + "\n");
 
             for (int i = 1; i <= 9; i++)
             {
@@ -474,7 +498,7 @@ namespace ReaLTaiizor.UI
                 }
             }
 
-            builder.AppendFormat("Reviewers:  " + efstxtReviewers.Text + " \n\n");
+            builder.AppendFormat("**Reviewers:**  " + efstxtReviewers.Text + " \n\n");
 
             string batchOperationResults = builder.ToString();
             //DialogResult mresult = MaterialMessageBox.Show(batchOperationResults, "Review Result");
@@ -505,6 +529,7 @@ namespace ReaLTaiizor.UI
             EnsureSelectItem(efsComboBox7);
             EnsureSelectItem(efsComboBox8);
             EnsureSelectItem(efsComboBox9);
+            EnsureSelectItem(efsComboBox10);
 
             // Now reliably set to "Select"
             SetComboBoxToSelect(efsComboBox1);
@@ -516,6 +541,7 @@ namespace ReaLTaiizor.UI
             SetComboBoxToSelect(efsComboBox7);
             SetComboBoxToSelect(efsComboBox8);
             SetComboBoxToSelect(efsComboBox9);
+            SetComboBoxToSelect(efsComboBox10);
 
             // Clear associated TextBoxes
             efstxt1.Text = "";
@@ -527,6 +553,7 @@ namespace ReaLTaiizor.UI
             efstxt7.Text = "";
             efstxt8.Text = "";
             efstxt9.Text = "";
+            efstxt10.Text = "";
             efstxtReviewers.Text = "";
 
             // Reset flags
@@ -1069,6 +1096,11 @@ namespace ReaLTaiizor.UI
         }
 
         private void cdrlbl5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }

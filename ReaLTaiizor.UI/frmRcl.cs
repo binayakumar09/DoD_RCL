@@ -61,78 +61,6 @@ namespace ReaLTaiizor.UI
             console.Text = DataLogger.logString;
         }
 
-        private Control CloneControl(Control source)
-        {
-            Control copy = (Control)Activator.CreateInstance(source.GetType());
-
-            // Copy common properties
-            copy.Name = source.Name + "_copy";
-            copy.Text = source.Text;
-            copy.Size = source.Size;
-            copy.Location = source.Location;
-            copy.Dock = source.Dock;
-            copy.Anchor = source.Anchor;
-            copy.Margin = source.Margin;
-            copy.Padding = source.Padding;
-            copy.Enabled = source.Enabled;
-            copy.Visible = source.Visible;
-            copy.BackColor = source.BackColor;
-            copy.ForeColor = source.ForeColor;
-            copy.Font = source.Font;
-            copy.RightToLeft = source.RightToLeft;
-            copy.TabIndex = source.TabIndex;
-
-            // Type-specific properties
-            if (copy is ComboBox cbCopy && source is ComboBox cbSource)
-            {
-                foreach (var item in cbSource.Items) cbCopy.Items.Add(item);
-                cbCopy.SelectedIndex = cbSource.SelectedIndex;
-                cbCopy.DropDownStyle = cbSource.DropDownStyle;
-            }
-            else if (copy is TextBox tbCopy && source is TextBox tbSource)
-            {
-                tbCopy.Text = tbSource.Text;
-                tbCopy.Multiline = tbSource.Multiline;
-                tbCopy.ReadOnly = tbSource.ReadOnly;
-                tbCopy.WordWrap = tbSource.WordWrap;
-            }
-            else if (copy is CheckBox chkCopy && source is CheckBox chkSource)
-            {
-                chkCopy.Checked = chkSource.Checked;
-            }
-            else if (copy is RadioButton rbCopy && source is RadioButton rbSource)
-            {
-                rbCopy.Checked = rbSource.Checked;
-            }
-            else if (copy is ListBox lbCopy && source is ListBox lbSource)
-            {
-                foreach (var item in lbSource.Items) lbCopy.Items.Add(item);
-                lbCopy.SelectedIndex = lbSource.SelectedIndex;
-            }
-            // Add more types as needed
-
-            // Re-assign event handlers for buttons/links if needed
-            if (copy is Button btnCopy && source is Button btnSource)
-            {
-                if (btnSource.Name == "efsBtnSubmit") btnCopy.Click += efsBtnSubmit_Click;
-                if (btnSource.Name == "efsBtnReset") btnCopy.Click += efsBtnReset_Click;
-                if (btnSource.Name == "efsBtnCancel") btnCopy.Click += efsBtnCancel_Click;
-            }
-            if (copy is LinkLabel llCopy && source is LinkLabel llSource)
-            {
-                if (llSource.Name == "efslink") llCopy.LinkClicked += efslink_LinkClicked;
-            }
-
-            // Recursively clone children
-            foreach (Control child in source.Controls)
-            {
-                Control childCopy = CloneControl(child);
-                copy.Controls.Add(childCopy);
-            }
-
-            return copy;
-        }
-
         private void CheckforUpdate()
         {
             String RemoteVersion, LocalVersion = "";
@@ -366,7 +294,100 @@ namespace ReaLTaiizor.UI
             if (!ValidateEfsComboBoxAndTextBoxYes(efsComboBox5, efstxt5, efslbl5))
                 return;
 
-            efsReviewResult();
+            efsReviewResult("EFS in CP2 Ready State");
+        }
+
+        private void cp2BtnSubmit_Click(object sender, EventArgs e)
+        {
+
+            if (cp2txtReviewers.TextLength == 0)
+            {
+                result1 = MessageBox.Show("Please add reviewers name", "Mandatory reviewers", buttonsOk, MessageBoxIcon.Warning);
+                if (result1 == DialogResult.OK)
+                {
+                    cp2txtReviewers.Focus();
+                    return;
+                }
+                else
+                {
+                    // Do something  
+                }
+            }
+
+            void ShowMessageAndFocus(ComboBox comboBox, TextBox textBox, string message, Label label)
+            {
+                var result = MessageBox.Show(message, label.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (result == DialogResult.OK)
+                {
+                    if (comboBox != null)
+                    {
+                        comboBox.Focus();
+                    }
+                    else if (textBox != null)
+                    {
+                        textBox.Focus();
+                    }
+                }
+                else
+                {
+                    // Do something
+                }
+            }
+
+            Boolean ValidateCP2ComboBoxAndTextBox(ComboBox comboBox, TextBox textBox, string selectMessage, string addCommentMessage, Label label)
+            {
+                String text = textBox.Text;
+                int wordCount = text.Split(new char[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries).Length;
+
+                if (comboBox.Text.Equals("Select"))
+                {
+                    ShowMessageAndFocus(null, textBox, "Please Select the Status", label);
+                    return false;
+                }
+                else if (wordCount <= 2 && (comboBox.SelectedIndex.Equals(1) || comboBox.SelectedIndex.Equals(2)))
+                {
+                    ShowMessageAndFocus(null, textBox, addCommentMessage, label);
+                    return false;
+                }
+                return true;
+            }
+
+            Boolean ValidateCP2ComboBoxAndTextBoxYes(ComboBox comboBox, TextBox textBox, Label label)
+            {
+                String text = textBox.Text;
+                int wordCount = text.Split(new char[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries).Length;
+
+                if (wordCount < 1 && (comboBox.SelectedIndex.Equals(0)))
+                {
+                    ShowMessageAndFocus(null, textBox, "Please update Comments Section", label);
+                    return false;
+                }
+                return true;
+            }
+
+            ComboBox[] comboBoxes = { cp2ComboBox1, cp2ComboBox2, cp2ComboBox3, cp2ComboBox4, cp2ComboBox5, cp2ComboBox6, cp2ComboBox7, cp2ComboBox7, cp2ComboBox9, cp2ComboBox10 };
+            TextBox[] textBoxes = { cp2txt1, cp2txt2, cp2txt3, cp2txt4, cp2txt5, cp2txt6, cp2txt7, cp2txt8, cp2txt9, cp2txt10 };
+            Label[] labels = { cp2lbl1, cp2lbl2, cp2lbl3, cp2lbl4, cp2lbl5, cp2lbl6, cp2lbl7, cp2lbl8, cp2lbl9, cp2lbl10 };
+
+            for (int i = 0; i < comboBoxes.Length; i++)
+            {
+                if (!ValidateCP2ComboBoxAndTextBox(comboBoxes[i], textBoxes[i], selectEfsOptionMessage, addEfsCommentMessage, labels[i]))
+                {
+                    return;
+                }
+            }
+            if (!ValidateCP2ComboBoxAndTextBoxYes(cp2ComboBox1, cp2txt1, cp2lbl1))
+                return;
+            if (!ValidateCP2ComboBoxAndTextBoxYes(cp2ComboBox2, cp2txt2, cp2lbl2))
+                return;
+            if (!ValidateCP2ComboBoxAndTextBoxYes(cp2ComboBox3, cp2txt3, cp2lbl3))
+                return;
+            if (!ValidateCP2ComboBoxAndTextBoxYes(cp2ComboBox4, cp2txt4, cp2lbl4))
+                return;
+            if (!ValidateCP2ComboBoxAndTextBoxYes(cp2ComboBox5, cp2txt5, cp2lbl5))
+                return;
+
+            efsReviewResult("EFS in CP2 Approved State");
         }
 
         public void DownloadFile()
@@ -459,9 +480,9 @@ namespace ReaLTaiizor.UI
 
         }
 
-        public void efsReviewResult()
+        public void efsReviewResult(String efsState)
         {
-            StringBuilder builder = new("||" + "EFS in CP2 Ready State" + "||" + "\n");
+            StringBuilder builder = new("||" + efsState + "||" + "\n");
             builder.AppendFormat("||" + efslblhdr1.Text + "||" + efslblhdr2.Text + "||" + efslblhdr3.Text + "||" + "\n");
 
             for (int i = 1; i <= 9; i++)
@@ -553,6 +574,51 @@ namespace ReaLTaiizor.UI
         }
 
         private void efsBtnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cp2BtnReset_Click(object sender, EventArgs e)
+        {
+            // Defensive: Ensure "Select" is present, add if missing
+            EnsureSelectItem(cp2ComboBox1);
+            EnsureSelectItem(cp2ComboBox2);
+            EnsureSelectItem(cp2ComboBox3);
+            EnsureSelectItem(cp2ComboBox4);
+            EnsureSelectItem(cp2ComboBox5);
+            EnsureSelectItem(cp2ComboBox6);
+            EnsureSelectItem(cp2ComboBox7);
+            EnsureSelectItem(cp2ComboBox8);
+            EnsureSelectItem(cp2ComboBox9);
+            EnsureSelectItem(cp2ComboBox10);
+
+            // Now reliably set to "Select"
+            SetComboBoxToSelect(cp2ComboBox1);
+            SetComboBoxToSelect(cp2ComboBox2);
+            SetComboBoxToSelect(cp2ComboBox3);
+            SetComboBoxToSelect(cp2ComboBox4);
+            SetComboBoxToSelect(cp2ComboBox5);
+            SetComboBoxToSelect(cp2ComboBox6);
+            SetComboBoxToSelect(cp2ComboBox7);
+            SetComboBoxToSelect(cp2ComboBox8);
+            SetComboBoxToSelect(cp2ComboBox9);
+            SetComboBoxToSelect(cp2ComboBox10);
+
+            // Clear associated TextBoxes
+            cp2txt1.Text = "";
+            cp2txt2.Text = "";
+            cp2txt3.Text = "";
+            cp2txt4.Text = "";
+            cp2txt5.Text = "";
+            cp2txt6.Text = "";
+            cp2txt7.Text = "";
+            cp2txt8.Text = "";
+            cp2txt9.Text = "";
+            cp2txt10.Text = "";
+            cp2txtReviewers.Text = "";
+        }
+
+        private void cp2BtnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }

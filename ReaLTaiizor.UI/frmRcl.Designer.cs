@@ -120,11 +120,11 @@ namespace ReaLTaiizor.UI
             materialLabel11 = new ReaLTaiizor.Controls.MaterialLabel();
             materialLabel12 = new ReaLTaiizor.Controls.MaterialLabel();
             materialLabel13 = new ReaLTaiizor.Controls.MaterialLabel();
-            materialButton4 = new ReaLTaiizor.Controls.MaterialButton();
-            materialButton5 = new ReaLTaiizor.Controls.MaterialButton();
-            materialButton6 = new ReaLTaiizor.Controls.MaterialButton();
+            cp2BtnReset = new ReaLTaiizor.Controls.MaterialButton();
+            cp2BtnSubmit = new ReaLTaiizor.Controls.MaterialButton();
+            cp2BtnCancel = new ReaLTaiizor.Controls.MaterialButton();
             pictureBox6 = new PictureBox();
-            materialTextBox2 = new ReaLTaiizor.Controls.MaterialTextBox();
+            cp2txtReviewers = new ReaLTaiizor.Controls.MaterialTextBox();
             materialLabel18 = new ReaLTaiizor.Controls.MaterialLabel();
             tabPage3 = new TabPage();
             codeReviewTab = new TabPage();
@@ -982,11 +982,11 @@ namespace ReaLTaiizor.UI
             // 
             tabPage2.Controls.Add(tableLayoutPanel6);
             tabPage2.Controls.Add(tableLayoutPanel5);
-            tabPage2.Controls.Add(materialButton4);
-            tabPage2.Controls.Add(materialButton5);
-            tabPage2.Controls.Add(materialButton6);
+            tabPage2.Controls.Add(cp2BtnReset);
+            tabPage2.Controls.Add(cp2BtnSubmit);
+            tabPage2.Controls.Add(cp2BtnCancel);
             tabPage2.Controls.Add(pictureBox6);
-            tabPage2.Controls.Add(materialTextBox2);
+            tabPage2.Controls.Add(cp2txtReviewers);
             tabPage2.Controls.Add(materialLabel18);
             tabPage2.Location = new System.Drawing.Point(4, 24);
             tabPage2.Name = "tabPage2";
@@ -1435,66 +1435,69 @@ namespace ReaLTaiizor.UI
             materialLabel13.TabIndex = 68;
             materialLabel13.Text = "Status";
             // 
-            // materialButton4
+            // cp2BtnReset
             // 
-            materialButton4.AutoSize = false;
-            materialButton4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton4.Depth = 0;
-            materialButton4.DrawShadows = true;
-            materialButton4.HighEmphasis = false;
-            materialButton4.Icon = RCL.Properties.Resources.ic_restore_page_black_36dp;
-            materialButton4.Location = new System.Drawing.Point(320, 523);
-            materialButton4.Margin = new Padding(4, 6, 4, 6);
-            materialButton4.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            materialButton4.Name = "materialButton4";
-            materialButton4.Size = new System.Drawing.Size(130, 36);
-            materialButton4.TabIndex = 87;
-            materialButton4.Text = "Reset";
-            materialButton4.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
-            materialButton4.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton4.UseAccentColor = false;
-            materialButton4.UseVisualStyleBackColor = true;
+            cp2BtnReset.AutoSize = false;
+            cp2BtnReset.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            cp2BtnReset.Depth = 0;
+            cp2BtnReset.DrawShadows = true;
+            cp2BtnReset.HighEmphasis = false;
+            cp2BtnReset.Icon = RCL.Properties.Resources.ic_restore_page_black_36dp;
+            cp2BtnReset.Location = new System.Drawing.Point(320, 523);
+            cp2BtnReset.Margin = new Padding(4, 6, 4, 6);
+            cp2BtnReset.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            cp2BtnReset.Name = "cp2BtnReset";
+            cp2BtnReset.Size = new System.Drawing.Size(130, 36);
+            cp2BtnReset.TabIndex = 87;
+            cp2BtnReset.Text = "Reset";
+            cp2BtnReset.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
+            cp2BtnReset.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            cp2BtnReset.UseAccentColor = false;
+            cp2BtnReset.UseVisualStyleBackColor = true;
+            cp2BtnReset.Click += cp2BtnReset_Click;
             // 
-            // materialButton5
+            // cp2BtnSubmit
             // 
-            materialButton5.AutoSize = false;
-            materialButton5.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton5.Depth = 0;
-            materialButton5.DrawShadows = true;
-            materialButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            materialButton5.HighEmphasis = true;
-            materialButton5.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
-            materialButton5.Location = new System.Drawing.Point(647, 526);
-            materialButton5.Margin = new Padding(4, 6, 4, 6);
-            materialButton5.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            materialButton5.Name = "materialButton5";
-            materialButton5.Size = new System.Drawing.Size(138, 36);
-            materialButton5.TabIndex = 85;
-            materialButton5.Text = "Submit";
-            materialButton5.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
-            materialButton5.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton5.UseAccentColor = false;
-            materialButton5.UseVisualStyleBackColor = true;
+            cp2BtnSubmit.AutoSize = false;
+            cp2BtnSubmit.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            cp2BtnSubmit.Depth = 0;
+            cp2BtnSubmit.DrawShadows = true;
+            cp2BtnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            cp2BtnSubmit.HighEmphasis = true;
+            cp2BtnSubmit.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
+            cp2BtnSubmit.Location = new System.Drawing.Point(647, 526);
+            cp2BtnSubmit.Margin = new Padding(4, 6, 4, 6);
+            cp2BtnSubmit.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            cp2BtnSubmit.Name = "cp2BtnSubmit";
+            cp2BtnSubmit.Size = new System.Drawing.Size(138, 36);
+            cp2BtnSubmit.TabIndex = 85;
+            cp2BtnSubmit.Text = "Submit";
+            cp2BtnSubmit.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
+            cp2BtnSubmit.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            cp2BtnSubmit.UseAccentColor = false;
+            cp2BtnSubmit.UseVisualStyleBackColor = true;
+            cp2BtnSubmit.Click += cp2BtnSubmit_Click;
             // 
-            // materialButton6
+            // cp2BtnCancel
             // 
-            materialButton6.AutoSize = false;
-            materialButton6.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton6.Depth = 0;
-            materialButton6.DrawShadows = true;
-            materialButton6.HighEmphasis = true;
-            materialButton6.Icon = RCL.Properties.Resources.Close_16xLG;
-            materialButton6.Location = new System.Drawing.Point(484, 526);
-            materialButton6.Margin = new Padding(4, 6, 4, 6);
-            materialButton6.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            materialButton6.Name = "materialButton6";
-            materialButton6.Size = new System.Drawing.Size(130, 36);
-            materialButton6.TabIndex = 86;
-            materialButton6.Text = "Cancel";
-            materialButton6.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
-            materialButton6.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton6.UseAccentColor = true;
-            materialButton6.UseVisualStyleBackColor = true;
+            cp2BtnCancel.AutoSize = false;
+            cp2BtnCancel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            cp2BtnCancel.Depth = 0;
+            cp2BtnCancel.DrawShadows = true;
+            cp2BtnCancel.HighEmphasis = true;
+            cp2BtnCancel.Icon = RCL.Properties.Resources.Close_16xLG;
+            cp2BtnCancel.Location = new System.Drawing.Point(484, 526);
+            cp2BtnCancel.Margin = new Padding(4, 6, 4, 6);
+            cp2BtnCancel.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            cp2BtnCancel.Name = "cp2BtnCancel";
+            cp2BtnCancel.Size = new System.Drawing.Size(130, 36);
+            cp2BtnCancel.TabIndex = 86;
+            cp2BtnCancel.Text = "Cancel";
+            cp2BtnCancel.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
+            cp2BtnCancel.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            cp2BtnCancel.UseAccentColor = true;
+            cp2BtnCancel.UseVisualStyleBackColor = true;
+            cp2BtnCancel.Click += cp2BtnCancel_Click;
             // 
             // pictureBox6
             // 
@@ -1508,22 +1511,22 @@ namespace ReaLTaiizor.UI
             pictureBox6.TabIndex = 82;
             pictureBox6.TabStop = false;
             // 
-            // materialTextBox2
+            // cp2txtReviewers
             // 
-            materialTextBox2.BorderStyle = BorderStyle.None;
-            materialTextBox2.Cursor = Cursors.IBeam;
-            materialTextBox2.Depth = 0;
-            materialTextBox2.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            materialTextBox2.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
-            materialTextBox2.Hint = "Type reviewers name here like Eric, Suresh";
-            materialTextBox2.Location = new System.Drawing.Point(160, 73);
-            materialTextBox2.MaxLength = 50;
-            materialTextBox2.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            materialTextBox2.Multiline = false;
-            materialTextBox2.Name = "materialTextBox2";
-            materialTextBox2.Size = new System.Drawing.Size(884, 50);
-            materialTextBox2.TabIndex = 81;
-            materialTextBox2.Text = "";
+            cp2txtReviewers.BorderStyle = BorderStyle.None;
+            cp2txtReviewers.Cursor = Cursors.IBeam;
+            cp2txtReviewers.Depth = 0;
+            cp2txtReviewers.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            cp2txtReviewers.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
+            cp2txtReviewers.Hint = "Type reviewers name here like Eric, Suresh";
+            cp2txtReviewers.Location = new System.Drawing.Point(160, 73);
+            cp2txtReviewers.MaxLength = 50;
+            cp2txtReviewers.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            cp2txtReviewers.Multiline = false;
+            cp2txtReviewers.Name = "cp2txtReviewers";
+            cp2txtReviewers.Size = new System.Drawing.Size(884, 50);
+            cp2txtReviewers.TabIndex = 81;
+            cp2txtReviewers.Text = "";
             // 
             // materialLabel18
             // 
@@ -3264,11 +3267,11 @@ namespace ReaLTaiizor.UI
         private Controls.MaterialButton materialButton1;
         private Controls.MaterialButton materialButton2;
         private Controls.MaterialButton materialButton3;
-        private Controls.MaterialButton materialButton4;
-        private Controls.MaterialButton materialButton5;
-        private Controls.MaterialButton materialButton6;
+        private Controls.MaterialButton cp2BtnReset;
+        private Controls.MaterialButton cp2BtnSubmit;
+        private Controls.MaterialButton cp2BtnCancel;
         private PictureBox pictureBox6;
-        private Controls.MaterialTextBox materialTextBox2;
+        private Controls.MaterialTextBox cp2txtReviewers;
         private Controls.MaterialLabel materialLabel18;
         private TabPage tabPage3;
         private TableLayoutPanel tableLayoutPanelHeader;

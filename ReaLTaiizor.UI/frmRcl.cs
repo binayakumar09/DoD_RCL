@@ -59,19 +59,6 @@ namespace ReaLTaiizor.UI
             materialManager.Theme = MaterialManager.Themes.LIGHT;
             materialManager.ColorScheme = new MaterialColorScheme(MaterialPrimary.Indigo500, MaterialPrimary.Indigo700, MaterialPrimary.Indigo100, MaterialAccent.Pink200, MaterialTextShade.WHITE);
             console.Text = DataLogger.logString;
-
-            // Duplicate efsTabA content into efsTabB
-            DuplicateTabPageContent(efsTabA, efsTabB);
-        }
-
-        private void DuplicateTabPageContent(TabPage source, TabPage destination)
-        {
-            destination.Controls.Clear();
-            foreach (Control ctrl in source.Controls)
-            {
-                Control copy = CloneControl(ctrl);
-                destination.Controls.Add(copy);
-            }
         }
 
         private Control CloneControl(Control source)
@@ -341,7 +328,7 @@ namespace ReaLTaiizor.UI
                     ShowMessageAndFocus(null, textBox, addCommentMessage, label);
                     return false;
                 }
-                    return true;
+                return true;
             }
 
             Boolean ValidateEfsComboBoxAndTextBoxYes(ComboBox comboBox, TextBox textBox, Label label)
@@ -1101,6 +1088,11 @@ namespace ReaLTaiizor.UI
         }
 
         private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
         {
 
         }

@@ -169,6 +169,9 @@ namespace ReaLTaiizor.UI
             cdrlblhdr3 = new ReaLTaiizor.Controls.MaterialLabel();
             cdrlblhdr2 = new ReaLTaiizor.Controls.MaterialLabel();
             tableLayoutPanel8 = new TableLayoutPanel();
+            textBox1 = new TextBox();
+            comboBox1 = new ComboBox();
+            label1 = new Label();
             cdrtxt11 = new TextBox();
             cdrtxt10 = new TextBox();
             cdrtxt9 = new TextBox();
@@ -273,9 +276,6 @@ namespace ReaLTaiizor.UI
             toolStripSeparator1 = new ToolStripSeparator();
             item3ToolStripMenuItem = new ReaLTaiizor.Controls.MaterialToolStripMenuItem();
             contextMenuStrip1 = new ContextMenuStrip(components);
-            label1 = new Label();
-            comboBox1 = new ComboBox();
-            textBox1 = new TextBox();
             specTabControl.SuspendLayout();
             efsTab.SuspendLayout();
             efsTabInnerTabControl.SuspendLayout();
@@ -353,14 +353,15 @@ namespace ReaLTaiizor.UI
             // 
             // efsTabInnerTabControl
             // 
+            efsTabInnerTabControl.Appearance = TabAppearance.Buttons;
             efsTabInnerTabControl.Controls.Add(efsTabA);
             efsTabInnerTabControl.Controls.Add(tabPage2);
             efsTabInnerTabControl.Controls.Add(tabPage3);
-            efsTabInnerTabControl.Dock = DockStyle.Fill;
             efsTabInnerTabControl.Location = new System.Drawing.Point(2, 2);
             efsTabInnerTabControl.Name = "efsTabInnerTabControl";
+            efsTabInnerTabControl.Padding = new System.Drawing.Point(6, 10);
             efsTabInnerTabControl.SelectedIndex = 0;
-            efsTabInnerTabControl.Size = new System.Drawing.Size(1256, 826);
+            efsTabInnerTabControl.Size = new System.Drawing.Size(1257, 826);
             efsTabInnerTabControl.TabIndex = 100;
             // 
             // efsTabA
@@ -378,10 +379,10 @@ namespace ReaLTaiizor.UI
             efsTabA.Controls.Add(efsBtnCancel);
             efsTabA.Controls.Add(efstxtReviewers);
             efsTabA.Controls.Add(materialLabel46);
-            efsTabA.Location = new System.Drawing.Point(4, 24);
+            efsTabA.Location = new System.Drawing.Point(4, 41);
             efsTabA.Name = "efsTabA";
             efsTabA.Padding = new Padding(3);
-            efsTabA.Size = new System.Drawing.Size(1248, 798);
+            efsTabA.Size = new System.Drawing.Size(1249, 781);
             efsTabA.TabIndex = 0;
             efsTabA.Text = "CP2 Ready State";
             efsTabA.UseVisualStyleBackColor = true;
@@ -452,6 +453,7 @@ namespace ReaLTaiizor.UI
             // 
             // tableLayoutPanelHeader
             // 
+            tableLayoutPanelHeader.BackColor = System.Drawing.Color.Linen;
             tableLayoutPanelHeader.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
             tableLayoutPanelHeader.ColumnCount = 3;
             tableLayoutPanelHeader.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
@@ -1027,10 +1029,10 @@ namespace ReaLTaiizor.UI
             tabPage2.Controls.Add(pictureBox6);
             tabPage2.Controls.Add(cp2txtReviewers);
             tabPage2.Controls.Add(materialLabel18);
-            tabPage2.Location = new System.Drawing.Point(4, 24);
+            tabPage2.Location = new System.Drawing.Point(4, 41);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new System.Drawing.Size(1248, 798);
+            tabPage2.Size = new System.Drawing.Size(1249, 781);
             tabPage2.TabIndex = 2;
             tabPage2.Text = "CP2 Approved State";
             tabPage2.UseVisualStyleBackColor = true;
@@ -1412,6 +1414,7 @@ namespace ReaLTaiizor.UI
             // 
             // tableLayoutPanel5
             // 
+            tableLayoutPanel5.BackColor = System.Drawing.Color.Linen;
             tableLayoutPanel5.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
             tableLayoutPanel5.ColumnCount = 3;
             tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
@@ -1588,10 +1591,10 @@ namespace ReaLTaiizor.UI
             tabPage3.Controls.Add(pictureBox4);
             tabPage3.Controls.Add(cp3txtReviewers);
             tabPage3.Controls.Add(materialLabel14);
-            tabPage3.Location = new System.Drawing.Point(4, 24);
+            tabPage3.Location = new System.Drawing.Point(4, 41);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new System.Drawing.Size(1248, 798);
+            tabPage3.Size = new System.Drawing.Size(1249, 781);
             tabPage3.TabIndex = 3;
             tabPage3.Text = "CP3 Approved";
             tabPage3.UseVisualStyleBackColor = true;
@@ -1933,6 +1936,7 @@ namespace ReaLTaiizor.UI
             // 
             // tableLayoutPanel10
             // 
+            tableLayoutPanel10.BackColor = System.Drawing.Color.Linen;
             tableLayoutPanel10.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
             tableLayoutPanel10.ColumnCount = 3;
             tableLayoutPanel10.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
@@ -2122,6 +2126,7 @@ namespace ReaLTaiizor.UI
             // 
             // tableLayoutPanel7
             // 
+            tableLayoutPanel7.BackColor = System.Drawing.Color.Linen;
             tableLayoutPanel7.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
             tableLayoutPanel7.ColumnCount = 3;
             tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
@@ -2248,6 +2253,39 @@ namespace ReaLTaiizor.UI
             tableLayoutPanel8.Size = new System.Drawing.Size(1204, 415);
             tableLayoutPanel8.TabIndex = 69;
             tableLayoutPanel8.Paint += tableLayoutPanel8_Paint_1;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new System.Drawing.Point(658, 360);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "Please add DFMEA link or schedule when DFMEA is planned";
+            textBox1.ScrollBars = ScrollBars.Vertical;
+            textBox1.Size = new System.Drawing.Size(541, 23);
+            textBox1.TabIndex = 131;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            comboBox1.Location = new System.Drawing.Point(500, 360);
+            comboBox1.Name = "comboBox1";
+            comboBox1.RightToLeft = RightToLeft.No;
+            comboBox1.Size = new System.Drawing.Size(147, 23);
+            comboBox1.TabIndex = 130;
+            comboBox1.Text = "Select";
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Left;
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            label1.Location = new System.Drawing.Point(9, 364);
+            label1.Margin = new Padding(7, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(363, 16);
+            label1.TabIndex = 129;
+            label1.Text = "Does UTE testing need to be planned for the feature by dev team?";
             // 
             // cdrtxt11
             // 
@@ -2728,6 +2766,7 @@ namespace ReaLTaiizor.UI
             // 
             // systemSpecInnerTabControl
             // 
+            systemSpecInnerTabControl.Appearance = TabAppearance.Buttons;
             systemSpecInnerTabControl.Controls.Add(cp1Tab);
             systemSpecInnerTabControl.Controls.Add(cp2Tab);
             systemSpecInnerTabControl.Dock = DockStyle.Fill;
@@ -2747,9 +2786,9 @@ namespace ReaLTaiizor.UI
             cp1Tab.Controls.Add(materialLabel6);
             cp1Tab.Controls.Add(tableLayoutPanel2);
             cp1Tab.Controls.Add(tableLayoutPanel1);
-            cp1Tab.Location = new System.Drawing.Point(4, 24);
+            cp1Tab.Location = new System.Drawing.Point(4, 27);
             cp1Tab.Name = "cp1Tab";
-            cp1Tab.Size = new System.Drawing.Size(1246, 796);
+            cp1Tab.Size = new System.Drawing.Size(1246, 793);
             cp1Tab.TabIndex = 0;
             cp1Tab.Text = "CP1";
             // 
@@ -2839,7 +2878,7 @@ namespace ReaLTaiizor.UI
             // 
             // tableLayoutPanel2
             // 
-            tableLayoutPanel2.BackColor = System.Drawing.Color.White;
+            tableLayoutPanel2.BackColor = System.Drawing.Color.Linen;
             tableLayoutPanel2.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
             tableLayoutPanel2.ColumnCount = 3;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
@@ -3173,9 +3212,9 @@ namespace ReaLTaiizor.UI
             cp2Tab.Controls.Add(materialLabel10);
             cp2Tab.Controls.Add(tableLayoutPanel3);
             cp2Tab.Controls.Add(tableLayoutPanel4);
-            cp2Tab.Location = new System.Drawing.Point(4, 24);
+            cp2Tab.Location = new System.Drawing.Point(4, 27);
             cp2Tab.Name = "cp2Tab";
-            cp2Tab.Size = new System.Drawing.Size(1246, 796);
+            cp2Tab.Size = new System.Drawing.Size(1246, 793);
             cp2Tab.TabIndex = 1;
             cp2Tab.Text = "CP2";
             // 
@@ -3265,7 +3304,7 @@ namespace ReaLTaiizor.UI
             // 
             // tableLayoutPanel3
             // 
-            tableLayoutPanel3.BackColor = System.Drawing.Color.White;
+            tableLayoutPanel3.BackColor = System.Drawing.Color.Linen;
             tableLayoutPanel3.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
             tableLayoutPanel3.ColumnCount = 3;
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
@@ -3527,39 +3566,6 @@ namespace ReaLTaiizor.UI
             // 
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.Left;
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            label1.Location = new System.Drawing.Point(9, 364);
-            label1.Margin = new Padding(7, 0, 2, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(363, 16);
-            label1.TabIndex = 129;
-            label1.Text = "Does UTE testing need to be planned for the feature by dev team?";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            comboBox1.Location = new System.Drawing.Point(500, 360);
-            comboBox1.Name = "comboBox1";
-            comboBox1.RightToLeft = RightToLeft.No;
-            comboBox1.Size = new System.Drawing.Size(147, 23);
-            comboBox1.TabIndex = 130;
-            comboBox1.Text = "Select";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new System.Drawing.Point(658, 360);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Please add DFMEA link or schedule when DFMEA is planned";
-            textBox1.ScrollBars = ScrollBars.Vertical;
-            textBox1.Size = new System.Drawing.Size(541, 23);
-            textBox1.TabIndex = 131;
             // 
             // frmRcl
             // 

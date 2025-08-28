@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -54,7 +55,7 @@ namespace ReaLTaiizor.UI
             CheckforUpdate();
 
             materialManager = MaterialManager.Instance;
-            materialManager.EnforceBackcolorOnAllComponents = true;
+            materialManager.EnforceBackcolorOnAllComponents = false;
             materialManager.AddFormToManage(this);
             materialManager.Theme = MaterialManager.Themes.LIGHT;
             materialManager.ColorScheme = new MaterialColorScheme(MaterialPrimary.Indigo500, MaterialPrimary.Indigo700, MaterialPrimary.Indigo100, MaterialAccent.Pink200, MaterialTextShade.WHITE);

@@ -391,7 +391,7 @@ namespace ReaLTaiizor.UI
             // 
             efslink.AutoSize = true;
             efslink.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            efslink.Location = new System.Drawing.Point(633, 734);
+            efslink.Location = new System.Drawing.Point(636, 681);
             efslink.Name = "efslink";
             efslink.Size = new System.Drawing.Size(30, 15);
             efslink.TabIndex = 98;
@@ -406,7 +406,7 @@ namespace ReaLTaiizor.UI
             materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             materialLabel2.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             materialLabel2.HighEmphasis = true;
-            materialLabel2.Location = new System.Drawing.Point(47, 734);
+            materialLabel2.Location = new System.Drawing.Point(47, 681);
             materialLabel2.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialLabel2.Name = "materialLabel2";
             materialLabel2.Size = new System.Drawing.Size(592, 19);
@@ -895,7 +895,7 @@ namespace ReaLTaiizor.UI
             // 
             pictureBox2.Image = RCL.Properties.Resources.EFS;
             pictureBox2.InitialImage = (System.Drawing.Image)resources.GetObject("pictureBox2.InitialImage");
-            pictureBox2.Location = new System.Drawing.Point(421, 14);
+            pictureBox2.Location = new System.Drawing.Point(443, 15);
             pictureBox2.Margin = new Padding(0);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new System.Drawing.Size(54, 50);
@@ -910,7 +910,7 @@ namespace ReaLTaiizor.UI
             materialLabel50.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             materialLabel50.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             materialLabel50.HighEmphasis = true;
-            materialLabel50.Location = new System.Drawing.Point(48, 691);
+            materialLabel50.Location = new System.Drawing.Point(48, 638);
             materialLabel50.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialLabel50.Name = "materialLabel50";
             materialLabel50.Size = new System.Drawing.Size(244, 19);
@@ -925,7 +925,7 @@ namespace ReaLTaiizor.UI
             materialLabel48.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             materialLabel48.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             materialLabel48.HighEmphasis = true;
-            materialLabel48.Location = new System.Drawing.Point(47, 712);
+            materialLabel48.Location = new System.Drawing.Point(47, 659);
             materialLabel48.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialLabel48.Name = "materialLabel48";
             materialLabel48.Size = new System.Drawing.Size(503, 19);
@@ -940,7 +940,7 @@ namespace ReaLTaiizor.UI
             materialLabel49.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             materialLabel49.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             materialLabel49.HighEmphasis = true;
-            materialLabel49.Location = new System.Drawing.Point(50, 668);
+            materialLabel49.Location = new System.Drawing.Point(50, 615);
             materialLabel49.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialLabel49.Name = "materialLabel49";
             materialLabel49.Size = new System.Drawing.Size(38, 19);
@@ -1011,10 +1011,10 @@ namespace ReaLTaiizor.UI
             // 
             materialLabel46.Depth = 0;
             materialLabel46.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            materialLabel46.Location = new System.Drawing.Point(478, 20);
+            materialLabel46.Location = new System.Drawing.Point(509, 32);
             materialLabel46.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialLabel46.Name = "materialLabel46";
-            materialLabel46.Size = new System.Drawing.Size(261, 44);
+            materialLabel46.Size = new System.Drawing.Size(261, 30);
             materialLabel46.TabIndex = 33;
             materialLabel46.Text = "EFS DOD Review";
             materialLabel46.Click += materialLabel46_Click;
@@ -1545,7 +1545,7 @@ namespace ReaLTaiizor.UI
             // 
             pictureBox6.Image = RCL.Properties.Resources.EFS;
             pictureBox6.InitialImage = (System.Drawing.Image)resources.GetObject("pictureBox6.InitialImage");
-            pictureBox6.Location = new System.Drawing.Point(402, 14);
+            pictureBox6.Location = new System.Drawing.Point(442, 14);
             pictureBox6.Margin = new Padding(0);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new System.Drawing.Size(54, 50);
@@ -1561,7 +1561,7 @@ namespace ReaLTaiizor.UI
             cp2txtReviewers.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             cp2txtReviewers.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             cp2txtReviewers.Hint = "Type reviewers name here like Eric, Suresh";
-            cp2txtReviewers.Location = new System.Drawing.Point(160, 73);
+            cp2txtReviewers.Location = new System.Drawing.Point(156, 73);
             cp2txtReviewers.MaxLength = 50;
             cp2txtReviewers.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             cp2txtReviewers.Multiline = false;
@@ -1574,10 +1574,10 @@ namespace ReaLTaiizor.UI
             // 
             materialLabel18.Depth = 0;
             materialLabel18.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            materialLabel18.Location = new System.Drawing.Point(459, 20);
+            materialLabel18.Location = new System.Drawing.Point(511, 31);
             materialLabel18.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialLabel18.Name = "materialLabel18";
-            materialLabel18.Size = new System.Drawing.Size(261, 44);
+            materialLabel18.Size = new System.Drawing.Size(261, 26);
             materialLabel18.TabIndex = 80;
             materialLabel18.Text = "EFS DOD Review";
             // 
@@ -2003,7 +2003,7 @@ namespace ReaLTaiizor.UI
             // 
             pictureBox4.Image = RCL.Properties.Resources.EFS;
             pictureBox4.InitialImage = (System.Drawing.Image)resources.GetObject("pictureBox4.InitialImage");
-            pictureBox4.Location = new System.Drawing.Point(375, 14);
+            pictureBox4.Location = new System.Drawing.Point(440, 13);
             pictureBox4.Margin = new Padding(0);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new System.Drawing.Size(54, 50);
@@ -2019,7 +2019,7 @@ namespace ReaLTaiizor.UI
             cp3txtReviewers.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             cp3txtReviewers.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             cp3txtReviewers.Hint = "Type reviewers name here like Eric, Suresh";
-            cp3txtReviewers.Location = new System.Drawing.Point(133, 73);
+            cp3txtReviewers.Location = new System.Drawing.Point(142, 73);
             cp3txtReviewers.MaxLength = 50;
             cp3txtReviewers.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             cp3txtReviewers.Multiline = false;
@@ -2032,10 +2032,10 @@ namespace ReaLTaiizor.UI
             // 
             materialLabel14.Depth = 0;
             materialLabel14.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            materialLabel14.Location = new System.Drawing.Point(432, 20);
+            materialLabel14.Location = new System.Drawing.Point(510, 30);
             materialLabel14.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialLabel14.Name = "materialLabel14";
-            materialLabel14.Size = new System.Drawing.Size(261, 44);
+            materialLabel14.Size = new System.Drawing.Size(261, 25);
             materialLabel14.TabIndex = 83;
             materialLabel14.Text = "EFS DOD Review";
             // 
@@ -2681,9 +2681,9 @@ namespace ReaLTaiizor.UI
             materialLabel45.Location = new System.Drawing.Point(49, 680);
             materialLabel45.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialLabel45.Name = "materialLabel45";
-            materialLabel45.Size = new System.Drawing.Size(514, 19);
+            materialLabel45.Size = new System.Drawing.Size(503, 19);
             materialLabel45.TabIndex = 83;
-            materialLabel45.Text = "2. If \"Done\" option is not selected, you have to fill \"comment\" mandatorily";
+            materialLabel45.Text = "2. If \"Yes\" option is not selected, you have to fill \"comment\" mandatorily";
             materialLabel45.UseAccent = true;
             // 
             // materialLabel56
@@ -2800,7 +2800,7 @@ namespace ReaLTaiizor.UI
             specBtnReset.DrawShadows = true;
             specBtnReset.HighEmphasis = false;
             specBtnReset.Icon = RCL.Properties.Resources.ic_restore_page_black_36dp;
-            specBtnReset.Location = new System.Drawing.Point(401, 490);
+            specBtnReset.Location = new System.Drawing.Point(337, 456);
             specBtnReset.Margin = new Padding(4, 6, 4, 6);
             specBtnReset.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             specBtnReset.Name = "specBtnReset";
@@ -2821,7 +2821,7 @@ namespace ReaLTaiizor.UI
             specBtnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             specBtnSubmit.HighEmphasis = true;
             specBtnSubmit.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
-            specBtnSubmit.Location = new System.Drawing.Point(736, 490);
+            specBtnSubmit.Location = new System.Drawing.Point(645, 456);
             specBtnSubmit.Margin = new Padding(4, 6, 4, 6);
             specBtnSubmit.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             specBtnSubmit.Name = "specBtnSubmit";
@@ -2841,7 +2841,7 @@ namespace ReaLTaiizor.UI
             specBtnCancel.DrawShadows = true;
             specBtnCancel.HighEmphasis = true;
             specBtnCancel.Icon = RCL.Properties.Resources.Close_16xLG;
-            specBtnCancel.Location = new System.Drawing.Point(582, 491);
+            specBtnCancel.Location = new System.Drawing.Point(491, 456);
             specBtnCancel.Margin = new Padding(4, 6, 4, 6);
             specBtnCancel.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             specBtnCancel.Name = "specBtnCancel";
@@ -2857,7 +2857,7 @@ namespace ReaLTaiizor.UI
             // 
             pictureBox1.Image = (System.Drawing.Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.InitialImage = (System.Drawing.Image)resources.GetObject("pictureBox1.InitialImage");
-            pictureBox1.Location = new System.Drawing.Point(437, 23);
+            pictureBox1.Location = new System.Drawing.Point(454, 23);
             pictureBox1.Margin = new Padding(0);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new System.Drawing.Size(54, 50);
@@ -2869,7 +2869,7 @@ namespace ReaLTaiizor.UI
             // 
             materialLabel6.Depth = 0;
             materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            materialLabel6.Location = new System.Drawing.Point(494, 43);
+            materialLabel6.Location = new System.Drawing.Point(522, 42);
             materialLabel6.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialLabel6.Name = "materialLabel6";
             materialLabel6.Size = new System.Drawing.Size(261, 44);
@@ -3222,7 +3222,7 @@ namespace ReaLTaiizor.UI
             // 
             pictureBox5.Image = (System.Drawing.Image)resources.GetObject("pictureBox5.Image");
             pictureBox5.InitialImage = (System.Drawing.Image)resources.GetObject("pictureBox5.InitialImage");
-            pictureBox5.Location = new System.Drawing.Point(437, 86);
+            pictureBox5.Location = new System.Drawing.Point(442, 86);
             pictureBox5.Margin = new Padding(0);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new System.Drawing.Size(54, 50);
@@ -3238,7 +3238,7 @@ namespace ReaLTaiizor.UI
             specBtnReset2.DrawShadows = true;
             specBtnReset2.HighEmphasis = false;
             specBtnReset2.Icon = RCL.Properties.Resources.ic_restore_page_black_36dp;
-            specBtnReset2.Location = new System.Drawing.Point(401, 380);
+            specBtnReset2.Location = new System.Drawing.Point(342, 380);
             specBtnReset2.Margin = new Padding(4, 6, 4, 6);
             specBtnReset2.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             specBtnReset2.Name = "specBtnReset2";
@@ -3259,7 +3259,7 @@ namespace ReaLTaiizor.UI
             specBtnSubmit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             specBtnSubmit2.HighEmphasis = true;
             specBtnSubmit2.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
-            specBtnSubmit2.Location = new System.Drawing.Point(736, 380);
+            specBtnSubmit2.Location = new System.Drawing.Point(645, 380);
             specBtnSubmit2.Margin = new Padding(4, 6, 4, 6);
             specBtnSubmit2.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             specBtnSubmit2.Name = "specBtnSubmit2";
@@ -3279,7 +3279,7 @@ namespace ReaLTaiizor.UI
             specBtnCancel2.DrawShadows = true;
             specBtnCancel2.HighEmphasis = true;
             specBtnCancel2.Icon = RCL.Properties.Resources.Close_16xLG;
-            specBtnCancel2.Location = new System.Drawing.Point(555, 380);
+            specBtnCancel2.Location = new System.Drawing.Point(496, 380);
             specBtnCancel2.Margin = new Padding(4, 6, 4, 6);
             specBtnCancel2.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             specBtnCancel2.Name = "specBtnCancel2";
@@ -3295,7 +3295,7 @@ namespace ReaLTaiizor.UI
             // 
             materialLabel10.Depth = 0;
             materialLabel10.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            materialLabel10.Location = new System.Drawing.Point(494, 98);
+            materialLabel10.Location = new System.Drawing.Point(508, 104);
             materialLabel10.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialLabel10.Name = "materialLabel10";
             materialLabel10.Size = new System.Drawing.Size(275, 38);

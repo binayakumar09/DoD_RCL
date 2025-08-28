@@ -50,7 +50,17 @@ namespace ReaLTaiizor.UI
             tableLayoutPanel1.BackColor = System.Drawing.Color.White;
             tableLayoutPanel2.BackColor = System.Drawing.Color.White;
 
-            // Owner draw so we control font
+            // --- ADD THIS BLOCK to style the CP1/CP2 tab headers ---
+            if (systemSpecInnerTabControl != null)
+            {
+                systemSpecInnerTabControl.DrawMode = TabDrawMode.OwnerDrawFixed;
+                systemSpecInnerTabControl.SizeMode = TabSizeMode.Fixed;
+                systemSpecInnerTabControl.ItemSize = new Size(120, 30); // Adjust width/height as needed
+                systemSpecInnerTabControl.DrawItem += SystemSpecInnerTabControl_DrawItem;
+            }
+            // --- END ADD ---
+
+            // Owner draw for the other tab control
             efsTabInnerTabControl.DrawMode = TabDrawMode.OwnerDrawFixed;
             efsTabInnerTabControl.DrawItem += EfsTabInnerTabControl_DrawItem;
 
@@ -1354,6 +1364,54 @@ namespace ReaLTaiizor.UI
         private void tableLayoutPanel8_Paint_1(object sender, PaintEventArgs e)
         {
 
+        }
+
+        // Reuse to bold all headers in a TabControl. If fontSize <= 0, it keeps the current size.
+        private void BoldAllTabHeaders(TabControl tabControl, float fontSize = 0f)
+        {
+            if (tabControl == null) return;
+            var currentFont = tabControl.Font;
+            float newSize = fontSize > 0 ? fontSize : currentFont.Size;
+
+            // Avoid creating a new font object if it's already correct
+            if (currentFont.Bold && Math.Abs(currentFont.Size - newSize) < 0.1f) return;
+
+            tabControl.Font = new Font(currentFont.FontFamily, newSize, FontStyle.Bold);
+        }
+
+        private void SystemSpecInnerTabControl_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            var tabControl = (TabControl)sender;
+            var tabPage = tabControl.TabPages[e.Index];
+
+            // Use a bold, size 12 font for the header
+            using (var font = new Font(tabControl.Font.FontFamily, 12f, FontStyle.Bold))
+            {
+                // Define drawing area
+                Rectangle tabArea = tabControl.GetTabRect(e.Index);
+                
+                // Draw the background
+                var isSelected = (e.State & DrawItemState.Selected) == DrawItemState.Selected;
+                using (var backBrush = new SolidBrush(isSelected ? SystemColors.ControlLightLight : SystemColors.Control))
+                {
+                    e.Graphics.FillRectangle(backBrush, tabArea);
+                }
+
+                // Draw the text
+                TextRenderer.DrawText(
+                    e.Graphics,
+                    tabPage.Text,
+                    font,
+                    tabArea,
+                    SystemColors.ControlText,
+                    TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+            }
+
+            // Draw the focus rectangle if the tab has focus
+            if ((e.State & DrawItemState.Focus) == DrawItemState.Focus)
+            {
+                e.DrawFocusRectangle();
+            }
         }
     }
 }

@@ -127,28 +127,31 @@ namespace ReaLTaiizor.UI
             cp2txtReviewers = new ReaLTaiizor.Controls.MaterialTextBox();
             materialLabel18 = new ReaLTaiizor.Controls.MaterialLabel();
             tabPage3 = new TabPage();
+            cp3BtnReset = new ReaLTaiizor.Controls.MaterialButton();
+            cp3BtnSubmit = new ReaLTaiizor.Controls.MaterialButton();
+            cp3BtnCancel = new ReaLTaiizor.Controls.MaterialButton();
             tableLayoutPanel9 = new TableLayoutPanel();
-            textBox3 = new TextBox();
+            cp3txt7 = new TextBox();
             cp3lbl7 = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            comboBox3 = new ComboBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
+            cp3ComboBox5 = new ComboBox();
+            cp3ComboBox4 = new ComboBox();
+            cp3ComboBox3 = new ComboBox();
+            cp3txt6 = new TextBox();
+            cp3txt5 = new TextBox();
+            cp3txt4 = new TextBox();
+            cp3txt3 = new TextBox();
+            cp3txt2 = new TextBox();
             cp3lbl6 = new Label();
             cp3lbl2 = new Label();
             cp3lbl3 = new Label();
             cp3lbl4 = new Label();
             cp3lbl5 = new Label();
             cp3lbl1 = new Label();
-            textBox9 = new TextBox();
-            comboBox4 = new ComboBox();
-            comboBox5 = new ComboBox();
-            comboBox7 = new ComboBox();
-            comboBox8 = new ComboBox();
+            cp3txt1 = new TextBox();
+            cp3ComboBox1 = new ComboBox();
+            cp3ComboBox2 = new ComboBox();
+            cp3ComboBox7 = new ComboBox();
+            cp3ComboBox6 = new ComboBox();
             tableLayoutPanel10 = new TableLayoutPanel();
             materialLabel15 = new ReaLTaiizor.Controls.MaterialLabel();
             materialLabel16 = new ReaLTaiizor.Controls.MaterialLabel();
@@ -270,9 +273,9 @@ namespace ReaLTaiizor.UI
             toolStripSeparator1 = new ToolStripSeparator();
             item3ToolStripMenuItem = new ReaLTaiizor.Controls.MaterialToolStripMenuItem();
             contextMenuStrip1 = new ContextMenuStrip(components);
-            materialButton4 = new ReaLTaiizor.Controls.MaterialButton();
-            materialButton5 = new ReaLTaiizor.Controls.MaterialButton();
-            materialButton6 = new ReaLTaiizor.Controls.MaterialButton();
+            label1 = new Label();
+            comboBox1 = new ComboBox();
+            textBox1 = new TextBox();
             specTabControl.SuspendLayout();
             efsTab.SuspendLayout();
             efsTabInnerTabControl.SuspendLayout();
@@ -1577,9 +1580,9 @@ namespace ReaLTaiizor.UI
             // 
             // tabPage3
             // 
-            tabPage3.Controls.Add(materialButton4);
-            tabPage3.Controls.Add(materialButton5);
-            tabPage3.Controls.Add(materialButton6);
+            tabPage3.Controls.Add(cp3BtnReset);
+            tabPage3.Controls.Add(cp3BtnSubmit);
+            tabPage3.Controls.Add(cp3BtnCancel);
             tabPage3.Controls.Add(tableLayoutPanel9);
             tabPage3.Controls.Add(tableLayoutPanel10);
             tabPage3.Controls.Add(pictureBox4);
@@ -1593,6 +1596,69 @@ namespace ReaLTaiizor.UI
             tabPage3.Text = "CP3 Approved";
             tabPage3.UseVisualStyleBackColor = true;
             // 
+            // cp3BtnReset
+            // 
+            cp3BtnReset.AutoSize = false;
+            cp3BtnReset.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            cp3BtnReset.Depth = 0;
+            cp3BtnReset.DrawShadows = true;
+            cp3BtnReset.HighEmphasis = false;
+            cp3BtnReset.Icon = RCL.Properties.Resources.ic_restore_page_black_36dp;
+            cp3BtnReset.Location = new System.Drawing.Point(327, 443);
+            cp3BtnReset.Margin = new Padding(4, 6, 4, 6);
+            cp3BtnReset.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            cp3BtnReset.Name = "cp3BtnReset";
+            cp3BtnReset.Size = new System.Drawing.Size(130, 36);
+            cp3BtnReset.TabIndex = 94;
+            cp3BtnReset.Text = "Reset";
+            cp3BtnReset.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
+            cp3BtnReset.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            cp3BtnReset.UseAccentColor = false;
+            cp3BtnReset.UseVisualStyleBackColor = true;
+            cp3BtnReset.Click += cp2BtnCancel_Click;
+            // 
+            // cp3BtnSubmit
+            // 
+            cp3BtnSubmit.AutoSize = false;
+            cp3BtnSubmit.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            cp3BtnSubmit.Depth = 0;
+            cp3BtnSubmit.DrawShadows = true;
+            cp3BtnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            cp3BtnSubmit.HighEmphasis = true;
+            cp3BtnSubmit.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
+            cp3BtnSubmit.Location = new System.Drawing.Point(654, 446);
+            cp3BtnSubmit.Margin = new Padding(4, 6, 4, 6);
+            cp3BtnSubmit.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            cp3BtnSubmit.Name = "cp3BtnSubmit";
+            cp3BtnSubmit.Size = new System.Drawing.Size(138, 36);
+            cp3BtnSubmit.TabIndex = 92;
+            cp3BtnSubmit.Text = "Submit";
+            cp3BtnSubmit.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
+            cp3BtnSubmit.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            cp3BtnSubmit.UseAccentColor = false;
+            cp3BtnSubmit.UseVisualStyleBackColor = true;
+            cp3BtnSubmit.Click += cp2BtnSubmit_Click;
+            // 
+            // cp3BtnCancel
+            // 
+            cp3BtnCancel.AutoSize = false;
+            cp3BtnCancel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            cp3BtnCancel.Depth = 0;
+            cp3BtnCancel.DrawShadows = true;
+            cp3BtnCancel.HighEmphasis = true;
+            cp3BtnCancel.Icon = RCL.Properties.Resources.Close_16xLG;
+            cp3BtnCancel.Location = new System.Drawing.Point(491, 446);
+            cp3BtnCancel.Margin = new Padding(4, 6, 4, 6);
+            cp3BtnCancel.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            cp3BtnCancel.Name = "cp3BtnCancel";
+            cp3BtnCancel.Size = new System.Drawing.Size(130, 36);
+            cp3BtnCancel.TabIndex = 93;
+            cp3BtnCancel.Text = "Cancel";
+            cp3BtnCancel.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
+            cp3BtnCancel.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            cp3BtnCancel.UseAccentColor = true;
+            cp3BtnCancel.UseVisualStyleBackColor = true;
+            // 
             // tableLayoutPanel9
             // 
             tableLayoutPanel9.BackColor = System.Drawing.Color.White;
@@ -1601,27 +1667,27 @@ namespace ReaLTaiizor.UI
             tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 156F));
             tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 547F));
-            tableLayoutPanel9.Controls.Add(textBox3, 2, 6);
+            tableLayoutPanel9.Controls.Add(cp3txt7, 2, 6);
             tableLayoutPanel9.Controls.Add(cp3lbl7, 0, 6);
-            tableLayoutPanel9.Controls.Add(comboBox1, 1, 4);
-            tableLayoutPanel9.Controls.Add(comboBox2, 1, 3);
-            tableLayoutPanel9.Controls.Add(comboBox3, 1, 2);
-            tableLayoutPanel9.Controls.Add(textBox4, 2, 5);
-            tableLayoutPanel9.Controls.Add(textBox5, 2, 4);
-            tableLayoutPanel9.Controls.Add(textBox6, 2, 3);
-            tableLayoutPanel9.Controls.Add(textBox7, 2, 2);
-            tableLayoutPanel9.Controls.Add(textBox8, 2, 1);
+            tableLayoutPanel9.Controls.Add(cp3ComboBox5, 1, 4);
+            tableLayoutPanel9.Controls.Add(cp3ComboBox4, 1, 3);
+            tableLayoutPanel9.Controls.Add(cp3ComboBox3, 1, 2);
+            tableLayoutPanel9.Controls.Add(cp3txt6, 2, 5);
+            tableLayoutPanel9.Controls.Add(cp3txt5, 2, 4);
+            tableLayoutPanel9.Controls.Add(cp3txt4, 2, 3);
+            tableLayoutPanel9.Controls.Add(cp3txt3, 2, 2);
+            tableLayoutPanel9.Controls.Add(cp3txt2, 2, 1);
             tableLayoutPanel9.Controls.Add(cp3lbl6, 0, 5);
             tableLayoutPanel9.Controls.Add(cp3lbl2, 0, 1);
             tableLayoutPanel9.Controls.Add(cp3lbl3, 0, 2);
             tableLayoutPanel9.Controls.Add(cp3lbl4, 0, 3);
             tableLayoutPanel9.Controls.Add(cp3lbl5, 0, 4);
             tableLayoutPanel9.Controls.Add(cp3lbl1, 0, 0);
-            tableLayoutPanel9.Controls.Add(textBox9, 2, 0);
-            tableLayoutPanel9.Controls.Add(comboBox4, 1, 0);
-            tableLayoutPanel9.Controls.Add(comboBox5, 1, 1);
-            tableLayoutPanel9.Controls.Add(comboBox7, 1, 6);
-            tableLayoutPanel9.Controls.Add(comboBox8, 1, 5);
+            tableLayoutPanel9.Controls.Add(cp3txt1, 2, 0);
+            tableLayoutPanel9.Controls.Add(cp3ComboBox1, 1, 0);
+            tableLayoutPanel9.Controls.Add(cp3ComboBox2, 1, 1);
+            tableLayoutPanel9.Controls.Add(cp3ComboBox7, 1, 6);
+            tableLayoutPanel9.Controls.Add(cp3ComboBox6, 1, 5);
             tableLayoutPanel9.Location = new System.Drawing.Point(14, 163);
             tableLayoutPanel9.Margin = new Padding(0);
             tableLayoutPanel9.Name = "tableLayoutPanel9";
@@ -1641,15 +1707,15 @@ namespace ReaLTaiizor.UI
             tableLayoutPanel9.Size = new System.Drawing.Size(1168, 234);
             tableLayoutPanel9.TabIndex = 91;
             // 
-            // textBox3
+            // cp3txt7
             // 
-            textBox3.Location = new System.Drawing.Point(622, 197);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "Enter the Schedule, e.g. Wk Number or Date";
-            textBox3.ScrollBars = ScrollBars.Vertical;
-            textBox3.Size = new System.Drawing.Size(541, 22);
-            textBox3.TabIndex = 48;
+            cp3txt7.Location = new System.Drawing.Point(622, 197);
+            cp3txt7.Multiline = true;
+            cp3txt7.Name = "cp3txt7";
+            cp3txt7.PlaceholderText = "Enter the Schedule, e.g. Wk Number or Date";
+            cp3txt7.ScrollBars = ScrollBars.Vertical;
+            cp3txt7.Size = new System.Drawing.Size(541, 22);
+            cp3txt7.TabIndex = 48;
             // 
             // cp3lbl7
             // 
@@ -1663,84 +1729,84 @@ namespace ReaLTaiizor.UI
             cp3lbl7.TabIndex = 42;
             cp3lbl7.Text = "Is Airphone Capabilities page updated?";
             // 
-            // comboBox1
+            // cp3ComboBox5
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            comboBox1.Location = new System.Drawing.Point(464, 133);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new System.Drawing.Size(147, 23);
-            comboBox1.TabIndex = 40;
-            comboBox1.Text = "Select";
+            cp3ComboBox5.FormattingEnabled = true;
+            cp3ComboBox5.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            cp3ComboBox5.Location = new System.Drawing.Point(464, 133);
+            cp3ComboBox5.Name = "cp3ComboBox5";
+            cp3ComboBox5.Size = new System.Drawing.Size(147, 23);
+            cp3ComboBox5.TabIndex = 40;
+            cp3ComboBox5.Text = "Select";
             // 
-            // comboBox2
+            // cp3ComboBox4
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            comboBox2.Location = new System.Drawing.Point(464, 102);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new System.Drawing.Size(147, 23);
-            comboBox2.TabIndex = 39;
-            comboBox2.Text = "Select";
+            cp3ComboBox4.FormattingEnabled = true;
+            cp3ComboBox4.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            cp3ComboBox4.Location = new System.Drawing.Point(464, 102);
+            cp3ComboBox4.Name = "cp3ComboBox4";
+            cp3ComboBox4.Size = new System.Drawing.Size(147, 23);
+            cp3ComboBox4.TabIndex = 39;
+            cp3ComboBox4.Text = "Select";
             // 
-            // comboBox3
+            // cp3ComboBox3
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            comboBox3.Location = new System.Drawing.Point(464, 68);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new System.Drawing.Size(147, 23);
-            comboBox3.TabIndex = 38;
-            comboBox3.Text = "Select";
+            cp3ComboBox3.FormattingEnabled = true;
+            cp3ComboBox3.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            cp3ComboBox3.Location = new System.Drawing.Point(464, 68);
+            cp3ComboBox3.Name = "cp3ComboBox3";
+            cp3ComboBox3.Size = new System.Drawing.Size(147, 23);
+            cp3ComboBox3.TabIndex = 38;
+            cp3ComboBox3.Text = "Select";
             // 
-            // textBox4
+            // cp3txt6
             // 
-            textBox4.Location = new System.Drawing.Point(622, 170);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.ScrollBars = ScrollBars.Vertical;
-            textBox4.Size = new System.Drawing.Size(541, 19);
-            textBox4.TabIndex = 35;
+            cp3txt6.Location = new System.Drawing.Point(622, 170);
+            cp3txt6.Multiline = true;
+            cp3txt6.Name = "cp3txt6";
+            cp3txt6.ScrollBars = ScrollBars.Vertical;
+            cp3txt6.Size = new System.Drawing.Size(541, 19);
+            cp3txt6.TabIndex = 35;
             // 
-            // textBox5
+            // cp3txt5
             // 
-            textBox5.Location = new System.Drawing.Point(622, 133);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.PlaceholderText = "Please share the link here.";
-            textBox5.ScrollBars = ScrollBars.Vertical;
-            textBox5.Size = new System.Drawing.Size(541, 25);
-            textBox5.TabIndex = 34;
+            cp3txt5.Location = new System.Drawing.Point(622, 133);
+            cp3txt5.Multiline = true;
+            cp3txt5.Name = "cp3txt5";
+            cp3txt5.PlaceholderText = "Please share the link here.";
+            cp3txt5.ScrollBars = ScrollBars.Vertical;
+            cp3txt5.Size = new System.Drawing.Size(541, 25);
+            cp3txt5.TabIndex = 34;
             // 
-            // textBox6
+            // cp3txt4
             // 
-            textBox6.Location = new System.Drawing.Point(622, 102);
-            textBox6.Multiline = true;
-            textBox6.Name = "textBox6";
-            textBox6.PlaceholderText = "Please share the link here.";
-            textBox6.ScrollBars = ScrollBars.Vertical;
-            textBox6.Size = new System.Drawing.Size(541, 23);
-            textBox6.TabIndex = 33;
+            cp3txt4.Location = new System.Drawing.Point(622, 102);
+            cp3txt4.Multiline = true;
+            cp3txt4.Name = "cp3txt4";
+            cp3txt4.PlaceholderText = "Please share the link here.";
+            cp3txt4.ScrollBars = ScrollBars.Vertical;
+            cp3txt4.Size = new System.Drawing.Size(541, 23);
+            cp3txt4.TabIndex = 33;
             // 
-            // textBox7
+            // cp3txt3
             // 
-            textBox7.Location = new System.Drawing.Point(622, 68);
-            textBox7.Multiline = true;
-            textBox7.Name = "textBox7";
-            textBox7.PlaceholderText = "Please share the link here.";
-            textBox7.ScrollBars = ScrollBars.Vertical;
-            textBox7.Size = new System.Drawing.Size(541, 23);
-            textBox7.TabIndex = 32;
+            cp3txt3.Location = new System.Drawing.Point(622, 68);
+            cp3txt3.Multiline = true;
+            cp3txt3.Name = "cp3txt3";
+            cp3txt3.PlaceholderText = "Please share the link here.";
+            cp3txt3.ScrollBars = ScrollBars.Vertical;
+            cp3txt3.Size = new System.Drawing.Size(541, 23);
+            cp3txt3.TabIndex = 32;
             // 
-            // textBox8
+            // cp3txt2
             // 
-            textBox8.Location = new System.Drawing.Point(622, 36);
-            textBox8.Multiline = true;
-            textBox8.Name = "textBox8";
-            textBox8.PlaceholderText = "Please share the link here.";
-            textBox8.ScrollBars = ScrollBars.Vertical;
-            textBox8.Size = new System.Drawing.Size(541, 23);
-            textBox8.TabIndex = 31;
+            cp3txt2.Location = new System.Drawing.Point(622, 36);
+            cp3txt2.Multiline = true;
+            cp3txt2.Name = "cp3txt2";
+            cp3txt2.PlaceholderText = "Please share the link here.";
+            cp3txt2.ScrollBars = ScrollBars.Vertical;
+            cp3txt2.Size = new System.Drawing.Size(541, 23);
+            cp3txt2.TabIndex = 31;
             // 
             // cp3lbl6
             // 
@@ -1814,56 +1880,56 @@ namespace ReaLTaiizor.UI
             cp3lbl1.TabIndex = 2;
             cp3lbl1.Text = "Please provide EFS link.";
             // 
-            // textBox9
+            // cp3txt1
             // 
-            textBox9.Location = new System.Drawing.Point(622, 5);
-            textBox9.Multiline = true;
-            textBox9.Name = "textBox9";
-            textBox9.PlaceholderText = "Please share the link here.";
-            textBox9.ScrollBars = ScrollBars.Vertical;
-            textBox9.Size = new System.Drawing.Size(541, 23);
-            textBox9.TabIndex = 25;
+            cp3txt1.Location = new System.Drawing.Point(622, 5);
+            cp3txt1.Multiline = true;
+            cp3txt1.Name = "cp3txt1";
+            cp3txt1.PlaceholderText = "Please share the link here.";
+            cp3txt1.ScrollBars = ScrollBars.Vertical;
+            cp3txt1.Size = new System.Drawing.Size(541, 23);
+            cp3txt1.TabIndex = 25;
             // 
-            // comboBox4
+            // cp3ComboBox1
             // 
-            comboBox4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            comboBox4.Location = new System.Drawing.Point(464, 5);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new System.Drawing.Size(150, 23);
-            comboBox4.TabIndex = 36;
-            comboBox4.Text = "Select";
+            cp3ComboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            cp3ComboBox1.FormattingEnabled = true;
+            cp3ComboBox1.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            cp3ComboBox1.Location = new System.Drawing.Point(464, 5);
+            cp3ComboBox1.Name = "cp3ComboBox1";
+            cp3ComboBox1.Size = new System.Drawing.Size(150, 23);
+            cp3ComboBox1.TabIndex = 36;
+            cp3ComboBox1.Text = "Select";
             // 
-            // comboBox5
+            // cp3ComboBox2
             // 
-            comboBox5.FormattingEnabled = true;
-            comboBox5.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            comboBox5.Location = new System.Drawing.Point(464, 36);
-            comboBox5.Name = "comboBox5";
-            comboBox5.Size = new System.Drawing.Size(147, 23);
-            comboBox5.TabIndex = 37;
-            comboBox5.Text = "Select";
+            cp3ComboBox2.FormattingEnabled = true;
+            cp3ComboBox2.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            cp3ComboBox2.Location = new System.Drawing.Point(464, 36);
+            cp3ComboBox2.Name = "cp3ComboBox2";
+            cp3ComboBox2.Size = new System.Drawing.Size(147, 23);
+            cp3ComboBox2.TabIndex = 37;
+            cp3ComboBox2.Text = "Select";
             // 
-            // comboBox7
+            // cp3ComboBox7
             // 
-            comboBox7.FormattingEnabled = true;
-            comboBox7.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            comboBox7.Location = new System.Drawing.Point(464, 197);
-            comboBox7.Name = "comboBox7";
-            comboBox7.Size = new System.Drawing.Size(147, 23);
-            comboBox7.TabIndex = 45;
-            comboBox7.Text = "Select";
+            cp3ComboBox7.FormattingEnabled = true;
+            cp3ComboBox7.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            cp3ComboBox7.Location = new System.Drawing.Point(464, 197);
+            cp3ComboBox7.Name = "cp3ComboBox7";
+            cp3ComboBox7.Size = new System.Drawing.Size(147, 23);
+            cp3ComboBox7.TabIndex = 45;
+            cp3ComboBox7.Text = "Select";
             // 
-            // comboBox8
+            // cp3ComboBox6
             // 
-            comboBox8.FormattingEnabled = true;
-            comboBox8.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            comboBox8.Location = new System.Drawing.Point(464, 170);
-            comboBox8.Name = "comboBox8";
-            comboBox8.Size = new System.Drawing.Size(147, 23);
-            comboBox8.TabIndex = 41;
-            comboBox8.Text = "Select";
+            cp3ComboBox6.FormattingEnabled = true;
+            cp3ComboBox6.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            cp3ComboBox6.Location = new System.Drawing.Point(464, 170);
+            cp3ComboBox6.Name = "cp3ComboBox6";
+            cp3ComboBox6.Size = new System.Drawing.Size(147, 23);
+            cp3ComboBox6.TabIndex = 41;
+            cp3ComboBox6.Text = "Select";
             // 
             // tableLayoutPanel10
             // 
@@ -2051,7 +2117,7 @@ namespace ReaLTaiizor.UI
             materialCard1.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialCard1.Name = "materialCard1";
             materialCard1.Padding = new Padding(14);
-            materialCard1.Size = new System.Drawing.Size(1177, 405);
+            materialCard1.Size = new System.Drawing.Size(1177, 439);
             materialCard1.TabIndex = 87;
             // 
             // tableLayoutPanel7
@@ -2126,6 +2192,9 @@ namespace ReaLTaiizor.UI
             tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 156F));
             tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 547F));
+            tableLayoutPanel8.Controls.Add(textBox1, 2, 11);
+            tableLayoutPanel8.Controls.Add(comboBox1, 1, 11);
+            tableLayoutPanel8.Controls.Add(label1, 0, 11);
             tableLayoutPanel8.Controls.Add(cdrtxt11, 2, 10);
             tableLayoutPanel8.Controls.Add(cdrtxt10, 2, 9);
             tableLayoutPanel8.Controls.Add(cdrtxt9, 2, 8);
@@ -2162,25 +2231,27 @@ namespace ReaLTaiizor.UI
             tableLayoutPanel8.Location = new System.Drawing.Point(-1, 37);
             tableLayoutPanel8.Margin = new Padding(0);
             tableLayoutPanel8.Name = "tableLayoutPanel8";
-            tableLayoutPanel8.RowCount = 12;
+            tableLayoutPanel8.RowCount = 13;
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 29F));
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 29F));
-            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 31F));
-            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 34F));
-            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 29F));
+            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 37F));
+            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 27F));
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 28F));
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 34F));
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 29F));
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 31F));
-            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 125F));
-            tableLayoutPanel8.Size = new System.Drawing.Size(1177, 369);
+            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 116F));
+            tableLayoutPanel8.Size = new System.Drawing.Size(1204, 415);
             tableLayoutPanel8.TabIndex = 69;
+            tableLayoutPanel8.Paint += tableLayoutPanel8_Paint_1;
             // 
             // cdrtxt11
             // 
-            cdrtxt11.Location = new System.Drawing.Point(631, 329);
+            cdrtxt11.Location = new System.Drawing.Point(658, 329);
             cdrtxt11.Multiline = true;
             cdrtxt11.Name = "cdrtxt11";
             cdrtxt11.PlaceholderText = "Please add DFMEA link or schedule when DFMEA is planned";
@@ -2190,7 +2261,7 @@ namespace ReaLTaiizor.UI
             // 
             // cdrtxt10
             // 
-            cdrtxt10.Location = new System.Drawing.Point(631, 297);
+            cdrtxt10.Location = new System.Drawing.Point(658, 297);
             cdrtxt10.Multiline = true;
             cdrtxt10.Name = "cdrtxt10";
             cdrtxt10.ScrollBars = ScrollBars.Vertical;
@@ -2199,7 +2270,7 @@ namespace ReaLTaiizor.UI
             // 
             // cdrtxt9
             // 
-            cdrtxt9.Location = new System.Drawing.Point(631, 265);
+            cdrtxt9.Location = new System.Drawing.Point(658, 265);
             cdrtxt9.Multiline = true;
             cdrtxt9.Name = "cdrtxt9";
             cdrtxt9.PlaceholderText = "Please make sure Coverity snapshot/link is updated in JIRA";
@@ -2209,7 +2280,7 @@ namespace ReaLTaiizor.UI
             // 
             // cdrtxt8
             // 
-            cdrtxt8.Location = new System.Drawing.Point(631, 229);
+            cdrtxt8.Location = new System.Drawing.Point(658, 229);
             cdrtxt8.Multiline = true;
             cdrtxt8.Name = "cdrtxt8";
             cdrtxt8.ScrollBars = ScrollBars.Vertical;
@@ -2218,7 +2289,7 @@ namespace ReaLTaiizor.UI
             // 
             // cdrtxt7
             // 
-            cdrtxt7.Location = new System.Drawing.Point(631, 199);
+            cdrtxt7.Location = new System.Drawing.Point(658, 199);
             cdrtxt7.Multiline = true;
             cdrtxt7.Name = "cdrtxt7";
             cdrtxt7.ScrollBars = ScrollBars.Vertical;
@@ -2227,16 +2298,16 @@ namespace ReaLTaiizor.UI
             // 
             // cdrtxt6
             // 
-            cdrtxt6.Location = new System.Drawing.Point(631, 168);
+            cdrtxt6.Location = new System.Drawing.Point(658, 170);
             cdrtxt6.Multiline = true;
             cdrtxt6.Name = "cdrtxt6";
             cdrtxt6.ScrollBars = ScrollBars.Vertical;
-            cdrtxt6.Size = new System.Drawing.Size(541, 23);
+            cdrtxt6.Size = new System.Drawing.Size(541, 21);
             cdrtxt6.TabIndex = 123;
             // 
             // cdrtxt5
             // 
-            cdrtxt5.Location = new System.Drawing.Point(631, 132);
+            cdrtxt5.Location = new System.Drawing.Point(658, 131);
             cdrtxt5.Multiline = true;
             cdrtxt5.Name = "cdrtxt5";
             cdrtxt5.ScrollBars = ScrollBars.Vertical;
@@ -2245,7 +2316,7 @@ namespace ReaLTaiizor.UI
             // 
             // cdrtxt4
             // 
-            cdrtxt4.Location = new System.Drawing.Point(631, 99);
+            cdrtxt4.Location = new System.Drawing.Point(658, 99);
             cdrtxt4.Multiline = true;
             cdrtxt4.Name = "cdrtxt4";
             cdrtxt4.ScrollBars = ScrollBars.Vertical;
@@ -2254,7 +2325,7 @@ namespace ReaLTaiizor.UI
             // 
             // cdrtxt3
             // 
-            cdrtxt3.Location = new System.Drawing.Point(631, 68);
+            cdrtxt3.Location = new System.Drawing.Point(658, 68);
             cdrtxt3.Multiline = true;
             cdrtxt3.Name = "cdrtxt3";
             cdrtxt3.ScrollBars = ScrollBars.Vertical;
@@ -2263,7 +2334,7 @@ namespace ReaLTaiizor.UI
             // 
             // cdrtxt2
             // 
-            cdrtxt2.Location = new System.Drawing.Point(631, 36);
+            cdrtxt2.Location = new System.Drawing.Point(658, 36);
             cdrtxt2.Multiline = true;
             cdrtxt2.Name = "cdrtxt2";
             cdrtxt2.PlaceholderText = "Update Reviewer name and MR link here ...";
@@ -2273,7 +2344,7 @@ namespace ReaLTaiizor.UI
             // 
             // cdrtxt1
             // 
-            cdrtxt1.Location = new System.Drawing.Point(631, 5);
+            cdrtxt1.Location = new System.Drawing.Point(658, 5);
             cdrtxt1.Multiline = true;
             cdrtxt1.Name = "cdrtxt1";
             cdrtxt1.PlaceholderText = "This is applicable only for Grooming/Refinement/Study JIRA";
@@ -2285,7 +2356,7 @@ namespace ReaLTaiizor.UI
             // 
             cdrComboBox9.FormattingEnabled = true;
             cdrComboBox9.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            cdrComboBox9.Location = new System.Drawing.Point(473, 265);
+            cdrComboBox9.Location = new System.Drawing.Point(500, 265);
             cdrComboBox9.Name = "cdrComboBox9";
             cdrComboBox9.RightToLeft = RightToLeft.No;
             cdrComboBox9.Size = new System.Drawing.Size(147, 23);
@@ -2296,7 +2367,7 @@ namespace ReaLTaiizor.UI
             // 
             cdrComboBox8.FormattingEnabled = true;
             cdrComboBox8.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            cdrComboBox8.Location = new System.Drawing.Point(473, 229);
+            cdrComboBox8.Location = new System.Drawing.Point(500, 229);
             cdrComboBox8.Name = "cdrComboBox8";
             cdrComboBox8.RightToLeft = RightToLeft.No;
             cdrComboBox8.Size = new System.Drawing.Size(147, 23);
@@ -2307,7 +2378,7 @@ namespace ReaLTaiizor.UI
             // 
             cdrComboBox7.FormattingEnabled = true;
             cdrComboBox7.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            cdrComboBox7.Location = new System.Drawing.Point(473, 199);
+            cdrComboBox7.Location = new System.Drawing.Point(500, 199);
             cdrComboBox7.Name = "cdrComboBox7";
             cdrComboBox7.RightToLeft = RightToLeft.No;
             cdrComboBox7.Size = new System.Drawing.Size(147, 23);
@@ -2318,7 +2389,7 @@ namespace ReaLTaiizor.UI
             // 
             cdrComboBox6.FormattingEnabled = true;
             cdrComboBox6.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            cdrComboBox6.Location = new System.Drawing.Point(473, 168);
+            cdrComboBox6.Location = new System.Drawing.Point(500, 170);
             cdrComboBox6.Name = "cdrComboBox6";
             cdrComboBox6.RightToLeft = RightToLeft.No;
             cdrComboBox6.Size = new System.Drawing.Size(147, 23);
@@ -2329,7 +2400,7 @@ namespace ReaLTaiizor.UI
             // 
             cdrComboBox5.FormattingEnabled = true;
             cdrComboBox5.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            cdrComboBox5.Location = new System.Drawing.Point(473, 132);
+            cdrComboBox5.Location = new System.Drawing.Point(500, 131);
             cdrComboBox5.Name = "cdrComboBox5";
             cdrComboBox5.RightToLeft = RightToLeft.No;
             cdrComboBox5.Size = new System.Drawing.Size(147, 23);
@@ -2340,7 +2411,7 @@ namespace ReaLTaiizor.UI
             // 
             cdrComboBox4.FormattingEnabled = true;
             cdrComboBox4.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            cdrComboBox4.Location = new System.Drawing.Point(473, 99);
+            cdrComboBox4.Location = new System.Drawing.Point(500, 99);
             cdrComboBox4.Name = "cdrComboBox4";
             cdrComboBox4.RightToLeft = RightToLeft.No;
             cdrComboBox4.Size = new System.Drawing.Size(147, 23);
@@ -2351,7 +2422,7 @@ namespace ReaLTaiizor.UI
             // 
             cdrComboBox3.FormattingEnabled = true;
             cdrComboBox3.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            cdrComboBox3.Location = new System.Drawing.Point(473, 68);
+            cdrComboBox3.Location = new System.Drawing.Point(500, 68);
             cdrComboBox3.Name = "cdrComboBox3";
             cdrComboBox3.RightToLeft = RightToLeft.No;
             cdrComboBox3.Size = new System.Drawing.Size(147, 23);
@@ -2362,7 +2433,7 @@ namespace ReaLTaiizor.UI
             // 
             cdrComboBox2.FormattingEnabled = true;
             cdrComboBox2.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            cdrComboBox2.Location = new System.Drawing.Point(473, 36);
+            cdrComboBox2.Location = new System.Drawing.Point(500, 36);
             cdrComboBox2.Name = "cdrComboBox2";
             cdrComboBox2.RightToLeft = RightToLeft.No;
             cdrComboBox2.Size = new System.Drawing.Size(147, 23);
@@ -2377,7 +2448,7 @@ namespace ReaLTaiizor.UI
             cdrlbl8.Location = new System.Drawing.Point(9, 227);
             cdrlbl8.Margin = new Padding(7, 0, 2, 0);
             cdrlbl8.Name = "cdrlbl8";
-            cdrlbl8.Size = new System.Drawing.Size(426, 32);
+            cdrlbl8.Size = new System.Drawing.Size(464, 32);
             cdrlbl8.TabIndex = 10;
             cdrlbl8.Text = "Is EFS updated with dev test plan and design section by dev team (Mandatory before feature CA closure)?";
             // 
@@ -2386,10 +2457,10 @@ namespace ReaLTaiizor.UI
             cdrlbl6.Anchor = AnchorStyles.Left;
             cdrlbl6.AutoSize = true;
             cdrlbl6.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            cdrlbl6.Location = new System.Drawing.Point(9, 165);
+            cdrlbl6.Location = new System.Drawing.Point(9, 167);
             cdrlbl6.Margin = new Padding(7, 0, 2, 0);
             cdrlbl6.Name = "cdrlbl6";
-            cdrlbl6.Size = new System.Drawing.Size(433, 29);
+            cdrlbl6.Size = new System.Drawing.Size(482, 27);
             cdrlbl6.TabIndex = 7;
             cdrlbl6.Text = "Are System Component Testing [SCT] TCs planned, prioritized and reviewed by architect and AG?";
             // 
@@ -2422,10 +2493,10 @@ namespace ReaLTaiizor.UI
             cdrlbl5.Anchor = AnchorStyles.Left;
             cdrlbl5.AutoSize = true;
             cdrlbl5.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            cdrlbl5.Location = new System.Drawing.Point(9, 130);
+            cdrlbl5.Location = new System.Drawing.Point(9, 138);
             cdrlbl5.Margin = new Padding(7, 0, 2, 0);
             cdrlbl5.Name = "cdrlbl5";
-            cdrlbl5.Size = new System.Drawing.Size(436, 32);
+            cdrlbl5.Size = new System.Drawing.Size(458, 16);
             cdrlbl5.TabIndex = 6;
             cdrlbl5.Text = "Are Module Testing [MT] TCs planned, prioritized and reviewed by architect and AG?";
             cdrlbl5.Click += cdrlbl5_Click;
@@ -2483,7 +2554,7 @@ namespace ReaLTaiizor.UI
             cdrlbl11.Anchor = AnchorStyles.Left;
             cdrlbl11.AutoSize = true;
             cdrlbl11.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            cdrlbl11.Location = new System.Drawing.Point(9, 333);
+            cdrlbl11.Location = new System.Drawing.Point(9, 332);
             cdrlbl11.Margin = new Padding(7, 0, 2, 0);
             cdrlbl11.Name = "cdrlbl11";
             cdrlbl11.Size = new System.Drawing.Size(277, 16);
@@ -2494,7 +2565,7 @@ namespace ReaLTaiizor.UI
             // 
             cdrComboBox1.FormattingEnabled = true;
             cdrComboBox1.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            cdrComboBox1.Location = new System.Drawing.Point(473, 5);
+            cdrComboBox1.Location = new System.Drawing.Point(500, 5);
             cdrComboBox1.Name = "cdrComboBox1";
             cdrComboBox1.RightToLeft = RightToLeft.No;
             cdrComboBox1.Size = new System.Drawing.Size(147, 23);
@@ -2505,7 +2576,7 @@ namespace ReaLTaiizor.UI
             // 
             cdrComboBox10.FormattingEnabled = true;
             cdrComboBox10.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            cdrComboBox10.Location = new System.Drawing.Point(473, 297);
+            cdrComboBox10.Location = new System.Drawing.Point(500, 297);
             cdrComboBox10.Name = "cdrComboBox10";
             cdrComboBox10.RightToLeft = RightToLeft.No;
             cdrComboBox10.Size = new System.Drawing.Size(147, 23);
@@ -2516,7 +2587,7 @@ namespace ReaLTaiizor.UI
             // 
             cdrComboBox11.FormattingEnabled = true;
             cdrComboBox11.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
-            cdrComboBox11.Location = new System.Drawing.Point(473, 329);
+            cdrComboBox11.Location = new System.Drawing.Point(500, 329);
             cdrComboBox11.Name = "cdrComboBox11";
             cdrComboBox11.RightToLeft = RightToLeft.No;
             cdrComboBox11.Size = new System.Drawing.Size(147, 23);
@@ -3457,66 +3528,38 @@ namespace ReaLTaiizor.UI
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // materialButton4
+            // label1
             // 
-            materialButton4.AutoSize = false;
-            materialButton4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton4.Depth = 0;
-            materialButton4.DrawShadows = true;
-            materialButton4.HighEmphasis = false;
-            materialButton4.Icon = RCL.Properties.Resources.ic_restore_page_black_36dp;
-            materialButton4.Location = new System.Drawing.Point(327, 443);
-            materialButton4.Margin = new Padding(4, 6, 4, 6);
-            materialButton4.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            materialButton4.Name = "materialButton4";
-            materialButton4.Size = new System.Drawing.Size(130, 36);
-            materialButton4.TabIndex = 94;
-            materialButton4.Text = "Reset";
-            materialButton4.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
-            materialButton4.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton4.UseAccentColor = false;
-            materialButton4.UseVisualStyleBackColor = true;
+            label1.Anchor = AnchorStyles.Left;
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            label1.Location = new System.Drawing.Point(9, 364);
+            label1.Margin = new Padding(7, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(363, 16);
+            label1.TabIndex = 129;
+            label1.Text = "Does UTE testing need to be planned for the feature by dev team?";
             // 
-            // materialButton5
+            // comboBox1
             // 
-            materialButton5.AutoSize = false;
-            materialButton5.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton5.Depth = 0;
-            materialButton5.DrawShadows = true;
-            materialButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            materialButton5.HighEmphasis = true;
-            materialButton5.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
-            materialButton5.Location = new System.Drawing.Point(654, 446);
-            materialButton5.Margin = new Padding(4, 6, 4, 6);
-            materialButton5.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            materialButton5.Name = "materialButton5";
-            materialButton5.Size = new System.Drawing.Size(138, 36);
-            materialButton5.TabIndex = 92;
-            materialButton5.Text = "Submit";
-            materialButton5.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
-            materialButton5.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton5.UseAccentColor = false;
-            materialButton5.UseVisualStyleBackColor = true;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            comboBox1.Location = new System.Drawing.Point(500, 360);
+            comboBox1.Name = "comboBox1";
+            comboBox1.RightToLeft = RightToLeft.No;
+            comboBox1.Size = new System.Drawing.Size(147, 23);
+            comboBox1.TabIndex = 130;
+            comboBox1.Text = "Select";
             // 
-            // materialButton6
+            // textBox1
             // 
-            materialButton6.AutoSize = false;
-            materialButton6.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton6.Depth = 0;
-            materialButton6.DrawShadows = true;
-            materialButton6.HighEmphasis = true;
-            materialButton6.Icon = RCL.Properties.Resources.Close_16xLG;
-            materialButton6.Location = new System.Drawing.Point(491, 446);
-            materialButton6.Margin = new Padding(4, 6, 4, 6);
-            materialButton6.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            materialButton6.Name = "materialButton6";
-            materialButton6.Size = new System.Drawing.Size(130, 36);
-            materialButton6.TabIndex = 93;
-            materialButton6.Text = "Cancel";
-            materialButton6.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
-            materialButton6.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton6.UseAccentColor = true;
-            materialButton6.UseVisualStyleBackColor = true;
+            textBox1.Location = new System.Drawing.Point(658, 360);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "Please add DFMEA link or schedule when DFMEA is planned";
+            textBox1.ScrollBars = ScrollBars.Vertical;
+            textBox1.Size = new System.Drawing.Size(541, 23);
+            textBox1.TabIndex = 131;
             // 
             // frmRcl
             // 
@@ -3804,33 +3847,36 @@ namespace ReaLTaiizor.UI
         private Controls.MaterialTextBox cp3txtReviewers;
         private Controls.MaterialLabel materialLabel14;
         private TableLayoutPanel tableLayoutPanel9;
-        private TextBox textBox3;
+        private TextBox cp3txt7;
         private Label cp3lbl7;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
+        private ComboBox cp3ComboBox5;
+        private ComboBox cp3ComboBox4;
+        private ComboBox cp3ComboBox3;
+        private TextBox cp3txt6;
+        private TextBox cp3txt5;
+        private TextBox cp3txt4;
+        private TextBox cp3txt3;
+        private TextBox cp3txt2;
         private Label cp3lbl6;
         private Label cp3lbl2;
         private Label cp3lbl3;
         private Label cp3lbl4;
         private Label cp3lbl5;
         private Label cp3lbl1;
-        private TextBox textBox9;
-        private ComboBox comboBox4;
-        private ComboBox comboBox5;
-        private ComboBox comboBox7;
-        private ComboBox comboBox8;
+        private TextBox cp3txt1;
+        private ComboBox cp3ComboBox1;
+        private ComboBox cp3ComboBox2;
+        private ComboBox cp3ComboBox7;
+        private ComboBox cp3ComboBox6;
         private TableLayoutPanel tableLayoutPanel10;
         private Controls.MaterialLabel materialLabel15;
         private Controls.MaterialLabel materialLabel16;
         private Controls.MaterialLabel materialLabel17;
-        private Controls.MaterialButton materialButton4;
-        private Controls.MaterialButton materialButton5;
-        private Controls.MaterialButton materialButton6;
+        private Controls.MaterialButton cp3BtnReset;
+        private Controls.MaterialButton cp3BtnSubmit;
+        private Controls.MaterialButton cp3BtnCancel;
+        private TextBox textBox1;
+        private ComboBox comboBox1;
+        private Label label1;
     }
 }

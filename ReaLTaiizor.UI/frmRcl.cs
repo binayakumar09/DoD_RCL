@@ -390,6 +390,91 @@ namespace ReaLTaiizor.UI
             efsReviewResult("EFS in CP2 Approved State");
         }
 
+        private void cp3BtnSubmit_Click(object sender, EventArgs e)
+        {
+
+            if (cp3txtReviewers.TextLength == 0)
+            {
+                result1 = MessageBox.Show("Please add reviewers name", "Mandatory reviewers", buttonsOk, MessageBoxIcon.Warning);
+                if (result1 == DialogResult.OK)
+                {
+                    cp3txtReviewers.Focus();
+                    return;
+                }
+                else
+                {
+                    // Do something  
+                }
+            }
+
+            void ShowMessageAndFocus(ComboBox comboBox, TextBox textBox, string message, Label label)
+            {
+                var result = MessageBox.Show(message, label.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (result == DialogResult.OK)
+                {
+                    if (comboBox != null)
+                    {
+                        comboBox.Focus();
+                    }
+                    else if (textBox != null)
+                    {
+                        textBox.Focus();
+                    }
+                }
+                else
+                {
+                    // Do something
+                }
+            }
+
+            Boolean ValidateCP3ComboBoxAndTextBox(ComboBox comboBox, TextBox textBox, string selectMessage, string addCommentMessage, Label label)
+            {
+                String text = textBox.Text;
+                int wordCount = text.Split(new char[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries).Length;
+
+                if (comboBox.Text.Equals("Select"))
+                {
+                    ShowMessageAndFocus(null, textBox, "Please Select the Status", label);
+                    return false;
+                }
+                else if (wordCount <= 2 && (comboBox.SelectedIndex.Equals(1) || comboBox.SelectedIndex.Equals(2)))
+                {
+                    ShowMessageAndFocus(null, textBox, addCommentMessage, label);
+                    return false;
+                }
+                return true;
+            }
+
+            Boolean ValidateCP3ComboBoxAndTextBoxYes(ComboBox comboBox, TextBox textBox, Label label)
+            {
+                String text = textBox.Text;
+                int wordCount = text.Split(new char[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries).Length;
+
+                if (wordCount < 1 && (comboBox.SelectedIndex.Equals(0)))
+                {
+                    ShowMessageAndFocus(null, textBox, "Please update Comments Section", label);
+                    return false;
+                }
+                return true;
+            }
+
+            ComboBox[] comboBoxes = { cp3ComboBox1, cp3ComboBox2, cp3ComboBox3, cp3ComboBox4, cp3ComboBox5, cp3ComboBox6, cp3ComboBox7 };
+            TextBox[] textBoxes = { cp3txt1, cp3txt2, cp3txt3, cp3txt4, cp3txt5, cp3txt6, cp3txt7 };
+            Label[] labels = { cp3lbl1, cp3lbl2, cp3lbl3, cp3lbl4, cp3lbl5, cp3lbl6, cp3lbl7 };
+
+            for (int i = 0; i < comboBoxes.Length; i++)
+            {
+                if (!ValidateCP3ComboBoxAndTextBox(comboBoxes[i], textBoxes[i], selectEfsOptionMessage, addEfsCommentMessage, labels[i]))
+                {
+                    return;
+                }
+            }
+            if (!ValidateCP3ComboBoxAndTextBoxYes(cp3ComboBox1, cp3txt1, cp3lbl1))
+                return;
+
+            efsReviewResult("EFS in CP3 Approved State");
+        }
+
         public void DownloadFile()
         {
             String fileUrl = "file://eseefsn50.emea.nsn-net.net/rotta4internal/5G_3/Bangalore/RCL/RCL.zip";
@@ -619,6 +704,42 @@ namespace ReaLTaiizor.UI
         }
 
         private void cp2BtnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cp3BtnReset_Click(object sender, EventArgs e)
+        {
+            // Defensive: Ensure "Select" is present, add if missing
+            EnsureSelectItem(cp3ComboBox1);
+            EnsureSelectItem(cp3ComboBox2);
+            EnsureSelectItem(cp3ComboBox3);
+            EnsureSelectItem(cp3ComboBox4);
+            EnsureSelectItem(cp3ComboBox5);
+            EnsureSelectItem(cp3ComboBox6);
+            EnsureSelectItem(cp3ComboBox7);
+
+            // Now reliably set to "Select"
+            SetComboBoxToSelect(cp3ComboBox1);
+            SetComboBoxToSelect(cp3ComboBox2);
+            SetComboBoxToSelect(cp3ComboBox3);
+            SetComboBoxToSelect(cp3ComboBox4);
+            SetComboBoxToSelect(cp3ComboBox5);
+            SetComboBoxToSelect(cp3ComboBox6);
+            SetComboBoxToSelect(cp3ComboBox7);
+
+            // Clear associated TextBoxes
+            cp3txt1.Text = "";
+            cp3txt2.Text = "";
+            cp3txt3.Text = "";
+            cp3txt4.Text = "";
+            cp3txt5.Text = "";
+            cp3txt6.Text = "";
+            cp3txt7.Text = "";
+            cp3txtReviewers.Text = "";
+        }
+
+        private void cp3BtnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -1159,6 +1280,11 @@ namespace ReaLTaiizor.UI
         }
 
         private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel8_Paint_1(object sender, PaintEventArgs e)
         {
 
         }

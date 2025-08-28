@@ -50,6 +50,13 @@ namespace ReaLTaiizor.UI
             tableLayoutPanel1.BackColor = System.Drawing.Color.White;
             tableLayoutPanel2.BackColor = System.Drawing.Color.White;
 
+            // Owner draw so we control font
+            efsTabInnerTabControl.DrawMode = TabDrawMode.OwnerDrawFixed;
+            efsTabInnerTabControl.DrawItem += EfsTabInnerTabControl_DrawItem;
+
+            // Adjust tab header size (width & height) for 12pt bold captions
+            AdjustEfsTabHeaderSize();
+
             console.Visible = false;
 
             CheckforUpdate();
@@ -60,6 +67,65 @@ namespace ReaLTaiizor.UI
             materialManager.Theme = MaterialManager.Themes.LIGHT;
             materialManager.ColorScheme = new MaterialColorScheme(MaterialPrimary.Indigo500, MaterialPrimary.Indigo700, MaterialPrimary.Indigo100, MaterialAccent.Pink200, MaterialTextShade.WHITE);
             console.Text = DataLogger.logString;
+        }
+
+        // Dynamically compute a suitable width & height for tab headers
+        private void AdjustEfsTabHeaderSize()
+        {
+            if (efsTabInnerTabControl == null || efsTabInnerTabControl.TabPages.Count == 0)
+                return;
+
+            // Desired font
+            using var font = new Font(efsTabInnerTabControl.Font.FontFamily, 12f, FontStyle.Bold);
+            int maxWidth = 0;
+
+            foreach (TabPage tp in efsTabInnerTabControl.TabPages)
+            {
+                // Measure single line text
+                var sz = TextRenderer.MeasureText(tp.Text, font, new Size(int.MaxValue, int.MaxValue),
+                    TextFormatFlags.SingleLine);
+                // Add horizontal padding
+                int w = sz.Width + 32; // 16px left + 16px right
+                if (w > maxWidth) maxWidth = w;
+            }
+
+            // Minimum width safeguard
+            maxWidth = Math.Max(maxWidth, 140);
+
+            // Height: font height + vertical padding
+            int height = font.Height + 14; // 7px top + 7px bottom
+
+            efsTabInnerTabControl.SizeMode = TabSizeMode.Fixed;
+            efsTabInnerTabControl.ItemSize = new Size(maxWidth, height);
+        }
+
+        // DrawItem event handler for bold tab headers (12pt)
+        private void EfsTabInnerTabControl_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            var tabControl = (TabControl)sender;
+            var tabPage = tabControl.TabPages[e.Index];
+
+            using var font = new Font(tabControl.Font.FontFamily, 12f, FontStyle.Bold);
+
+            // Background (respect selection)
+            var isSelected = (e.State & DrawItemState.Selected) == DrawItemState.Selected;
+            Color back = isSelected ? SystemColors.ControlLightLight : SystemColors.Control;
+            using (var b = new SolidBrush(back))
+                e.Graphics.FillRectangle(b, e.Bounds);
+
+            // Text color
+            Color textColor = isSelected ? SystemColors.ControlText : SystemColors.ControlText;
+
+            TextRenderer.DrawText(
+                e.Graphics,
+                tabPage.Text,
+                font,
+                e.Bounds,
+                textColor,
+                TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter | TextFormatFlags.EndEllipsis);
+
+            if ((e.State & DrawItemState.Focus) == DrawItemState.Focus)
+                e.DrawFocusRectangle();
         }
 
         private void CheckforUpdate()

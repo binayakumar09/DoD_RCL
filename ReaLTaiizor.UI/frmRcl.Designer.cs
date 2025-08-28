@@ -127,6 +127,35 @@ namespace ReaLTaiizor.UI
             cp2txtReviewers = new ReaLTaiizor.Controls.MaterialTextBox();
             materialLabel18 = new ReaLTaiizor.Controls.MaterialLabel();
             tabPage3 = new TabPage();
+            tableLayoutPanel9 = new TableLayoutPanel();
+            textBox3 = new TextBox();
+            cp3lbl7 = new Label();
+            comboBox1 = new ComboBox();
+            comboBox2 = new ComboBox();
+            comboBox3 = new ComboBox();
+            textBox4 = new TextBox();
+            textBox5 = new TextBox();
+            textBox6 = new TextBox();
+            textBox7 = new TextBox();
+            textBox8 = new TextBox();
+            cp3lbl6 = new Label();
+            cp3lbl2 = new Label();
+            cp3lbl3 = new Label();
+            cp3lbl4 = new Label();
+            cp3lbl5 = new Label();
+            cp3lbl1 = new Label();
+            textBox9 = new TextBox();
+            comboBox4 = new ComboBox();
+            comboBox5 = new ComboBox();
+            comboBox7 = new ComboBox();
+            comboBox8 = new ComboBox();
+            tableLayoutPanel10 = new TableLayoutPanel();
+            materialLabel15 = new ReaLTaiizor.Controls.MaterialLabel();
+            materialLabel16 = new ReaLTaiizor.Controls.MaterialLabel();
+            materialLabel17 = new ReaLTaiizor.Controls.MaterialLabel();
+            pictureBox4 = new PictureBox();
+            cp3txtReviewers = new ReaLTaiizor.Controls.MaterialTextBox();
+            materialLabel14 = new ReaLTaiizor.Controls.MaterialLabel();
             codeReviewTab = new TabPage();
             cdrLink = new LinkLabel();
             materialLabel1 = new ReaLTaiizor.Controls.MaterialLabel();
@@ -241,6 +270,9 @@ namespace ReaLTaiizor.UI
             toolStripSeparator1 = new ToolStripSeparator();
             item3ToolStripMenuItem = new ReaLTaiizor.Controls.MaterialToolStripMenuItem();
             contextMenuStrip1 = new ContextMenuStrip(components);
+            materialButton4 = new ReaLTaiizor.Controls.MaterialButton();
+            materialButton5 = new ReaLTaiizor.Controls.MaterialButton();
+            materialButton6 = new ReaLTaiizor.Controls.MaterialButton();
             specTabControl.SuspendLayout();
             efsTab.SuspendLayout();
             efsTabInnerTabControl.SuspendLayout();
@@ -253,6 +285,10 @@ namespace ReaLTaiizor.UI
             tableLayoutPanel6.SuspendLayout();
             tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            tabPage3.SuspendLayout();
+            tableLayoutPanel9.SuspendLayout();
+            tableLayoutPanel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             codeReviewTab.SuspendLayout();
             materialCard1.SuspendLayout();
             tableLayoutPanel7.SuspendLayout();
@@ -1541,6 +1577,14 @@ namespace ReaLTaiizor.UI
             // 
             // tabPage3
             // 
+            tabPage3.Controls.Add(materialButton4);
+            tabPage3.Controls.Add(materialButton5);
+            tabPage3.Controls.Add(materialButton6);
+            tabPage3.Controls.Add(tableLayoutPanel9);
+            tabPage3.Controls.Add(tableLayoutPanel10);
+            tabPage3.Controls.Add(pictureBox4);
+            tabPage3.Controls.Add(cp3txtReviewers);
+            tabPage3.Controls.Add(materialLabel14);
             tabPage3.Location = new System.Drawing.Point(4, 24);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
@@ -1548,6 +1592,382 @@ namespace ReaLTaiizor.UI
             tabPage3.TabIndex = 3;
             tabPage3.Text = "CP3 Approved";
             tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel9
+            // 
+            tableLayoutPanel9.BackColor = System.Drawing.Color.White;
+            tableLayoutPanel9.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
+            tableLayoutPanel9.ColumnCount = 3;
+            tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 156F));
+            tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 547F));
+            tableLayoutPanel9.Controls.Add(textBox3, 2, 6);
+            tableLayoutPanel9.Controls.Add(cp3lbl7, 0, 6);
+            tableLayoutPanel9.Controls.Add(comboBox1, 1, 4);
+            tableLayoutPanel9.Controls.Add(comboBox2, 1, 3);
+            tableLayoutPanel9.Controls.Add(comboBox3, 1, 2);
+            tableLayoutPanel9.Controls.Add(textBox4, 2, 5);
+            tableLayoutPanel9.Controls.Add(textBox5, 2, 4);
+            tableLayoutPanel9.Controls.Add(textBox6, 2, 3);
+            tableLayoutPanel9.Controls.Add(textBox7, 2, 2);
+            tableLayoutPanel9.Controls.Add(textBox8, 2, 1);
+            tableLayoutPanel9.Controls.Add(cp3lbl6, 0, 5);
+            tableLayoutPanel9.Controls.Add(cp3lbl2, 0, 1);
+            tableLayoutPanel9.Controls.Add(cp3lbl3, 0, 2);
+            tableLayoutPanel9.Controls.Add(cp3lbl4, 0, 3);
+            tableLayoutPanel9.Controls.Add(cp3lbl5, 0, 4);
+            tableLayoutPanel9.Controls.Add(cp3lbl1, 0, 0);
+            tableLayoutPanel9.Controls.Add(textBox9, 2, 0);
+            tableLayoutPanel9.Controls.Add(comboBox4, 1, 0);
+            tableLayoutPanel9.Controls.Add(comboBox5, 1, 1);
+            tableLayoutPanel9.Controls.Add(comboBox7, 1, 6);
+            tableLayoutPanel9.Controls.Add(comboBox8, 1, 5);
+            tableLayoutPanel9.Location = new System.Drawing.Point(14, 163);
+            tableLayoutPanel9.Margin = new Padding(0);
+            tableLayoutPanel9.Name = "tableLayoutPanel9";
+            tableLayoutPanel9.RowCount = 8;
+            tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Absolute, 29F));
+            tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Absolute, 32F));
+            tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Absolute, 29F));
+            tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
+            tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Absolute, 28F));
+            tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel9.Size = new System.Drawing.Size(1168, 234);
+            tableLayoutPanel9.TabIndex = 91;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new System.Drawing.Point(622, 197);
+            textBox3.Multiline = true;
+            textBox3.Name = "textBox3";
+            textBox3.PlaceholderText = "Enter the Schedule, e.g. Wk Number or Date";
+            textBox3.ScrollBars = ScrollBars.Vertical;
+            textBox3.Size = new System.Drawing.Size(541, 22);
+            textBox3.TabIndex = 48;
+            // 
+            // cp3lbl7
+            // 
+            cp3lbl7.Anchor = AnchorStyles.Left;
+            cp3lbl7.AutoSize = true;
+            cp3lbl7.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            cp3lbl7.Location = new System.Drawing.Point(9, 200);
+            cp3lbl7.Margin = new Padding(7, 0, 2, 0);
+            cp3lbl7.Name = "cp3lbl7";
+            cp3lbl7.Size = new System.Drawing.Size(217, 16);
+            cp3lbl7.TabIndex = 42;
+            cp3lbl7.Text = "Is Airphone Capabilities page updated?";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            comboBox1.Location = new System.Drawing.Point(464, 133);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new System.Drawing.Size(147, 23);
+            comboBox1.TabIndex = 40;
+            comboBox1.Text = "Select";
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            comboBox2.Location = new System.Drawing.Point(464, 102);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new System.Drawing.Size(147, 23);
+            comboBox2.TabIndex = 39;
+            comboBox2.Text = "Select";
+            // 
+            // comboBox3
+            // 
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            comboBox3.Location = new System.Drawing.Point(464, 68);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new System.Drawing.Size(147, 23);
+            comboBox3.TabIndex = 38;
+            comboBox3.Text = "Select";
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new System.Drawing.Point(622, 170);
+            textBox4.Multiline = true;
+            textBox4.Name = "textBox4";
+            textBox4.ScrollBars = ScrollBars.Vertical;
+            textBox4.Size = new System.Drawing.Size(541, 19);
+            textBox4.TabIndex = 35;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new System.Drawing.Point(622, 133);
+            textBox5.Multiline = true;
+            textBox5.Name = "textBox5";
+            textBox5.PlaceholderText = "Please share the link here.";
+            textBox5.ScrollBars = ScrollBars.Vertical;
+            textBox5.Size = new System.Drawing.Size(541, 25);
+            textBox5.TabIndex = 34;
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new System.Drawing.Point(622, 102);
+            textBox6.Multiline = true;
+            textBox6.Name = "textBox6";
+            textBox6.PlaceholderText = "Please share the link here.";
+            textBox6.ScrollBars = ScrollBars.Vertical;
+            textBox6.Size = new System.Drawing.Size(541, 23);
+            textBox6.TabIndex = 33;
+            // 
+            // textBox7
+            // 
+            textBox7.Location = new System.Drawing.Point(622, 68);
+            textBox7.Multiline = true;
+            textBox7.Name = "textBox7";
+            textBox7.PlaceholderText = "Please share the link here.";
+            textBox7.ScrollBars = ScrollBars.Vertical;
+            textBox7.Size = new System.Drawing.Size(541, 23);
+            textBox7.TabIndex = 32;
+            // 
+            // textBox8
+            // 
+            textBox8.Location = new System.Drawing.Point(622, 36);
+            textBox8.Multiline = true;
+            textBox8.Name = "textBox8";
+            textBox8.PlaceholderText = "Please share the link here.";
+            textBox8.ScrollBars = ScrollBars.Vertical;
+            textBox8.Size = new System.Drawing.Size(541, 23);
+            textBox8.TabIndex = 31;
+            // 
+            // cp3lbl6
+            // 
+            cp3lbl6.Anchor = AnchorStyles.Left;
+            cp3lbl6.AutoSize = true;
+            cp3lbl6.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            cp3lbl6.Location = new System.Drawing.Point(9, 171);
+            cp3lbl6.Margin = new Padding(7, 0, 2, 0);
+            cp3lbl6.Name = "cp3lbl6";
+            cp3lbl6.Size = new System.Drawing.Size(293, 16);
+            cp3lbl6.TabIndex = 23;
+            cp3lbl6.Text = "Are TCs planned in alignment with dev test strategy?";
+            // 
+            // cp3lbl2
+            // 
+            cp3lbl2.Anchor = AnchorStyles.Left;
+            cp3lbl2.AutoSize = true;
+            cp3lbl2.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            cp3lbl2.Location = new System.Drawing.Point(9, 40);
+            cp3lbl2.Margin = new Padding(7, 0, 2, 0);
+            cp3lbl2.Name = "cp3lbl2";
+            cp3lbl2.Size = new System.Drawing.Size(178, 16);
+            cp3lbl2.TabIndex = 3;
+            cp3lbl2.Text = "Is EFS in \"CP3 Approved\" State?";
+            // 
+            // cp3lbl3
+            // 
+            cp3lbl3.Anchor = AnchorStyles.Left;
+            cp3lbl3.AutoSize = true;
+            cp3lbl3.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            cp3lbl3.Location = new System.Drawing.Point(9, 73);
+            cp3lbl3.Margin = new Padding(7, 0, 2, 0);
+            cp3lbl3.Name = "cp3lbl3";
+            cp3lbl3.Size = new System.Drawing.Size(123, 16);
+            cp3lbl3.TabIndex = 5;
+            cp3lbl3.Text = "Is DFMEA Completed?";
+            // 
+            // cp3lbl4
+            // 
+            cp3lbl4.Anchor = AnchorStyles.Left;
+            cp3lbl4.AutoSize = true;
+            cp3lbl4.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            cp3lbl4.Location = new System.Drawing.Point(9, 105);
+            cp3lbl4.Margin = new Padding(7, 0, 2, 0);
+            cp3lbl4.Name = "cp3lbl4";
+            cp3lbl4.Size = new System.Drawing.Size(285, 16);
+            cp3lbl4.TabIndex = 4;
+            cp3lbl4.Text = "Is Design section of the EFS updated and reviewed?";
+            // 
+            // cp3lbl5
+            // 
+            cp3lbl5.Anchor = AnchorStyles.Left;
+            cp3lbl5.AutoSize = true;
+            cp3lbl5.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            cp3lbl5.Location = new System.Drawing.Point(9, 131);
+            cp3lbl5.Margin = new Padding(7, 0, 2, 0);
+            cp3lbl5.Name = "cp3lbl5";
+            cp3lbl5.Size = new System.Drawing.Size(425, 32);
+            cp3lbl5.TabIndex = 6;
+            cp3lbl5.Text = "Is Greenleaf tool updated with TCs(UT/MT/SCT/Sanity) corresponding to each requirements by dev (Tracked by LPO)?";
+            // 
+            // cp3lbl1
+            // 
+            cp3lbl1.Anchor = AnchorStyles.Left;
+            cp3lbl1.AutoSize = true;
+            cp3lbl1.Font = new System.Drawing.Font("Nokia Pure Headline", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            cp3lbl1.Location = new System.Drawing.Point(9, 8);
+            cp3lbl1.Margin = new Padding(7, 0, 2, 0);
+            cp3lbl1.Name = "cp3lbl1";
+            cp3lbl1.Size = new System.Drawing.Size(132, 16);
+            cp3lbl1.TabIndex = 2;
+            cp3lbl1.Text = "Please provide EFS link.";
+            // 
+            // textBox9
+            // 
+            textBox9.Location = new System.Drawing.Point(622, 5);
+            textBox9.Multiline = true;
+            textBox9.Name = "textBox9";
+            textBox9.PlaceholderText = "Please share the link here.";
+            textBox9.ScrollBars = ScrollBars.Vertical;
+            textBox9.Size = new System.Drawing.Size(541, 23);
+            textBox9.TabIndex = 25;
+            // 
+            // comboBox4
+            // 
+            comboBox4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            comboBox4.FormattingEnabled = true;
+            comboBox4.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            comboBox4.Location = new System.Drawing.Point(464, 5);
+            comboBox4.Name = "comboBox4";
+            comboBox4.Size = new System.Drawing.Size(150, 23);
+            comboBox4.TabIndex = 36;
+            comboBox4.Text = "Select";
+            // 
+            // comboBox5
+            // 
+            comboBox5.FormattingEnabled = true;
+            comboBox5.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            comboBox5.Location = new System.Drawing.Point(464, 36);
+            comboBox5.Name = "comboBox5";
+            comboBox5.Size = new System.Drawing.Size(147, 23);
+            comboBox5.TabIndex = 37;
+            comboBox5.Text = "Select";
+            // 
+            // comboBox7
+            // 
+            comboBox7.FormattingEnabled = true;
+            comboBox7.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            comboBox7.Location = new System.Drawing.Point(464, 197);
+            comboBox7.Name = "comboBox7";
+            comboBox7.Size = new System.Drawing.Size(147, 23);
+            comboBox7.TabIndex = 45;
+            comboBox7.Text = "Select";
+            // 
+            // comboBox8
+            // 
+            comboBox8.FormattingEnabled = true;
+            comboBox8.Items.AddRange(new object[] { "Yes", "No", "Not Applicable" });
+            comboBox8.Location = new System.Drawing.Point(464, 170);
+            comboBox8.Name = "comboBox8";
+            comboBox8.Size = new System.Drawing.Size(147, 23);
+            comboBox8.TabIndex = 41;
+            comboBox8.Text = "Select";
+            // 
+            // tableLayoutPanel10
+            // 
+            tableLayoutPanel10.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
+            tableLayoutPanel10.ColumnCount = 3;
+            tableLayoutPanel10.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel10.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 156F));
+            tableLayoutPanel10.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 549F));
+            tableLayoutPanel10.Controls.Add(materialLabel15, 0, 0);
+            tableLayoutPanel10.Controls.Add(materialLabel16, 2, 0);
+            tableLayoutPanel10.Controls.Add(materialLabel17, 1, 0);
+            tableLayoutPanel10.ForeColor = System.Drawing.Color.White;
+            tableLayoutPanel10.Location = new System.Drawing.Point(14, 128);
+            tableLayoutPanel10.Margin = new Padding(2);
+            tableLayoutPanel10.Name = "tableLayoutPanel10";
+            tableLayoutPanel10.RowCount = 1;
+            tableLayoutPanel10.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel10.Size = new System.Drawing.Size(1168, 33);
+            tableLayoutPanel10.TabIndex = 90;
+            // 
+            // materialLabel15
+            // 
+            materialLabel15.Anchor = AnchorStyles.None;
+            materialLabel15.AutoSize = true;
+            materialLabel15.Depth = 0;
+            materialLabel15.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            materialLabel15.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
+            materialLabel15.HighEmphasis = true;
+            materialLabel15.Location = new System.Drawing.Point(178, 7);
+            materialLabel15.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialLabel15.Name = "materialLabel15";
+            materialLabel15.Size = new System.Drawing.Size(105, 19);
+            materialLabel15.TabIndex = 66;
+            materialLabel15.Text = "Review Criteria";
+            // 
+            // materialLabel16
+            // 
+            materialLabel16.Anchor = AnchorStyles.None;
+            materialLabel16.AutoSize = true;
+            materialLabel16.Depth = 0;
+            materialLabel16.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            materialLabel16.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
+            materialLabel16.HighEmphasis = true;
+            materialLabel16.Location = new System.Drawing.Point(853, 7);
+            materialLabel16.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialLabel16.Name = "materialLabel16";
+            materialLabel16.Size = new System.Drawing.Size(78, 19);
+            materialLabel16.TabIndex = 69;
+            materialLabel16.Text = "Comments";
+            // 
+            // materialLabel17
+            // 
+            materialLabel17.Anchor = AnchorStyles.None;
+            materialLabel17.AutoSize = true;
+            materialLabel17.Depth = 0;
+            materialLabel17.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            materialLabel17.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
+            materialLabel17.HighEmphasis = true;
+            materialLabel17.Location = new System.Drawing.Point(515, 7);
+            materialLabel17.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialLabel17.Name = "materialLabel17";
+            materialLabel17.Size = new System.Drawing.Size(47, 19);
+            materialLabel17.TabIndex = 68;
+            materialLabel17.Text = "Status";
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = RCL.Properties.Resources.EFS;
+            pictureBox4.InitialImage = (System.Drawing.Image)resources.GetObject("pictureBox4.InitialImage");
+            pictureBox4.Location = new System.Drawing.Point(375, 14);
+            pictureBox4.Margin = new Padding(0);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new System.Drawing.Size(54, 50);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 85;
+            pictureBox4.TabStop = false;
+            // 
+            // cp3txtReviewers
+            // 
+            cp3txtReviewers.BorderStyle = BorderStyle.None;
+            cp3txtReviewers.Cursor = Cursors.IBeam;
+            cp3txtReviewers.Depth = 0;
+            cp3txtReviewers.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            cp3txtReviewers.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
+            cp3txtReviewers.Hint = "Type reviewers name here like Eric, Suresh";
+            cp3txtReviewers.Location = new System.Drawing.Point(133, 73);
+            cp3txtReviewers.MaxLength = 50;
+            cp3txtReviewers.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            cp3txtReviewers.Multiline = false;
+            cp3txtReviewers.Name = "cp3txtReviewers";
+            cp3txtReviewers.Size = new System.Drawing.Size(884, 50);
+            cp3txtReviewers.TabIndex = 84;
+            cp3txtReviewers.Text = "";
+            // 
+            // materialLabel14
+            // 
+            materialLabel14.Depth = 0;
+            materialLabel14.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            materialLabel14.Location = new System.Drawing.Point(432, 20);
+            materialLabel14.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialLabel14.Name = "materialLabel14";
+            materialLabel14.Size = new System.Drawing.Size(261, 44);
+            materialLabel14.TabIndex = 83;
+            materialLabel14.Text = "EFS DOD Review";
             // 
             // codeReviewTab
             // 
@@ -3037,6 +3457,67 @@ namespace ReaLTaiizor.UI
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // materialButton4
+            // 
+            materialButton4.AutoSize = false;
+            materialButton4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton4.Depth = 0;
+            materialButton4.DrawShadows = true;
+            materialButton4.HighEmphasis = false;
+            materialButton4.Icon = RCL.Properties.Resources.ic_restore_page_black_36dp;
+            materialButton4.Location = new System.Drawing.Point(327, 443);
+            materialButton4.Margin = new Padding(4, 6, 4, 6);
+            materialButton4.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialButton4.Name = "materialButton4";
+            materialButton4.Size = new System.Drawing.Size(130, 36);
+            materialButton4.TabIndex = 94;
+            materialButton4.Text = "Reset";
+            materialButton4.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
+            materialButton4.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton4.UseAccentColor = false;
+            materialButton4.UseVisualStyleBackColor = true;
+            // 
+            // materialButton5
+            // 
+            materialButton5.AutoSize = false;
+            materialButton5.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton5.Depth = 0;
+            materialButton5.DrawShadows = true;
+            materialButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            materialButton5.HighEmphasis = true;
+            materialButton5.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
+            materialButton5.Location = new System.Drawing.Point(654, 446);
+            materialButton5.Margin = new Padding(4, 6, 4, 6);
+            materialButton5.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialButton5.Name = "materialButton5";
+            materialButton5.Size = new System.Drawing.Size(138, 36);
+            materialButton5.TabIndex = 92;
+            materialButton5.Text = "Submit";
+            materialButton5.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
+            materialButton5.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton5.UseAccentColor = false;
+            materialButton5.UseVisualStyleBackColor = true;
+            // 
+            // materialButton6
+            // 
+            materialButton6.AutoSize = false;
+            materialButton6.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton6.Depth = 0;
+            materialButton6.DrawShadows = true;
+            materialButton6.HighEmphasis = true;
+            materialButton6.Icon = RCL.Properties.Resources.Close_16xLG;
+            materialButton6.Location = new System.Drawing.Point(491, 446);
+            materialButton6.Margin = new Padding(4, 6, 4, 6);
+            materialButton6.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            materialButton6.Name = "materialButton6";
+            materialButton6.Size = new System.Drawing.Size(130, 36);
+            materialButton6.TabIndex = 93;
+            materialButton6.Text = "Cancel";
+            materialButton6.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
+            materialButton6.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton6.UseAccentColor = true;
+            materialButton6.UseVisualStyleBackColor = true;
+            // 
             // frmRcl
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -3071,6 +3552,12 @@ namespace ReaLTaiizor.UI
             tableLayoutPanel5.ResumeLayout(false);
             tableLayoutPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            tabPage3.ResumeLayout(false);
+            tableLayoutPanel9.ResumeLayout(false);
+            tableLayoutPanel9.PerformLayout();
+            tableLayoutPanel10.ResumeLayout(false);
+            tableLayoutPanel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             codeReviewTab.ResumeLayout(false);
             codeReviewTab.PerformLayout();
             materialCard1.ResumeLayout(false);
@@ -3313,5 +3800,37 @@ namespace ReaLTaiizor.UI
         private Controls.MaterialLabel materialLabel11;
         private Controls.MaterialLabel materialLabel12;
         private Controls.MaterialLabel materialLabel13;
+        private PictureBox pictureBox4;
+        private Controls.MaterialTextBox cp3txtReviewers;
+        private Controls.MaterialLabel materialLabel14;
+        private TableLayoutPanel tableLayoutPanel9;
+        private TextBox textBox3;
+        private Label cp3lbl7;
+        private ComboBox comboBox1;
+        private ComboBox comboBox2;
+        private ComboBox comboBox3;
+        private TextBox textBox4;
+        private TextBox textBox5;
+        private TextBox textBox6;
+        private TextBox textBox7;
+        private TextBox textBox8;
+        private Label cp3lbl6;
+        private Label cp3lbl2;
+        private Label cp3lbl3;
+        private Label cp3lbl4;
+        private Label cp3lbl5;
+        private Label cp3lbl1;
+        private TextBox textBox9;
+        private ComboBox comboBox4;
+        private ComboBox comboBox5;
+        private ComboBox comboBox7;
+        private ComboBox comboBox8;
+        private TableLayoutPanel tableLayoutPanel10;
+        private Controls.MaterialLabel materialLabel15;
+        private Controls.MaterialLabel materialLabel16;
+        private Controls.MaterialLabel materialLabel17;
+        private Controls.MaterialButton materialButton4;
+        private Controls.MaterialButton materialButton5;
+        private Controls.MaterialButton materialButton6;
     }
 }

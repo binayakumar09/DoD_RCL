@@ -1640,7 +1640,7 @@ namespace ReaLTaiizor.UI
             cp3BtnSubmit.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             cp3BtnSubmit.UseAccentColor = false;
             cp3BtnSubmit.UseVisualStyleBackColor = true;
-            cp3BtnSubmit.Click += cp2BtnSubmit_Click;
+            cp3BtnSubmit.Click += cp3BtnSubmit_Click;
             // 
             // cp3BtnCancel
             // 
@@ -2019,12 +2019,12 @@ namespace ReaLTaiizor.UI
             cp3txtReviewers.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             cp3txtReviewers.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             cp3txtReviewers.Hint = "Type reviewers name here like Eric, Suresh";
-            cp3txtReviewers.Location = new System.Drawing.Point(142, 73);
+            cp3txtReviewers.Location = new System.Drawing.Point(157, 73);
             cp3txtReviewers.MaxLength = 50;
             cp3txtReviewers.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             cp3txtReviewers.Multiline = false;
             cp3txtReviewers.Name = "cp3txtReviewers";
-            cp3txtReviewers.Size = new System.Drawing.Size(884, 50);
+            cp3txtReviewers.Size = new System.Drawing.Size(869, 50);
             cp3txtReviewers.TabIndex = 84;
             cp3txtReviewers.Text = "";
             // 
@@ -2259,7 +2259,7 @@ namespace ReaLTaiizor.UI
             textBox1.Location = new System.Drawing.Point(658, 360);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Please add DFMEA link or schedule when DFMEA is planned";
+            textBox1.PlaceholderText = "Update if it is planned by Dev team or BLR3 team.";
             textBox1.ScrollBars = ScrollBars.Vertical;
             textBox1.Size = new System.Drawing.Size(541, 23);
             textBox1.TabIndex = 131;

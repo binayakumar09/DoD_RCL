@@ -154,25 +154,70 @@ namespace ReaLTaiizor.UI
             string localPath = Path.Combine(currentDirectory, "update_new.xml");
             Uri fileUri = new Uri(fileUrl);
 
-            // Create a FileWebRequest object
-            FileWebRequest request = (FileWebRequest)WebRequest.Create(fileUri);
-
-            using (FileWebResponse response = (FileWebResponse)request.GetResponse())
+            // Try downloading the update file. If it fails, log and continue execution.
+            try
             {
-                // Get the response stream
-                using (Stream responseStream = response.GetResponseStream())
+                // Create a FileWebRequest object
+                FileWebRequest request = (FileWebRequest)WebRequest.Create(fileUri);
+
+                using (FileWebResponse response = (FileWebResponse)request.GetResponse())
                 {
-                    // Create a file stream to save the file
-                    using (FileStream fileStream = new FileStream(localPath, FileMode.Create, FileAccess.Write))
+                    // Get the response stream
+                    using (Stream responseStream = response.GetResponseStream())
                     {
-                        // Read the response stream and write to the file stream
-                        responseStream.CopyTo(fileStream);
+                        if (responseStream == null)
+                        {
+                            throw new InvalidOperationException("No response stream received when checking for updates.");
+                        }
+
+                        // Create a file stream to save the file
+                        using (FileStream fileStream = new FileStream(localPath, FileMode.Create, FileAccess.Write))
+                        {
+                            // Read the response stream and write to the file stream
+                            responseStream.CopyTo(fileStream);
+                        }
                     }
                 }
-            }
 
-            DataLogger.logString += "Version File downloaded successfully!";
-            DataLogger.logString += "\n";
+                DataLogger.logString += "Version File downloaded successfully!";
+                DataLogger.logString += "\n";
+            }
+            catch (WebException wex)
+            {
+                DataLogger.logString += ("Unable to access update file: " + wex.Message + "\n");
+
+                // Show an error window; user clicks OK to acknowledge and the app proceeds
+                try
+                {
+                    MessageBox.Show("Unable to access update server. Skipping update check." + "\n" + wex.Message, "Update Check", buttonsOk, MessageBoxIcon.Warning);
+                }
+                catch
+                {
+                    // If MessageBox fails for any reason, ignore and continue
+                }
+
+                // Ensure any partial file is removed
+                try { if (File.Exists(localPath)) File.Delete(localPath); } catch { }
+
+                // Proceed with application execution after user acknowledges
+                return;
+            }
+            catch (Exception ex)
+            {
+                DataLogger.logString += ("Error while checking for updates: " + ex.Message + "\n");
+
+                try
+                {
+                    MessageBox.Show("Error while checking for updates. Skipping update check." + "\n" + ex.Message, "Update Check", buttonsOk, MessageBoxIcon.Warning);
+                }
+                catch
+                {
+                    // ignore
+                }
+
+                try { if (File.Exists(localPath)) File.Delete(localPath); } catch { }
+                return; // proceed with application execution without update
+            }
 
             XmlDocument doc = new XmlDocument();
             doc.Load(localPath);

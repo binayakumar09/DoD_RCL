@@ -330,12 +330,12 @@ namespace ReaLTaiizor.UI
             specTabControl.Depth = 0;
             specTabControl.Dock = DockStyle.Fill;
             specTabControl.ImageList = menuIconList;
-            specTabControl.Location = new System.Drawing.Point(3, 3);
+            specTabControl.Location = new System.Drawing.Point(3, 64);
             specTabControl.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             specTabControl.Multiline = true;
             specTabControl.Name = "specTabControl";
             specTabControl.SelectedIndex = 0;
-            specTabControl.Size = new System.Drawing.Size(1268, 865);
+            specTabControl.Size = new System.Drawing.Size(1268, 804);
             specTabControl.TabIndex = 18;
             // 
             // efsTab
@@ -347,7 +347,7 @@ namespace ReaLTaiizor.UI
             efsTab.Margin = new Padding(2);
             efsTab.Name = "efsTab";
             efsTab.Padding = new Padding(2);
-            efsTab.Size = new System.Drawing.Size(1260, 830);
+            efsTab.Size = new System.Drawing.Size(1260, 769);
             efsTab.TabIndex = 7;
             efsTab.Text = "EFS Review";
             // 
@@ -418,18 +418,19 @@ namespace ReaLTaiizor.UI
             // 
             efsBtnReset.AutoSize = false;
             efsBtnReset.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            efsBtnReset.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             efsBtnReset.Depth = 0;
-            efsBtnReset.DrawShadows = true;
             efsBtnReset.HighEmphasis = false;
             efsBtnReset.Icon = RCL.Properties.Resources.ic_restore_page_black_36dp;
+            efsBtnReset.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
             efsBtnReset.Location = new System.Drawing.Point(334, 542);
             efsBtnReset.Margin = new Padding(4, 6, 4, 6);
             efsBtnReset.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             efsBtnReset.Name = "efsBtnReset";
+            efsBtnReset.NoAccentTextColor = System.Drawing.Color.Empty;
             efsBtnReset.Size = new System.Drawing.Size(130, 36);
             efsBtnReset.TabIndex = 73;
             efsBtnReset.Text = "Reset";
-            efsBtnReset.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
             efsBtnReset.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             efsBtnReset.UseAccentColor = false;
             efsBtnReset.UseVisualStyleBackColor = true;
@@ -951,19 +952,20 @@ namespace ReaLTaiizor.UI
             // 
             efsBtnSubmit.AutoSize = false;
             efsBtnSubmit.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            efsBtnSubmit.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             efsBtnSubmit.Depth = 0;
-            efsBtnSubmit.DrawShadows = true;
             efsBtnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             efsBtnSubmit.HighEmphasis = true;
             efsBtnSubmit.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
+            efsBtnSubmit.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
             efsBtnSubmit.Location = new System.Drawing.Point(661, 542);
             efsBtnSubmit.Margin = new Padding(4, 6, 4, 6);
             efsBtnSubmit.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             efsBtnSubmit.Name = "efsBtnSubmit";
+            efsBtnSubmit.NoAccentTextColor = System.Drawing.Color.Empty;
             efsBtnSubmit.Size = new System.Drawing.Size(138, 36);
             efsBtnSubmit.TabIndex = 36;
             efsBtnSubmit.Text = "Submit";
-            efsBtnSubmit.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
             efsBtnSubmit.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             efsBtnSubmit.UseAccentColor = false;
             efsBtnSubmit.UseVisualStyleBackColor = true;
@@ -973,18 +975,19 @@ namespace ReaLTaiizor.UI
             // 
             efsBtnCancel.AutoSize = false;
             efsBtnCancel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            efsBtnCancel.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             efsBtnCancel.Depth = 0;
-            efsBtnCancel.DrawShadows = true;
             efsBtnCancel.HighEmphasis = true;
             efsBtnCancel.Icon = RCL.Properties.Resources.Close_16xLG;
+            efsBtnCancel.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
             efsBtnCancel.Location = new System.Drawing.Point(498, 542);
             efsBtnCancel.Margin = new Padding(4, 6, 4, 6);
             efsBtnCancel.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             efsBtnCancel.Name = "efsBtnCancel";
+            efsBtnCancel.NoAccentTextColor = System.Drawing.Color.Empty;
             efsBtnCancel.Size = new System.Drawing.Size(130, 36);
             efsBtnCancel.TabIndex = 37;
             efsBtnCancel.Text = "Cancel";
-            efsBtnCancel.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
             efsBtnCancel.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             efsBtnCancel.UseAccentColor = true;
             efsBtnCancel.UseVisualStyleBackColor = true;
@@ -992,12 +995,14 @@ namespace ReaLTaiizor.UI
             // 
             // efstxtReviewers
             // 
+            efstxtReviewers.AnimateReadOnly = false;
             efstxtReviewers.BorderStyle = BorderStyle.None;
             efstxtReviewers.Cursor = Cursors.IBeam;
             efstxtReviewers.Depth = 0;
             efstxtReviewers.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             efstxtReviewers.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             efstxtReviewers.Hint = "Type reviewers name here like Eric, Suresh";
+            efstxtReviewers.LeadingIcon = null;
             efstxtReviewers.Location = new System.Drawing.Point(155, 76);
             efstxtReviewers.MaxLength = 50;
             efstxtReviewers.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.OUT;
@@ -1006,6 +1011,7 @@ namespace ReaLTaiizor.UI
             efstxtReviewers.Size = new System.Drawing.Size(884, 50);
             efstxtReviewers.TabIndex = 34;
             efstxtReviewers.Text = "";
+            efstxtReviewers.TrailingIcon = null;
             // 
             // materialLabel46
             // 
@@ -1481,18 +1487,19 @@ namespace ReaLTaiizor.UI
             // 
             cp2BtnReset.AutoSize = false;
             cp2BtnReset.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            cp2BtnReset.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             cp2BtnReset.Depth = 0;
-            cp2BtnReset.DrawShadows = true;
             cp2BtnReset.HighEmphasis = false;
             cp2BtnReset.Icon = RCL.Properties.Resources.ic_restore_page_black_36dp;
+            cp2BtnReset.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
             cp2BtnReset.Location = new System.Drawing.Point(320, 523);
             cp2BtnReset.Margin = new Padding(4, 6, 4, 6);
             cp2BtnReset.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             cp2BtnReset.Name = "cp2BtnReset";
+            cp2BtnReset.NoAccentTextColor = System.Drawing.Color.Empty;
             cp2BtnReset.Size = new System.Drawing.Size(130, 36);
             cp2BtnReset.TabIndex = 87;
             cp2BtnReset.Text = "Reset";
-            cp2BtnReset.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
             cp2BtnReset.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             cp2BtnReset.UseAccentColor = false;
             cp2BtnReset.UseVisualStyleBackColor = true;
@@ -1502,19 +1509,20 @@ namespace ReaLTaiizor.UI
             // 
             cp2BtnSubmit.AutoSize = false;
             cp2BtnSubmit.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            cp2BtnSubmit.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             cp2BtnSubmit.Depth = 0;
-            cp2BtnSubmit.DrawShadows = true;
             cp2BtnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             cp2BtnSubmit.HighEmphasis = true;
             cp2BtnSubmit.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
+            cp2BtnSubmit.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
             cp2BtnSubmit.Location = new System.Drawing.Point(647, 526);
             cp2BtnSubmit.Margin = new Padding(4, 6, 4, 6);
             cp2BtnSubmit.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             cp2BtnSubmit.Name = "cp2BtnSubmit";
+            cp2BtnSubmit.NoAccentTextColor = System.Drawing.Color.Empty;
             cp2BtnSubmit.Size = new System.Drawing.Size(138, 36);
             cp2BtnSubmit.TabIndex = 85;
             cp2BtnSubmit.Text = "Submit";
-            cp2BtnSubmit.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
             cp2BtnSubmit.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             cp2BtnSubmit.UseAccentColor = false;
             cp2BtnSubmit.UseVisualStyleBackColor = true;
@@ -1524,18 +1532,19 @@ namespace ReaLTaiizor.UI
             // 
             cp2BtnCancel.AutoSize = false;
             cp2BtnCancel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            cp2BtnCancel.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             cp2BtnCancel.Depth = 0;
-            cp2BtnCancel.DrawShadows = true;
             cp2BtnCancel.HighEmphasis = true;
             cp2BtnCancel.Icon = RCL.Properties.Resources.Close_16xLG;
+            cp2BtnCancel.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
             cp2BtnCancel.Location = new System.Drawing.Point(484, 526);
             cp2BtnCancel.Margin = new Padding(4, 6, 4, 6);
             cp2BtnCancel.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             cp2BtnCancel.Name = "cp2BtnCancel";
+            cp2BtnCancel.NoAccentTextColor = System.Drawing.Color.Empty;
             cp2BtnCancel.Size = new System.Drawing.Size(130, 36);
             cp2BtnCancel.TabIndex = 86;
             cp2BtnCancel.Text = "Cancel";
-            cp2BtnCancel.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
             cp2BtnCancel.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             cp2BtnCancel.UseAccentColor = true;
             cp2BtnCancel.UseVisualStyleBackColor = true;
@@ -1555,12 +1564,14 @@ namespace ReaLTaiizor.UI
             // 
             // cp2txtReviewers
             // 
+            cp2txtReviewers.AnimateReadOnly = false;
             cp2txtReviewers.BorderStyle = BorderStyle.None;
             cp2txtReviewers.Cursor = Cursors.IBeam;
             cp2txtReviewers.Depth = 0;
             cp2txtReviewers.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             cp2txtReviewers.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             cp2txtReviewers.Hint = "Type reviewers name here like Eric, Suresh";
+            cp2txtReviewers.LeadingIcon = null;
             cp2txtReviewers.Location = new System.Drawing.Point(156, 73);
             cp2txtReviewers.MaxLength = 50;
             cp2txtReviewers.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.OUT;
@@ -1569,6 +1580,7 @@ namespace ReaLTaiizor.UI
             cp2txtReviewers.Size = new System.Drawing.Size(884, 50);
             cp2txtReviewers.TabIndex = 81;
             cp2txtReviewers.Text = "";
+            cp2txtReviewers.TrailingIcon = null;
             // 
             // materialLabel18
             // 
@@ -1603,18 +1615,19 @@ namespace ReaLTaiizor.UI
             // 
             cp3BtnReset.AutoSize = false;
             cp3BtnReset.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            cp3BtnReset.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             cp3BtnReset.Depth = 0;
-            cp3BtnReset.DrawShadows = true;
             cp3BtnReset.HighEmphasis = false;
             cp3BtnReset.Icon = RCL.Properties.Resources.ic_restore_page_black_36dp;
+            cp3BtnReset.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
             cp3BtnReset.Location = new System.Drawing.Point(327, 443);
             cp3BtnReset.Margin = new Padding(4, 6, 4, 6);
             cp3BtnReset.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             cp3BtnReset.Name = "cp3BtnReset";
+            cp3BtnReset.NoAccentTextColor = System.Drawing.Color.Empty;
             cp3BtnReset.Size = new System.Drawing.Size(130, 36);
             cp3BtnReset.TabIndex = 94;
             cp3BtnReset.Text = "Reset";
-            cp3BtnReset.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
             cp3BtnReset.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             cp3BtnReset.UseAccentColor = false;
             cp3BtnReset.UseVisualStyleBackColor = true;
@@ -1624,19 +1637,20 @@ namespace ReaLTaiizor.UI
             // 
             cp3BtnSubmit.AutoSize = false;
             cp3BtnSubmit.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            cp3BtnSubmit.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             cp3BtnSubmit.Depth = 0;
-            cp3BtnSubmit.DrawShadows = true;
             cp3BtnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             cp3BtnSubmit.HighEmphasis = true;
             cp3BtnSubmit.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
+            cp3BtnSubmit.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
             cp3BtnSubmit.Location = new System.Drawing.Point(654, 446);
             cp3BtnSubmit.Margin = new Padding(4, 6, 4, 6);
             cp3BtnSubmit.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             cp3BtnSubmit.Name = "cp3BtnSubmit";
+            cp3BtnSubmit.NoAccentTextColor = System.Drawing.Color.Empty;
             cp3BtnSubmit.Size = new System.Drawing.Size(138, 36);
             cp3BtnSubmit.TabIndex = 92;
             cp3BtnSubmit.Text = "Submit";
-            cp3BtnSubmit.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
             cp3BtnSubmit.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             cp3BtnSubmit.UseAccentColor = false;
             cp3BtnSubmit.UseVisualStyleBackColor = true;
@@ -1646,18 +1660,19 @@ namespace ReaLTaiizor.UI
             // 
             cp3BtnCancel.AutoSize = false;
             cp3BtnCancel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            cp3BtnCancel.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             cp3BtnCancel.Depth = 0;
-            cp3BtnCancel.DrawShadows = true;
             cp3BtnCancel.HighEmphasis = true;
             cp3BtnCancel.Icon = RCL.Properties.Resources.Close_16xLG;
+            cp3BtnCancel.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
             cp3BtnCancel.Location = new System.Drawing.Point(491, 446);
             cp3BtnCancel.Margin = new Padding(4, 6, 4, 6);
             cp3BtnCancel.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             cp3BtnCancel.Name = "cp3BtnCancel";
+            cp3BtnCancel.NoAccentTextColor = System.Drawing.Color.Empty;
             cp3BtnCancel.Size = new System.Drawing.Size(130, 36);
             cp3BtnCancel.TabIndex = 93;
             cp3BtnCancel.Text = "Cancel";
-            cp3BtnCancel.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
             cp3BtnCancel.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             cp3BtnCancel.UseAccentColor = true;
             cp3BtnCancel.UseVisualStyleBackColor = true;
@@ -2013,12 +2028,14 @@ namespace ReaLTaiizor.UI
             // 
             // cp3txtReviewers
             // 
+            cp3txtReviewers.AnimateReadOnly = false;
             cp3txtReviewers.BorderStyle = BorderStyle.None;
             cp3txtReviewers.Cursor = Cursors.IBeam;
             cp3txtReviewers.Depth = 0;
             cp3txtReviewers.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             cp3txtReviewers.ForeColor = System.Drawing.Color.FromArgb(180, 0, 0, 0);
             cp3txtReviewers.Hint = "Type reviewers name here like Eric, Suresh";
+            cp3txtReviewers.LeadingIcon = null;
             cp3txtReviewers.Location = new System.Drawing.Point(157, 73);
             cp3txtReviewers.MaxLength = 50;
             cp3txtReviewers.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.OUT;
@@ -2027,6 +2044,7 @@ namespace ReaLTaiizor.UI
             cp3txtReviewers.Size = new System.Drawing.Size(869, 50);
             cp3txtReviewers.TabIndex = 84;
             cp3txtReviewers.Text = "";
+            cp3txtReviewers.TrailingIcon = null;
             // 
             // materialLabel14
             // 
@@ -2056,7 +2074,7 @@ namespace ReaLTaiizor.UI
             codeReviewTab.ImageKey = "round_assessment_white_24dp.png";
             codeReviewTab.Location = new System.Drawing.Point(4, 31);
             codeReviewTab.Name = "codeReviewTab";
-            codeReviewTab.Size = new System.Drawing.Size(1260, 830);
+            codeReviewTab.Size = new System.Drawing.Size(1260, 769);
             codeReviewTab.TabIndex = 0;
             codeReviewTab.Text = "Code Review";
             // 
@@ -2091,18 +2109,19 @@ namespace ReaLTaiizor.UI
             // 
             cdrBtnReset.AutoSize = false;
             cdrBtnReset.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            cdrBtnReset.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             cdrBtnReset.Depth = 0;
-            cdrBtnReset.DrawShadows = true;
             cdrBtnReset.HighEmphasis = false;
             cdrBtnReset.Icon = RCL.Properties.Resources.ic_restore_page_black_36dp;
+            cdrBtnReset.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
             cdrBtnReset.Location = new System.Drawing.Point(334, 536);
             cdrBtnReset.Margin = new Padding(4, 6, 4, 6);
             cdrBtnReset.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             cdrBtnReset.Name = "cdrBtnReset";
+            cdrBtnReset.NoAccentTextColor = System.Drawing.Color.Empty;
             cdrBtnReset.Size = new System.Drawing.Size(130, 36);
             cdrBtnReset.TabIndex = 88;
             cdrBtnReset.Text = "Reset";
-            cdrBtnReset.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
             cdrBtnReset.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             cdrBtnReset.UseAccentColor = false;
             cdrBtnReset.UseVisualStyleBackColor = true;
@@ -2704,42 +2723,46 @@ namespace ReaLTaiizor.UI
             // 
             cdrBtnSubmit.AutoSize = false;
             cdrBtnSubmit.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            cdrBtnSubmit.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             cdrBtnSubmit.Depth = 0;
-            cdrBtnSubmit.DrawShadows = true;
             cdrBtnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             cdrBtnSubmit.HighEmphasis = true;
             cdrBtnSubmit.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
+            cdrBtnSubmit.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
             cdrBtnSubmit.Location = new System.Drawing.Point(674, 536);
             cdrBtnSubmit.Margin = new Padding(4, 6, 4, 6);
             cdrBtnSubmit.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             cdrBtnSubmit.Name = "cdrBtnSubmit";
+            cdrBtnSubmit.NoAccentTextColor = System.Drawing.Color.Empty;
             cdrBtnSubmit.Size = new System.Drawing.Size(138, 36);
             cdrBtnSubmit.TabIndex = 79;
             cdrBtnSubmit.Text = "Submit";
-            cdrBtnSubmit.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
             cdrBtnSubmit.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             cdrBtnSubmit.UseAccentColor = false;
             cdrBtnSubmit.UseVisualStyleBackColor = true;
+            cdrBtnSubmit.Click += cdrBtnSubmit_Click;
             // 
             // cdrBtnCancel
             // 
             cdrBtnCancel.AutoSize = false;
             cdrBtnCancel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            cdrBtnCancel.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             cdrBtnCancel.Depth = 0;
-            cdrBtnCancel.DrawShadows = true;
             cdrBtnCancel.HighEmphasis = true;
             cdrBtnCancel.Icon = RCL.Properties.Resources.Close_16xLG;
+            cdrBtnCancel.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
             cdrBtnCancel.Location = new System.Drawing.Point(504, 537);
             cdrBtnCancel.Margin = new Padding(4, 6, 4, 6);
             cdrBtnCancel.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             cdrBtnCancel.Name = "cdrBtnCancel";
+            cdrBtnCancel.NoAccentTextColor = System.Drawing.Color.Empty;
             cdrBtnCancel.Size = new System.Drawing.Size(130, 36);
             cdrBtnCancel.TabIndex = 80;
             cdrBtnCancel.Text = "Cancel";
-            cdrBtnCancel.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
             cdrBtnCancel.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             cdrBtnCancel.UseAccentColor = true;
             cdrBtnCancel.UseVisualStyleBackColor = true;
+            cdrBtnCancel.Click += cdrBtnCancel_Click;
             // 
             // materialLabel58
             // 
@@ -2760,7 +2783,7 @@ namespace ReaLTaiizor.UI
             systemSpecTab.Location = new System.Drawing.Point(4, 31);
             systemSpecTab.Name = "systemSpecTab";
             systemSpecTab.Padding = new Padding(3);
-            systemSpecTab.Size = new System.Drawing.Size(1260, 830);
+            systemSpecTab.Size = new System.Drawing.Size(1260, 769);
             systemSpecTab.TabIndex = 8;
             systemSpecTab.Text = "System Spec";
             // 
@@ -2773,7 +2796,7 @@ namespace ReaLTaiizor.UI
             systemSpecInnerTabControl.Location = new System.Drawing.Point(3, 3);
             systemSpecInnerTabControl.Name = "systemSpecInnerTabControl";
             systemSpecInnerTabControl.SelectedIndex = 0;
-            systemSpecInnerTabControl.Size = new System.Drawing.Size(1254, 824);
+            systemSpecInnerTabControl.Size = new System.Drawing.Size(1254, 763);
             systemSpecInnerTabControl.TabIndex = 0;
             // 
             // cp1Tab
@@ -2788,7 +2811,7 @@ namespace ReaLTaiizor.UI
             cp1Tab.Controls.Add(tableLayoutPanel1);
             cp1Tab.Location = new System.Drawing.Point(4, 27);
             cp1Tab.Name = "cp1Tab";
-            cp1Tab.Size = new System.Drawing.Size(1246, 793);
+            cp1Tab.Size = new System.Drawing.Size(1246, 732);
             cp1Tab.TabIndex = 0;
             cp1Tab.Text = "CP1";
             // 
@@ -2796,62 +2819,68 @@ namespace ReaLTaiizor.UI
             // 
             specBtnReset.AutoSize = false;
             specBtnReset.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            specBtnReset.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             specBtnReset.Depth = 0;
-            specBtnReset.DrawShadows = true;
             specBtnReset.HighEmphasis = false;
             specBtnReset.Icon = RCL.Properties.Resources.ic_restore_page_black_36dp;
+            specBtnReset.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
             specBtnReset.Location = new System.Drawing.Point(337, 456);
             specBtnReset.Margin = new Padding(4, 6, 4, 6);
             specBtnReset.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             specBtnReset.Name = "specBtnReset";
+            specBtnReset.NoAccentTextColor = System.Drawing.Color.Empty;
             specBtnReset.Size = new System.Drawing.Size(130, 36);
             specBtnReset.TabIndex = 77;
             specBtnReset.Text = "Reset";
-            specBtnReset.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
             specBtnReset.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             specBtnReset.UseAccentColor = false;
             specBtnReset.UseVisualStyleBackColor = true;
+            specBtnReset.Click += specBtnReset_Click;
             // 
             // specBtnSubmit
             // 
             specBtnSubmit.AutoSize = false;
             specBtnSubmit.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            specBtnSubmit.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             specBtnSubmit.Depth = 0;
-            specBtnSubmit.DrawShadows = true;
             specBtnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             specBtnSubmit.HighEmphasis = true;
             specBtnSubmit.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
+            specBtnSubmit.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
             specBtnSubmit.Location = new System.Drawing.Point(645, 456);
             specBtnSubmit.Margin = new Padding(4, 6, 4, 6);
             specBtnSubmit.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             specBtnSubmit.Name = "specBtnSubmit";
+            specBtnSubmit.NoAccentTextColor = System.Drawing.Color.Empty;
             specBtnSubmit.Size = new System.Drawing.Size(138, 36);
             specBtnSubmit.TabIndex = 76;
             specBtnSubmit.Text = "Submit";
-            specBtnSubmit.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
             specBtnSubmit.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             specBtnSubmit.UseAccentColor = false;
             specBtnSubmit.UseVisualStyleBackColor = true;
+            specBtnSubmit.Click += specBtnSubmit_Click;
             // 
             // specBtnCancel
             // 
             specBtnCancel.AutoSize = false;
             specBtnCancel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            specBtnCancel.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             specBtnCancel.Depth = 0;
-            specBtnCancel.DrawShadows = true;
             specBtnCancel.HighEmphasis = true;
             specBtnCancel.Icon = RCL.Properties.Resources.Close_16xLG;
+            specBtnCancel.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
             specBtnCancel.Location = new System.Drawing.Point(491, 456);
             specBtnCancel.Margin = new Padding(4, 6, 4, 6);
             specBtnCancel.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             specBtnCancel.Name = "specBtnCancel";
+            specBtnCancel.NoAccentTextColor = System.Drawing.Color.Empty;
             specBtnCancel.Size = new System.Drawing.Size(130, 36);
             specBtnCancel.TabIndex = 75;
             specBtnCancel.Text = "Cancel";
-            specBtnCancel.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
             specBtnCancel.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             specBtnCancel.UseAccentColor = true;
             specBtnCancel.UseVisualStyleBackColor = true;
+            specBtnCancel.Click += specBtnCancel_Click;
             // 
             // pictureBox1
             // 
@@ -3214,7 +3243,7 @@ namespace ReaLTaiizor.UI
             cp2Tab.Controls.Add(tableLayoutPanel4);
             cp2Tab.Location = new System.Drawing.Point(4, 27);
             cp2Tab.Name = "cp2Tab";
-            cp2Tab.Size = new System.Drawing.Size(1246, 793);
+            cp2Tab.Size = new System.Drawing.Size(1246, 732);
             cp2Tab.TabIndex = 1;
             cp2Tab.Text = "CP2";
             // 
@@ -3234,39 +3263,42 @@ namespace ReaLTaiizor.UI
             // 
             specBtnReset2.AutoSize = false;
             specBtnReset2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            specBtnReset2.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             specBtnReset2.Depth = 0;
-            specBtnReset2.DrawShadows = true;
             specBtnReset2.HighEmphasis = false;
             specBtnReset2.Icon = RCL.Properties.Resources.ic_restore_page_black_36dp;
+            specBtnReset2.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
             specBtnReset2.Location = new System.Drawing.Point(342, 380);
             specBtnReset2.Margin = new Padding(4, 6, 4, 6);
             specBtnReset2.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             specBtnReset2.Name = "specBtnReset2";
+            specBtnReset2.NoAccentTextColor = System.Drawing.Color.Empty;
             specBtnReset2.Size = new System.Drawing.Size(130, 36);
             specBtnReset2.TabIndex = 91;
             specBtnReset2.Text = "Reset";
-            specBtnReset2.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
             specBtnReset2.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             specBtnReset2.UseAccentColor = false;
             specBtnReset2.UseVisualStyleBackColor = true;
+            specBtnReset2.Click += specBtnReset2_Click;
             // 
             // specBtnSubmit2
             // 
             specBtnSubmit2.AutoSize = false;
             specBtnSubmit2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            specBtnSubmit2.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             specBtnSubmit2.Depth = 0;
-            specBtnSubmit2.DrawShadows = true;
             specBtnSubmit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             specBtnSubmit2.HighEmphasis = true;
             specBtnSubmit2.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
+            specBtnSubmit2.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
             specBtnSubmit2.Location = new System.Drawing.Point(645, 380);
             specBtnSubmit2.Margin = new Padding(4, 6, 4, 6);
             specBtnSubmit2.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             specBtnSubmit2.Name = "specBtnSubmit2";
+            specBtnSubmit2.NoAccentTextColor = System.Drawing.Color.Empty;
             specBtnSubmit2.Size = new System.Drawing.Size(138, 36);
             specBtnSubmit2.TabIndex = 89;
             specBtnSubmit2.Text = "Submit";
-            specBtnSubmit2.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
             specBtnSubmit2.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             specBtnSubmit2.UseAccentColor = false;
             specBtnSubmit2.UseVisualStyleBackColor = true;
@@ -3275,21 +3307,23 @@ namespace ReaLTaiizor.UI
             // 
             specBtnCancel2.AutoSize = false;
             specBtnCancel2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            specBtnCancel2.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             specBtnCancel2.Depth = 0;
-            specBtnCancel2.DrawShadows = true;
             specBtnCancel2.HighEmphasis = true;
             specBtnCancel2.Icon = RCL.Properties.Resources.Close_16xLG;
+            specBtnCancel2.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
             specBtnCancel2.Location = new System.Drawing.Point(496, 380);
             specBtnCancel2.Margin = new Padding(4, 6, 4, 6);
             specBtnCancel2.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             specBtnCancel2.Name = "specBtnCancel2";
+            specBtnCancel2.NoAccentTextColor = System.Drawing.Color.Empty;
             specBtnCancel2.Size = new System.Drawing.Size(130, 36);
             specBtnCancel2.TabIndex = 90;
             specBtnCancel2.Text = "Cancel";
-            specBtnCancel2.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
             specBtnCancel2.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             specBtnCancel2.UseAccentColor = true;
             specBtnCancel2.UseVisualStyleBackColor = true;
+            specBtnCancel2.Click += specBtnCancel2_Click;
             // 
             // materialLabel10
             // 
@@ -3486,17 +3520,18 @@ namespace ReaLTaiizor.UI
             // materialButton26
             // 
             materialButton26.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton26.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             materialButton26.Depth = 0;
-            materialButton26.DrawShadows = true;
             materialButton26.HighEmphasis = true;
             materialButton26.Icon = null;
+            materialButton26.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
             materialButton26.Location = new System.Drawing.Point(3, 70);
             materialButton26.Margin = new Padding(4, 6, 4, 6);
             materialButton26.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton26.Name = "materialButton26";
-            materialButton26.Size = new System.Drawing.Size(16, 36);
+            materialButton26.NoAccentTextColor = System.Drawing.Color.Empty;
+            materialButton26.Size = new System.Drawing.Size(64, 36);
             materialButton26.TabIndex = 93;
-            materialButton26.TextState = ReaLTaiizor.Controls.MaterialButton.TextStateType.Normal;
             materialButton26.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             materialButton26.UseAccentColor = false;
             // 

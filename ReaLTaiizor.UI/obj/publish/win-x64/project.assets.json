@@ -14,7 +14,7 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "ReaLTaiizor/3.7.8.5": {
+      "ReaLTaiizor/3.8.1.4": {
         "type": "package",
         "compile": {
           "lib/net6.0-windows7.0/ReaLTaiizor.dll": {
@@ -44,7 +44,7 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "ReaLTaiizor/3.7.8.5": {
+      "ReaLTaiizor/3.8.1.4": {
         "type": "package",
         "compile": {
           "lib/net6.0-windows7.0/ReaLTaiizor.dll": {
@@ -110,46 +110,33 @@
         "tools/net7.0/illink.runtimeconfig.json"
       ]
     },
-    "ReaLTaiizor/3.7.8.5": {
-      "sha512": "Ii7HHUZifkTgerZ9mbksg2FVCtiG3PgKNZzMy9skdcrzavLfYVbNxBFTodNfnDl+KII9QZ2fxpBmy7quFT44VA==",
+    "ReaLTaiizor/3.8.1.4": {
+      "sha512": "OyWDI78hbeNLPFQE2YA616RYXMyCO0uOjwsJi6pPiDOyCFM/HKX3Lpfy1UBb6z9KApGnNs+WVsVZn8AZm5xyQQ==",
       "type": "package",
-      "path": "realtaiizor/3.7.8.5",
+      "path": "realtaiizor/3.8.1.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE",
+        "README.MD",
         "Taiizor.png",
-        "lib/net40/ReaLTaiizor.dll",
-        "lib/net40/ReaLTaiizor.xml",
-        "lib/net45/ReaLTaiizor.dll",
-        "lib/net45/ReaLTaiizor.xml",
-        "lib/net451/ReaLTaiizor.dll",
-        "lib/net451/ReaLTaiizor.xml",
-        "lib/net452/ReaLTaiizor.dll",
-        "lib/net452/ReaLTaiizor.xml",
-        "lib/net46/ReaLTaiizor.dll",
-        "lib/net46/ReaLTaiizor.xml",
-        "lib/net461/ReaLTaiizor.dll",
-        "lib/net461/ReaLTaiizor.xml",
-        "lib/net462/ReaLTaiizor.dll",
-        "lib/net462/ReaLTaiizor.xml",
-        "lib/net47/ReaLTaiizor.dll",
-        "lib/net47/ReaLTaiizor.xml",
-        "lib/net471/ReaLTaiizor.dll",
-        "lib/net471/ReaLTaiizor.xml",
-        "lib/net472/ReaLTaiizor.dll",
-        "lib/net472/ReaLTaiizor.xml",
+        "lib/net10.0-windows7.0/ReaLTaiizor.dll",
+        "lib/net10.0-windows7.0/ReaLTaiizor.xml",
         "lib/net48/ReaLTaiizor.dll",
         "lib/net48/ReaLTaiizor.xml",
-        "lib/net5.0-windows7.0/ReaLTaiizor.dll",
-        "lib/net5.0-windows7.0/ReaLTaiizor.xml",
+        "lib/net481/ReaLTaiizor.dll",
+        "lib/net481/ReaLTaiizor.xml",
         "lib/net6.0-windows7.0/ReaLTaiizor.dll",
         "lib/net6.0-windows7.0/ReaLTaiizor.xml",
-        "lib/netcoreapp3.0/ReaLTaiizor.dll",
-        "lib/netcoreapp3.0/ReaLTaiizor.xml",
+        "lib/net7.0-windows7.0/ReaLTaiizor.dll",
+        "lib/net7.0-windows7.0/ReaLTaiizor.xml",
+        "lib/net8.0-windows7.0/ReaLTaiizor.dll",
+        "lib/net8.0-windows7.0/ReaLTaiizor.xml",
+        "lib/net9.0-windows7.0/ReaLTaiizor.dll",
+        "lib/net9.0-windows7.0/ReaLTaiizor.xml",
         "lib/netcoreapp3.1/ReaLTaiizor.dll",
         "lib/netcoreapp3.1/ReaLTaiizor.xml",
-        "realtaiizor.3.7.8.5.nupkg.sha512",
+        "realtaiizor.3.8.1.4.nupkg.sha512",
         "realtaiizor.nuspec"
       ]
     }
@@ -158,7 +145,7 @@
     "net6.0-windows7.0": [
       "Microsoft.NET.ILLink.Analyzers >= 7.0.100-1.23211.1",
       "Microsoft.NET.ILLink.Tasks >= 7.0.100-1.23211.1",
-      "ReaLTaiizor >= 3.7.8.5"
+      "ReaLTaiizor >= 3.8.1.4"
     ]
   },
   "packageFolders": {
@@ -226,7 +213,7 @@
           },
           "ReaLTaiizor": {
             "target": "Package",
-            "version": "[3.7.8.5, )"
+            "version": "[3.8.1.4, )"
           }
         },
         "imports": [
@@ -266,7 +253,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

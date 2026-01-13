@@ -8,17 +8,26 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml;
+using System.Runtime.InteropServices;
 using RCL;
 using ReaLTaiizor.Colors;
 using ReaLTaiizor.Forms;
 using ReaLTaiizor.Util;
+using ReaLTaiizor.Manager;
 
 namespace ReaLTaiizor.UI
 {
 
     public partial class frmRcl : MaterialForm
     {
-        private readonly MaterialManager materialManager;
+        // P/Invoke declarations for creating rounded corners
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
+
+        [DllImport("User32.dll", EntryPoint = "SetWindowRgn")]
+        private static extern int SetWindowRgn(IntPtr hWnd, IntPtr hRgn, bool bRedraw);
+
+        private readonly MaterialSkinManager materialManager;
         public readonly int progressval = 10;
         static readonly string nl = System.Environment.NewLine;
         readonly string addEfsCommentMessage = "Please add proper rationale" + nl + "if No or Not Applicable option selected";
@@ -71,12 +80,31 @@ namespace ReaLTaiizor.UI
 
             CheckforUpdate();
 
-            materialManager = MaterialManager.Instance;
+            materialManager = MaterialSkinManager.Instance;
             materialManager.EnforceBackcolorOnAllComponents = false;
             materialManager.AddFormToManage(this);
-            materialManager.Theme = MaterialManager.Themes.LIGHT;
+            materialManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialManager.ColorScheme = new MaterialColorScheme(MaterialPrimary.Indigo500, MaterialPrimary.Indigo700, MaterialPrimary.Indigo100, MaterialAccent.Pink200, MaterialTextShade.WHITE);
             console.Text = DataLogger.logString;
+            
+            // Apply rounded corners to the form
+            ApplyRoundedCorners();
+        }
+
+        // Method to apply rounded corners to the form
+        private void ApplyRoundedCorners()
+        {
+            int cornerRadius = 20; // Adjust the radius as needed for more or less rounded corners
+            IntPtr roundedRegion = CreateRoundRectRgn(0, 0, Width, Height, cornerRadius, cornerRadius);
+            SetWindowRgn(Handle, roundedRegion, true);
+        }
+
+        // Override OnResize to maintain rounded corners when form is resized
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            // Reapply rounded corners when form is resized
+            ApplyRoundedCorners();
         }
 
         // Dynamically compute a suitable width & height for tab headers
@@ -149,7 +177,7 @@ namespace ReaLTaiizor.UI
                 return;
             }
 
-            string fileUrl = "file://eseefsn50.emea.nsn-net.net/rotta4internal/5G_3/Bangalore/RCL/update.xml";
+            string fileUrl = @"file:\\bhlinn60.apac.nsn-net.net\NEWAirphone_Bangalore\AP-BLR2\RCL\update.xml";
             string currentDirectory = Directory.GetCurrentDirectory();
             string localPath = Path.Combine(currentDirectory, "update_new.xml");
             Uri fileUri = new Uri(fileUrl);
@@ -265,7 +293,7 @@ namespace ReaLTaiizor.UI
 
         private bool isNWavailable()
         {
-            string server = "eseefsn50.emea.nsn-net.net";
+            string server = "bhlinn60.apac.nsn-net.net";
             Ping ping = new Ping();
 
             try
@@ -289,7 +317,7 @@ namespace ReaLTaiizor.UI
 
         private void materialButton1_Click(object sender, EventArgs e)
         {
-            materialManager.Theme = materialManager.Theme == MaterialManager.Themes.DARK ? MaterialManager.Themes.LIGHT : MaterialManager.Themes.DARK;
+            materialManager.Theme = materialManager.Theme == MaterialSkinManager.Themes.DARK ? MaterialSkinManager.Themes.LIGHT : MaterialSkinManager.Themes.DARK;
             updateColor();
         }
 
@@ -299,9 +327,9 @@ namespace ReaLTaiizor.UI
             {
                 case 0:
                     materialManager.ColorScheme = new MaterialColorScheme(
-                        materialManager.Theme == MaterialManager.Themes.DARK ? MaterialPrimary.Teal500 : MaterialPrimary.Indigo500,
-                        materialManager.Theme == MaterialManager.Themes.DARK ? MaterialPrimary.Teal700 : MaterialPrimary.Indigo700,
-                        materialManager.Theme == MaterialManager.Themes.DARK ? MaterialPrimary.Teal200 : MaterialPrimary.Indigo100,
+                        materialManager.Theme == MaterialSkinManager.Themes.DARK ? MaterialPrimary.Teal500 : MaterialPrimary.Indigo500,
+                        materialManager.Theme == MaterialSkinManager.Themes.DARK ? MaterialPrimary.Teal700 : MaterialPrimary.Indigo700,
+                        materialManager.Theme == MaterialSkinManager.Themes.DARK ? MaterialPrimary.Teal200 : MaterialPrimary.Indigo100,
                         MaterialAccent.Pink200,
                         MaterialTextShade.WHITE);
                     break;
@@ -375,7 +403,7 @@ namespace ReaLTaiizor.UI
                 }
                 else if (wordCount <= 2 && (comboBox.SelectedIndex.Equals(1) || comboBox.SelectedIndex.Equals(2)))
                 {
-                    ShowMessageAndFocus(null, textBox, addCommentMessage, label);
+                    ShowMessageAndFocus(null, textBox, addEfsCommentMessage, label);
                     return false;
                 }
                 return true;
@@ -468,7 +496,7 @@ namespace ReaLTaiizor.UI
                 }
                 else if (wordCount <= 2 && (comboBox.SelectedIndex.Equals(1) || comboBox.SelectedIndex.Equals(2)))
                 {
-                    ShowMessageAndFocus(null, textBox, addCommentMessage, label);
+                    ShowMessageAndFocus(null, textBox, addEfsCommentMessage, label);
                     return false;
                 }
                 return true;
@@ -561,7 +589,7 @@ namespace ReaLTaiizor.UI
                 }
                 else if (wordCount <= 2 && (comboBox.SelectedIndex.Equals(1) || comboBox.SelectedIndex.Equals(2)))
                 {
-                    ShowMessageAndFocus(null, textBox, addCommentMessage, label);
+                    ShowMessageAndFocus(null, textBox, addEfsCommentMessage, label);
                     return false;
                 }
                 return true;
@@ -599,7 +627,7 @@ namespace ReaLTaiizor.UI
 
         public void DownloadFile()
         {
-            String fileUrl = "file://eseefsn50.emea.nsn-net.net/rotta4internal/5G_3/Bangalore/RCL/RCL.zip";
+            String fileUrl = @"file:\\bhlinn60.apac.nsn-net.net\NEWAirphone_Bangalore\AP-BLR2\RCL\RCL.zip";
             string destinationPath = Path.Combine(Directory.GetCurrentDirectory(), "RCL.zip");
             FileWebRequest request = (FileWebRequest)WebRequest.Create(fileUrl);
             Uri fileUri = new Uri(fileUrl);

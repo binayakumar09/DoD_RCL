@@ -69,7 +69,7 @@
     <Content Include="Resources\round_swap_vert_white_24dp.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="ReaLTaiizor" Version="3.7.8.5" />
+    <PackageReference Include="ReaLTaiizor" Version="3.8.1.4" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GitHub|AnyCPU'">
     <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>

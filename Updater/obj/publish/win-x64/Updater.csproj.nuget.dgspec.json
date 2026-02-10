@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\UI Project\\APRCL\\Updater\\Updater.csproj": {}
+    "D:\\MyDevelopment\\UI Project\\DoD_RCL\\Updater\\Updater.csproj": {}
   },
   "projects": {
-    "D:\\UI Project\\APRCL\\Updater\\Updater.csproj": {
+    "D:\\MyDevelopment\\UI Project\\DoD_RCL\\Updater\\Updater.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\UI Project\\APRCL\\Updater\\Updater.csproj",
+        "projectUniqueName": "D:\\MyDevelopment\\UI Project\\DoD_RCL\\Updater\\Updater.csproj",
         "projectName": "Updater",
-        "projectPath": "D:\\UI Project\\APRCL\\Updater\\Updater.csproj",
+        "projectPath": "D:\\MyDevelopment\\UI Project\\DoD_RCL\\Updater\\Updater.csproj",
         "packagesPath": "C:\\Users\\binpradh\\.nuget\\packages\\",
-        "outputPath": "D:\\UI Project\\APRCL\\Updater\\obj\\publish\\win-x64\\",
+        "outputPath": "D:\\MyDevelopment\\UI Project\\DoD_RCL\\Updater\\obj\\publish\\win-x64\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -43,7 +43,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -52,7 +53,7 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.8, )",
+              "version": "[8.0.22, )",
               "autoReferenced": true
             }
           },
@@ -70,19 +71,19 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[8.0.8, 8.0.8]"
+              "version": "[8.0.22, 8.0.22]"
             },
             {
               "name": "Microsoft.NETCore.App.Crossgen2.win-x64",
-              "version": "[8.0.8, 8.0.8]"
+              "version": "[8.0.22, 8.0.22]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[8.0.8, 8.0.8]"
+              "version": "[8.0.22, 8.0.22]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-              "version": "[8.0.8, 8.0.8]"
+              "version": "[8.0.22, 8.0.22]"
             }
           ],
           "frameworkReferences": {
@@ -90,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

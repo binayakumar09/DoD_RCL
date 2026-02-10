@@ -929,9 +929,9 @@ namespace ReaLTaiizor.UI
             materialLabel48.Location = new System.Drawing.Point(47, 659);
             materialLabel48.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialLabel48.Name = "materialLabel48";
-            materialLabel48.Size = new System.Drawing.Size(503, 19);
+            materialLabel48.Size = new System.Drawing.Size(909, 19);
             materialLabel48.TabIndex = 66;
-            materialLabel48.Text = "2. If \"Yes\" option is not selected, you have to fill \"comment\" mandatorily";
+            materialLabel48.Text = "2. Based on the Slection (Yes/No/NA), appropriate comment needs to be added. Please refer to the HInts and update accordingly.";
             materialLabel48.UseAccent = true;
             // 
             // materialLabel49
@@ -954,7 +954,7 @@ namespace ReaLTaiizor.UI
             efsBtnSubmit.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             efsBtnSubmit.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             efsBtnSubmit.Depth = 0;
-            efsBtnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            efsBtnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             efsBtnSubmit.HighEmphasis = true;
             efsBtnSubmit.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
             efsBtnSubmit.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
@@ -1511,7 +1511,7 @@ namespace ReaLTaiizor.UI
             cp2BtnSubmit.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             cp2BtnSubmit.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             cp2BtnSubmit.Depth = 0;
-            cp2BtnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            cp2BtnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             cp2BtnSubmit.HighEmphasis = true;
             cp2BtnSubmit.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
             cp2BtnSubmit.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
@@ -1639,7 +1639,7 @@ namespace ReaLTaiizor.UI
             cp3BtnSubmit.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             cp3BtnSubmit.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             cp3BtnSubmit.Depth = 0;
-            cp3BtnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            cp3BtnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             cp3BtnSubmit.HighEmphasis = true;
             cp3BtnSubmit.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
             cp3BtnSubmit.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
@@ -2700,9 +2700,9 @@ namespace ReaLTaiizor.UI
             materialLabel45.Location = new System.Drawing.Point(49, 680);
             materialLabel45.MouseState = Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialLabel45.Name = "materialLabel45";
-            materialLabel45.Size = new System.Drawing.Size(503, 19);
+            materialLabel45.Size = new System.Drawing.Size(909, 19);
             materialLabel45.TabIndex = 83;
-            materialLabel45.Text = "2. If \"Yes\" option is not selected, you have to fill \"comment\" mandatorily";
+            materialLabel45.Text = "2. Based on the Slection (Yes/No/NA), appropriate comment needs to be added. Please refer to the HInts and update accordingly.";
             materialLabel45.UseAccent = true;
             // 
             // materialLabel56
@@ -2725,7 +2725,7 @@ namespace ReaLTaiizor.UI
             cdrBtnSubmit.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             cdrBtnSubmit.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             cdrBtnSubmit.Depth = 0;
-            cdrBtnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            cdrBtnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             cdrBtnSubmit.HighEmphasis = true;
             cdrBtnSubmit.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
             cdrBtnSubmit.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
@@ -2843,7 +2843,7 @@ namespace ReaLTaiizor.UI
             specBtnSubmit.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             specBtnSubmit.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             specBtnSubmit.Depth = 0;
-            specBtnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            specBtnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             specBtnSubmit.HighEmphasis = true;
             specBtnSubmit.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
             specBtnSubmit.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
@@ -3287,7 +3287,7 @@ namespace ReaLTaiizor.UI
             specBtnSubmit2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             specBtnSubmit2.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             specBtnSubmit2.Depth = 0;
-            specBtnSubmit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            specBtnSubmit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             specBtnSubmit2.HighEmphasis = true;
             specBtnSubmit2.Icon = RCL.Properties.Resources.ic_assignment_turned_in_white_36dp;
             specBtnSubmit2.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
@@ -3539,7 +3539,7 @@ namespace ReaLTaiizor.UI
             // 
             materialContextMenuStrip1.BackColor = System.Drawing.Color.White;
             materialContextMenuStrip1.Depth = 0;
-            materialContextMenuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            materialContextMenuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             materialContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             materialContextMenuStrip1.Items.AddRange(new ToolStripItem[] { item1ToolStripMenuItem, disabledItemToolStripMenuItem, item2ToolStripMenuItem, toolStripSeparator1, item3ToolStripMenuItem });
             materialContextMenuStrip1.Margin = new Padding(16, 8, 16, 8);

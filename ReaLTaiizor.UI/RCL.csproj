@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <!--<TargetFramework>net48</TargetFramework>-->
-	  <!--TargetFrameworks>net461;net462;net6.0-windows</TargetFrameworks-->
-	  <TargetFrameworks>;net6.0-windows</TargetFrameworks>
-	  <!--TargetFrameworks>net472;netcoreapp3.1-windows</TargetFrameworks-->
-	  <EnablePreviewFeatures>True</EnablePreviewFeatures>
-	  <GenerateRequiresPreviewFeaturesAttribute>False</GenerateRequiresPreviewFeaturesAttribute>
+    <!--TargetFrameworks>net461;net462;net6.0-windows</TargetFrameworks-->
+    <!--<TargetFrameworks>net472;netcoreapp3.1-windows</TargetFrameworks-->
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <EnablePreviewFeatures>True</EnablePreviewFeatures>
+    <GenerateRequiresPreviewFeaturesAttribute>False</GenerateRequiresPreviewFeaturesAttribute>
     <OutputType>WinExe</OutputType>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <UseWindowsForms>true</UseWindowsForms>

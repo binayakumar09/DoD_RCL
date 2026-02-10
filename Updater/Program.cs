@@ -30,7 +30,33 @@ class Program
                 }
             }
         }
-        Console.WriteLine("Update complete!");
+        
+        // Delete RCL.zip after extraction
+        File.Delete(zipPath);
+        Console.WriteLine($"Deleted: {fileName}");
+        
+        // Delete update.xml if it exists
+        string updateXmlPath = Path.Combine(extractPath, "update.xml");
+        if (File.Exists(updateXmlPath))
+        {
+            File.Delete(updateXmlPath);
+            Console.WriteLine($"Deleted: update.xml");
+        }
+        
+        // Rename update_new.xml to update.xml
+        string updateNewXmlPath = Path.Combine(extractPath, "update_new.xml");
+        if (File.Exists(updateNewXmlPath))
+        {
+            File.Move(updateNewXmlPath, updateXmlPath, true);
+            Console.WriteLine($"Renamed: update_new.xml to update.xml");
+        }
+        
+        Console.WriteLine("\n========================================");
+        Console.WriteLine("Update Successful!");
+        Console.WriteLine("Files have been updated successfully.");
+        Console.WriteLine("========================================\n");
+        
+        Console.WriteLine("Launching RCL.exe...");
         RunRCL();
     }
 
@@ -55,8 +81,6 @@ class Program
             StartInfo = startInfo
         };
         process.Start();
-        File.Delete(Path.Combine(currentDirectory, "update_new.xml"));
-        File.Delete(Path.Combine(currentDirectory, "RCL.zip"));
     }
 }
 

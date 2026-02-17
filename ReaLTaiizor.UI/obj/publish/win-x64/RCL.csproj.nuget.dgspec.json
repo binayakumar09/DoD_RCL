@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net9.0-windows7.0": {
@@ -58,7 +58,7 @@
             },
             "ReaLTaiizor": {
               "target": "Package",
-              "version": "[3.8.1.4, )"
+              "version": "[3.8.1.5, )"
             }
           },
           "imports": [
@@ -114,7 +114,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200-preview.0.26103.119/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

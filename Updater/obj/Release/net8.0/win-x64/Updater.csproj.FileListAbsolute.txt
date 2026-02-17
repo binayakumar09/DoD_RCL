@@ -576,7 +576,6 @@ D:\MyDevelopment\UI Project\DoD_RCL\Updater\bin\Release\net8.0\win-x64\createdum
 D:\MyDevelopment\UI Project\DoD_RCL\Updater\bin\Release\net8.0\win-x64\hostfxr.dll
 D:\MyDevelopment\UI Project\DoD_RCL\Updater\bin\Release\net8.0\win-x64\hostpolicy.dll
 D:\MyDevelopment\UI Project\DoD_RCL\Updater\bin\Release\net8.0\win-x64\mscordaccore.dll
-D:\MyDevelopment\UI Project\DoD_RCL\Updater\bin\Release\net8.0\win-x64\mscordaccore_amd64_amd64_8.0.2225.52707.dll
 D:\MyDevelopment\UI Project\DoD_RCL\Updater\bin\Release\net8.0\win-x64\mscordbi.dll
 D:\MyDevelopment\UI Project\DoD_RCL\Updater\bin\Release\net8.0\win-x64\mscorrc.dll
 D:\MyDevelopment\UI Project\DoD_RCL\Updater\bin\Release\net8.0\win-x64\msquic.dll
@@ -591,3 +590,4 @@ D:\MyDevelopment\UI Project\DoD_RCL\Updater\obj\Release\net8.0\win-x64\refint\Up
 D:\MyDevelopment\UI Project\DoD_RCL\Updater\obj\Release\net8.0\win-x64\Updater.pdb
 D:\MyDevelopment\UI Project\DoD_RCL\Updater\obj\Release\net8.0\win-x64\Updater.genruntimeconfig.cache
 D:\MyDevelopment\UI Project\DoD_RCL\Updater\obj\Release\net8.0\win-x64\ref\Updater.dll
+D:\MyDevelopment\UI Project\DoD_RCL\Updater\bin\Release\net8.0\win-x64\mscordaccore_amd64_amd64_8.0.2325.60607.dll

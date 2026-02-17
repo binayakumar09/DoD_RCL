@@ -632,22 +632,63 @@ namespace ReaLTaiizor.UI
             FileWebRequest request = (FileWebRequest)WebRequest.Create(fileUrl);
             Uri fileUri = new Uri(fileUrl);
 
-            using (FileWebResponse response = (FileWebResponse)request.GetResponse())
+            try
             {
-                // Get the response stream
-                using (Stream responseStream = response.GetResponseStream())
+                using (FileWebResponse response = (FileWebResponse)request.GetResponse())
                 {
-                    // Create a file stream to save the file
-                    using (FileStream fileStream = new FileStream(destinationPath, FileMode.Create, FileAccess.Write))
+                    long totalBytes = response.ContentLength;
+
+                    // Show progress dialog
+                    using (var progressForm = new ProgressDialog("Downloading RCL.zip", "Downloading update file..."))
                     {
-                        // Read the response stream and write to the file stream
-                        responseStream.CopyTo(fileStream);
+                        progressForm.Show();
+                        Application.DoEvents();
+
+                        // Get the response stream
+                        using (Stream responseStream = response.GetResponseStream())
+                        {
+                            // Create a file stream to save the file
+                            using (FileStream fileStream = new FileStream(destinationPath, FileMode.Create, FileAccess.Write))
+                            {
+                                // Read the response stream in chunks and update progress
+                                ReadStreamWithProgress(responseStream, fileStream, totalBytes, progressForm);
+                            }
+                        }
                     }
+
+                    RunUpdater();
+                    Environment.Exit(0);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error downloading update: " + ex.Message, "Download Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ReadStreamWithProgress(Stream sourceStream, FileStream destinationStream, long totalBytes, ProgressDialog progressDialog)
+        {
+            const int bufferSize = 8192; // 8KB chunks
+            byte[] buffer = new byte[bufferSize];
+            int bytesRead;
+            long totalBytesRead = 0;
+
+            while ((bytesRead = sourceStream.Read(buffer, 0, bufferSize)) > 0)
+            {
+                destinationStream.Write(buffer, 0, bytesRead);
+                totalBytesRead += bytesRead;
+
+                // Update progress
+                if (totalBytes > 0)
+                {
+                    int percentage = (int)((totalBytesRead * 100) / totalBytes);
+                    progressDialog.UpdateProgress(percentage, $"Downloading: {totalBytesRead / (1024 * 1024)} MB / {totalBytes / (1024 * 1024)} MB");
+                    Application.DoEvents(); // Keep UI responsive
                 }
             }
 
-            RunUpdater();
-            Environment.Exit(0);
+            progressDialog.UpdateProgress(100, "Download complete!");
+            System.Threading.Thread.Sleep(500); // Brief pause to show completion
         }
 
         private void RunUpdater()

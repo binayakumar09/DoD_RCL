@@ -8,6 +8,9 @@
     <Compile Update="frmRcl.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ProgressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="frmRcl.resx">

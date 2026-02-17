@@ -3,7 +3,7 @@
     <!--<TargetFramework>net48</TargetFramework>-->
     <!--TargetFrameworks>net461;net462;net6.0-windows</TargetFrameworks-->
     <!--<TargetFrameworks>net472;netcoreapp3.1-windows</TargetFrameworks-->
-    <TargetFramework>net9.0-windows</TargetFramework>
+    <TargetFramework>net10.0-windows</TargetFramework>
     <EnablePreviewFeatures>True</EnablePreviewFeatures>
     <GenerateRequiresPreviewFeaturesAttribute>False</GenerateRequiresPreviewFeaturesAttribute>
     <OutputType>WinExe</OutputType>
@@ -23,6 +23,40 @@
     <SignAssembly>false</SignAssembly>
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
+
+  <!-- Optimization Settings for Size and Performance -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <!-- NOTE: Windows Forms doesn't support trimming due to dynamic designer code
+         Using alternative optimizations instead: R2R, single-file, and tiered compilation -->
+
+    <!-- DO NOT enable trimming for Windows Forms apps -->
+    <PublishTrimmed>false</PublishTrimmed>
+
+    <!-- Single-file deployment (works great with WinForms) -->
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>false</SelfContained>
+
+    <!-- Ready-to-Run (R2R) compilation for faster startup - MAJOR performance gain -->
+    <PublishReadyToRun>true</PublishReadyToRun>
+
+    <!-- Tiered compilation for better performance throughout app lifecycle -->
+    <TieredCompilation>true</TieredCompilation>
+    <TieredCompilationQuickJit>true</TieredCompilationQuickJit>
+    <TieredCompilationQuickJitForLoops>true</TieredCompilationQuickJitForLoops>
+
+    <!-- Remove debug symbols in Release to reduce size -->
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+
+    <!-- Runtime optimization -->
+    <InvariantGlobalization>false</InvariantGlobalization>
+    <UseAppHost>true</UseAppHost>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+
+    <!-- Reduce metadata size -->
+    <MetadataUpdaterSupport>false</MetadataUpdaterSupport>
+    <IncludeNativeLibrariesForSelfExtract>false</IncludeNativeLibrariesForSelfExtract>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -37,6 +71,11 @@
     <Compile Update="TaskWindowControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Trimmer root configuration -->
+    <TrimmerRootAssembly Include="RCL" />
+    <TrimmerRootAssembly Include="ReaLTaiizor" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\application_16x.png" />
@@ -69,7 +108,7 @@
     <Content Include="Resources\round_swap_vert_white_24dp.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="ReaLTaiizor" Version="3.8.1.4" />
+    <PackageReference Include="ReaLTaiizor" Version="3.8.1.5" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GitHub|AnyCPU'">
     <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>

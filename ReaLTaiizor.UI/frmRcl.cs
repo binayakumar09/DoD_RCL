@@ -398,7 +398,7 @@ namespace ReaLTaiizor.UI
 
                 if (comboBox.Text.Equals("Select"))
                 {
-                    ShowMessageAndFocus(null, textBox, "Please Select the Status", label);
+                    ShowMessageAndFocus(comboBox, null, "Please Select the Status", label);
                     return false;
                 }
                 else if (wordCount <= 2 && (comboBox.SelectedIndex.Equals(1) || comboBox.SelectedIndex.Equals(2)))
@@ -544,10 +544,31 @@ namespace ReaLTaiizor.UI
 
             for (int i = 0; i < comboBoxes.Length; i++)
             {
-                if (!ValidateCP2ComboBoxAndTextBox(comboBoxes[i], textBoxes[i], selectEfsOptionMessage, addEfsCommentMessage, labels[i]))
+                // If not selected, prompt and focus the ComboBox
+                if (comboBoxes[i].Text.Equals("Select"))
                 {
+                    ShowMessageAndFocus(comboBoxes[i], null, "Please Select the Status", labels[i]);
                     return;
                 }
+
+                // Compute word count
+                String txt = textBoxes[i].Text;
+                int wordCount = txt.Split(new char[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries).Length;
+
+                bool isNoOrNA = comboBoxes[i].Text.Equals("No", StringComparison.OrdinalIgnoreCase)
+                                || comboBoxes[i].Text.Equals("NA", StringComparison.OrdinalIgnoreCase)
+                                || comboBoxes[i].Text.Equals("Not Applicable", StringComparison.OrdinalIgnoreCase);
+
+                // For cp2txt2..cp2txt5 (indexes 1..4) allow empty/short comments when selection is No/NA
+                if (!(i >= 1 && i <= 4))
+                {
+                    if (wordCount <= 2 && isNoOrNA)
+                    {
+                        ShowMessageAndFocus(null, textBoxes[i], addEfsCommentMessage, labels[i]);
+                        return;
+                    }
+                }
+                // For indexes 1..4, we purposely skip the No/NA comment requirement
             }
             if (!ValidateCP2ComboBoxAndTextBoxYes(cp2ComboBox1, cp2txt1, cp2lbl1))
                 return;

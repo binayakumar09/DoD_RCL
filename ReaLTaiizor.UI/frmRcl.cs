@@ -422,16 +422,39 @@ namespace ReaLTaiizor.UI
                 return true;
             }
 
-            ComboBox[] comboBoxes = { efsComboBox1, efsComboBox2, efsComboBox3, efsComboBox4, efsComboBox5, efsComboBox6, efsComboBox7, efsComboBox7, efsComboBox9, efsComboBox10 };
+            ComboBox[] comboBoxes = { efsComboBox1, efsComboBox2, efsComboBox3, efsComboBox4, efsComboBox5, efsComboBox6, efsComboBox7, efsComboBox8, efsComboBox9, efsComboBox10 };
             TextBox[] textBoxes = { efstxt1, efstxt2, efstxt3, efstxt4, efstxt5, efstxt6, efstxt7, efstxt8, efstxt9, efstxt10 };
             Label[] labels = { efslbl1, efslbl2, efslbl3, efslbl4, efslbl5, efslbl6, efslbl7, efslbl8, efslbl9, efslbl10 };
 
             for (int i = 0; i < comboBoxes.Length; i++)
             {
-                if (!ValidateEfsComboBoxAndTextBox(comboBoxes[i], textBoxes[i], selectEfsOptionMessage, addEfsCommentMessage, labels[i]))
+                // Validate selection first
+                if (comboBoxes[i].Text.Equals("Select"))
                 {
+                    // Focus the ComboBox so the user can select the status
+                    ShowMessageAndFocus(comboBoxes[i], null, "Please Select the Status", labels[i]);
                     return;
                 }
+
+                // Compute word count
+                String txt = textBoxes[i].Text;
+                int wordCount = txt.Split(new char[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries).Length;
+
+                // For efstxt2..efstxt5 (indexes 1..4) we DO NOT require comments when the combo is "No" or "NA"/"Not Applicable".
+                bool isNoOrNA = comboBoxes[i].Text.Equals("No", StringComparison.OrdinalIgnoreCase)
+                                || comboBoxes[i].Text.Equals("NA", StringComparison.OrdinalIgnoreCase)
+                                || comboBoxes[i].Text.Equals("Not Applicable", StringComparison.OrdinalIgnoreCase);
+
+                if (!(i >= 1 && i <= 4))
+                {
+                    // For other items: if No/Not Applicable selected and comment too short, require rationale
+                    if (wordCount <= 2 && isNoOrNA)
+                    {
+                        ShowMessageAndFocus(null, textBoxes[i], addEfsCommentMessage, labels[i]);
+                        return;
+                    }
+                }
+                // For indexes 1..4, skip the No/NA comment requirement (allow empty or short comments when No/NA selected)
             }
             if (!ValidateEfsComboBoxAndTextBoxYes(efsComboBox1, efstxt1, efslbl1))
                 return;
@@ -515,7 +538,7 @@ namespace ReaLTaiizor.UI
                 return true;
             }
 
-            ComboBox[] comboBoxes = { cp2ComboBox1, cp2ComboBox2, cp2ComboBox3, cp2ComboBox4, cp2ComboBox5, cp2ComboBox6, cp2ComboBox7, cp2ComboBox7, cp2ComboBox9, cp2ComboBox10 };
+            ComboBox[] comboBoxes = { cp2ComboBox1, cp2ComboBox2, cp2ComboBox3, cp2ComboBox4, cp2ComboBox5, cp2ComboBox6, cp2ComboBox7, cp2ComboBox8, cp2ComboBox9, cp2ComboBox10 };
             TextBox[] textBoxes = { cp2txt1, cp2txt2, cp2txt3, cp2txt4, cp2txt5, cp2txt6, cp2txt7, cp2txt8, cp2txt9, cp2txt10 };
             Label[] labels = { cp2lbl1, cp2lbl2, cp2lbl3, cp2lbl4, cp2lbl5, cp2lbl6, cp2lbl7, cp2lbl8, cp2lbl9, cp2lbl10 };
 
@@ -537,7 +560,7 @@ namespace ReaLTaiizor.UI
             if (!ValidateCP2ComboBoxAndTextBoxYes(cp2ComboBox5, cp2txt5, cp2lbl5))
                 return;
 
-            efsReviewResult("EFS in CP2 Approved State");
+            ReviewResult("cp2", "EFS in CP2 Approved State", 10);
         }
 
         private void cp3BtnSubmit_Click(object sender, EventArgs e)
@@ -622,7 +645,7 @@ namespace ReaLTaiizor.UI
             if (!ValidateCP3ComboBoxAndTextBoxYes(cp3ComboBox1, cp3txt1, cp3lbl1))
                 return;
 
-            efsReviewResult("EFS in CP3 Approved State");
+            ReviewResult("cp3", "EFS in CP3 Approved State", 7);
         }
 
         public void DownloadFile()
@@ -756,36 +779,46 @@ namespace ReaLTaiizor.UI
 
         }
 
-        public void efsReviewResult(String efsState)
+        public void ReviewResult(string prefix, string header, int maxItems)
         {
-            StringBuilder builder = new("||" + efsState + "||" + "\n");
-            builder.AppendFormat("||" + efslblhdr1.Text + "||" + efslblhdr2.Text + "||" + efslblhdr3.Text + "||" + "\n");
+            StringBuilder builder = new("||" + header + "||" + "\n");
 
-            for (int i = 1; i <= 9; i++)
+            var hdr1 = this.Controls.Find(prefix + "lblhdr1", true).FirstOrDefault() as Label;
+            var hdr2 = this.Controls.Find(prefix + "lblhdr2", true).FirstOrDefault() as Label;
+            var hdr3 = this.Controls.Find(prefix + "lblhdr3", true).FirstOrDefault() as Label;
+            if (hdr1 != null && hdr2 != null && hdr3 != null)
             {
-                var label = this.Controls.Find("efslbl" + i, true).FirstOrDefault() as Label;
-                var comboBox = this.Controls.Find("efsComboBox" + i, true).FirstOrDefault() as ComboBox;
-                var textBox = this.Controls.Find("efstxt" + i, true).FirstOrDefault() as TextBox;
+                builder.AppendFormat("||" + hdr1.Text + "||" + hdr2.Text + "||" + hdr3.Text + "||" + "\n");
+            }
+
+            for (int i = 1; i <= maxItems; i++)
+            {
+                var label = this.Controls.Find(prefix + "lbl" + i, true).FirstOrDefault() as Label;
+                var comboBox = this.Controls.Find(prefix + "ComboBox" + i, true).FirstOrDefault() as ComboBox;
+                var textBox = this.Controls.Find(prefix + "txt" + i, true).FirstOrDefault() as TextBox;
 
                 if (label != null && comboBox != null && textBox != null)
                 {
                     builder.AppendFormat("|" + label.Text);
                     if (comboBox.Text.Equals("No") || comboBox.Text.Equals("Not Applicable"))
                     {
-                        builder.AppendFormat("||" + comboBox.SelectedItem);
+                        builder.AppendFormat("||" + comboBox.Text);
                     }
                     else
                     {
-                        builder.AppendFormat("|" + comboBox.SelectedItem);
+                        builder.AppendFormat("|" + comboBox.Text);
                     }
                     builder.AppendFormat("|" + textBox.Text + " |\n");
                 }
             }
 
-            builder.AppendFormat("**Reviewers:**  " + efstxtReviewers.Text + " \n\n");
+            var reviewers = this.Controls.Find(prefix + "txtReviewers", true).FirstOrDefault() as TextBox;
+            if (reviewers != null)
+            {
+                builder.AppendFormat("**Reviewers:**  " + reviewers.Text + " \n\n");
+            }
 
             string batchOperationResults = builder.ToString();
-            //DialogResult mresult = MaterialMessageBox.Show(batchOperationResults, "Review Result");
             result1 = MessageBox.Show(batchOperationResults + "Click OK to copy contents", "Paste contents to Jira Description", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result1 == DialogResult.OK)
             {
@@ -799,6 +832,11 @@ namespace ReaLTaiizor.UI
 
             return;
 
+        }
+
+        public void efsReviewResult(String efsState)
+        {
+            ReviewResult("efs", efsState, 10);
         }
 
         private void efsBtnReset_Click(object sender, EventArgs e)

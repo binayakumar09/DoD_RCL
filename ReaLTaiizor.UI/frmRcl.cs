@@ -608,7 +608,16 @@ namespace ReaLTaiizor.UI
                 {
                     if (comboBox != null)
                     {
+                        // Ensure the ComboBox receives focus and is visible to user
                         comboBox.Focus();
+                        comboBox.Select();
+                        // Briefly show the dropdown to make focus obvious
+                        if (!comboBox.DroppedDown)
+                        {
+                            comboBox.DroppedDown = true;
+                            Application.DoEvents();
+                            comboBox.DroppedDown = false;
+                        }
                     }
                     else if (textBox != null)
                     {
@@ -628,7 +637,7 @@ namespace ReaLTaiizor.UI
 
                 if (comboBox.Text.Equals("Select"))
                 {
-                    ShowMessageAndFocus(null, textBox, "Please Select the Status", label);
+                    ShowMessageAndFocus(comboBox, null, "Please Select the Status", label);
                     return false;
                 }
                 else if (wordCount <= 2 && (comboBox.SelectedIndex.Equals(1) || comboBox.SelectedIndex.Equals(2)))
